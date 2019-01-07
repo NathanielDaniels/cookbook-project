@@ -1,57 +1,68 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: hsl(0,0,15);
+    background: hsl(0,0,20);
+    scroll-behavior: smooth;
 }
 
 .main-container {
     margin: 0 auto;
     width: 1200px;
+    // filter: drop-shadow(0px 5px 5px hsl(0,0,10));
     .navbar-container {
-        filter: drop-shadow(0px 5px 5px hsl(0,0,20));
+        filter: drop-shadow(0px 5px 2px hsl(0,0,10));
         width: 100%;
-        height: 100px;
+        height: 50px;
         background: hsl(0,0,20);
         .navbar-links {
             width: 100%;
             ul {
+                display: flex;
+                justify-content: center;
+                height: 50px;
                 list-style: none;
-                text-align: center;
-                padding: 40px 0;
                 text-decoration: none;
                 li {
-                    display: inline-block;
-                    font-size: 26px;
+                    align-self: center;
+                    font-size: 20px;
                     padding: 0 30px;
                     a {
+                        text-transform: uppercase;
+                        letter-spacing: .1rem;
                         text-decoration: none;
-                        color: hsl(0,0,80);
+                        color: hsl(0,0,90);
+                        &:hover {
+                            color: hsl(0,0,70);
+                        }
                     }
+                // /li    
                 }
-                // /li
+            // /ul    
             }
-            // /ul
-        }
         // /.navbar-links
-    }
+        }
     // /.navbar-container
-
-    .body-container {
+    }
+    
+    .title-container {
+        filter: drop-shadow(0px 5px 5px hsl(0,0,10));
         position: relative;
         .bg {
             background-image: url("/IMG/6817673-spices-wallpaper.jpg");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            filter: opacity(.4);
+            filter: opacity(.5);
             height: 400px;
         }
-        .title {
+        .main-title {
             width: 100%;
-            font-size: 50px;
+            font-size: 60px;
+            letter-spacing: .1rem;
             text-align: center;
             position: absolute;
             top: 50%;
@@ -59,23 +70,67 @@ body {
             transform: translate(-50%, -50%);
             color: rgb(255,255,255);
             filter: drop-shadow(3px 5px 2px hsl(0,0,15));
-            button {
-                font-size: 18px;
-                opacity: .6;
-                background: hsl(0,0,15);
-                color: white;
-                padding: 5px 10px;
-                text-transform: uppercase;
-                cursor: pointer;
-                &:hover {
-                    background: hsl(0,0,5);
-                }
-                
-            }
-            // /button
-        }
+           
         // /.title
+        }
+        button {
+            // position: relative;
+            // top: 50px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            letter-spacing: .1rem;
+            font-size: 30px;
+            opacity: .7;
+            // background: hsl(0,0,15);
+            background: hsl(3,60,25);
+            filter: drop-shadow(0px 5px 2px hsl(0,0,25));
+            color: white;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            border-radius: 7px;
+            cursor: pointer;
+            &:hover {
+                background: hsl(3,60,19);
+                opacity: .8;
+                // box-shadow: none;
+                filter: drop-shadow(0px 0px 0px transparent);
+            }
+        // /button
+        }
+    // /.title-container
     }
-    // /.body-container
-}
+
+    .recipes-container {
+        width: 100%;
+        height: auto;
+        background: hsl(0,0,45);
+        padding: 80px;
+        .recipes-title {
+            font-size: 40px;
+            padding-bottom: 60px;
+        }
+        .recipes-body {
+            justify-content: center;
+            // grid-area: 2 / 1;
+            padding: 10px;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 300px);
+            grid-template-rows: repeat(2, 200px);
+            .grid-item {
+                padding: 10px;
+                background: hsl(0,0,30);
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 50px;
+        background: hsl(0,0,20);
+    }
+
 // /.main-container
+}
