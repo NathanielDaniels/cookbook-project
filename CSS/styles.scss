@@ -113,11 +113,13 @@ body {
         padding: 80px;
         border-bottom: 1px solid hsl(0,0,5);
         .recipes-title {
+            position: absolute;
             font-size: 40px;
             padding-bottom: 60px;
             color: hsl(0,0,10);
         }
         .recipes-body {
+            margin-top: 125px;
             justify-content: center;
             padding: 10px;
             display: grid;
@@ -160,8 +162,6 @@ body {
             }
         }
     }
-
-
 
 
     footer {

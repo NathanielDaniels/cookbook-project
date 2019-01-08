@@ -130,12 +130,14 @@ body {
 }
 
 .main-container .recipes-container .recipes-title {
+  position: absolute;
   font-size: 40px;
   padding-bottom: 60px;
   color: #1a1a1a;
 }
 
 .main-container .recipes-container .recipes-body {
+  margin-top: 125px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
