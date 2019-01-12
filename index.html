@@ -40,7 +40,7 @@
             <div class="recipes-body">
                 <a href="#" class="grid-item recipe1">
                     <div class="test">
-                        <p>Beautiful image with some text in a box</p>
+                        <p>Foodie image with some text in a box</p>
                     </div>
                 </a> 
                 <a href="#" class="grid-item recipe2"></a>
@@ -56,11 +56,18 @@
             <h1 class="form-title">
                 Add a Recipe
             </h1>
-            <div class="form">
-                Name of Recipe:<br>
-                <input type="text">
-            </div>
-            
+            <form class="form">
+                <fieldset>
+                    <legend>Add a Recipe</legend>
+                    Name of Recipe:<br>
+                    <input type="text" name="recipe-name"><br>
+                    Ingredients List:<br>
+                    <input type="text" name="ingredient-list"><br>
+                    Inscructions:<br>
+                    <input type="text" name="instruction"><br>
+                    <input type="submit"></fieldset>
+                </fieldset>
+            </form>
         </section>
         <footer>
             Simone's Recipe Box LLC.
