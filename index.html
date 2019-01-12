@@ -35,7 +35,7 @@
 
         <section class="recipes-container">
             <div class="recipes-title">
-                <h1>Recipes</h1>
+                <h1>Top Recipes</h1>
             </div>
             <div class="recipes-body">
                 <a href="#" class="grid-item recipe1">
@@ -59,13 +59,22 @@
             <form class="form">
                 <fieldset>
                     <legend>Add a Recipe</legend>
-                    Name of Recipe:<br>
-                    <input type="text" name="recipe-name"><br>
-                    Ingredients List:<br>
-                    <input type="text" name="ingredient-list"><br>
-                    Inscructions:<br>
-                    <input type="text" name="instruction"><br>
-                    <input type="submit"></fieldset>
+                    <div class="form-grid">
+                        <div class="recipe-name">
+                            <label>Name of Recipe:</label>
+                            <input type="text" name="recipe-name">
+                        </div>
+                        
+                        <div class="recipe-list">
+                            <label>Ingredients List:</label><br>
+                            <textarea type="text" name="ingredient-list"></textarea><br>
+                        </div>
+                        <div class="recipe-inst">
+                            <label>Inscructions:</label><br>
+                            <textarea name="instruction"></textarea><br>
+                        </div>
+                        <input type="submit"></fieldset>
+                    </div>
                 </fieldset>
             </form>
         </section>
