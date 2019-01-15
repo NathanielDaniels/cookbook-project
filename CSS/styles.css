@@ -29,6 +29,10 @@ body {
   width: 100%;
 }
 
+.main-container .navbar-container .navbar-links:hover a {
+  color: #999999;
+}
+
 .main-container .navbar-container .navbar-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,7 +63,7 @@ body {
 }
 
 .main-container .navbar-container .navbar-links ul li a:hover {
-  color: #999999;
+  color: #e6e6e6;
 }
 
 .main-container .title-container {
@@ -227,11 +231,11 @@ body {
 }
 
 .main-container .form-container form {
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
 .main-container .form-container form fieldset {
-  padding: 40px 20px 50px;
+  padding: 50px 25px 55px;
   border-radius: 10px;
 }
 
@@ -328,7 +332,7 @@ body {
 
 .main-container .form-container form fieldset .form-grid input[type="submit"] {
   position: absolute;
-  top: 94%;
+  top: 92%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -385,6 +389,9 @@ body {
     -ms-grid-rows: (200px)[3] !important;
         grid-template-rows: repeat(3, 200px) !important;
   }
+  form fieldset .form-grid input[type="submit"] {
+    top: 93% !important;
+  }
 }
 
 @media screen and (max-width: 730px) {
@@ -439,8 +446,7 @@ body {
     font-size: 18px;
   }
   .form-container form fieldset .form-grid input[type="submit"] {
-    width: 155px !important;
-    top: 96.5% !important;
+    top: 96% !important;
   }
 }
 
@@ -459,7 +465,7 @@ body {
     font-size: 5rem !important;
   }
   .recipes-container {
-    padding: 80px 5% !important;
+    padding: 100px 5% 80px !important;
   }
   .recipes-container .recipe-title h1 {
     font-size: 2rem !important;
@@ -473,6 +479,9 @@ body {
         grid-template-rows: repeat(6, 200px) !important;
     width: 100%;
     margin: 0 auto;
+  }
+  .form-container form fieldset input[type="submit"] {
+    width: 155px !important;
   }
 }
 

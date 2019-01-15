@@ -20,14 +20,19 @@ body {
         width: 100%;
         height: 50px;
         background: hsl(0,0,20);
+         
         .navbar-links {
             width: 100%;
+           &:hover a {
+                color: hsl(0,0,60);
+            }
             ul {
                 display: flex;
                 justify-content: center;
                 height: 50px;
                 list-style: none;
                 text-decoration: none;
+                
                 li {
                     align-self: center;
                     font-size: 18px;
@@ -39,7 +44,7 @@ body {
                         color: hsl(0,0,90);
                         transition: all .3s ease-in-out;
                         &:hover {
-                            color: hsl(0,0,60);
+                            color: hsl(0,0,90);
                         }
                     }
                 // /li    
@@ -197,9 +202,9 @@ body {
             color: hsl(0,0,10);
         }
         form {
-            padding-top: 50px;
+            padding: 50px 0;
             fieldset {
-                padding: 40px 20px 50px;
+                padding: 50px 25px 55px;
                 border-radius: 10px;
                 label {
                     font-size: 22px;
@@ -270,7 +275,7 @@ body {
                      //SUBMIT BUTTON
                     input[type="submit"] {
                         position: absolute;
-                        top: 94%;
+                        top: 92%;
                         left: 50%;
                         transform: translate(-50%, -50%);
                         width: 35%;
@@ -317,7 +322,7 @@ body {
 }
 
 
-//=========================================================================
+//===============================================================================-------------
 // RESPONSIVE MEDIA
 @media screen and (max-width: 1200px) {
     .main-container {
@@ -330,6 +335,18 @@ body {
             grid-template-rows: repeat(3, 200px) !important;
         }
     }
+    form {
+        fieldset {
+            .form-grid {
+                input[type="submit"] {
+                    top: 93% !important;
+                }
+            }
+        // /fieldset
+        }
+    // /form
+    }
+// /Media (1200px)
 }
 
 @media screen and (max-width: 730px) {
@@ -374,15 +391,19 @@ body {
                         }
                     }
                     input[type="submit"] {
-                        width: 155px !important;
-                        top: 96.5% !important;
+                        // width: 155px !important;
+                        top: 96% !important;
                     }
+                // /.form-grid
                 }
+            // /fieldset
             }
+        // /form
         }
-        
+    // /form-container
     }
-}
+// /Media (720px)
+} 
 
 @media screen and (max-width: 540px) {
     .main-container {
@@ -408,7 +429,7 @@ body {
         }
     }
     .recipes-container {
-        padding: 80px 5% !important;
+        padding: 100px 5% 80px !important;
         .recipe-title {
             h1 {
                 font-size: 2rem !important;
@@ -422,6 +443,19 @@ body {
             margin: 0 auto;
         }
     }
+    .form-container {
+        form {
+            fieldset {
+                input[type="submit"] {
+                    width: 155px !important;
+                    // top: 96% !important;
+                }
+            }
+        // /form
+        }
+    // /.form-container
+    }
+// /Media (540px)
 }
 
 @media screen and (max-width: 480px) {
@@ -445,6 +479,7 @@ body {
                 font-size: 2rem !important;
             }
         }
+    // /.main-container
     }  
-    
+// /Media (480px)
 }
