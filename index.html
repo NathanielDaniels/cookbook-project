@@ -56,28 +56,28 @@
       <h1 class="form-title">
         Add a Recipe
       </h1>
-        <form class="form">
+        <form class="form" action='' method="POST">
           <fieldset>
             <!-- <legend>Add a Recipe</legend> -->
             <div class="form-grid">
               <div class="recipe-name">
                 <label>Name of Recipe:</label>
-                <input type="text" name="recipe-name">
+                <input type="text" name="recipe-name" maxlength="100" > <!-- value="<?=$varRecipeName;?>" -->
               </div>
               <div class="recipe-list">
                 <label>Ingredients List:</label><br>
-                <textarea type="text" name="ingredient-list"></textarea><br>
+                <textarea type="text" name="ingredient-list"></textarea><br> <!-- value="<?=$varRecipeList;?>" -->
               </div>
               <div class="recipe-inst">
                 <label>Instructions:</label><br>
-                <textarea name="instruction"></textarea><br>
+                <textarea name="instruction" ></textarea><br> <!-- value="<?=$varRecipeInstructions;?>" -->
               </div>
               <div class="add-link">
                 <label for="">Link Your Favorite Recipe:</label>
-                <input type="text" name="fav-link" placeholder="www.MyFavoriteRecipes.com">
+                <input type="text" name="fav-link" placeholder="www.MyFavoriteRecipes.com" > <!-- value="<?=$varFavoriteLink;?>"  -->
               </div>
             </div>
-            <input type="submit">
+            <input type="submit" name="form-submit" value="submit">
           </fieldset>
         </form>
 
