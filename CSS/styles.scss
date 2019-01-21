@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin:  0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
@@ -9,15 +9,23 @@ body {
   background: hsl(0,0,20);
   scroll-behavior: smooth;
 }
-
+/*------------------------------------*\
+    #MAIN-CONTAINER
+\*------------------------------------*/
 .main-container {
   margin: 0 auto;
-  width: 1200px;
+  width:  1200px;
   filter: drop-shadow(0px 5px 5px hsl(0,0,10));
+
+
+  /*------------------------------------*\
+    #NAVBAR-CONTAINER
+\*------------------------------------*/
+
   .navbar-container {
       border-bottom: 1px solid hsl(0,0,10);
       // filter: drop-shadow(0px 5px 2px hsl(0,0,10));
-      width: 100%;
+      width:  100%;
       height: 50px;
       background: hsl(0,0,20);
         
@@ -55,7 +63,12 @@ body {
       }
   // /.navbar-container
   }
-  // TITLE SECTION (MAIN)
+
+
+  /*------------------------------------*\
+    #TITLE-CONTAINER (MAIN)
+\*------------------------------------*/
+
   .title-container {
     filter: drop-shadow(0px 5px 5px hsl(0,0,10));
     // position: relative;
@@ -74,14 +87,14 @@ body {
       letter-spacing: .1rem;
       text-align: center;
       position: absolute;
-      top: 50%;
+      top:  50%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgb(255,255,255);
       filter: drop-shadow(3px 5px 2px hsl(0,0,15));
       h1 {
           // font-family: serif;
-          font-size: 8rem;
+          font-size:   8rem;
           font-weight: 300;
       }
     // /.title
@@ -114,9 +127,13 @@ body {
     }
   // /.title-container
   }
-  // RECIPE SECTION
+
+  /*------------------------------------*\
+    #RECIPE-SECTION
+\*------------------------------------*/
+
   .recipes-container {
-    width: 100%;
+    width:  100%;
     height: auto;
     background: hsl(0,0,60);
     padding: 80px;
@@ -125,7 +142,7 @@ body {
     .recipes-title {
       // position: absolute;
       margin: 0;
-      font-size: 3rem;
+      font-size:   3rem;
       font-weight: 300;
       color: hsl(0,0,10);
     }
@@ -189,9 +206,13 @@ body {
       }
     }
   }
-  // FORM SECTION
+
+  /*------------------------------------*\
+    #FORM-SECTION
+\*------------------------------------*/
+
   .form-container {
-    width: 100%;
+    width:  100%;
     height: auto;
     padding: 80px;
     border-bottom: 1px solid hsl(0,0,5);
@@ -310,9 +331,13 @@ body {
   // /.form-container
   }
 
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
   footer.footer {
     color: rgb(255,255,255);
-    width: 100%;
+    width:  100%;
     height: 50px;
     background: hsl(0,0,20);
     display: flex;
