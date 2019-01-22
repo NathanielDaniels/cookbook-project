@@ -26,10 +26,10 @@ body {
     #TITLE-CONTAINER (MAIN)
 \*------------------------------------*/
   /*------------------------------------*\
-    #RECIPE-SECTION
+    #RECIPE-SECTION (Top Recipes)
 \*------------------------------------*/
   /*------------------------------------*\
-    #FORM-SECTION
+    #FORM-SECTION (Add a Recipe)
 \*------------------------------------*/
   /*------------------------------------*\
     #FOOTER
@@ -58,15 +58,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 50px;
   list-style: none;
   text-decoration: none;
 }
 
 .main-container .navbar-container .navbar-links ul li {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   font-size: 18px;
   padding: 0 30px;
 }
@@ -85,9 +85,9 @@ body {
 }
 
 .main-container .title-container {
+  border-bottom: 1px solid #333333;
   -webkit-filter: drop-shadow(0px 5px 5px #1a1a1a);
           filter: drop-shadow(0px 5px 5px #1a1a1a);
-  border-bottom: 1px solid #333333;
 }
 
 .main-container .title-container .bg {
@@ -101,17 +101,17 @@ body {
 }
 
 .main-container .title-container .main-title {
-  width: 100%;
-  letter-spacing: .1rem;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   color: white;
   -webkit-filter: drop-shadow(3px 5px 2px #262626);
           filter: drop-shadow(3px 5px 2px #262626);
+  left: 50%;
+  letter-spacing: .1rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .main-container .title-container .main-title h1 {
@@ -120,31 +120,30 @@ body {
 }
 
 .main-container .title-container button {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  letter-spacing: .1rem;
-  font-size: 30px;
-  opacity: .7;
   background: #661d1a;
-  -webkit-filter: drop-shadow(0px 5px 2px #404040);
-          filter: drop-shadow(0px 5px 2px #404040);
-  color: white;
-  padding: 10px 15px;
-  text-transform: uppercase;
   border-radius: 7px;
   cursor: pointer;
+  color: white;
+  -webkit-filter: drop-shadow(0px 5px 2px #404040);
+          filter: drop-shadow(0px 5px 2px #404040);
+  font-size: 30px;
+  left: 50%;
+  letter-spacing: .1rem;
+  opacity: .7;
+  padding: 10px 15px;
+  position: absolute;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .main-container .title-container button:hover {
   background: #4e1613;
-  opacity: .8;
   -webkit-filter: drop-shadow(0px 0px 0px transparent);
           filter: drop-shadow(0px 0px 0px transparent);
+  opacity: .8;
 }
 
 .main-container .recipes-container {
@@ -198,16 +197,34 @@ body {
   position: relative;
 }
 
-.main-container .recipes-container .recipes-body .recipe1 .test {
+.main-container .recipes-container .recipes-body .recipe1 .hover-text {
   background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
   color: #fff;
   text-align: center;
   padding: 10px 20px;
   font-size: 1.1em;
   text-transform: uppercase;
   position: absolute;
-  top: 120px;
+  top: 0px;
+  height: 100%;
   left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe1 .hover-text:hover {
+  opacity: 1;
 }
 
 .main-container .recipes-container .recipes-body .recipe2 {
@@ -215,9 +232,69 @@ body {
   background-size: cover;
 }
 
+.main-container .recipes-container .recipes-body .recipe2 .hover-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe2 .hover-text:hover {
+  opacity: 1;
+}
+
 .main-container .recipes-container .recipes-body .recipe3 {
   background-image: url("/IMG/recipe3.jpg");
   background-size: cover;
+}
+
+.main-container .recipes-container .recipes-body .recipe3 .hover-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe3 .hover-text:hover {
+  opacity: 1;
 }
 
 .main-container .recipes-container .recipes-body .recipe4 {
@@ -225,14 +302,104 @@ body {
   background-size: cover;
 }
 
+.main-container .recipes-container .recipes-body .recipe4 .hover-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe4 .hover-text:hover {
+  opacity: 1;
+}
+
 .main-container .recipes-container .recipes-body .recipe5 {
   background-image: url("/IMG/recipe5.jpg");
   background-size: cover;
 }
 
+.main-container .recipes-container .recipes-body .recipe5 .hover-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe5 .hover-text:hover {
+  opacity: 1;
+}
+
 .main-container .recipes-container .recipes-body .recipe6 {
   background-image: url("/IMG/recipe6.jpg");
   background-size: cover;
+}
+
+.main-container .recipes-container .recipes-body .recipe6 .hover-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+
+.main-container .recipes-container .recipes-body .recipe6 .hover-text:hover {
+  opacity: 1;
 }
 
 .main-container .form-container {
