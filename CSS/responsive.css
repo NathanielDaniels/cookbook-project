@@ -1,0 +1,108 @@
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: auto;
+  }
+  .recipes-container .recipes-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2] !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-rows: (200px)[3] !important;
+        grid-template-rows: repeat(3, 200px) !important;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .main-container {
+    width: auto;
+  }
+  .recipes-container .recipes-title h1 {
+    position: static;
+    font-size: 3rem;
+    text-align: center;
+  }
+  .recipes-container .recipes-body {
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (200px)[6] !important;
+        grid-template-rows: repeat(6, 200px) !important;
+    width: 80%;
+  }
+  section.form-container {
+    padding: 20px;
+  }
+  section.form-container h1.form-title {
+    font-size: 3rem !important;
+    padding-top: 30px;
+    text-align: center;
+  }
+  section.form-container form fieldset .form-grid {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.form-container form fieldset .form-grid .recipe-list textarea {
+    width: 100% !important;
+  }
+  section.form-container form fieldset .form-grid .add-link input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+  section.form-container form fieldset .form-grid .add-link input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+  section.form-container form fieldset .form-grid .add-link input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+  section.form-container form fieldset .form-grid .add-link input::placeholder {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .main-container {
+    width: auto;
+  }
+  .navbar-links ul li {
+    padding: 0 8px !important;
+    font-size: 1rem !important;
+  }
+  .title-container .bg {
+    height: 600px !important;
+  }
+  .title-container .main-title h1 {
+    font-size: 5rem !important;
+  }
+  .recipes-container {
+    padding: 100px 5% 80px !important;
+  }
+  .recipes-container .recipe-title h1 {
+    font-size: 2rem !important;
+  }
+  .recipes-container .recipes-body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (200px)[6] !important;
+        grid-template-rows: repeat(6, 200px) !important;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .form-container form fieldset input[type="submit"] {
+    width: 155px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-container .recipes-container recipe-title {
+    font-size: 2rem !important;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

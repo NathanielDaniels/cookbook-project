@@ -1,0 +1,162 @@
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: auto;
+  }
+  .recipes-container {
+    .recipes-body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-rows: repeat(3, 200px) !important;
+    }
+  }
+  // form {
+  //   fieldset {
+  //     .form-grid {
+  //       // input[type="submit"] {
+  //       //   top: 93% !important;
+  //       // }
+  //     }
+  //   // /fieldset
+  //   }
+  // // /form
+  // }
+// /Media (1200px)
+}
+
+@media screen and (max-width: 730px) {
+  .main-container {
+    width: auto;
+  }
+  .recipes-container {
+    // padding: 80px 150px !important;
+    .recipes-title h1 {
+      position: static;
+      font-size: 3rem;
+      text-align: center;
+    }
+    .recipes-body {
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr) !important;
+      grid-template-rows: repeat(6, 200px) !important;
+      width: 80%;
+    }
+  }
+  section.form-container {
+    padding: 20px;
+    h1.form-title {
+      font-size: 3rem !important;
+      padding-top: 30px;
+      text-align: center;
+    }
+    form {
+      fieldset {
+        .form-grid {
+          display: flex !important;
+          flex-direction: column;
+          .recipe-list {
+            textarea {
+              width: 100% !important;
+            }
+          }
+          .add-link {
+            input::placeholder {
+              font-size: 18px;
+            }
+          }
+          // input[type="submit"] {
+          //   // width: 155px !important;
+          //   // position: relative !important;
+          //   top: 150px !important;
+          // }
+        // /.form-grid
+        }
+          // /fieldset
+      }
+      // /form
+    }
+  // /form-container
+  }
+// /Media (720px)
+} 
+
+@media screen and (max-width: 540px) {
+  .main-container {
+    width: auto;
+    // padding: 0 !important;
+  }
+  .navbar-links {
+    ul {
+      li {
+        padding: 0 8px !important;
+        font-size: 1rem !important;
+      }
+    }
+  }
+  .title-container {
+    .bg {
+      height: 600px !important;
+      // height: 80vh !important;
+    }
+    .main-title {
+      h1 {
+        font-size: 5rem !important;
+      }
+    }
+  }
+  .recipes-container {
+    padding: 100px 5% 80px !important;
+    .recipe-title {
+      h1 {
+        font-size: 2rem !important;
+      }
+    }
+    .recipes-body {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr) !important;
+      grid-template-rows: repeat(6, 200px) !important;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .form-container {
+    form {
+      fieldset {
+        input[type="submit"] {
+          width: 155px !important;
+          // top: 96% !important;
+        }
+      }
+    // /form
+    }
+  // /.form-container
+  }
+// /Media (540px)
+}
+
+@media screen and (max-width: 480px) {
+  // .main-container {
+//      width: 400px;
+  // }
+  // .navbar-container {
+//     // width: 50%;
+//     li {
+//       padding: 0 5px !important;
+//     }
+  // }
+  // .main-title {
+//     h1 {
+//        font-size: 40px;
+//     }
+  // }
+  .main-container {
+    .recipes-container {
+      recipe-title {
+        font-size: 2rem !important;
+      }
+    }
+  // /.main-container
+  }  
+// /Media (480px)
+}

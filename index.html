@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,31 @@
   <title>Simone's Cookbook</title>
   <link rel="stylesheet" href="/CSS/styles.css">
 </head>
+
 <body>
 
   <div class="main-container">
-      
+
     <section class="navbar-container">
       <div class="navbar-links">
         <ul>
-          <li><a href="#">Home</a></li> 
+          <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Recipes</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-      <!-- /.navbar-links -->
+        <!-- /.navbar-links -->
       </div>
-    <!-- /.navbar-container -->
+      <!-- /.navbar-container -->
     </section>
-    
+
     <section class="title-container">
       <div class="bg"></div>
       <div class="main-title">
         <h1>Simone's <br>Recipe Box</h1>
       </div>
       <button>Get Started</button>
-    <!-- /.title-container -->
+      <!-- /.title-container -->
     </section>
 
     <section class="recipes-container">
@@ -42,7 +44,7 @@
           <div class="hover-text">
             <p>Foodie image with some text in a box</p>
           </div>
-        </a> 
+        </a>
         <a href="#" class="grid-item recipe2">
           <div class="hover-text">
             <p>Foodie image with some text in a box</p>
@@ -69,40 +71,44 @@
           </div>
         </a>
       </div>
-    <!-- /.recipes-container -->
+      <!-- /.recipes-container -->
     </section>
 
     <section class="form-container">
       <h1 class="form-title">
         Add a Recipe
       </h1>
-        <form class="form" action='/PHP/recipe-form.php' method="POST">
-          <fieldset>
-            <!-- <legend>Add a Recipe</legend> -->
-            <div class="form-grid">
-              <div class="recipe-name">
-                <label for="recipe-name">Name of Recipe:</label>
-                <input type="text" name="recipe-name" maxlength="100" > <!-- value="<?=$varRecipeName;?>" -->
-              </div>
-              <div class="recipe-list">
-                <label for="ingredient-list">Ingredients List:</label><br>
-                <textarea type="text" name="ingredient-list"></textarea><br> <!-- value="<?=$varRecipeList;?>" -->
-              </div>
-              <div class="recipe-inst">
-                <label for="instruction">Instructions:</label><br>
-                <textarea name="instruction" ></textarea><br> <!-- value="<?=$varRecipeInstructions;?>" -->
-              </div>
-              <div class="add-link">
-                <label for="fav-link">Link Your Favorite Recipe:</label>
-                <input type="text" name="fav-link" placeholder="www.MyFavoriteRecipes.com" > <!-- value="<?=$varFavoriteLink;?>"  -->
-              </div>
+      <form class="form" action='/PHP/recipe-form.php' method="POST">
+        <fieldset>
+          <!-- <legend>Add a Recipe</legend> -->
+          <div class="form-grid">
+            <fieldset class="recipe-name">
+              <legend for="recipe-name">Name of Recipe</legend>
+              <input type="text" name="recipe-name" maxlength="100">
+              <!-- value="<?=$varRecipeName;?>" -->
+            </fieldset>
+            <div class="recipe-list">
+              <label for="ingredient-list">Ingredients List:</label><br>
+              <textarea type="text" name="ingredient-list"></textarea><br>
+              <!-- value="<?=$varRecipeList;?>" -->
             </div>
-            <input class="form-button" type="submit" name="form-submit" value="submit">
-          </fieldset>
-        </form>
+            <div class="recipe-inst">
+              <label for="instruction">Instructions:</label><br>
+              <textarea name="instruction"></textarea><br>
+              <!-- value="<?=$varRecipeInstructions;?>" -->
+            </div>
+            <div class="add-link">
+              <label for="fav-link">Link Your Favorite Recipe:</label>
+              <input type="text" name="fav-link" placeholder="www.MyFavoriteRecipes.com">
+              <!-- value="<?=$varFavoriteLink;?>"  -->
+            </div>
+          </div>
+          <input class="form-button" type="submit" name="form-submit" value="submit">
+        </fieldset>
+      </form>
 
-        <!-- Left If Need to Seperate Form Bubbles -->
-        <!-- <form action="">
+      <!-- Left If Need to Separate Form Bubbles -->
+      <!-- <form action="">
             <fieldset>
                 <div class="add-link">
                     <label for="">Or Link Your Favorite Online Recipes</label>
@@ -117,11 +123,12 @@
       Simone's Recipe Box LLC.
     </footer>
 
-  
-  <!-- /.main-container -->
+
+    <!-- /.main-container -->
   </div>
-    
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="JS/script.js"></script>
 </body>
+
 </html>
