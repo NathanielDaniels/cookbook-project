@@ -79,7 +79,7 @@
         Add a Recipe
       </h1>
       <form class="form" action='/PHP/recipe-form.php' method="POST">
-        <fieldset>
+        <fieldset class="main-fieldset">
           <!-- <legend>Add a Recipe</legend> -->
           <div class="form-grid">
             <fieldset class="recipe-name">
@@ -87,21 +87,21 @@
               <input type="text" name="recipe-name" maxlength="100">
               <!-- value="<?=$varRecipeName;?>" -->
             </fieldset>
-            <div class="recipe-list">
-              <label for="ingredient-list">Ingredients List:</label><br>
+            <fieldset class="recipe-list">
+              <legend for="ingredient-list">Ingredients List</legend><br>
               <textarea type="text" name="ingredient-list"></textarea><br>
               <!-- value="<?=$varRecipeList;?>" -->
-            </div>
-            <div class="recipe-inst">
-              <label for="instruction">Instructions:</label><br>
+            </fieldset>
+            <fieldset class="recipe-inst">
+              <legend for="instruction">Instructions</legend><br>
               <textarea name="instruction"></textarea><br>
               <!-- value="<?=$varRecipeInstructions;?>" -->
-            </div>
-            <div class="add-link">
-              <label for="fav-link">Link Your Favorite Recipe:</label>
+            </fieldset>
+            <fieldset class="add-link">
+              <legend for="fav-link">Link Your Favorite Recipe</legend>
               <input type="text" name="fav-link" placeholder="www.MyFavoriteRecipes.com">
               <!-- value="<?=$varFavoriteLink;?>"  -->
-            </div>
+            </fieldset>
           </div>
           <input class="form-button" type="submit" name="form-submit" value="submit">
         </fieldset>
