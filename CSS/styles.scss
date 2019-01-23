@@ -248,32 +248,40 @@ body {
     form {
       padding: 50px 0;
       fieldset.main-fieldset {
-        border-radius: 10px;
+        border-radius: 30px;
         padding: 50px 25px 0px;
+        border: 5px solid hsl(3,60,25);
         .form-grid {
           display: grid;
-          grid-row-gap: 20px;     
-          grid-template-columns: 200px auto;
-          grid-template-rows: 100px 350px 100px;
+          grid-gap: 20px;     
+          grid-template-columns: 250px auto;
+          grid-template-rows: 75px 300px 75px;
           fieldset {
+            border: 3px solid white;
             border-radius: 30px;
             padding: 5px 20px;
+            transition: color .3s ease-in-out;
+            &:hover {
+              color: white;
+            }
           }
           legend {
             font-size: 22px;
             padding: 0 10px;
           }
           input {
-            // background: rgb(223, 223, 223);
+            position: relative;
+            top: 0;
             background-color: transparent;
             border-radius: 10px;
             border-color: transparent;
             font-size: 24px;
-            height: 50px;
+            // height: 50px;
             // margin: 10px 0 30px;
             margin: 0;
             padding-left: 5px;
             width: 100%;
+            color: white;
             &:focus {
               outline-style: none;
             }
@@ -288,12 +296,13 @@ body {
             textarea[name="ingredient-list"] {
               // resize: vertical; max-height: 350px; min-height: 300px;
               // background: rgb(223, 223, 223);
+              // margin: 10px 0 30px;
               background-color: transparent;
               border-color: transparent;
+              color: white;
               font-size: 24px;
-              height: 300px;
-              // margin: 10px 0 30px;
-              padding: 5px;
+              height: 230px;
+              // padding: 5px;
               resize: none; 
               width: 100%;
               &:focus {
@@ -304,17 +313,18 @@ body {
           .recipe-inst {
             textarea[name="instruction"] {
               // background: rgb(223, 223, 223);
+              // margin: 10px 0 30px;
               background-color: transparent;
               border-color: transparent;
               border-radius: 2px;
               font-size: 24px;
               grid-area: 2;
               grid-column: 2 / 3;
-              height: 300px;
-              // margin: 10px 0 30px;
+              height: 230px;
               padding: 5px;
               resize: none; 
               width: 100%;
+              color: white;
               &:focus {
                 outline-style: none;
               }
@@ -322,10 +332,12 @@ body {
           }
           // Add-Link Input
           .add-link {
+            color: white;
             grid-area: 3;
             grid-column: 1 / 3;
+            @include centered();
             input {
-              margin: 10px 0 0px;
+              @include centered();
             }
             input::placeholder {
               color: #999;
@@ -347,7 +359,7 @@ body {
           padding: 10px;
           position: relative;
           text-transform: uppercase;
-          top: 80px;
+          top: 60px;
           transform: translate(-50%, -50%);
           transition: all .3s ease-in-out;
           width: 30%;
@@ -437,12 +449,12 @@ body {
       padding-top: 30px;
       text-align: center;
     }
-    form {
-      fieldset {
+    form.form {
+      fieldset.main-fieldset {
         .form-grid {
           display: flex !important;
           flex-direction: column;
-          .recipe-list {
+          fieldset.recipe-list {
             textarea {
               width: 100% !important;
             }
@@ -452,11 +464,10 @@ body {
               font-size: 18px;
             }
           }
-          // input[type="submit"] {
-          //   // width: 155px !important;
-          //   // position: relative !important;
-          //   top: 150px !important;
-          // }
+          input.form-button[type="submit"] {
+            width: 155px !important;
+            // top: 150px !important;
+          }
         // /.form-grid
         }
           // /fieldset
@@ -507,9 +518,9 @@ body {
       width: 100%;
     }
   }
-  .form-container {
-    form {
-      fieldset {
+  section.form-container {
+    form.form {
+      fieldset.main-fieldset {
         input[type="submit"] {
           width: 155px !important;
           // top: 96% !important;
