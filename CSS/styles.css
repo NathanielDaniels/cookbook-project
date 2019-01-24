@@ -457,16 +457,16 @@ body {
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid input {
-  position: relative;
-  top: 0;
   background-color: transparent;
-  border-radius: 10px;
   border-color: transparent;
+  border-radius: 10px;
+  color: white;
   font-size: 22px;
   margin: 0;
   padding-left: 5px;
+  position: relative;
+  top: 0;
   width: 100%;
-  color: white;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid input:focus {
@@ -554,8 +554,8 @@ body {
   border-radius: 7px;
   color: white;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 5px 2px #404040);
-          filter: drop-shadow(0px 5px 2px #404040);
+  -webkit-filter: drop-shadow(0px 8px 5px #404040);
+          filter: drop-shadow(0px 8px 5px #404040);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-size: 30px;
   left: 50%;
@@ -573,10 +573,10 @@ body {
 }
 
 .main-container .form-container form fieldset.main-fieldset input.form-button[type="submit"]:hover {
-  background: #4e1613;
+  background: #5a1a16;
   opacity: 1;
-  -webkit-filter: drop-shadow(0px 0px 0px transparent);
-          filter: drop-shadow(0px 0px 0px transparent);
+  -webkit-filter: drop-shadow(0px 6px 5px #474747);
+          filter: drop-shadow(0px 6px 5px #474747);
 }
 
 .main-container footer.footer {

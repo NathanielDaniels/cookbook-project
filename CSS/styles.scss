@@ -278,19 +278,18 @@ body {
             padding: 0 10px;
           }
           input {
-            
-            position: relative;
-            top: 0;
-            background-color: transparent;
-            border-radius: 10px;
-            border-color: transparent;
-            font-size: 22px;
             // height: 50px;
             // margin: 10px 0 30px;
+            background-color: transparent;
+            border-color: transparent;
+            border-radius: 10px;
+            color: white;
+            font-size: 22px;
             margin: 0;
             padding-left: 5px;
+            position: relative;
+            top: 0;
             width: 100%;
-            color: white;
             &:focus {
               outline-style: none;
             }
@@ -356,7 +355,7 @@ body {
           border-radius: 7px;
           color: white;
           cursor: pointer;
-          filter: drop-shadow(0px 5px 2px hsl(0,0,25));
+          filter: drop-shadow(0px 8px 5px hsl(0,0,25));
           text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
           font-size: 30px;
           left: 50%;
@@ -370,9 +369,9 @@ body {
           transition: all .3s ease-in-out;
           width: 25%;
           &:hover {
-            background: hsl(3,60,19);
+            background: hsl(3,60,22);
             opacity: 1;
-            filter: drop-shadow(0px 0px 0px transparent);
+            filter: drop-shadow(0px 6px 5px hsl(0,0,28));
           }
         // /Submit Button
         }
