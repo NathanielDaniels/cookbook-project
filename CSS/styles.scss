@@ -243,7 +243,6 @@ body {
     padding: 80px;
     width:  100%;
     .form-title {
-      // position: absolute;
       color: hsl(0,0,10);
       text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
       font-size: 4rem;
@@ -253,19 +252,23 @@ body {
       fieldset.main-fieldset {
         border-radius: 30px;
         padding: 50px 25px 0px;
-        border: 5px solid hsl(3,60,25);
+        border: 2px solid hsl(3,60,15);
+        box-shadow: 0px 2px 10px hsl(3,60,15);
         .form-grid {
           display: grid;
           grid-gap: 20px;     
           grid-template-columns: 250px auto;
           grid-template-rows: 75px 300px 75px;
           fieldset {
-            border: 2px solid hsl(3,60,15);
+            // box-shadow: inset 0px -8px 20px -10px rgba(0,0,0,0.75);
+            box-shadow: inset 0px -8px 20px -10px hsl(3,60,15);
+            border: 3px solid hsl(3,60,15);
             border-radius: 30px;
             padding: 5px 20px;
             transition: color .3s ease-in-out;
             // &:hover {
             //   color: white;
+            //   box-shadow: inset 0px -8px 20px -10px hsl(3,60,15);
             // }
           }
           legend {
@@ -275,6 +278,7 @@ body {
             padding: 0 10px;
           }
           input {
+            
             position: relative;
             top: 0;
             background-color: transparent;
@@ -364,7 +368,7 @@ body {
           top: 60px;
           transform: translate(-50%, -50%);
           transition: all .3s ease-in-out;
-          width: 30%;
+          width: 25%;
           &:hover {
             background: hsl(3,60,19);
             opacity: 1;
@@ -396,6 +400,19 @@ body {
   }
 // /.main-container
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //===============================================================================-------------
