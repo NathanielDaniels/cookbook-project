@@ -65,7 +65,6 @@ body {
         height: 50px;
         list-style: none;
         text-decoration: none;
-        
         li {
           // align-self: center;
           font-size: 18px;
@@ -128,13 +127,13 @@ body {
       color: white;
       cursor: pointer;
       filter: drop-shadow(0px 5px 2px hsl(0,0,25));
-      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
       font-size: 30px;
       left: 50%;
       letter-spacing: .1rem;
       opacity: .7;
       padding: 10px 15px;
       position: absolute;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
       text-transform: uppercase;
       transform: translate(-50%, -50%);
       transition: all .3s ease-in-out;
@@ -163,10 +162,10 @@ body {
     .recipes-title {
       // position: absolute;
       color: hsl(0,0,10);
-      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
       font-size: 3rem;
       font-weight: 300;
       margin: 0;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
     }
     .recipes-body {
       display: grid;
@@ -244,16 +243,16 @@ body {
     width:  100%;
     .form-title {
       color: hsl(0,0,10);
-      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
       font-size: 4rem;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
     }
     form {
       padding: 50px 0;
       fieldset.main-fieldset {
         border-radius: 30px;
-        padding: 50px 25px 0px;
         border: 2px solid hsl(3,60,15);
         box-shadow: 0px 2px 10px hsl(3,60,15);
+        padding: 50px 25px 0px;
         .form-grid {
           display: grid;
           grid-gap: 20px;     
@@ -261,9 +260,9 @@ body {
           grid-template-rows: 75px 300px 75px;
           fieldset {
             // box-shadow: inset 0px -8px 20px -10px rgba(0,0,0,0.75);
-            box-shadow: inset 0px -8px 20px -10px hsl(3,60,15);
-            border: 3px solid hsl(3,60,15);
             border-radius: 30px;
+            border: 3px solid hsl(3,60,15);
+            box-shadow: inset 0px -8px 20px -10px hsl(3,60,15);
             padding: 5px 20px;
             transition: color .3s ease-in-out;
             // &:hover {
@@ -272,9 +271,9 @@ body {
             // }
           }
           legend {
-            font-size: 22px;
             // font-weight: bold;
             color: hsl(3,60,25);
+            font-size: 22px;
             padding: 0 10px;
           }
           input {
@@ -302,15 +301,15 @@ body {
             grid-area: 2;
             grid-column: 1 / 2;
             textarea[name="ingredient-list"] {
-              // resize: vertical; max-height: 350px; min-height: 300px;
               // background: rgb(223, 223, 223);
               // margin: 10px 0 30px;
+              // padding: 5px;
+              // resize: vertical; max-height: 350px; min-height: 300px;
               background-color: transparent;
               border-color: transparent;
               color: white;
               font-size: 22px;
               height: 230px;
-              // padding: 5px;
               resize: none; 
               width: 100%;
               &:focus {
@@ -325,6 +324,7 @@ body {
               background-color: transparent;
               border-color: transparent;
               border-radius: 2px;
+              color: white;
               font-size: 22px;
               grid-area: 2;
               grid-column: 2 / 3;
@@ -332,7 +332,6 @@ body {
               padding: 5px;
               resize: none; 
               width: 100%;
-              color: white;
               &:focus {
                 outline-style: none;
               }
@@ -356,13 +355,13 @@ body {
           color: white;
           cursor: pointer;
           filter: drop-shadow(0px 8px 5px hsl(0,0,25));
-          text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
           font-size: 30px;
           left: 50%;
           letter-spacing: .1rem;
           opacity: .98;
           padding: 10px;
           position: relative;
+          text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
           text-transform: uppercase;
           top: 60px;
           transform: translate(-50%, -50%);
@@ -370,8 +369,8 @@ body {
           width: 25%;
           &:hover {
             background: hsl(3,60,22);
-            opacity: 1;
             filter: drop-shadow(0px 6px 5px hsl(0,0,28));
+            opacity: 1;
           }
         // /Submit Button
         }
