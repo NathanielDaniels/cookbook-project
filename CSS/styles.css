@@ -37,7 +37,7 @@ body {
 }
 
 .main-container .navbar-container {
-  background: #333333;
+  background: transparent;
   border-bottom: 1px solid #1a1a1a;
   height: 50px;
   width: 100%;
@@ -126,13 +126,13 @@ body {
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 5px 2px #404040);
           filter: drop-shadow(0px 5px 2px #404040);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-size: 30px;
   left: 50%;
   letter-spacing: .1rem;
   opacity: .7;
   padding: 10px 15px;
   position: absolute;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -159,10 +159,10 @@ body {
 
 .main-container .recipes-container .recipes-title {
   color: #1a1a1a;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-size: 3rem;
   font-weight: 300;
   margin: 0;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
 .main-container .recipes-container .recipes-body {
@@ -405,7 +405,7 @@ body {
 }
 
 .main-container .form-container {
-  background: #666666;
+  background: #bfbfbf;
   border-bottom: 1px solid #0d0d0d;
   height: auto;
   padding: 80px;
@@ -414,8 +414,8 @@ body {
 
 .main-container .form-container .form-title {
   color: #1a1a1a;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-size: 4rem;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
 .main-container .form-container form {
@@ -423,11 +423,12 @@ body {
 }
 
 .main-container .form-container form fieldset.main-fieldset {
+  background: #d1d1d1;
   border-radius: 30px;
-  padding: 50px 25px 0px;
   border: 2px solid #3d120f;
   -webkit-box-shadow: 0px 2px 10px #3d120f;
           box-shadow: 0px 2px 10px #3d120f;
+  padding: 50px 25px 0px;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid {
@@ -441,18 +442,18 @@ body {
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid fieldset {
-  -webkit-box-shadow: inset 0px -8px 20px -10px #3d120f;
-          box-shadow: inset 0px -8px 20px -10px #3d120f;
+  border-radius: 25px;
   border: 3px solid #3d120f;
-  border-radius: 30px;
+  -webkit-box-shadow: inset 0px -8px 20px -12px #3d120f;
+          box-shadow: inset 0px -8px 20px -12px #3d120f;
   padding: 5px 20px;
   -webkit-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid legend {
-  font-size: 22px;
   color: #661d1a;
+  font-size: 22px;
   padding: 0 10px;
 }
 
@@ -460,7 +461,7 @@ body {
   background-color: transparent;
   border-color: transparent;
   border-radius: 10px;
-  color: white;
+  color: #111;
   font-size: 22px;
   margin: 0;
   padding-left: 5px;
@@ -492,7 +493,7 @@ body {
 .main-container .form-container form fieldset.main-fieldset .form-grid .recipe-list textarea[name="ingredient-list"] {
   background-color: transparent;
   border-color: transparent;
-  color: white;
+  color: #111;
   font-size: 22px;
   height: 230px;
   resize: none;
@@ -507,6 +508,7 @@ body {
   background-color: transparent;
   border-color: transparent;
   border-radius: 2px;
+  color: #111;
   font-size: 22px;
   -ms-grid-row: 2;
   grid-area: 2;
@@ -517,7 +519,6 @@ body {
   padding: 5px;
   resize: none;
   width: 100%;
-  color: white;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid .recipe-inst textarea[name="instruction"]:focus {
@@ -534,19 +535,19 @@ body {
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid .add-link input::-webkit-input-placeholder {
-  color: #999;
+  color: #777;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid .add-link input:-ms-input-placeholder {
-  color: #999;
+  color: #777;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid .add-link input::-ms-input-placeholder {
-  color: #999;
+  color: #777;
 }
 
 .main-container .form-container form fieldset.main-fieldset .form-grid .add-link input::placeholder {
-  color: #999;
+  color: #777;
 }
 
 .main-container .form-container form fieldset.main-fieldset input.form-button[type="submit"] {
@@ -556,13 +557,13 @@ body {
   cursor: pointer;
   -webkit-filter: drop-shadow(0px 8px 5px #404040);
           filter: drop-shadow(0px 8px 5px #404040);
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   font-size: 30px;
   left: 50%;
   letter-spacing: .1rem;
   opacity: .98;
   padding: 10px;
   position: relative;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
   top: 60px;
   -webkit-transform: translate(-50%, -50%);
@@ -574,16 +575,16 @@ body {
 
 .main-container .form-container form fieldset.main-fieldset input.form-button[type="submit"]:hover {
   background: #5a1a16;
-  opacity: 1;
   -webkit-filter: drop-shadow(0px 6px 5px #474747);
           filter: drop-shadow(0px 6px 5px #474747);
+  opacity: 1;
 }
 
 .main-container footer.footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #333333;
+  background: transparent;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
