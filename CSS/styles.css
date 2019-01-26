@@ -4,6 +4,8 @@
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -62,8 +64,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
-  list-style: none;
-  text-decoration: none;
 }
 
 .main-container .navbar-container .navbar-links ul li {
@@ -74,7 +74,6 @@ body {
 .main-container .navbar-container .navbar-links ul li a {
   color: #e6e6e6;
   letter-spacing: .1rem;
-  text-decoration: none;
   text-transform: uppercase;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -185,7 +184,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
   display: relative;
-  text-decoration: none;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
