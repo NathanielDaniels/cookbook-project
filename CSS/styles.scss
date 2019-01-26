@@ -176,6 +176,7 @@ body {
       margin-top: 30px;
       padding: 10px;
       .grid-item {
+        background-size: cover;
         // padding: 10px;
         border-radius: 10px;
         cursor: pointer;
@@ -185,48 +186,27 @@ body {
         &:hover {
           filter: drop-shadow(0px 10px 5px hsl(0,0,25));
         }
+        .hover-text {
+          @include hover-text();
+        }
       }
       .recipe1 {
         background-image: url("/IMG/recipe1.jpg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
       .recipe2 {
         background-image: url("/IMG/recipe2.jpeg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
     .recipe3 {
         background-image: url("/IMG/recipe3.jpg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
       .recipe4 {
         background-image: url("/IMG/recipe4.jpg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
       .recipe5 {
         background-image: url("/IMG/recipe5.jpg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
       .recipe6 {
         background-image: url("/IMG/recipe6.jpg");
-        background-size: cover;
-        .hover-text {
-          @include hover-text();
-        }
       }
     }
   }
@@ -236,8 +216,8 @@ body {
 \*------------------------------------*/
 
   .form-container {
-    background: hsl(0,0,75);
     // background: #96A1E3;
+    background: hsl(0,0,75);
     border-bottom: 1px solid hsl(0,0,5);
     height: auto;
     padding: 80px;
