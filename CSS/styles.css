@@ -167,17 +167,21 @@ body {
   -webkit-box-shadow: 0px 2px 5px #0d0d0d;
           box-shadow: 0px 2px 5px #0d0d0d;
   height: auto;
-  padding: 80px;
+  padding: 80px 0;
   width: 100%;
 }
 
 .main-container .recipes-container .recipes-title {
-  color: #1a1a1a;
-  font-size: 3rem;
+  text-align: center;
   margin: 0;
 }
 
 .main-container .recipes-container .recipes-title h1 {
+  color: #1a1a1a;
+  font-family: Rustico;
+  font-size: 6rem;
+  font-weight: 300;
+  height: 150px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
@@ -341,7 +345,7 @@ body {
   margin: 0;
   padding-left: 5px;
   position: relative;
-  top: -8px;
+  top: -10px;
   width: 100%;
 }
 
@@ -516,7 +520,7 @@ body {
     font-size: 8.5rem;
   }
   .recipes-container .recipes-title h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     position: static;
     text-align: center;
   }
@@ -564,27 +568,27 @@ body {
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 560px) {
   .main-container {
     width: auto;
   }
-  .navbar-links ul li {
+  .main-container .navbar-links ul li {
     font-size: 1rem !important;
     padding: 0 8px !important;
   }
-  .title-container .bg {
+  .main-container .title-container .bg {
     height: 600px !important;
   }
-  .title-container .main-title h1 {
+  .main-container .title-container .main-title h1 {
     font-size: 5rem !important;
   }
-  .recipes-container {
+  .main-container section.recipes-container {
     padding: 100px 5% 80px !important;
   }
-  .recipes-container .recipe-title h1 {
-    font-size: 2rem !important;
+  .main-container section.recipes-container .recipe-title h1.top-recipes-title {
+    font-size: .5rem !important;
   }
-  .recipes-container .recipes-body {
+  .main-container section.recipes-container .recipes-body {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[1] !important;
@@ -594,32 +598,33 @@ body {
     margin: 0 auto;
     width: 100%;
   }
-  section.form-container {
+  .main-container section.form-container {
     padding: 5% !important;
   }
-  section.form-container form.form fieldset.main-fieldset {
+  .main-container section.form-container form.form fieldset.main-fieldset {
     width: 100%;
   }
-  section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
+  .main-container section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
     font-size: 15px;
   }
-  section.form-container form.form fieldset.main-fieldset input:-ms-input-placeholder {
+  .main-container section.form-container form.form fieldset.main-fieldset input:-ms-input-placeholder {
     font-size: 15px;
   }
-  section.form-container form.form fieldset.main-fieldset input::-ms-input-placeholder {
+  .main-container section.form-container form.form fieldset.main-fieldset input::-ms-input-placeholder {
     font-size: 15px;
   }
-  section.form-container form.form fieldset.main-fieldset input::placeholder {
+  .main-container section.form-container form.form fieldset.main-fieldset input::placeholder {
     font-size: 15px;
   }
-  section.form-container form.form fieldset.main-fieldset input[type="submit"] {
+  .main-container section.form-container form.form fieldset.main-fieldset input[type="submit"] {
     width: 155px !important;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .main-container .recipes-container recipe-title {
-    font-size: 2rem !important;
+  top-recipes .recipes-container .recipe-title h1 {
+    font-size: .4rem !important;
+    line-height: .4 !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
