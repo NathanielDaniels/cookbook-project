@@ -53,10 +53,6 @@ body {
   width: 100%;
 }
 
-.main-container .navbar-container .navbar-links {
-  width: 100%;
-}
-
 .main-container .navbar-container .navbar-links:hover a {
   color: #999999;
 }
@@ -107,11 +103,33 @@ body {
   height: 650px;
 }
 
+.main-container .title-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
+          filter: drop-shadow(0px 5px 2px #1a1a1a);
+}
+
+.main-container .title-container .navbar a {
+  padding: 0 30px;
+  color: white;
+}
+
 .main-container .title-container .main-title {
   color: white;
-  left: 50%;
   letter-spacing: .1rem;
   position: absolute;
+  left: 50%;
   text-align: center;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -120,13 +138,13 @@ body {
 }
 
 .main-container .title-container .main-title h1 {
+  color: #eec990;
   -webkit-filter: drop-shadow(0px 10px 5px #0d0d0d);
           filter: drop-shadow(0px 10px 5px #0d0d0d);
+  font-family: Rustico;
   font-size: 10rem;
   font-weight: 300;
   line-height: 1.1;
-  font-family: Rustico;
-  color: #eec990;
 }
 
 .main-container .title-container button {
@@ -134,8 +152,8 @@ body {
   border-radius: 7px;
   color: white;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 5px 2px #7d4b12);
-          filter: drop-shadow(0px 5px 2px #7d4b12);
+  -webkit-filter: drop-shadow(0px 4px 2px #50300b);
+          filter: drop-shadow(0px 4px 2px #50300b);
   font-size: 30px;
   left: 50%;
   letter-spacing: .1rem;
@@ -152,8 +170,8 @@ body {
 
 .main-container .title-container button:hover {
   background: #4e1613;
-  -webkit-filter: drop-shadow(0px 1px 1px #7d4b12);
-          filter: drop-shadow(0px 1px 1px #7d4b12);
+  -webkit-filter: drop-shadow(0px 1px 1px #50300b);
+          filter: drop-shadow(0px 1px 1px #50300b);
   opacity: 1;
 }
 
@@ -439,8 +457,8 @@ body {
   border-radius: 7px;
   color: white;
   cursor: pointer;
-  -webkit-filter: drop-shadow(0px 5px 5px #0d0d0d);
-          filter: drop-shadow(0px 5px 5px #0d0d0d);
+  -webkit-filter: drop-shadow(0px 4px 2px #0d0d0d);
+          filter: drop-shadow(0px 4px 2px #0d0d0d);
   font-size: 30px;
   left: 50%;
   letter-spacing: .1rem;

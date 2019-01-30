@@ -65,7 +65,6 @@ body {
     height: 50px;
     width:  100%;
     .navbar-links {
-      width: 100%;
       &:hover a {
         color: hsl(0,0,60);
       }
@@ -99,9 +98,9 @@ body {
 \*------------------------------------*/
 
   .title-container {
-    // filter: drop-shadow(0px 5px 5px hsl(32, 75%, 28%));
     border-bottom: 1px solid hsl(0,0,20);
     filter: drop-shadow(0px 5px 5px hsl(0,0,10));
+    // border-bottom: none;
     .bg {
       background-image: url("/IMG/6817673-spices-wallpaper.jpg");
       background-position: center;
@@ -110,28 +109,36 @@ body {
       filter: opacity(.5);
       height: 650px;
     }
+    // .navbar {
+    //   display: flex;
+    //   flex-direction: row;
+    //   position: absolute;
+    //   top: 10px;
+    //   left: 50%;
+    //   transform: translate(-50%);
+    //   filter: drop-shadow(0px 5px 2px hsl(0,0,10));
+    //   a {
+    //     padding: 0 30px;
+    //     color: white;
+    //   }
+    // }
     .main-title {
       color: rgb(255,255,255);
-      left: 50%;
       letter-spacing: .1rem;
       position: absolute;
+      left: 50%;
       text-align: center;
       top: 50%;
       transform: translate(-50%, -50%);
       width: 100%;
       h1 {
+        // font-family: 'Finger Paint', cursive;
+        color: hsl(36, 74%, 75%);
         filter: drop-shadow(0px 10px 5px hsl(0,0,5));
+        font-family: Rustico;
         font-size: 10rem;
         font-weight: 300;
         line-height: 1.1;
-        // font-family: 'Finger Paint', cursive;
-        font-family: Rustico;
-        // color: #EBA877;
-        // color: #F1C98E;
-        // color: hsl(0,0,60);
-        // color: hsl(18, 36%, 70%);
-        // color: hsl(32, 75%, 68%);
-        color: hsl(36, 74%, 75%);
       }
     // /.title
     }
@@ -141,7 +148,7 @@ body {
       color: white;
       cursor: pointer;
       // filter: drop-shadow(0px 5px 2px hsl(32, 75%, 20%));
-      filter: drop-shadow(0px 5px 2px hsl(32, 75%, 28%));
+      filter: drop-shadow(0px 4px 2px hsl(32, 75%, 18%));
       font-size: 30px;
       left: 50%;
       letter-spacing: .1rem;
@@ -155,7 +162,7 @@ body {
       &:hover {
         background: hsl(3,60,19);
         // filter: drop-shadow(0px 0px 0px transparent);
-        filter: drop-shadow(0px 1px 1px hsl(32, 75%, 28%));
+        filter: drop-shadow(0px 1px 1px hsl(32, 75%, 18%));
         // filter: drop-shadow(0px 1px 1px hsl(32, 75%, 20%));
         opacity: 1;
         // box-shadow: none;
@@ -393,7 +400,7 @@ body {
           border-radius: 7px;
           color: white;
           cursor: pointer;
-          filter: drop-shadow(0px 5px 5px hsl(0,0,5));
+          filter: drop-shadow(0px 4px 2px hsl(0,0,5));
           font-size: 30px;
           left: 50%;
           letter-spacing: .1rem;
