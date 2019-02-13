@@ -66,53 +66,53 @@
     echo $str;
 -->
 
- <?php
+<?php
 
-    /* echo is like console.log but shows to the user.*/
-    /* Separate by "." */
-    echo "<p>Data Processed</>" . "</br>" . "</br>";
+/* echo is like console.log but shows to the user.*/
+/* Separate by "." */
+echo "<p>Data Processed</>" . "</br>" . "</br>";
 
-    /* Set the Timezone*/
-    date_default_timezone_set('UTC');
+/* Set the Timezone*/
+date_default_timezone_set('UTC');
 
-    /* Echos the Date
+/* Echos the Date
 
-        h : 12 hr format
-        H : 24 hr format
-        i : Minutes
-        s : Seconds
-        u : Microseconds
-        a : Lowercase AM or PM
-        l : Full text for the Day
-        F : Full text for the Month
-        j : Day of the Month
-        S : Suffix for the Day st, nd, rd, etc
-        Y : 4 digit year
-        e : Timezone
+h : 12 hr format
+H : 24 hr format
+i : Minutes
+s : Seconds
+u : Microseconds
+a : Lowercase AM or PM
+l : Full text for the Day
+F : Full text for the Month
+j : Day of the Month
+S : Suffix for the Day st, nd, rd, etc
+Y : 4 digit year
+e : Timezone
 
-    */
+*/
 
-    /* Post the Date */
-    echo date('h:i:s:u a, l F jS Y e') . "</br>" . "</br>";
-    /* 12hr, Minutes, Seconds, Microseconds, Lower am/pm, Full Day, Full Month, Day of Month + Suffix, 4 Digit Year, Timezone */
+/* Post the Date */
+echo date('h:i:s:u a, l F jS Y e') . "</br>" . "</br>";
+/* 12hr, Minutes, Seconds, Microseconds, Lower am/pm, Full Day, Full Month, Day of Month + Suffix, 4 Digit Year, Timezone */
 
-    /* ======================================================================= */
+/* ======================================================================= */
 
-    $recipeName = $_POST['Recipe-Name'];
-        $recipeList = $_POST['List'];
-        $recipeInst = $_POST['Instructions'];
-        $recipeLink = $_POST['Link'];
+$recipeName = $_POST['recipe-name'];
+$recipeList = $_POST['ingredient-list'];
+$recipeInst = $_POST['instruction'];
+$recipeLink = $_POST['fav-link'];
 
-        echo $recipeName . "</br>";
-        echo $recipeInst . "</br>";
-        echo $recipeLink . "</br>";
+echo $recipeName . "</br>";
+echo $recipeInst . "</br>";
+echo $recipeLink . "</br>";
 
-        $str = <<<EOD
-        The Recipe Name is $recipeName. </br> The Recipe List : $recipeList. </br> $recipeName Instructions : $recipeInst. </br> Link to your favorite Recipes Online : $recipeLink.
-        EOD;
+$str = <<<EOD
+The Recipe Name is $recipeName. </br> The Recipe List : $recipeList. </br> $recipeName Instructions : $recipeInst. </br> Link to your favorite Recipes Online : $recipeLink.
+EOD;
 
-        echo $str;
-  ?>
+echo $str;
+?>
   
  
 

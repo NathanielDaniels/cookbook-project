@@ -51,6 +51,7 @@ body {
   border-bottom: 1px solid #1a1a1a;
   height: 50px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .main-container .navbar-container .navbar-links:hover a {
@@ -101,28 +102,6 @@ body {
   -webkit-filter: opacity(0.5);
           filter: opacity(0.5);
   height: 650px;
-}
-
-.main-container .title-container .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
-  -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
-          filter: drop-shadow(0px 5px 2px #1a1a1a);
-}
-
-.main-container .title-container .navbar a {
-  padding: 0 30px;
-  color: white;
 }
 
 .main-container .title-container .main-title {
