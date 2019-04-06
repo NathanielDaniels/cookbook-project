@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Finger+Paint');
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Finger+Paint");
 
 @font-face {
   font-family: Rustico;
@@ -12,12 +12,12 @@
 }
 
 @mixin hover-text() {
-  @include centered(); 
+  @include centered();
   // top: 120px;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   color: #fff;
-  font-size: 1.1em; 
+  font-size: 1.1em;
   height: 100%;
   left: 0px;
   opacity: 0;
@@ -26,7 +26,7 @@
   text-align: center;
   text-transform: uppercase;
   top: 0px;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
   &:hover {
     opacity: 1;
   }
@@ -35,7 +35,7 @@
 * {
   box-sizing: border-box;
   font-family: sans-serif;
-  margin:  0;
+  margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
@@ -43,31 +43,30 @@
 }
 
 body {
-  background: hsl(0,0,20);
+  background: hsl(0, 0, 20);
 }
 /*------------------------------------*\
     #MAIN-CONTAINER
 \*------------------------------------*/
-  .main-container {
-    filter: drop-shadow(0px 5px 5px hsl(0,0,10));
-    margin: 0 auto;
-    width:  1200px;
-
+.main-container {
+  filter: drop-shadow(0px 5px 5px hsl(0, 0, 10));
+  margin: 0 auto;
+  width: 1200px;
 
   /*------------------------------------*\
     #NAVBAR-CONTAINER
 \*------------------------------------*/
 
   .navbar-container {
-    filter: drop-shadow(0px 5px 2px hsl(0,0,10));
+    filter: drop-shadow(0px 5px 2px hsl(0, 0, 10));
     background: transparent;
-    border-bottom: 1px solid hsl(0,0,10);
+    border-bottom: 1px solid hsl(0, 0, 10);
     height: 50px;
-    width:  100%;
+    width: 100%;
     margin: 0 auto;
     .navbar-links {
       &:hover a {
-        color: hsl(0,0,60);
+        color: hsl(0, 0, 60);
       }
       ul {
         @include centered();
@@ -76,38 +75,37 @@ body {
           font-size: 18px;
           padding: 0 30px;
           a {
-            color: hsl(0,0,90);
-            letter-spacing: .1rem;
+            color: hsl(0, 0, 90);
+            letter-spacing: 0.1rem;
             text-transform: uppercase;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             &:hover {
-                color: hsl(0,0,90);
+              color: hsl(0, 0, 90);
             }
           }
-        // /li    
+          // /li
         }
-      // /ul    
+        // /ul
       }
-    // /.navbar-links
+      // /.navbar-links
     }
-  // /.navbar-container
+    // /.navbar-container
   }
-
 
   /*------------------------------------*\
     #TITLE-CONTAINER (MAIN)
 \*------------------------------------*/
 
   .title-container {
-    border-bottom: 1px solid hsl(0,0,20);
-    filter: drop-shadow(0px 5px 5px hsl(0,0,10));
+    border-bottom: 1px solid hsl(0, 0, 20);
+    filter: drop-shadow(0px 5px 5px hsl(0, 0, 10));
     // border-bottom: none;
     .bg {
       background-image: url("/IMG/6817673-spices-wallpaper.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      filter: opacity(.5);
+      filter: opacity(0.5);
       height: 650px;
     }
     // .navbar {
@@ -124,8 +122,8 @@ body {
     //   }
     // }
     .main-title {
-      color: rgb(255,255,255);
-      letter-spacing: .1rem;
+      color: rgb(255, 255, 255);
+      letter-spacing: 0.1rem;
       position: absolute;
       left: 50%;
       text-align: center;
@@ -135,16 +133,16 @@ body {
       h1 {
         // font-family: 'Finger Paint', cursive;
         color: hsl(36, 74%, 75%);
-        filter: drop-shadow(0px 10px 5px hsl(0,0,5));
+        filter: drop-shadow(0px 10px 5px hsl(0, 0, 5));
         font-family: Rustico;
         font-size: 10rem;
         font-weight: 300;
         line-height: 1.1;
       }
-    // /.title
+      // /.title
     }
     button {
-      background: hsl(3,60,25);
+      background: hsl(3, 60, 25);
       border-radius: 7px;
       color: white;
       cursor: pointer;
@@ -152,16 +150,17 @@ body {
       filter: drop-shadow(0px 4px 2px hsl(32, 75%, 18%));
       font-size: 30px;
       left: 50%;
-      letter-spacing: .1rem;
-      opacity: .9;
+      letter-spacing: 0.1rem;
+      opacity: 0.9;
       padding: 10px 15px;
       position: absolute;
-      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+        0px -1px 0px rgba(0, 0, 0, 0.7);
       text-transform: uppercase;
       transform: translate(-50%, -50%);
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       &:hover {
-        background: hsl(3,60,19);
+        background: hsl(3, 60, 19);
         // filter: drop-shadow(0px 0px 0px transparent);
         filter: drop-shadow(0px 1px 1px hsl(32, 75%, 18%));
         // filter: drop-shadow(0px 1px 1px hsl(32, 75%, 20%));
@@ -171,11 +170,10 @@ body {
       a {
         color: white;
       }
-    // /button
+      // /button
     }
-  // /.title-container
+    // /.title-container
   }
-
 
   /*------------------------------------*\
     #RECIPE-SECTION (Top Recipes)
@@ -193,22 +191,23 @@ body {
     // background: hsl(0,0,60);
     // background: hsl(18, 36%, 70%);
     // background: hsl(32, 75%, 68%);
-    background: #EEC78E;
-    border-bottom: 1px solid hsl(0,0,5);
-    box-shadow: 0px 2px 5px hsl(0,0,5);
+    background: #eec78e;
+    border-bottom: 5px solid hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
     padding: 80px 0;
-    width:  100%;
+    width: 100%;
     .recipes-title {
       text-align: center;
       margin: 0;
       h1 {
-        color: hsl(0,0,10);
+        color: hsl(0, 0, 10);
         font-family: Rustico;
         font-size: 6rem;
         font-weight: 300;
         height: 150px;
-        text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+          0px -1px 0px rgba(0, 0, 0, 0.7);
       }
     }
     .recipes-body {
@@ -224,7 +223,7 @@ body {
         border-radius: 10px;
         cursor: pointer;
         display: relative;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         &:hover {
           filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
         }
@@ -253,7 +252,6 @@ body {
     }
   }
 
-
   /*------------------------------------*\
     #FORM-SECTION (Add a Recipe)
 \*------------------------------------*/
@@ -266,13 +264,14 @@ body {
     background-image: url("/IMG/form-bg.jpg");
     background-position: center;
     background-size: cover;
-    border-bottom: 1px solid hsl(0,0,5);
+    border-bottom: 4px solid hsl(0, 0, 0.5);
     height: auto;
-    width:  100%;
+    width: 100%;
     .form-title {
-      color: hsl(0,0,10);
+      color: hsl(0, 0, 10);
       font-size: 4rem;
-      text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+        0px -1px 0px rgba(0, 0, 0, 0.7);
     }
     form {
       padding: 50px 0;
@@ -282,8 +281,8 @@ body {
         background-image: url("/IMG/Wood-Grain.jpg");
         background-position: center;
         border-radius: 30px;
-        border: 2px solid hsl(3,60,15);
-        filter: drop-shadow(0px 6px 5px hsl(0,0,5));
+        border: 2px solid hsl(3, 60, 15);
+        filter: drop-shadow(0px 6px 5px hsl(0, 0, 5));
         left: 35%;
         padding: 40px 25px 0px;
         position: relative;
@@ -291,7 +290,7 @@ body {
         width: 60%;
         .form-grid {
           display: grid;
-          grid-gap: 20px;     
+          grid-gap: 20px;
           grid-template-columns: 250px auto;
           grid-template-rows: 75px 300px 75px;
           fieldset {
@@ -300,21 +299,21 @@ body {
             // filter: contrast(5%);
             border-radius: 25px;
             border: 3px solid hsl(28, 32%, 20%);
-            box-shadow: inset 0px -8px 20px -10px hsl(3,60,15);
+            box-shadow: inset 0px -8px 20px -10px hsl(3, 60, 15);
             filter: saturate(2);
             padding: 5px 20px;
-            transition: color .3s ease-in-out;
+            transition: color 0.3s ease-in-out;
           }
           legend {
             // color: hsl(3,60,25);
             color: hsl(28, 32%, 10%);
             filter: saturate(2);
-            font-family: 'Gloria Hallelujah', cursive;
+            font-family: "Gloria Hallelujah", cursive;
             font-size: 22px;
             font-weight: 600;
             // font-family: 'Indie Flower', cursive;
             padding: 0 10px;
-            position:relative;
+            position: relative;
             top: -5px;
           }
           input {
@@ -337,7 +336,7 @@ body {
           .recipe-name {
             grid-area: 1;
             grid-column: 1 / 3;
-          }                          
+          }
           .recipe-list {
             grid-area: 2;
             grid-column: 1 / 2;
@@ -350,7 +349,7 @@ body {
               font-weight: 600;
               height: 230px;
               position: relative;
-              resize: none; 
+              resize: none;
               top: -15px;
               width: 100%;
               &:focus {
@@ -373,7 +372,7 @@ body {
               grid-column: 2 / 3;
               height: 230px;
               position: relative;
-              resize: none; 
+              resize: none;
               top: -15px;
               width: 100%;
               &:focus {
@@ -388,70 +387,71 @@ body {
             grid-column: 1 / 3;
             input::placeholder {
               color: hsl(28, 32%, 10%);
-              
             }
           }
-        // /.form-grid
+          // /.form-grid
         }
         //SUBMIT BUTTON
         input.form-button[type="submit"] {
           // box-shadow: 0px 2px 10px hsl(3,60,15);
           // filter: drop-shadow(0px 6px 4px hsl(3,60,15));
-          background: hsl(3,60,25);
+          background: hsl(3, 60, 25);
           border-radius: 7px;
           color: white;
           cursor: pointer;
-          filter: drop-shadow(0px 4px 2px hsl(0,0,5));
+          filter: drop-shadow(0px 4px 2px hsl(0, 0, 5));
           font-size: 30px;
           left: 50%;
-          letter-spacing: .1rem;
-          opacity: .98;
+          letter-spacing: 0.1rem;
+          opacity: 0.98;
           padding: 10px;
           position: relative;
-          text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+          text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+            0px -1px 0px rgba(0, 0, 0, 0.7);
           text-transform: uppercase;
           top: 60px;
           transform: translate(-50%, -50%);
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
           width: 25%;
           &:hover {
-            background: hsl(3,60,22);
+            background: hsl(3, 60, 22);
             // filter: drop-shadow(0px 3px 4px hsl(3,60,15));
             // filter: drop-shadow(0px 2px 2px hsl(17, 12%, 20%));
-            filter: drop-shadow(0px 1px 1px hsl(0,0,5));
+            filter: drop-shadow(0px 1px 1px hsl(0, 0, 5));
             opacity: 1;
           }
-        // /Submit Button
+          // /Submit Button
         }
-      // /fieldset
+        // /fieldset
       }
-    // /form
+      // /form
     }
-  // /.form-container
+    // /.form-container
   }
 
-
-/*------------------------------------*\
+  .form-recipes {
+    width: 100%;
+    height: 500px;
+    background: #f1c98e;
+  }
+  /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
 
   footer.footer {
     align-items: center;
     background: transparent;
-    color: rgb(255,255,255);
+    color: rgb(255, 255, 255);
     display: flex;
     height: 50px;
     justify-content: center;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
-    width:  100%;
+    width: 100%;
   }
 
-
-// /.main-container
+  // /.main-container
 }
-
-
 
 //===============================================================================-------------
 // RESPONSIVE MEDIA
@@ -472,13 +472,13 @@ body {
   form {
     fieldset {
       .form-grid {
-          grid-template-columns: 1fr 2fr !important;
+        grid-template-columns: 1fr 2fr !important;
       }
-    // /fieldset
+      // /fieldset
     }
-  // /form
+    // /form
   }
-// /Media (1200px)
+  // /Media (1200px)
 }
 
 @media screen and (max-width: 900px) {
@@ -489,11 +489,11 @@ body {
         left: 50%;
         transform: translate(-50%);
       }
-    // /form
+      // /form
     }
-  // /section.form-container
+    // /section.form-container
   }
-// /@media(900px)
+  // /@media(900px)
 }
 
 @media screen and (max-width: 745px) {
@@ -506,7 +506,7 @@ body {
       // line-height: 1.1;
     }
   }
-  
+
   .recipes-container {
     // padding: 80px 150px !important;
     .recipes-title h1 {
@@ -554,16 +554,16 @@ body {
             width: 155px !important;
             // top: 150px !important;
           }
-        // /.form-grid
+          // /.form-grid
         }
-          // /fieldset
+        // /fieldset
       }
       // /form
     }
-  // /form-container
+    // /form-container
   }
-// /Media (720px)
-} 
+  // /Media (720px)
+}
 
 @media screen and (max-width: 560px) {
   .main-container {
@@ -592,7 +592,7 @@ body {
       padding: 100px 5% 80px !important;
       .recipe-title {
         h1.top-recipes-title {
-          font-size: .5rem !important;
+          font-size: 0.5rem !important;
         }
       }
       .recipes-body {
@@ -608,7 +608,7 @@ body {
       form.form {
         fieldset.main-fieldset {
           width: 100%;
-          input::placeholder{
+          input::placeholder {
             font-size: 15px;
           }
           input[type="submit"] {
@@ -616,13 +616,13 @@ body {
             // top: 96% !important;
           }
         }
-      // /form
+        // /form
       }
-    // /.form-container
+      // /.form-container
     }
   }
-  
-// /Media (540px)
+
+  // /Media (540px)
 }
 
 @media screen and (max-width: 480px) {
@@ -630,11 +630,11 @@ body {
     .recipes-container {
       .recipe-title {
         h1 {
-          font-size: .4rem !important;
-          line-height: .4 !important;
+          font-size: 0.4rem !important;
+          line-height: 0.4 !important;
         }
       }
     }
   }
-// /Media (480px)
+  // /Media (480px)
 }
