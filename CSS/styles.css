@@ -47,11 +47,7 @@ body {
 .main-container .navbar-container {
   -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
           filter: drop-shadow(0px 5px 2px #1a1a1a);
-  background: transparent;
   border-bottom: 1px solid #1a1a1a;
-  height: 50px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .main-container .navbar-container .navbar-links:hover a {

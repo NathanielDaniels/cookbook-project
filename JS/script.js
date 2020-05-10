@@ -1,3 +1,7 @@
+const formRecipes = document.getElementById("formRecipes");
+const recipesList = document.querySelector("#recipesList");
+const form = document.getElementsByClassName("recipe-name");
+
 $(function() {
   $(".main-title")
     .hide()
@@ -12,6 +16,3 @@ $(function() {
   // });
 });
 
-const formRecipes = document.getElementById("formRecipes");
-const recipesList = document.querySelector("#recipesList");
-const form = document.getElementsByClassName("recipe-name");
