@@ -44,46 +44,6 @@ body {
 \*------------------------------------*/
 }
 
-.main-container .navbar-container {
-  -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
-          filter: drop-shadow(0px 5px 2px #1a1a1a);
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.main-container .navbar-container .navbar-links:hover a {
-  color: #999999;
-}
-
-.main-container .navbar-container .navbar-links ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-}
-
-.main-container .navbar-container .navbar-links ul li {
-  font-size: 18px;
-  padding: 0 30px;
-}
-
-.main-container .navbar-container .navbar-links ul li a {
-  color: #e6e6e6;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.main-container .navbar-container .navbar-links ul li a:hover {
-  color: #e6e6e6;
-}
-
 .main-container .title-container {
   border-bottom: 1px solid #333333;
   -webkit-filter: drop-shadow(0px 5px 5px #1a1a1a);
@@ -110,15 +70,23 @@ body {
           flex-direction: row;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 20px;
   -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
           filter: drop-shadow(0px 5px 2px #1a1a1a);
 }
 
 .main-container .title-container .navbar a {
-  padding: 0 30px;
+  font-size: 18px;
   color: white;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container .title-container .navbar a:hover {
+  color: #f2d4a6;
 }
 
 .main-container .title-container .main-title {
@@ -212,6 +180,22 @@ body {
           justify-content: center;
   margin-top: 30px;
   padding: 10px;
+}
+
+.main-container .recipes-container .recipes-body .prev {
+  font-size: 2rem;
+  position: absolute;
+  left: 4rem;
+  top: 165vh;
+  cursor: pointer;
+}
+
+.main-container .recipes-container .recipes-body .next {
+  font-size: 2rem;
+  position: absolute;
+  right: 4rem;
+  top: 165vh;
+  cursor: pointer;
 }
 
 .main-container .recipes-container .recipes-body .grid-item {
