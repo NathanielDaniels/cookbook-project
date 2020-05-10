@@ -97,7 +97,28 @@ body {
   background-size: cover;
   -webkit-filter: opacity(0.5);
           filter: opacity(0.5);
-  height: 650px;
+  height: 92vh;
+}
+
+.main-container .title-container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  -webkit-filter: drop-shadow(0px 5px 2px #1a1a1a);
+          filter: drop-shadow(0px 5px 2px #1a1a1a);
+}
+
+.main-container .title-container .navbar a {
+  padding: 0 30px;
+  color: white;
+  letter-spacing: 0.15rem;
 }
 
 .main-container .title-container .main-title {
