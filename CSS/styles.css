@@ -183,20 +183,21 @@ body {
   padding: 10px;
 }
 
-.main-container .recipes-container .recipes-body .prev {
-  font-size: 2rem;
+.main-container .recipes-container .recipes-body .prev,
+.main-container .recipes-container .recipes-body .next {
+  font-family: Rustico;
+  font-size: 4rem;
   position: absolute;
-  left: 4rem;
-  top: 165vh;
+  top: 160vh;
   cursor: pointer;
 }
 
+.main-container .recipes-container .recipes-body .prev {
+  left: 4rem;
+}
+
 .main-container .recipes-container .recipes-body .next {
-  font-size: 2rem;
-  position: absolute;
   right: 4rem;
-  top: 165vh;
-  cursor: pointer;
 }
 
 .main-container .recipes-container .recipes-body .grid-item {

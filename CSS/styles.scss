@@ -222,19 +222,19 @@ body {
       justify-content: center;
       margin-top: 30px;
       padding: 10px;
-      .prev {
-        font-size: 2rem;
+      .prev,
+      .next {
+        font-family: Rustico;
+        font-size: 4rem;
         position: absolute;
-        left: 4rem;
-        top: 165vh;
+        top: 160vh;
         cursor: pointer;
       }
+      .prev {
+        left: 4rem;
+      }
       .next {
-        font-size: 2rem;
-        position: absolute;
         right: 4rem;
-        top: 165vh;
-        cursor: pointer;
       }
       .grid-item {
         background-size: cover;
