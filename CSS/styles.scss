@@ -216,6 +216,23 @@ body {
           0px -1px 0px rgba(0, 0, 0, 0.7);
       }
     }
+    .recipe-arrows {
+      position: absolute;
+      .prev,
+      .next {
+        font-family: Rustico;
+        font-size: 4rem;
+        position: relative;
+        top: 200px;
+        cursor: pointer;
+      }
+      .prev {
+        left: 4rem;
+      }
+      .next {
+        right: 0;
+      }
+    }
     .recipes-body {
       display: grid;
       grid-gap: 20px;
@@ -224,20 +241,20 @@ body {
       justify-content: center;
       margin-top: 30px;
       padding: 10px;
-      .prev,
-      .next {
-        font-family: Rustico;
-        font-size: 4rem;
-        position: absolute;
-        top: 160vh;
-        cursor: pointer;
-      }
-      .prev {
-        left: 4rem;
-      }
-      .next {
-        right: 4rem;
-      }
+      // .prev,
+      // .next {
+      //   font-family: Rustico;
+      //   font-size: 4rem;
+      //   position: relative;
+      //   top: 50vh;
+      //   cursor: pointer;
+      // }
+      // .prev {
+      //   left: 4rem;
+      // }
+      // .next {
+      //   right: 4rem;
+      // }
       .grid-item {
         background-size: cover;
         border-radius: 10px;
