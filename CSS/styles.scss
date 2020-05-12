@@ -146,6 +146,8 @@ body {
       // /.title
     }
     button {
+      opacity: 0;
+      bottom: -80px;
       background: hsl(3, 60, 25);
       border-radius: 7px;
       color: white;
@@ -155,7 +157,7 @@ body {
       font-size: 30px;
       left: 50%;
       letter-spacing: 0.1rem;
-      opacity: 0.9;
+      // opacity: 0.9;
       padding: 10px 15px;
       position: absolute;
       text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
