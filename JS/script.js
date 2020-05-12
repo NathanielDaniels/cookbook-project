@@ -4,6 +4,7 @@ const form = document.getElementsByClassName("recipe-name");
 
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
+  $("#btn").hide().delay(200).fadeIn(1000);
 
   // $(window).scroll(function() {
   //   $(".recipes-title")
