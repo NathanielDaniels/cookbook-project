@@ -147,6 +147,8 @@ body {
 
 .main-container .recipes-container {
   background: #eec78e;
+  position: relative;
+  z-index: -1;
   border-bottom: 5px solid #010101;
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
@@ -171,6 +173,8 @@ body {
 
 .main-container .recipes-container .recipe-arrows {
   position: absolute;
+  width: 1200px;
+  top: 27rem;
 }
 
 .main-container .recipes-container .recipe-arrows .prev,
@@ -178,16 +182,36 @@ body {
   font-family: Rustico;
   font-size: 4rem;
   position: relative;
-  top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
   cursor: pointer;
 }
 
-.main-container .recipes-container .recipe-arrows .prev {
-  left: 4rem;
+.main-container .recipes-container .recipe-arrows .prev-arrow {
+  float: left;
 }
 
-.main-container .recipes-container .recipe-arrows .next {
-  right: 0;
+.main-container .recipes-container .recipe-arrows .prev-arrow .prev {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding-left: 50px;
+}
+
+.main-container .recipes-container .recipe-arrows .next-arrow {
+  float: right;
+}
+
+.main-container .recipes-container .recipe-arrows .next-arrow .next {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding-right: 50px;
 }
 
 .main-container .recipes-container .recipes-body {

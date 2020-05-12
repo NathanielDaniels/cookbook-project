@@ -198,6 +198,8 @@ body {
     // background: hsl(18, 36%, 70%);
     // background: hsl(32, 75%, 68%);
     background: #eec78e;
+    position: relative;
+    z-index: -1;
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
@@ -218,19 +220,31 @@ body {
     }
     .recipe-arrows {
       position: absolute;
+      width: 1200px;
+      top: 27rem;
       .prev,
       .next {
         font-family: Rustico;
         font-size: 4rem;
         position: relative;
-        top: 200px;
+        display: flex;
+        align-items: center;
+        width: 50%;
         cursor: pointer;
       }
-      .prev {
-        left: 4rem;
+      .prev-arrow {
+        float: left;
+        .prev {
+          justify-content: left;
+          padding-left: 50px;
+        }
       }
-      .next {
-        right: 0;
+      .next-arrow {
+        float: right;
+        .next {
+          justify-content: right;
+          padding-right: 50px;
+        }
       }
     }
     .recipes-body {
@@ -241,20 +255,6 @@ body {
       justify-content: center;
       margin-top: 30px;
       padding: 10px;
-      // .prev,
-      // .next {
-      //   font-family: Rustico;
-      //   font-size: 4rem;
-      //   position: relative;
-      //   top: 50vh;
-      //   cursor: pointer;
-      // }
-      // .prev {
-      //   left: 4rem;
-      // }
-      // .next {
-      //   right: 4rem;
-      // }
       .grid-item {
         background-size: cover;
         border-radius: 10px;
