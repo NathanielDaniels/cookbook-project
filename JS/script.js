@@ -4,7 +4,7 @@ const form = document.getElementsByClassName("recipe-name");
 
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
-  $("#btn").hide().delay(100).fadeIn(2000).animate({
+  $("#btn").hide().delay(100).fadeIn(1000).animate({
     bottom: "-55px",
     opacity: 0.9,
   });
