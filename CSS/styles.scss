@@ -221,7 +221,7 @@ body {
     .recipe-arrows {
       position: absolute;
       width: 1200px;
-      top: 27rem;
+      top: 28.5rem;
       .prev,
       .next {
         font-family: Rustico;
@@ -229,21 +229,28 @@ body {
         position: relative;
         display: flex;
         align-items: center;
-        width: 50%;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
         cursor: pointer;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: hsl(36, 74%, 60%);
+        }
       }
       .prev-arrow {
         float: left;
+        padding-left: 50px;
         .prev {
-          justify-content: left;
-          padding-left: 50px;
+          // align-items: center;
         }
       }
       .next-arrow {
         float: right;
+        padding-right: 50px;
         .next {
-          justify-content: right;
-          padding-right: 50px;
+          // float: right;
         }
       }
     }
@@ -266,6 +273,9 @@ body {
         }
         .hover-text {
           @include hover-text();
+          // p {
+          //   color: hsl(36, 74%, 80%);
+          // }
         }
       }
       .recipe1 {
@@ -526,6 +536,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .recipe-arrows {
+    display: none;
+  }
   section.form-container {
     form.form {
       fieldset.main-fieldset {

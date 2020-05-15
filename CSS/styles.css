@@ -174,7 +174,7 @@ body {
 .main-container .recipes-container .recipe-arrows {
   position: absolute;
   width: 1200px;
-  top: 27rem;
+  top: 28.5rem;
 }
 
 .main-container .recipes-container .recipe-arrows .prev,
@@ -188,29 +188,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container .recipes-container .recipe-arrows .prev:hover,
+.main-container .recipes-container .recipe-arrows .next:hover {
+  background-color: #e4a84e;
 }
 
 .main-container .recipes-container .recipe-arrows .prev-arrow {
   float: left;
-}
-
-.main-container .recipes-container .recipe-arrows .prev-arrow .prev {
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   padding-left: 50px;
 }
 
 .main-container .recipes-container .recipe-arrows .next-arrow {
   float: right;
-}
-
-.main-container .recipes-container .recipe-arrows .next-arrow .next {
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
   padding-right: 50px;
 }
 
@@ -553,6 +553,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .recipe-arrows {
+    display: none;
+  }
   section.form-container form.form fieldset.main-fieldset {
     width: 80%;
     left: 50%;
