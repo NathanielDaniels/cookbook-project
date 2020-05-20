@@ -6,6 +6,7 @@ const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
 const recipes = document.querySelectorAll(".grid-item");
 
+//! Hero Animations =====================================
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
   $("#btn").hide().delay(100).fadeIn(1000).animate({
@@ -14,8 +15,8 @@ $(function () {
   });
 });
 
+//! Top Recipe Arrows =====================================
 let counter = 0;
-console.log(counter);
 prevArrow.addEventListener("click", () => {
   counter--;
   console.log(counter);

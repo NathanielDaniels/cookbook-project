@@ -186,17 +186,6 @@ body {
 \*------------------------------------*/
 
   .recipes-container {
-    // background-image: url('/IMG/veggie-face-bg.jpg');
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // // background-size: cover;
-    // // background-size: 200%;
-    //========================
-    // background: #EBA877;
-    // background: #F1C98E;
-    // background: hsl(0,0,60);
-    // background: hsl(18, 36%, 70%);
-    // background: hsl(32, 75%, 68%);
     background: #eec78e;
     position: relative;
     z-index: -1;
@@ -206,7 +195,6 @@ body {
     padding: 80px 0;
     width: 100%;
     overflow: hidden;
-
     .recipes-title {
       text-align: center;
       margin: 0;
@@ -222,8 +210,10 @@ body {
     }
     .recipe-arrows {
       position: absolute;
-      width: 1200px;
-      top: 28.5rem;
+      // width: 1200px;
+      width: 100%;
+      // top: 28.5rem;
+      top: 57%;
       .prev,
       .next {
         font-family: Rustico;
@@ -244,24 +234,20 @@ body {
       .prev-arrow {
         float: left;
         padding-left: 50px;
-        z-index: 1000000;
-        .prev {
-          // align-items: center;
-        }
+        // z-index: 1000000;
       }
       .next-arrow {
         float: right;
         padding-right: 50px;
-        z-index: 1;
-        .next {
-          // float: right;
-        }
+        // z-index: 1;
       }
     }
     .recipes-body {
       display: grid;
       grid-gap: 20px;
-      width: 980px;
+      // width: 980px;
+      width: 80%;
+      // background: blue;
       margin: auto;
       grid-template-columns: repeat(3, 300px);
       grid-template-rows: repeat(2, 200px);
@@ -525,6 +511,7 @@ body {
       text-align: center;
     }
     .recipes-body {
+      width: 70%;
       display: grid;
       grid-template-columns: repeat(2, 1fr) !important;
       grid-template-rows: repeat(3, 200px) !important;
@@ -543,6 +530,10 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .recipe-body {
+    width: 80%;
+  }
+
   .recipe-arrows {
     display: none;
   }
@@ -664,7 +655,7 @@ body {
         grid-template-columns: repeat(1, 1fr) !important;
         grid-template-rows: repeat(6, 200px) !important;
         margin: 0 auto;
-        width: 100%;
+        width: 80%;
       }
     }
     section.form-container {
