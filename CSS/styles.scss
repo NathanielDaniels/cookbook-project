@@ -261,11 +261,14 @@ body {
     .recipes-body {
       display: grid;
       grid-gap: 20px;
+      width: 980px;
+      margin: auto;
       grid-template-columns: repeat(3, 300px);
       grid-template-rows: repeat(2, 200px);
       justify-content: center;
       margin-top: 30px;
       padding: 10px;
+      overflow: hidden;
       .grid-item {
         position: relative;
         background-size: cover;
@@ -284,7 +287,8 @@ body {
       }
       .recipe1 {
         background-image: url("/IMG/recipe1.jpg");
-        .recipe2 {
+      }
+      .recipe2 {
         background-image: url("/IMG/recipe2.jpeg");
       }
       .recipe3 {

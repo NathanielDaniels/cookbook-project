@@ -221,6 +221,8 @@ body {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
+  width: 980px;
+  margin: auto;
   -ms-grid-columns: (300px)[3];
       grid-template-columns: repeat(3, 300px);
   -ms-grid-rows: (200px)[2];
@@ -230,6 +232,7 @@ body {
           justify-content: center;
   margin-top: 30px;
   padding: 10px;
+  overflow: hidden;
 }
 
 .main-container .recipes-container .recipes-body .grid-item {
