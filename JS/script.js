@@ -13,20 +13,17 @@ $(function () {
   });
 });
 
-let currentLocation = "0";
 prevArrow.addEventListener("click", () => {
-  console.log("clicked");
-
   for (let i = 0; i < recipes.length; i++) {
+    let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 300;
     recipes[i].style.position = "relative";
-    recipes[i].style.left = `-${currentLocation}px`;
+    recipes[i].style.left = moveLeft + "px";
   }
 });
 nextArrow.addEventListener("click", () => {
-  console.log("clicked");
-
   for (let i = 0; i < recipes.length; i++) {
+    let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 300;
     recipes[i].style.position = "relative";
-    recipes[i].style.left = `${currentLocation}px`;
+    recipes[i].style.left = moveRight + "px";
   }
 });
