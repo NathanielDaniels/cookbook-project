@@ -155,6 +155,7 @@ body {
   height: auto;
   padding: 80px 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .main-container .recipes-container .recipes-title {
@@ -207,11 +208,13 @@ body {
 .main-container .recipes-container .recipe-arrows .prev-arrow {
   float: left;
   padding-left: 50px;
+  z-index: 1000000;
 }
 
 .main-container .recipes-container .recipe-arrows .next-arrow {
   float: right;
   padding-right: 50px;
+  z-index: 1;
 }
 
 .main-container .recipes-container .recipes-body {
@@ -230,10 +233,10 @@ body {
 }
 
 .main-container .recipes-container .recipes-body .grid-item {
+  position: relative;
   background-size: cover;
   border-radius: 10px;
   cursor: pointer;
-  display: relative;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
