@@ -5,14 +5,6 @@ const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
 const recipes = document.querySelectorAll(".grid-item");
 
-console.log(recipes);
-
-function recipeList() {
-  for (recipe of recipes) {
-    console.log(recipe);
-  }
-}
-
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
   $("#btn").hide().delay(100).fadeIn(1000).animate({
@@ -21,10 +13,20 @@ $(function () {
   });
 });
 
+let currentLocation = "0";
 prevArrow.addEventListener("click", () => {
   console.log("clicked");
-  // recipes.style.position = "relative";
-  // recipes.style.left = "-300px";
-  lastRecipe.style.position = "relative";
-  lastRecipe.style.left = "-300px";
+
+  for (let i = 0; i < recipes.length; i++) {
+    recipes[i].style.position = "relative";
+    recipes[i].style.left = `-${currentLocation}px`;
+  }
+});
+nextArrow.addEventListener("click", () => {
+  console.log("clicked");
+
+  for (let i = 0; i < recipes.length; i++) {
+    recipes[i].style.position = "relative";
+    recipes[i].style.left = `${currentLocation}px`;
+  }
 });
