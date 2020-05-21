@@ -35,6 +35,9 @@ body {
     #TITLE-CONTAINER (MAIN)
 \*------------------------------------*/
   /*------------------------------------*\
+    #About-SECTION 
+\*------------------------------------*/
+  /*------------------------------------*\
     #RECIPE-SECTION (Top Recipes)
 \*------------------------------------*/
   /*------------------------------------*\
@@ -77,6 +80,7 @@ body {
 }
 
 .main-container .title-container .navbar a {
+  font-family: Rustico;
   font-size: 18px;
   color: white;
   letter-spacing: 0.1rem;
@@ -143,6 +147,37 @@ body {
 
 .main-container .title-container button a {
   color: white;
+}
+
+.main-container .about-section {
+  width: 100%;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f5debc;
+  border-bottom: 5px solid black;
+  padding: 50px;
+}
+
+.main-container .about-section p {
+  font-family: Rustico;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main-container .about-section p:nth-child(2) {
+  margin-top: 20px;
 }
 
 .main-container .recipes-container {

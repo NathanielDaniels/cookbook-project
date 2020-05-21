@@ -1,6 +1,8 @@
-const formRecipes = document.getElementById("formRecipes");
-const recipesList = document.querySelector("#recipesList");
-const form = document.getElementsByClassName("recipe-name");
+// const formRecipes = document.getElementById("formRecipes");
+// const recipesList = document.querySelector("#recipesList");
+// const form = document.getElementsByClassName("recipe-name");
+
+const form = document.querySelector("#form");
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
@@ -51,3 +53,17 @@ nextArrow.addEventListener("click", () => {
     nextArrow.disabled = true;
   }
 });
+
+//! FORM DATA =====================================
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+
+  let response = await fetch("../formData.json", {
+    method: "POST",
+    body: new FormData(form),
+  });
+  let result = await response.json();
+
+  alert(result.message);
+};
