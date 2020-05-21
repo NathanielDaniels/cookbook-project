@@ -8,6 +8,7 @@ const recipes = document.querySelectorAll(".grid-item");
 
 const form = document.forms[0];
 console.log(form);
+const firstRecipe = document.querySelector(".firstRecipe");
 //! Hero Animations =====================================
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
@@ -61,21 +62,31 @@ formData.append("key1", "value1");
 
 // console.log(formData);
 
+let formInfo = {};
+// firstRecipe.push(formInfo);
+
 form.onsubmit = async (e) => {
   e.preventDefault();
 
   const nameValue = form.querySelector('input[type="text"]').value;
   console.log(nameValue);
+  formInfo.name = nameValue;
 
   const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
     .value;
   console.log(ingredientsValue);
+  formInfo.ingredients = ingredientsValue;
+
   const instructionsValue = form.querySelector('textarea[name="instruction"]')
     .value;
   console.log(instructionsValue);
+  formInfo.instructions = instructionsValue;
 
   const favLinkValue = form.querySelector('input[name="favLink"]').value;
   console.log(favLinkValue);
+  formInfo.website = favLinkValue;
+
+  console.log(formInfo);
 
   // let response = await fetch("", {
   //   method: "POST",
