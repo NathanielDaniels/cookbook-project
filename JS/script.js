@@ -7,8 +7,7 @@ const nextArrow = document.querySelector(".next-arrow");
 const recipes = document.querySelectorAll(".grid-item");
 
 const form = document.forms[0];
-console.log(form);
-const firstRecipe = document.querySelector(".firstRecipe");
+// console.log(form);
 //! Hero Animations =====================================
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
@@ -56,13 +55,21 @@ nextArrow.addEventListener("click", () => {
 });
 
 //! FORM DATA =====================================
+const recipeLocation = document.createElement("div");
+recipeLocation.classList = "recipeLocation";
+const firstRecipe = document.querySelector(".firstRecipe");
 
-let formData = new FormData();
-formData.append("key1", "value1");
+// console.log(firstRecipe);
+
+// console.log(recipeLocation);
+
+// let formData = new FormData();
+// formData.append("key1", "value1");
 
 // console.log(formData);
 
 let formInfo = {};
+
 // firstRecipe.push(formInfo);
 
 form.onsubmit = async (e) => {
@@ -75,18 +82,29 @@ form.onsubmit = async (e) => {
   const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
     .value;
   // console.log(ingredientsValue);
+
+  //! creating list for ingredients
+  // function list(ingredientsValue) {
+  //   return `<li>${ingredientsValue}</li>`;
+  // }
+
   formInfo.ingredients = ingredientsValue;
+  // formInfo.ingredients = list(ingredientsValue);
 
   const instructionsValue = form.querySelector('textarea[name="instruction"]')
     .value;
-  console.log(instructionsValue);
+  // console.log(instructionsValue);
   formInfo.instructions = instructionsValue;
 
   const favLinkValue = form.querySelector('input[name="favLink"]').value;
   // console.log(favLinkValue);
   formInfo.website = favLinkValue;
 
+  const file = form.querySelector('input[type="file"]');
+  console.log(file);
+
   console.log(formInfo);
+  firstRecipe.append(formInfo);
 
   // let response = await fetch("", {
   //   method: "POST",
@@ -97,6 +115,7 @@ form.onsubmit = async (e) => {
   // let result = await response.json();
 
   // alert(result.message);
+  recipeLocation.append(formInfo);
 };
 
 // console.log(document.forms);

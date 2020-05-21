@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Simone's Cookbook</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/CSS/styles.css" />
   </head>
 
@@ -37,8 +38,12 @@
         <!-- /.title-container -->
       </section>
       <section class="about-section">
-        <p>Simone is a food photographer and home cook<br> who knows her way around a spice rack !</p>
-        <p>This is just a piece of her Legacy...</p>
+        <!-- <div class="arrow-up"></div> -->
+        <div class="backboard">
+          <p>Simone is a food photographer and home cook<br> who knows her way around a spice rack !</p>
+          <p>This is just a piece of her Legacy...</p>
+
+        </div>
       </section>
 
       <section class="recipes-container" id="top-recipes" >
@@ -250,6 +255,12 @@
                   autocomplete="off"
                 />
                 <!-- value="<?=$varFavoriteLink;?>"  -->
+              </fieldset>
+              <fieldset class="file">
+                <legend for="file">Image</legend>
+                <input type="file" name="file"/>
+                <i class="fa fa-cloud-upload"><span>Click Here to add Image</span></i> 
+                <!-- <span>Custom Upload</span> -->
               </fieldset>
             </div>
             <input
