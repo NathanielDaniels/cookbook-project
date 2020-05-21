@@ -22,7 +22,7 @@ $(function () {
 let counter = 0;
 prevArrow.addEventListener("click", () => {
   counter--;
-  console.log(counter);
+  // console.log(counter);
   if (counter >= -3 && counter <= 3) {
     counter--;
     for (let i = 0; i < recipes.length; i++) {
@@ -39,7 +39,7 @@ prevArrow.addEventListener("click", () => {
 });
 nextArrow.addEventListener("click", () => {
   counter++;
-  console.log(counter);
+  // console.log(counter);
   if (counter <= 3 && counter >= -3) {
     counter++;
     for (let i = 0; i < recipes.length; i++) {
@@ -69,12 +69,12 @@ form.onsubmit = async (e) => {
   e.preventDefault();
 
   const nameValue = form.querySelector('input[type="text"]').value;
-  console.log(nameValue);
+  // console.log(nameValue);
   formInfo.name = nameValue;
 
   const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
     .value;
-  console.log(ingredientsValue);
+  // console.log(ingredientsValue);
   formInfo.ingredients = ingredientsValue;
 
   const instructionsValue = form.querySelector('textarea[name="instruction"]')
@@ -83,7 +83,7 @@ form.onsubmit = async (e) => {
   formInfo.instructions = instructionsValue;
 
   const favLinkValue = form.querySelector('input[name="favLink"]').value;
-  console.log(favLinkValue);
+  // console.log(favLinkValue);
   formInfo.website = favLinkValue;
 
   console.log(formInfo);
