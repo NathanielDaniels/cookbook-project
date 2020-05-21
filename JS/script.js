@@ -2,12 +2,12 @@
 // const recipesList = document.querySelector("#recipesList");
 // const form = document.getElementsByClassName("recipe-name");
 
-const form = document.querySelector("#form");
-
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
 const recipes = document.querySelectorAll(".grid-item");
 
+const form = document.forms[0];
+console.log(form);
 //! Hero Animations =====================================
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
@@ -56,14 +56,36 @@ nextArrow.addEventListener("click", () => {
 
 //! FORM DATA =====================================
 
+let formData = new FormData();
+formData.append("key1", "value1");
+
+// console.log(formData);
+
 form.onsubmit = async (e) => {
   e.preventDefault();
 
-  let response = await fetch("../formData.json", {
-    method: "POST",
-    body: new FormData(form),
-  });
-  let result = await response.json();
+  const nameValue = form.querySelector('input[type="text"]').value;
+  console.log(nameValue);
 
-  alert(result.message);
+  const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
+    .value;
+  console.log(ingredientsValue);
+  const instructionsValue = form.querySelector('textarea[name="instruction"]')
+    .value;
+  console.log(instructionsValue);
+
+  const favLinkValue = form.querySelector('input[name="favLink"]').value;
+  console.log(favLinkValue);
+
+  // let response = await fetch("", {
+  //   method: "POST",
+  //   body: new FormData(form),
+  // });
+
+  // console.log(response);
+  // let result = await response.json();
+
+  // alert(result.message);
 };
+
+// console.log(document.forms);
