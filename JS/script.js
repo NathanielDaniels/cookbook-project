@@ -61,8 +61,6 @@ const firstRecipe = document.querySelector(".firstRecipe");
 
 // console.log(firstRecipe);
 
-// console.log(recipeLocation);
-
 // let formData = new FormData();
 // formData.append("key1", "value1");
 
