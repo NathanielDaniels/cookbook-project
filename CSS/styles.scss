@@ -375,10 +375,13 @@ body {
             right: 3px;
             bottom: 3px;
             background: #e74c3c;
+            // background: hsl(3, 60, 25);
+
             border-radius: 50%;
           }
           &.active {
             border: 2px solid #3498db;
+            // border: 2px solid whitesmoke;
           }
         }
       }
