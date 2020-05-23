@@ -125,14 +125,14 @@ body {
   -webkit-filter: drop-shadow(0px 4px 2px #50300b);
           filter: drop-shadow(0px 4px 2px #50300b);
   font-size: 30px;
+  padding: 10px 15px;
   position: absolute;
   left: 50%;
-  letter-spacing: 0.1rem;
-  padding: 10px 15px;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -266,8 +266,8 @@ body {
   grid-gap: 20px;
   width: 80%;
   margin: auto;
-  -ms-grid-columns: (300px)[6];
-      grid-template-columns: repeat(6, 300px);
+  -ms-grid-columns: (300px)[7];
+      grid-template-columns: repeat(7, 300px);
   -ms-grid-rows: (200px)[2];
       grid-template-rows: repeat(2, 200px);
   -webkit-box-pack: center;
@@ -360,6 +360,63 @@ body {
 
 .main-container .recipes-container .recipes-body .recipe10 {
   background-image: url("/IMG/recipe6.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe11 {
+  background-image: url("/IMG/recipe5.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe12 {
+  background-image: url("/IMG/recipe6.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe13 {
+  background-image: url("/IMG/recipe5.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe14 {
+  background-image: url("/IMG/recipe6.jpg");
+}
+
+.main-container .recipes-container .pagination-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container .recipes-container .pagination-wrapper .pagination {
+  position: relative;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.main-container .recipes-container .pagination-wrapper .pagination span {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.main-container .recipes-container .pagination-wrapper .pagination span:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+
+.main-container .recipes-container .pagination-wrapper .pagination span.active {
+  border: 2px solid #3498db;
 }
 
 .main-container .form-container {
