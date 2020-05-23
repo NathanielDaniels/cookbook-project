@@ -236,7 +236,7 @@ body {
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
-    padding: 40px 0 40px;
+    padding: 40px 0 60px;
     width: 100%;
     overflow: hidden;
     .recipes-title {
@@ -254,10 +254,8 @@ body {
     }
     .recipe-arrows {
       position: absolute;
-      // width: 1200px;
       width: 100%;
-      // top: 28.5rem;
-      top: 57%;
+      top: 55%;
       .prev,
       .next {
         font-family: Rustico;

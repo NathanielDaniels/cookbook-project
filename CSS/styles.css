@@ -198,7 +198,7 @@ body {
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
   height: auto;
-  padding: 40px 0 40px;
+  padding: 40px 0 60px;
   width: 100%;
   overflow: hidden;
 }
@@ -220,7 +220,7 @@ body {
 .main-container .recipes-container .recipe-arrows {
   position: absolute;
   width: 100%;
-  top: 57%;
+  top: 55%;
 }
 
 .main-container .recipes-container .recipe-arrows .prev,
