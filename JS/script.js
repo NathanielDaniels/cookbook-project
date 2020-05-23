@@ -18,6 +18,9 @@ $(function () {
 });
 
 //! Top Recipe Arrows =====================================
+let pagination = document.querySelector(".pagination");
+let dots = pagination.children;
+
 let counter = 0;
 prevArrow.addEventListener("click", () => {
   counter++;
@@ -35,6 +38,16 @@ prevArrow.addEventListener("click", () => {
     // recipes.disabled = true;
     nextArrow.disabled = true;
   }
+  function dotsLeft() {
+    for (let i = 0; i < dots.length; i++) {
+      if (dots[i].classList.value === "active") {
+        dots[i].classList.remove("active");
+        dots[i - 1].classList.add("active");
+      }
+    }
+  }
+
+  dotsLeft();
 });
 
 nextArrow.addEventListener("click", () => {
@@ -53,6 +66,16 @@ nextArrow.addEventListener("click", () => {
     // recipes.disabled = true;
     prevArrow.disabled = true;
   }
+  function dotsRight() {
+    for (let i = 0; i < dots.length; i++) {
+      if (dots[i].classList.value === "active") {
+        dots[i].classList.remove("active");
+        dots[(i += 1)].classList.add("active");
+      }
+    }
+  }
+
+  dotsRight();
 });
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
