@@ -31,23 +31,21 @@ prevArrow.addEventListener("click", () => {
       let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 320;
       recipes[i].style.position = "relative";
       recipes[i].style.left = moveRight + "px";
+      function dotsLeft() {
+        for (let i = 0; i < dots.length; i++) {
+          if (dots[i].classList.value === "active") {
+            dots[i].classList.remove("active");
+            dots[(i -= 1)].classList.add("active");
+          }
+        }
+      }
     }
+    dotsLeft();
   } else if (counter > 3) {
     counter--;
   } else {
-    // recipes.disabled = true;
     nextArrow.disabled = true;
   }
-  function dotsLeft() {
-    for (let i = 0; i < dots.length; i++) {
-      if (dots[i].classList.value === "active") {
-        dots[i].classList.remove("active");
-        dots[i - 1].classList.add("active");
-      }
-    }
-  }
-
-  dotsLeft();
 });
 
 nextArrow.addEventListener("click", () => {
@@ -59,23 +57,21 @@ nextArrow.addEventListener("click", () => {
       let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
       recipes[i].style.position = "relative";
       recipes[i].style.left = moveLeft + "px";
+      function dotsRight() {
+        for (let i = 0; i < dots.length; i++) {
+          if (dots[i].classList.value === "active") {
+            dots[i].classList.remove("active");
+            dots[(i += 1)].classList.add("active");
+          }
+        }
+      }
     }
+    dotsRight();
   } else if (counter < -3) {
     counter++;
   } else {
-    // recipes.disabled = true;
     prevArrow.disabled = true;
   }
-  function dotsRight() {
-    for (let i = 0; i < dots.length; i++) {
-      if (dots[i].classList.value === "active") {
-        dots[i].classList.remove("active");
-        dots[(i += 1)].classList.add("active");
-      }
-    }
-  }
-
-  dotsRight();
 });
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
