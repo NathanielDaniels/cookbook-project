@@ -20,23 +20,6 @@ $(function () {
 //! Top Recipe Arrows =====================================
 let counter = 0;
 prevArrow.addEventListener("click", () => {
-  counter--;
-  // console.log(counter);
-  if (counter >= -3 && counter <= 3) {
-    counter--;
-    for (let i = 0; i < recipes.length; i++) {
-      let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
-      recipes[i].style.position = "relative";
-      recipes[i].style.left = moveLeft + "px";
-    }
-  } else if (counter < -3) {
-    counter++;
-  } else {
-    // recipes.disabled = true;
-    prevArrow.disabled = true;
-  }
-});
-nextArrow.addEventListener("click", () => {
   counter++;
   // console.log(counter);
   if (counter <= 3 && counter >= -3) {
@@ -54,6 +37,23 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
+nextArrow.addEventListener("click", () => {
+  counter--;
+  // console.log(counter);
+  if (counter >= -3 && counter <= 3) {
+    counter--;
+    for (let i = 0; i < recipes.length; i++) {
+      let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
+      recipes[i].style.position = "relative";
+      recipes[i].style.left = moveLeft + "px";
+    }
+  } else if (counter < -3) {
+    counter++;
+  } else {
+    // recipes.disabled = true;
+    prevArrow.disabled = true;
+  }
+});
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
 recipeLocation.classList = "recipeLocation";

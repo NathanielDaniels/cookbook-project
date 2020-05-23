@@ -266,8 +266,8 @@ body {
   grid-gap: 20px;
   width: 80%;
   margin: auto;
-  -ms-grid-columns: (300px)[3];
-      grid-template-columns: repeat(3, 300px);
+  -ms-grid-columns: (300px)[6];
+      grid-template-columns: repeat(6, 300px);
   -ms-grid-rows: (200px)[2];
       grid-template-rows: repeat(2, 200px);
   -webkit-box-pack: center;
@@ -343,6 +343,22 @@ body {
 }
 
 .main-container .recipes-container .recipes-body .recipe6 {
+  background-image: url("/IMG/recipe6.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe7 {
+  background-image: url("/IMG/recipe3.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe8 {
+  background-image: url("/IMG/recipe4.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe9 {
+  background-image: url("/IMG/recipe5.jpg");
+}
+
+.main-container .recipes-container .recipes-body .recipe10 {
   background-image: url("/IMG/recipe6.jpg");
 }
 
