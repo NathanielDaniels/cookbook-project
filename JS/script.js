@@ -20,6 +20,8 @@ $(function () {
 //! Top Recipe Arrows =====================================
 let pagination = document.querySelector(".pagination");
 let dots = pagination.children;
+let w = window.innerWidth;
+let h = window.innerHeight;
 
 let counter = 0;
 prevArrow.addEventListener("click", () => {
@@ -29,6 +31,9 @@ prevArrow.addEventListener("click", () => {
     counter++;
     for (let i = 0; i < recipes.length; i++) {
       let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 320;
+      if (w < "900") {
+        moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 220;
+      }
       recipes[i].style.position = "relative";
       recipes[i].style.left = moveRight + "px";
       function dotsLeft() {
@@ -55,6 +60,9 @@ nextArrow.addEventListener("click", () => {
     counter--;
     for (let i = 0; i < recipes.length; i++) {
       let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
+      if (w < "900") {
+        moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 220;
+      }
       recipes[i].style.position = "relative";
       recipes[i].style.left = moveLeft + "px";
       function dotsRight() {
