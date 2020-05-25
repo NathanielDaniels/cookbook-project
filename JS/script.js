@@ -23,6 +23,12 @@ let dots = pagination.children;
 let w = window.innerWidth;
 let h = window.innerHeight;
 
+console.log(w);
+
+window.addEventListener("resize", function () {
+  console.log(window.innerWidth);
+});
+
 let counter = 0;
 prevArrow.addEventListener("click", () => {
   counter++;
