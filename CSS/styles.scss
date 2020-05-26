@@ -646,8 +646,10 @@ body {
   .about-section {
     .boardContainer {
       .backboard {
+        background-size: 140% !important;
+
         p {
-          font-size: 0.1rem !important;
+          // font-size: 0.1rem !important;
         }
       }
     }
@@ -687,6 +689,21 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  section.about-section {
+    // height: auto !important;
+    div.boardContainer {
+      // height: auto !important;
+      div.backboard {
+        background-size: 180% !important;
+        // height: auto !important;
+        // width: 100% !important;
+        p {
+          font-size: 0.9rem !important;
+        }
+      }
+    }
+  }
+
   .recipes-container {
     .recipes-title {
       text-align: center;
@@ -740,6 +757,20 @@ body {
     .main-title h1.title {
       font-size: 8.5rem;
       // line-height: 1.1;
+    }
+  }
+  section.about-section {
+    height: auto !important;
+    div.boardContainer {
+      // height: auto !important;
+      div.backboard {
+        background-size: 200% !important;
+        // height: auto !important;
+        // width: 100% !important;
+        p {
+          font-size: 0.9rem !important;
+        }
+      }
     }
   }
 
