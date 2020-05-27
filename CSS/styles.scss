@@ -250,12 +250,11 @@ body {
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
     padding: 40px 0 60px;
-    // width: 100%;
-    // height: 100vh;
+    width: 100%;
     overflow: hidden;
     .recipes-title {
       text-align: center;
-      // margin: 0;
+      margin: 0;
       h1 {
         color: hsl(0, 0, 10);
         font-family: Rustico;
@@ -267,21 +266,19 @@ body {
       }
     }
     .recipe-arrows {
-      height: 4rem;
-      background: blue;
       position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
       top: 55%;
       .prev,
       .next {
-        width: 50px;
-        height: 50px;
         font-family: Rustico;
         font-size: 4rem;
-        // position: relative;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
         cursor: pointer;
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
@@ -289,18 +286,13 @@ body {
           background-color: hsl(36, 74%, 60%);
         }
       }
-      .prev {
-        background: green;
-        height: 50px;
-        width: 50px;
-      }
       .prev-arrow {
-        // display: inline-flex;
-        // padding-right: 50rem;
-        width: 50rem;
+        float: left;
+        padding-left: 2vw;
       }
       .next-arrow {
-        // display: inline-flex;
+        float: right;
+        padding-right: 2vw;
       }
     }
     .recipes-body {
