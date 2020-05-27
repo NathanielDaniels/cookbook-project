@@ -824,6 +824,9 @@ body {
     font-size: 1rem !important;
     padding: 0 8px !important;
   }
+  .main-container .title-container .bg {
+    height: 90vh !important;
+  }
   .main-container .title-container .main-title h1.title {
     font-size: 5rem !important;
   }

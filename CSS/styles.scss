@@ -886,6 +886,9 @@ body {
       }
     }
     .title-container {
+      .bg {
+        height: 90vh !important;
+      }
       .main-title h1.title {
         font-size: 5rem !important;
         // line-height: 1.1;
