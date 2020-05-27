@@ -62,7 +62,7 @@ body {
   background-size: cover;
   -webkit-filter: opacity(0.5);
           filter: opacity(0.5);
-  height: 95vh;
+  height: 94vh;
 }
 
 .main-container .title-container .navbar {
