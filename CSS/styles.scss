@@ -673,17 +673,8 @@ body {
     .recipes-title {
       text-align: center;
     }
-    .prev-arrow {
-      // float: left;
-      // padding-left: 4rem !important;
-    }
-    .next-arrow {
-      // float: right;
-      // padding-right: 4rem !important;
-    }
 
     .recipes-body {
-      // background: blue;
       width: 47rem !important;
       display: grid;
       grid-template-columns: repeat(7, 230px) !important;

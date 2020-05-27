@@ -37,6 +37,9 @@ prevArrow.addEventListener("click", () => {
     counter++;
     for (let i = 0; i < recipes.length; i++) {
       let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 320;
+      if (w < "1200") {
+        moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 250;
+      }
       if (w < "900") {
         moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 220;
       }
@@ -66,6 +69,9 @@ nextArrow.addEventListener("click", () => {
     counter--;
     for (let i = 0; i < recipes.length; i++) {
       let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
+      if (w < "1200") {
+        moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 250;
+      }
       if (w < "900") {
         moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 220;
       }
