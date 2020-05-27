@@ -94,7 +94,6 @@ body {
 \*------------------------------------*/
 
   .title-container {
-    // z-index: 3;
     border-bottom: 5px solid hsl(0, 0, 0);
     filter: drop-shadow(0px 5px 5px hsl(0, 0, 10));
     // border-bottom: none;
@@ -105,7 +104,6 @@ body {
       background-size: cover;
       filter: opacity(0.5);
       height: 94vh;
-      // height: 100vh;
     }
     .navbar {
       display: flex;
@@ -147,17 +145,16 @@ body {
       }
     }
     button {
-      // z-index: 1;
-      opacity: 0;
+      position: absolute;
       bottom: -80px;
+      left: 50%;
+      z-index: 1;
+      opacity: 0;
       background: hsl(3, 60, 25);
       border-radius: 7px;
-      // color: white;
       cursor: pointer;
       font-size: 30px;
       padding: 10px 15px;
-      position: absolute;
-      left: 50%;
       transform: translate(-50%, -50%);
       letter-spacing: 0.1rem;
       text-transform: uppercase;
@@ -203,8 +200,6 @@ body {
       display: none;
     }
     .boardContainer {
-      // position: static;
-      // z-index: -1;
       // filter: drop-shadow(0px 15px 15px hsl(32, 75%, 5%));
       filter: drop-shadow(0px 15px 15px hsl(0, 0, 5));
       // filter: drop-shadow(10px 20px 10px hsl(0, 0%, 10%));
@@ -246,6 +241,7 @@ body {
   .recipes-container {
     background: #eec78e;
     position: relative;
+    z-index: -1;
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
