@@ -686,8 +686,11 @@ body {
   .main-container {
     width: auto;
   }
+  .title-container .main-title h1.title {
+    font-size: 8.5rem;
+  }
   .about-section .boardContainer .backboard {
-    background-size: 125% !important;
+    background-size: 80rem !important;
   }
   .about-section .boardContainer .backboard p {
     font-size: 1.4rem !important;
@@ -729,10 +732,10 @@ body {
 
 @media screen and (max-width: 900px) {
   section.about-section div.boardContainer div.backboard {
-    background-size: 160% !important;
+    background-size: 80rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
-    font-size: 1.5rem !important;
+    font-size: 1.4rem !important;
   }
   .recipes-container .recipes-title {
     text-align: center;
@@ -753,8 +756,11 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  section.about-section {
+    background-size: 50rem !important;
+  }
   section.about-section div.boardContainer div.backboard {
-    background-size: 160% !important;
+    background-size: 75rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
     font-size: 1.5rem !important;
@@ -762,11 +768,8 @@ body {
 }
 
 @media screen and (max-width: 745px) {
-  .main-container {
-    width: auto;
-  }
   .title-container .main-title h1.title {
-    font-size: 8.5rem;
+    font-size: 6rem;
   }
   .recipes-container .recipes-title h1 {
     font-size: 5rem;
@@ -815,10 +818,7 @@ body {
     font-size: 1rem !important;
     padding: 0 8px !important;
   }
-  .main-container .title-container .bg {
-    height: 600px !important;
-  }
-  .main-container .title-container .main-title h1 {
+  .main-container .title-container .main-title h1.title {
     font-size: 5rem !important;
   }
   .main-container section.about-section {

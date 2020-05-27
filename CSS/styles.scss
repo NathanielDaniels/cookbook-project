@@ -652,10 +652,17 @@ body {
   .main-container {
     width: auto;
   }
+  .title-container {
+    .main-title h1.title {
+      font-size: 8.5rem;
+      // line-height: 1.1;
+    }
+  }
+
   .about-section {
     .boardContainer {
       .backboard {
-        background-size: 125% !important;
+        background-size: 80rem !important;
 
         p {
           font-size: 1.4rem !important;
@@ -702,11 +709,12 @@ body {
   section.about-section {
     div.boardContainer {
       div.backboard {
-        background-size: 160% !important;
+        // background-size: 160% !important;
+        background-size: 80rem !important;
         // height: auto !important;
         // width: 100% !important;
         p {
-          font-size: 1.5rem !important;
+          font-size: 1.4rem !important;
         }
       }
     }
@@ -759,9 +767,11 @@ body {
 
 @media screen and (max-width: 800px) {
   section.about-section {
+    background-size: 50rem !important;
+    // height: 15rem;
     div.boardContainer {
       div.backboard {
-        background-size: 160% !important;
+        background-size: 75rem !important;
         // height: auto !important;
         // width: 100% !important;
         p {
@@ -773,22 +783,17 @@ body {
 }
 
 @media screen and (max-width: 745px) {
-  .main-container {
-    width: auto;
-  }
   .title-container {
     .main-title h1.title {
-      font-size: 8.5rem;
-      // line-height: 1.1;
+      font-size: 6rem;
     }
   }
   // section.about-section {
   //   height: auto !important;
   //   div.boardContainer {
-  //     // height: auto !important;
   //     div.backboard {
-  //       background-size: 200% !important;
-  //       // height: auto !important;
+  //       background-size: 220% !important;
+  //       height: 1rem !important;
   //       // width: 100% !important;
   //       p {
   //         font-size: 1.3rem !important;
@@ -875,15 +880,22 @@ body {
       }
     }
     .title-container {
-      .bg {
-        height: 600px !important;
-      }
-      .main-title {
-        h1 {
-          font-size: 5rem !important;
-        }
+      .main-title h1.title {
+        font-size: 5rem !important;
+        // line-height: 1.1;
       }
     }
+
+    // .title-container {
+    //   .bg {
+    //     height: 30rem !important;
+    //   }
+    //   .main-title {
+    //     h1 {
+    //       font-size: 4rem !important;
+    //     }
+    //   }
+    // }
 
     section.about-section {
       height: 17rem !important;
