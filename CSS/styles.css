@@ -28,6 +28,7 @@ body {
           filter: drop-shadow(0px 5px 5px #1a1a1a);
   margin: 0 auto;
   width: 1200px;
+  position: relative;
   /*------------------------------------*\
     #NAVBAR-CONTAINER
 \*------------------------------------*/
@@ -118,6 +119,7 @@ body {
 
 .main-container .title-container button {
   opacity: 0;
+  bottom: -80px;
   background: #661d1a;
   border-radius: 7px;
   cursor: pointer;
@@ -148,6 +150,8 @@ body {
 }
 
 .main-container .about-section {
+  z-index: -1;
+  position: relative;
   height: 28rem;
   background: #eec78e;
   background-image: url("/IMG/Wood-Grain.jpg");
@@ -157,12 +161,11 @@ body {
   border-bottom: 5px solid black;
 }
 
-.main-container .about-section p {
+.main-container .about-section .mobilePara {
   display: none;
 }
 
 .main-container .about-section .boardContainer {
-  position: static;
   -webkit-filter: drop-shadow(0px 15px 15px #0d0d0d);
           filter: drop-shadow(0px 15px 15px #0d0d0d);
   text-shadow: 0px 2px 1.8px #140605;
@@ -170,6 +173,7 @@ body {
 
 .main-container .about-section .boardContainer .backboard {
   height: 400px;
+  color: blue;
   background-image: url("/IMG/woodSign2.png");
   background-position: center;
   background-size: 122%;
@@ -683,7 +687,10 @@ body {
     width: auto;
   }
   .about-section .boardContainer .backboard {
-    background-size: 140% !important;
+    background-size: 125% !important;
+  }
+  .about-section .boardContainer .backboard p {
+    font-size: 1.4rem !important;
   }
   .recipes-container .recipes-title {
     text-align: center;
@@ -722,7 +729,7 @@ body {
 
 @media screen and (max-width: 900px) {
   section.about-section div.boardContainer div.backboard {
-    background-size: 180% !important;
+    background-size: 160% !important;
   }
   section.about-section div.boardContainer div.backboard p {
     font-size: 1.5rem !important;
@@ -745,21 +752,21 @@ body {
   }
 }
 
+@media screen and (max-width: 800px) {
+  section.about-section div.boardContainer div.backboard {
+    background-size: 160% !important;
+  }
+  section.about-section div.boardContainer div.backboard p {
+    font-size: 1.5rem !important;
+  }
+}
+
 @media screen and (max-width: 745px) {
   .main-container {
     width: auto;
   }
   .title-container .main-title h1.title {
     font-size: 8.5rem;
-  }
-  section.about-section {
-    height: auto !important;
-  }
-  section.about-section div.boardContainer div.backboard {
-    background-size: 200% !important;
-  }
-  section.about-section div.boardContainer div.backboard p {
-    font-size: 1.3rem !important;
   }
   .recipes-container .recipes-title h1 {
     font-size: 5rem;

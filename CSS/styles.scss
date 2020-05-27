@@ -55,6 +55,7 @@ body {
   filter: drop-shadow(0px 5px 5px hsl(0, 0, 10));
   margin: 0 auto;
   width: 1200px;
+  position: relative;
 
   /*------------------------------------*\
     #NAVBAR-CONTAINER
@@ -146,8 +147,9 @@ body {
       }
     }
     button {
+      // z-index: 1;
       opacity: 0;
-      // bottom: -80px;
+      bottom: -80px;
       background: hsl(3, 60, 25);
       border-radius: 7px;
       // color: white;
@@ -181,6 +183,8 @@ body {
     #About-SECTION 
 \*------------------------------------*/
   .about-section {
+    z-index: -1;
+    position: relative;
     // width: 100%;
     height: 28rem;
     // background: hsl(36, 75%, 85%);
@@ -195,11 +199,12 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     border-bottom: 5px solid black;
-    p {
+    .mobilePara {
       display: none;
     }
     .boardContainer {
-      position: static;
+      // position: static;
+      // z-index: -1;
       // filter: drop-shadow(0px 15px 15px hsl(32, 75%, 5%));
       filter: drop-shadow(0px 15px 15px hsl(0, 0, 5));
       // filter: drop-shadow(10px 20px 10px hsl(0, 0%, 10%));
@@ -207,6 +212,7 @@ body {
       // text-shadow: 0px 4px 10px 5px hsl(3, 60, 15);
       .backboard {
         height: 400px;
+        color: blue;
         background-image: url("/IMG/woodSign2.png");
         background-position: center;
         background-size: 122%;
@@ -649,10 +655,10 @@ body {
   .about-section {
     .boardContainer {
       .backboard {
-        background-size: 140% !important;
+        background-size: 125% !important;
 
         p {
-          // font-size: 0.1rem !important;
+          font-size: 1.4rem !important;
         }
       }
     }
@@ -669,6 +675,7 @@ body {
     }
   }
   form {
+    // margin: auto;
     fieldset {
       .form-grid {
         // grid-template-columns: 1fr 2fr !important;
@@ -693,11 +700,9 @@ body {
 
 @media screen and (max-width: 900px) {
   section.about-section {
-    // height: auto !important;
     div.boardContainer {
-      // height: auto !important;
       div.backboard {
-        background-size: 180% !important;
+        background-size: 160% !important;
         // height: auto !important;
         // width: 100% !important;
         p {
@@ -752,6 +757,21 @@ body {
   // /@media(900px)
 }
 
+@media screen and (max-width: 800px) {
+  section.about-section {
+    div.boardContainer {
+      div.backboard {
+        background-size: 160% !important;
+        // height: auto !important;
+        // width: 100% !important;
+        p {
+          font-size: 1.5rem !important;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 745px) {
   .main-container {
     width: auto;
@@ -762,20 +782,20 @@ body {
       // line-height: 1.1;
     }
   }
-  section.about-section {
-    height: auto !important;
-    div.boardContainer {
-      // height: auto !important;
-      div.backboard {
-        background-size: 200% !important;
-        // height: auto !important;
-        // width: 100% !important;
-        p {
-          font-size: 1.3rem !important;
-        }
-      }
-    }
-  }
+  // section.about-section {
+  //   height: auto !important;
+  //   div.boardContainer {
+  //     // height: auto !important;
+  //     div.backboard {
+  //       background-size: 200% !important;
+  //       // height: auto !important;
+  //       // width: 100% !important;
+  //       p {
+  //         font-size: 1.3rem !important;
+  //       }
+  //     }
+  //   }
+  // }
 
   .recipes-container {
     // padding: 80px 150px !important;
