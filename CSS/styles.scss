@@ -32,6 +32,35 @@
   }
 }
 
+/* Sets the dimensions of the entire scrollbar */
+html::-webkit-scrollbar {
+  width: 20px;
+  height: 30px;
+}
+
+/* The grabbable scrollbar button  */
+html::-webkit-scrollbar-thumb {
+  // background: -webkit-gradient(
+  //   linear,
+  //   left top,
+  //   left bottom,
+  //   from(white),
+  //   to(#eec78e)
+  // );
+  // background: linear-gradient(180deg, white, #eec78e);
+  background-image: url("/IMG/fork.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  // box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+  //   inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* The vertical scrollbar background */
+html::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+}
+
 * {
   box-sizing: border-box;
   font-family: sans-serif;

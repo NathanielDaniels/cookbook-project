@@ -4,6 +4,25 @@
   src: url(/Fonts/Rustico-Regular.otf);
 }
 
+/* Sets the dimensions of the entire scrollbar */
+html::-webkit-scrollbar {
+  width: 20px;
+  height: 30px;
+}
+
+/* The grabbable scrollbar button  */
+html::-webkit-scrollbar-thumb {
+  background-image: url("/IMG/fork.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+/* The vertical scrollbar background */
+html::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
