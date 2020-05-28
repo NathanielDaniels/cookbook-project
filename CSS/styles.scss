@@ -948,7 +948,7 @@ body {
         grid-template-columns: repeat(1, 1fr) !important;
         grid-template-rows: repeat(14, 200px) !important;
         margin: 0 auto;
-        width: 80%;
+        width: 80% !important;
       }
       .pagination-wrapper {
         display: none;

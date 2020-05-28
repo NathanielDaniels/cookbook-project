@@ -868,7 +868,7 @@ body {
     -ms-grid-rows: (200px)[14] !important;
         grid-template-rows: repeat(14, 200px) !important;
     margin: 0 auto;
-    width: 80%;
+    width: 80% !important;
   }
   .main-container .recipes-container .pagination-wrapper {
     display: none;
