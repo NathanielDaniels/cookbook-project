@@ -771,6 +771,7 @@ body {
     height: auto !important;
   }
   section.about-section div.boardContainer div.backboard {
+    height: 22rem !important;
     background-size: 70rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
@@ -828,7 +829,7 @@ body {
     font-size: 5rem !important;
   }
   .main-container section.about-section {
-    height: 17rem !important;
+    height: 22rem !important;
   }
   .main-container section.about-section p {
     display: block;
@@ -845,8 +846,7 @@ body {
     color: transparent;
   }
   .main-container section.about-section div.boardContainer div.backboard {
-    display: none;
-    height: 265px;
+    height: 20rem !important;
     background-size: 200% !important;
   }
   .main-container section.about-section div.boardContainer div.backboard p {

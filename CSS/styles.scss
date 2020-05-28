@@ -796,6 +796,7 @@ body {
     height: auto !important;
     div.boardContainer {
       div.backboard {
+        height: 22rem !important;
         background-size: 70rem !important;
         p {
           font-size: 1.3rem !important;
@@ -904,12 +905,11 @@ body {
     // }
 
     section.about-section {
-      height: 17rem !important;
+      height: 22rem !important;
       p {
         display: block;
         text-shadow: 0px 1px 0px hsl(28, 32%, 16%),
           0px -1px 0px rgba(0, 0, 0, 1);
-
         letter-spacing: 1px;
         position: relative;
         top: 45%;
@@ -922,26 +922,16 @@ body {
       }
 
       div.boardContainer {
-        // height: auto !important;
         div.backboard {
-          display: none;
-          height: 265px;
+          // display: none;
+          height: 20rem !important;
           background-size: 200% !important;
-          // height: auto !important;
-          // width: 100% !important;
           p {
             font-size: 1.1rem !important;
           }
         }
       }
     }
-
-    // .recipes-container {
-    //   // padding: 100px 5% 80px !important;
-    //   h1.top-recipes-title {
-    //     font-size: 5rem;
-    //   }
-    // }
     .recipes-container {
       // padding: 80px 150px !important;
       .recipes-title h1 {
