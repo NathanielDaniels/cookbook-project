@@ -668,10 +668,9 @@ body {
   }
   .form-container {
     form {
-      // margin: auto;
       fieldset.mainFieldset {
-        left: 50% !important;
-        transform: translate(-50%, 0);
+        // left: 50% !important;
+        // transform: translate(-50%, 0);
         .form-grid {
           display: flex !important;
           flex-direction: column !important;
@@ -700,10 +699,7 @@ body {
   .about-section {
     .boardContainer {
       .backboard {
-        // background-size: 160% !important;
         background-size: 80rem !important;
-        // height: auto !important;
-        // width: 100% !important;
         p {
           font-size: 1.4rem !important;
         }
@@ -754,7 +750,7 @@ body {
     form {
       // margin: auto;
       fieldset.mainFieldset {
-        width: 80% !important;
+        // width: 80% !important;
         .form-grid {
         }
         // /fieldset
@@ -960,6 +956,8 @@ body {
       form.form {
         // width: 100vw !important;
         fieldset.main-fieldset {
+          left: 100% !important;
+
           width: 100%;
           input::placeholder {
             font-size: 15px;

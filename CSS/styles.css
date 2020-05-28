@@ -700,11 +700,6 @@ body {
     -ms-grid-rows: (160px)[2] !important;
         grid-template-rows: repeat(2, 160px) !important;
   }
-  .form-container form fieldset.mainFieldset {
-    left: 50% !important;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
   .form-container form fieldset.mainFieldset .form-grid {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -745,9 +740,6 @@ body {
   .recipe-arrows .next-arrow {
     float: right;
     padding-right: 0px !important;
-  }
-  .form-container form fieldset.mainFieldset {
-    width: 80% !important;
   }
 }
 
@@ -874,6 +866,7 @@ body {
     display: none;
   }
   .main-container section.form-container form.form fieldset.main-fieldset {
+    left: 100% !important;
     width: 100%;
   }
   .main-container section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
