@@ -422,16 +422,15 @@ body {
         border-radius: 30px;
         border: 2px solid hsl(3, 60, 15);
         filter: drop-shadow(0px 6px 5px hsl(0, 0, 5));
-        left: 45%;
+        left: 35%;
         padding: 40px 25px 0px;
         position: relative;
-        // width: 35rem;
         width: 60%;
         .form-grid {
           display: grid;
           grid-gap: 20px;
           grid-template-columns: 1fr;
-          grid-template-rows: 75px 75px 75px 250px;
+          grid-template-rows: 75px 75px 250px;
 
           fieldset {
             border-radius: 25px;
@@ -473,28 +472,28 @@ body {
           }
           .userName {
             grid-area: 1;
-            grid-column: 1 / 3;
+            grid-column: 1 / 2;
             input {
               top: -15px;
             }
           }
           .userEmail {
-            grid-area: 2;
-            grid-column: 1 / 3;
+            grid-area: 1;
+            grid-column: 2 / 3;
             input {
               top: -30px;
             }
           }
           .emailSubject {
-            textarea[name="emailSubject"] {
+            grid-area: 2;
+            grid-column: 1 / 3;
+            input[name="emailSubject"] {
               background-color: transparent;
               border-color: transparent;
               border-radius: 2px;
               color: hsl(28, 32%, 10%);
               font-size: 22px;
               font-weight: 600;
-              grid-area: 3;
-              grid-column: 1 / 3;
               height: 30px;
               position: relative;
               // background: blue;
@@ -507,10 +506,12 @@ body {
             }
           }
           .emailMessage {
-            grid-area: 4;
+            grid-area: 3;
             grid-column: 1 / 3;
           }
           .emailMessage {
+            grid-area: 3;
+            grid-column: 1 / 3;
             textarea[name="emailMessage"] {
               background-color: transparent;
               border-color: transparent;
@@ -519,8 +520,6 @@ body {
               // background: blue;
               font-size: 22px;
               font-weight: 600;
-              grid-area: 3;
-              grid-column: 1 / 3;
               height: 12rem;
               position: relative;
               resize: none;
@@ -669,25 +668,53 @@ body {
       grid-template-rows: repeat(2, 160px) !important;
     }
   }
+
   .form-container {
     form {
       fieldset.mainFieldset {
+        // background-position: center;
+        left: 45% !important;
+        width: 50% !important;
         // left: 50% !important;
         // transform: translate(-50%, 0);
         .form-grid fieldset:nth-last-child(2) {
           // background: blue;
           // grid-template-columns: 100% !important;
-
           // width: 45vw !important;
         }
-        // /fieldset
+        .form-grid {
+          grid-template-rows: 75px 75px 75px 250px !important;
+          .userName {
+            grid-area: 1 !important;
+            grid-column: 1 / 3 !important;
+            input {
+              top: -15px;
+            }
+          }
+          .userEmail {
+            grid-area: 2 !important;
+            grid-column: 1 / 3 !important;
+            input {
+              top: -30px;
+            }
+          }
+          .emailSubject {
+            grid-area: 3 !important;
+            grid-column: 1 / 3 !important;
+          }
+          .emailMessage {
+            grid-area: 4 !important;
+            grid-column: 1 / 3 !important;
+          }
+          // /fieldset
+        }
       }
-      // /form
     }
     .form-button {
       width: 9rem !important;
     }
   }
+
   // /Media (1200px)
 }
 
@@ -753,11 +780,14 @@ body {
     }
   }
   .form-container {
+    background-position: right !important;
     form {
       fieldset.mainFieldset {
-        left: -10% !important;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
+        width: 80% !important;
         .form-grid fieldset:nth-last-child(2) {
-          background: blue;
+          // background: blue;
           // grid-template-columns: 100% !important;
         }
         // /fieldset
