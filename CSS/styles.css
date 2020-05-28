@@ -422,17 +422,10 @@ body {
 
 .main-container .form-container {
   background-image: url("/IMG/form-bg.jpg");
-  background-position: center;
+  background-position: left;
   background-size: cover;
   border-bottom: 4px solid #010101;
-  height: auto;
   width: 100%;
-}
-
-.main-container .form-container .form-title {
-  color: #1a1a1a;
-  font-size: 4rem;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
 .main-container .form-container form {
@@ -446,21 +439,20 @@ body {
   border: 2px solid #3d120f;
   -webkit-filter: drop-shadow(0px 6px 5px #0d0d0d);
           filter: drop-shadow(0px 6px 5px #0d0d0d);
-  left: 35%;
+  left: 45%;
   padding: 40px 25px 0px;
   position: relative;
-  top: -5px;
-  width: 60%;
+  width: 50%;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
-  -ms-grid-columns: 250px auto;
-      grid-template-columns: 250px auto;
-  -ms-grid-rows: 75px 300px 75px;
-      grid-template-rows: 75px 300px 75px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 75px 75px 75px 250px;
+      grid-template-rows: 75px 75px 75px 250px;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
@@ -490,14 +482,12 @@ body {
 .main-container .form-container form fieldset.mainFieldset .form-grid input {
   background-color: transparent;
   border-color: transparent;
-  border-radius: 10px;
   color: #221911;
   font-size: 22px;
   font-weight: 600;
   margin: 0;
   padding-left: 5px;
   position: relative;
-  top: -10px;
   width: 100%;
 }
 
@@ -505,7 +495,7 @@ body {
   outline-style: none;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeName {
+.main-container .form-container form fieldset.mainFieldset .form-grid .userName {
   -ms-grid-row: 1;
   grid-area: 1;
   -ms-grid-column: 1;
@@ -513,105 +503,92 @@ body {
   grid-column: 1 / 3;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeList {
+.main-container .form-container form fieldset.mainFieldset .form-grid .userName input {
+  top: -15px;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail {
   -ms-grid-row: 2;
   grid-area: 2;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeList textarea {
-  background-color: transparent;
-  border-color: transparent;
-  color: #221911;
-  font-size: 22px;
-  font-weight: 600;
-  height: 230px;
-  position: relative;
-  resize: none;
-  top: -15px;
-  width: 100%;
+.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail input {
+  top: -30px;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeList textarea:focus {
-  outline-style: none;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeInst textarea[name="instruction"] {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject textarea[name="emailSubject"] {
   background-color: transparent;
   border-color: transparent;
   border-radius: 2px;
   color: #221911;
   font-size: 22px;
   font-weight: 600;
-  -ms-grid-row: 2;
-  grid-area: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  height: 230px;
-  position: relative;
-  resize: none;
-  top: -15px;
-  width: 100%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .recipeInst textarea[name="instruction"]:focus {
-  outline-style: none;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .addLink {
-  color: white;
   -ms-grid-row: 3;
   grid-area: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  height: 30px;
+  position: relative;
+  resize: none;
+  top: -30px;
+  width: 100%;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .addLink input::-webkit-input-placeholder {
-  color: #221911;
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject textarea[name="emailSubject"]:focus {
+  outline-style: none;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .addLink input:-ms-input-placeholder {
-  color: #221911;
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage {
+  -ms-grid-row: 4;
+  grid-area: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .addLink input::-ms-input-placeholder {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"] {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
   color: #221911;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .addLink input::placeholder {
-  color: #221911;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .file {
-  cursor: pointer;
-  color: #221911;
+  font-size: 22px;
+  font-weight: 600;
   -ms-grid-row: 3;
   grid-area: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  height: 12rem;
+  position: relative;
+  resize: none;
+  top: -25px;
+  width: 100%;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .file input::-webkit-input-placeholder {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"]:focus {
+  outline-style: none;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input::-webkit-input-placeholder {
   color: #221911;
   font-size: 2rem;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .file input:-ms-input-placeholder {
+.main-container .form-container form fieldset.mainFieldset .form-grid input:-ms-input-placeholder {
   color: #221911;
   font-size: 2rem;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .file input::-ms-input-placeholder {
+.main-container .form-container form fieldset.mainFieldset .form-grid input::-ms-input-placeholder {
   color: #221911;
   font-size: 2rem;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .file input::placeholder {
+.main-container .form-container form fieldset.mainFieldset .form-grid input::placeholder {
   color: #221911;
   font-size: 2rem;
 }
@@ -636,7 +613,6 @@ body {
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  width: 25%;
 }
 
 .main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"]:hover {
@@ -657,9 +633,10 @@ body {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  border-bottom: 5px solid black;
 }
 
-.main-container .form-recipes {
+.main-container .mainRecipes {
   border-bottom: 5px solid black;
   width: 100%;
   height: 500px;
@@ -667,7 +644,7 @@ body {
   background: #f1c98e;
 }
 
-.main-container .form-recipes .recipes-list {
+.main-container .mainRecipes .recipes-list {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -723,7 +700,12 @@ body {
     -ms-grid-rows: (160px)[2] !important;
         grid-template-rows: repeat(2, 160px) !important;
   }
-  .form-container form fieldset .form-grid {
+  .form-container form fieldset.mainFieldset {
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .form-container form fieldset.mainFieldset .form-grid {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -731,6 +713,9 @@ body {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+  }
+  .form-container .form-button {
+    width: 9rem !important;
   }
 }
 
@@ -761,9 +746,8 @@ body {
     float: right;
     padding-right: 0px !important;
   }
-  form fieldset .form-grid {
-    -ms-grid-columns: 1fr 2fr !important;
-        grid-template-columns: 1fr 2fr !important;
+  .form-container form fieldset.mainFieldset {
+    width: 80% !important;
   }
 }
 
@@ -820,9 +804,6 @@ body {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-  }
-  section.form-container form.form fieldset.main-fieldset .form-grid fieldset {
-    margin: 10px 0;
   }
   section.form-container form.form fieldset.main-fieldset .form-grid fieldset.recipe-list textarea {
     width: 100% !important;
@@ -891,6 +872,24 @@ body {
   }
   .main-container .recipes-container .pagination-wrapper {
     display: none;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset {
+    width: 100%;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset input:-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset input::-ms-input-placeholder {
+    font-size: 15px;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset input::placeholder {
+    font-size: 15px;
+  }
+  .main-container section.form-container form.form fieldset.main-fieldset input[type="submit"] {
+    width: 155px !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

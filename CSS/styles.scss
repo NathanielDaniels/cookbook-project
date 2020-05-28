@@ -402,46 +402,36 @@ body {
 \*------------------------------------*/
 
   .form-container {
-    // background: hsl(0,0,75);
-    // background: #F1C98E;
-    // background: hsl(18, 36%, 70%);
-    // padding: 80px 20px 80px 150px;
     background-image: url("/IMG/form-bg.jpg");
-    background-position: center;
+    background-position: left;
     background-size: cover;
     border-bottom: 4px solid hsl(0, 0, 0.5);
-    height: auto;
+    // height: auto;
     width: 100%;
-    .form-title {
-      color: hsl(0, 0, 10);
-      font-size: 4rem;
-      text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
-        0px -1px 0px rgba(0, 0, 0, 0.7);
-    }
+    // .form-title {
+    //   color: hsl(0, 0, 10);
+    //   font-size: 4rem;
+    //   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+    //     0px -1px 0px rgba(0, 0, 0, 0.7);
+    // }
     form {
       padding: 3rem 0;
       fieldset.mainFieldset {
-        // background: hsl(0,0,82);
-        // background: hsl(18, 28%, 65%);
         background-image: url("/IMG/Wood-Grain.jpg");
         background-position: center;
         border-radius: 30px;
         border: 2px solid hsl(3, 60, 15);
         filter: drop-shadow(0px 6px 5px hsl(0, 0, 5));
-        left: 35%;
+        left: 45%;
         padding: 40px 25px 0px;
         position: relative;
-        top: -5px;
-        width: 60%;
+        width: 50%;
         .form-grid {
           display: grid;
           grid-gap: 20px;
-          grid-template-columns: 250px auto;
-          grid-template-rows: 75px 300px 75px;
+          grid-template-columns: 1fr;
+          grid-template-rows: 75px 75px 75px 250px;
           fieldset {
-            // border: 3px solid hsl(3,60,15);
-            // box-shadow: inset 0px -8px 20px -10px rgba(0,0,0,0.75);
-            // filter: contrast(5%);
             border-radius: 25px;
             border: 3px solid hsl(28, 32%, 20%);
             box-shadow: inset 0px -8px 20px -10px hsl(3, 60, 15);
@@ -456,122 +446,112 @@ body {
             font-family: "Gloria Hallelujah", cursive;
             font-size: 22px;
             font-weight: 600;
-            // font-family: 'Indie Flower', cursive;
             padding: 0 10px;
             position: relative;
             top: -5px;
           }
           input {
-            // color: #111;
             background-color: transparent;
             border-color: transparent;
-            border-radius: 10px;
+            // border-radius: 10px;
             color: hsl(28, 32%, 10%);
             font-size: 22px;
             font-weight: 600;
             margin: 0;
             padding-left: 5px;
             position: relative;
-            top: -10px;
+            // background: purple;
             width: 100%;
             &:focus {
               outline-style: none;
             }
           }
-          .recipeName {
+          .userName {
             grid-area: 1;
             grid-column: 1 / 3;
-          }
-          .recipeList {
-            grid-area: 2;
-            grid-column: 1 / 2;
-            textarea {
-              // color: #111;
-              background-color: transparent;
-              border-color: transparent;
-              color: hsl(28, 32%, 10%);
-              font-size: 22px;
-              font-weight: 600;
-              height: 230px;
-              position: relative;
-              resize: none;
+            input {
               top: -15px;
-              width: 100%;
-              &:focus {
-                outline-style: none;
-              }
             }
           }
-          .recipeInst {
-            textarea[name="instruction"] {
-              // background: rgb(223, 223, 223);
-              // color: #111;
-              // margin: 10px 0 30px;
+          .userEmail {
+            grid-area: 2;
+            grid-column: 1 / 3;
+            input {
+              top: -30px;
+            }
+          }
+          .emailSubject {
+            textarea[name="emailSubject"] {
               background-color: transparent;
               border-color: transparent;
               border-radius: 2px;
               color: hsl(28, 32%, 10%);
               font-size: 22px;
               font-weight: 600;
-              grid-area: 2;
-              grid-column: 2 / 3;
-              height: 230px;
+              grid-area: 3;
+              grid-column: 1 / 3;
+              height: 30px;
               position: relative;
+              // background: blue;
               resize: none;
-              top: -15px;
+              top: -30px;
               width: 100%;
+              // border-radius: 20px;
+
               &:focus {
                 outline-style: none;
               }
             }
           }
-          // Add-Link Input
-          .addLink {
-            color: white;
-            grid-area: 3;
-            grid-column: 1 / 2;
-            input::placeholder {
+          .emailMessage {
+            grid-area: 4;
+            grid-column: 1 / 3;
+          }
+          .emailMessage {
+            textarea[name="emailMessage"] {
+              background-color: transparent;
+              border-color: transparent;
+              border-radius: 2px;
               color: hsl(28, 32%, 10%);
+              // background: blue;
+              font-size: 22px;
+              font-weight: 600;
+              grid-area: 3;
+              grid-column: 1 / 3;
+              height: 12rem;
+              position: relative;
+              resize: none;
+              top: -25px;
+              width: 100%;
+              // border-radius: 20px;
+
+              &:focus {
+                outline-style: none;
+              }
             }
           }
-          .file {
-            cursor: pointer;
+          input::placeholder {
             color: hsl(28, 32%, 10%);
-            grid-area: 3;
-            grid-column: 2 / 3;
-            input[type="file"] {
-              // display: none;
-              // position: absolute;
-              // width: 1px;
-              // height: 1px;
-              // padding: 0;
-              // margin: -1px;
-              // overflow: hidden;
-              // clip: rect(0, 0, 0, 0);
-              // border: 0;
-            }
-            input::placeholder {
-              color: hsl(28, 32%, 10%);
-              font-size: 2rem;
-            }
-            // i {
-            //   position: relative;
-            //   top: -5px;
-            //   span {
-            //     font-size: 1.2rem;
-            //     padding-left: 10px;
-            //     font-weight: bold;
-            //   }
-            // }
-            // .custom-file-upload {
-            //   border: 1px solid #ccc;
-            //   display: inline-block;
-            //   padding: 6px 12px;
-            //   cursor: pointer;
-            // }
+            font-size: 2rem;
           }
-          // /.form-grid
+          // i {
+          //   position: relative;
+          //   top: -5px;
+          //   span {
+          //     font-size: 1.2rem;
+          //     padding-left: 10px;
+          //     font-weight: bold;
+          //   }
+          // }
+          // .custom-file-upload {
+          //   border: 1px solid #ccc;
+          //   display: inline-block;
+          //   padding: 6px 12px;
+          //   cursor: pointer;
+          // }
         }
+        // /.form-grid
+
         //SUBMIT BUTTON
         input.form-button[type="submit"] {
           // box-shadow: 0px 2px 10px hsl(3,60,15);
@@ -593,7 +573,6 @@ body {
           top: 60px;
           transform: translate(-50%, -50%);
           transition: all 0.3s ease-in-out;
-          width: 25%;
           &:hover {
             background: hsl(3, 60, 22);
             // filter: drop-shadow(0px 3px 4px hsl(3,60,15));
@@ -616,11 +595,11 @@ body {
     display: flex;
     justify-content: center;
     align-content: center;
+    border-bottom: 5px solid hsl(0, 0, 0);
   }
 
-  .form-recipes {
+  .mainRecipes {
     border-bottom: 5px solid hsl(0, 0, 0);
-
     width: 100%;
     height: 500px;
     max-height: auto;
@@ -690,15 +669,19 @@ body {
   .form-container {
     form {
       // margin: auto;
-      fieldset {
+      fieldset.mainFieldset {
+        left: 50% !important;
+        transform: translate(-50%, 0);
         .form-grid {
-          // grid-template-columns: 1fr 2fr !important;
           display: flex !important;
           flex-direction: column !important;
         }
         // /fieldset
       }
       // /form
+    }
+    .form-button {
+      width: 9rem !important;
     }
   }
   // /Media (1200px)
@@ -767,14 +750,20 @@ body {
   //   }
   //   // /section.form-container
   // }
-  form {
-    fieldset {
-      .form-grid {
-        grid-template-columns: 1fr 2fr !important;
+  .form-container {
+    form {
+      // margin: auto;
+      fieldset.mainFieldset {
+        width: 80% !important;
+        .form-grid {
+        }
+        // /fieldset
       }
-      // /fieldset
+      // /form
     }
-    // /form
+    // .form-button {
+    //   width: 100% !important;
+    // }
   }
 
   // /@media(900px)
@@ -854,7 +843,7 @@ body {
           display: flex !important;
           flex-direction: column !important;
           fieldset {
-            margin: 10px 0;
+            // margin: 10px 0;
           }
           fieldset.recipe-list {
             textarea {
@@ -976,23 +965,24 @@ body {
       }
     }
 
-    // section.form-container {
-    //   padding: 5% !important;
-    //   form.form {
-    //     fieldset.main-fieldset {
-    //       width: 100%;
-    //       input::placeholder {
-    //         font-size: 15px;
-    //       }
-    //       input[type="submit"] {
-    //         width: 155px !important;
-    //         // top: 96% !important;
-    //       }
-    //     }
-    //     // /form
-    //   }
-    //   // /.form-container
-    // }
+    section.form-container {
+      // padding: 5% !important;
+      form.form {
+        // width: 100vw !important;
+        fieldset.main-fieldset {
+          width: 100%;
+          input::placeholder {
+            font-size: 15px;
+          }
+          input[type="submit"] {
+            width: 155px !important;
+            // top: 96% !important;
+          }
+        }
+        // /form
+      }
+      // /.form-container
+    }
   }
 
   // /Media (540px)
@@ -1011,3 +1001,215 @@ body {
   // }
   // /Media (480px)
 }
+
+//! ORIGINAL FORM CSS
+// --------------------------------------
+
+// .form-container {
+//   // background: hsl(0,0,75);
+//   // background: #F1C98E;
+//   // background: hsl(18, 36%, 70%);
+//   // padding: 80px 20px 80px 150px;
+//   background-image: url('/IMG/form-bg.jpg');
+//   background-position: center;
+//   background-size: cover;
+//   border-bottom: 4px solid hsl(0, 0, 0.5);
+//   height: auto;
+//   width: 100%;
+//   .form-title {
+//     color: hsl(0, 0, 10);
+//     font-size: 4rem;
+//     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+//       0px -1px 0px rgba(0, 0, 0, 0.7);
+//   }
+//   form {
+//     padding: 3rem 0;
+//     fieldset.mainFieldset {
+//       // background: hsl(0,0,82);
+//       // background: hsl(18, 28%, 65%);
+//       background-image: url('/IMG/Wood-Grain.jpg');
+//       background-position: center;
+//       border-radius: 30px;
+//       border: 2px solid hsl(3, 60, 15);
+//       filter: drop-shadow(0px 6px 5px hsl(0, 0, 5));
+//       left: 35%;
+//       padding: 40px 25px 0px;
+//       position: relative;
+//       top: -5px;
+//       width: 60%;
+//       .form-grid {
+//         display: grid;
+//         grid-gap: 20px;
+//         grid-template-columns: 250px auto;
+//         grid-template-rows: 75px 300px 75px;
+//         fieldset {
+//           // border: 3px solid hsl(3,60,15);
+//           // box-shadow: inset 0px -8px 20px -10px rgba(0,0,0,0.75);
+//           // filter: contrast(5%);
+//           border-radius: 25px;
+//           border: 3px solid hsl(28, 32%, 20%);
+//           box-shadow: inset 0px -8px 20px -10px hsl(3, 60, 15);
+//           filter: saturate(2);
+//           padding: 5px 20px;
+//           transition: color 0.3s ease-in-out;
+//         }
+//         legend {
+//           // color: hsl(3,60,25);
+//           color: hsl(28, 32%, 10%);
+//           filter: saturate(2);
+//           font-family: 'Gloria Hallelujah', cursive;
+//           font-size: 22px;
+//           font-weight: 600;
+//           // font-family: 'Indie Flower', cursive;
+//           padding: 0 10px;
+//           position: relative;
+//           top: -5px;
+//         }
+//         input {
+//           // color: #111;
+//           background-color: transparent;
+//           border-color: transparent;
+//           border-radius: 10px;
+//           color: hsl(28, 32%, 10%);
+//           font-size: 22px;
+//           font-weight: 600;
+//           margin: 0;
+//           padding-left: 5px;
+//           position: relative;
+//           top: -10px;
+//           width: 100%;
+//           &:focus {
+//             outline-style: none;
+//           }
+//         }
+//         .recipeName {
+//           grid-area: 1;
+//           grid-column: 1 / 3;
+//         }
+//         .recipeList {
+//           grid-area: 2;
+//           grid-column: 1 / 2;
+//           textarea {
+//             // color: #111;
+//             background-color: transparent;
+//             border-color: transparent;
+//             color: hsl(28, 32%, 10%);
+//             font-size: 22px;
+//             font-weight: 600;
+//             height: 230px;
+//             position: relative;
+//             resize: none;
+//             top: -15px;
+//             width: 100%;
+//             &:focus {
+//               outline-style: none;
+//             }
+//           }
+//         }
+//         .recipeInst {
+//           textarea[name='instruction'] {
+//             // background: rgb(223, 223, 223);
+//             // color: #111;
+//             // margin: 10px 0 30px;
+//             background-color: transparent;
+//             border-color: transparent;
+//             border-radius: 2px;
+//             color: hsl(28, 32%, 10%);
+//             font-size: 22px;
+//             font-weight: 600;
+//             grid-area: 2;
+//             grid-column: 2 / 3;
+//             height: 230px;
+//             position: relative;
+//             resize: none;
+//             top: -15px;
+//             width: 100%;
+//             &:focus {
+//               outline-style: none;
+//             }
+//           }
+//         }
+//         // Add-Link Input
+//         .addLink {
+//           color: white;
+//           grid-area: 3;
+//           grid-column: 1 / 2;
+//           input::placeholder {
+//             color: hsl(28, 32%, 10%);
+//           }
+//         }
+//         .file {
+//           cursor: pointer;
+//           color: hsl(28, 32%, 10%);
+//           grid-area: 3;
+//           grid-column: 2 / 3;
+//           input[type='file'] {
+//             // display: none;
+//             // position: absolute;
+//             // width: 1px;
+//             // height: 1px;
+//             // padding: 0;
+//             // margin: -1px;
+//             // overflow: hidden;
+//             // clip: rect(0, 0, 0, 0);
+//             // border: 0;
+//           }
+//           input::placeholder {
+//             color: hsl(28, 32%, 10%);
+//             font-size: 2rem;
+//           }
+//           // i {
+//           //   position: relative;
+//           //   top: -5px;
+//           //   span {
+//           //     font-size: 1.2rem;
+//           //     padding-left: 10px;
+//           //     font-weight: bold;
+//           //   }
+//           // }
+//           // .custom-file-upload {
+//           //   border: 1px solid #ccc;
+//           //   display: inline-block;
+//           //   padding: 6px 12px;
+//           //   cursor: pointer;
+//           // }
+//         }
+//         // /.form-grid
+//       }
+//       //SUBMIT BUTTON
+//       input.form-button[type='submit'] {
+//         // box-shadow: 0px 2px 10px hsl(3,60,15);
+//         // filter: drop-shadow(0px 6px 4px hsl(3,60,15));
+//         background: hsl(3, 60, 25);
+//         border-radius: 7px;
+//         color: white;
+//         cursor: pointer;
+//         filter: drop-shadow(0px 4px 2px hsl(0, 0, 5));
+//         font-size: 30px;
+//         left: 50%;
+//         letter-spacing: 0.1rem;
+//         opacity: 0.98;
+//         padding: 10px;
+//         position: relative;
+//         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+//           0px -1px 0px rgba(0, 0, 0, 0.7);
+//         text-transform: uppercase;
+//         top: 60px;
+//         transform: translate(-50%, -50%);
+//         transition: all 0.3s ease-in-out;
+//         width: 25%;
+//         &:hover {
+//           background: hsl(3, 60, 22);
+//           // filter: drop-shadow(0px 3px 4px hsl(3,60,15));
+//           // filter: drop-shadow(0px 2px 2px hsl(17, 12%, 20%));
+//           filter: drop-shadow(0px 1px 1px hsl(0, 0, 5));
+//           opacity: 1;
+//         }
+//         // /Submit Button
+//       }
+//       // /fieldset
+//     }
+//     // /form
+//   }
+//   // /.form-container
+// }

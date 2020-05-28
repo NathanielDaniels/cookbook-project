@@ -225,7 +225,7 @@
       </section> -->
       <!--! /======================== -->
 
-      <!-- ! Possible OLD Location for FORM-Section -->
+      <!-- ! Possible OLD Location for FORM-Section (SAVE THIS) -->
       <!-- <section class="form-container">
         <form class="form" id="form" method="POST">
           <fieldset class="mainFieldset">
@@ -280,11 +280,11 @@
       <section class="blog">
         Blog
       </section>
-      <section class="form-recipes" id="formRecipes">
+
+      <section class="mainRecipes" id="mainRecipes">
         <div class="recipes-list" id="recipesList">
+          main recipes
           <div class="firstRecipe"></div>
-          - Make Recipe Name a Link<br />
-          - Link slides open a side-menu with recipe inside
         </div>
       </section>
 
@@ -293,41 +293,38 @@
         <form class="form" id="form" method="POST">
           <fieldset class="mainFieldset">
             <div class="form-grid">
-              <fieldset class="recipeName">
-                <legend for="recipeName">Name Your Recipe</legend>
+              <fieldset class="userName">
+                <legend for="recipeName">Your Name</legend>
                 <input
                   type="text"
-                  name="recipeName"
+                  name="userName"
                   maxlength="100"
                   autocomplete="off"
                 />
               </fieldset>
-              <fieldset class="recipeList">
-                <legend for="ingredientList">Ingredients</legend>
+
+              <fieldset class="userEmail">
+                <legend for="userEmail">Your Email</legend>
                 <br />
-                <textarea type="text" name="ingredientList"></textarea><br />
+                <input type="email" name="userEmail"></input><br />
               </fieldset>
-              <fieldset class="recipeInst">
-                <legend for="instruction">Instructions</legend>
+              
+              <fieldset class="emailSubject">
+                <legend for="emailSubject">Subject</legend>
                 <br />
-                <textarea name="instruction"></textarea><br />
+                <textarea name="emailSubject"></textarea><br />
               </fieldset>
-              <fieldset class="addLink">
-                <legend for="fav-link">Favorite Link</legend>
-                <input
-                  type="text"
-                  name="favLink"
-                  placeholder="www.MyFavoriteRecipes.com"
-                  autocomplete="off"
-                />
+              <fieldset class="emailMessage">
+                <legend for="emailMessage">Message</legend>
+                <br />
+                <textarea name="emailMessage"></textarea><br />
               </fieldset>
-              <fieldset class="file">
-                <legend for="file">Image</legend>
-                <input type="file" name="file" />
-                <i class="fa fa-cloud-upload"
-                  ><span>Click Here to add Image</span></i
-                >
-              </fieldset>
+
+
+          
+          
+
+
             </div>
             <input
               class="form-button"
