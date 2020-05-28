@@ -218,7 +218,7 @@ body {
   margin-top: 20px;
 }
 
-.main-container .recipes-container {
+.main-container .topRecipes-container {
   background: #eec78e;
   position: relative;
   z-index: -1;
@@ -231,12 +231,12 @@ body {
   overflow: hidden;
 }
 
-.main-container .recipes-container .recipes-title {
+.main-container .topRecipes-container .topRecipes-title {
   text-align: center;
   margin: 0;
 }
 
-.main-container .recipes-container .recipes-title h1 {
+.main-container .topRecipes-container .topRecipes-title h1 {
   color: #1a1a1a;
   font-family: Rustico;
   font-size: 6rem;
@@ -245,68 +245,22 @@ body {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
-.main-container .recipes-container .recipe-arrows {
-  position: absolute;
-  width: 100%;
-  top: 55%;
-}
-
-.main-container .recipes-container .recipe-arrows .prev,
-.main-container .recipes-container .recipe-arrows .next {
-  font-family: Rustico;
-  font-size: 4rem;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.main-container .recipes-container .recipe-arrows .prev:hover,
-.main-container .recipes-container .recipe-arrows .next:hover {
-  background-color: #e4a84e;
-}
-
-.main-container .recipes-container .recipe-arrows .prev-arrow {
-  float: left;
-  padding-left: 2vw;
-}
-
-.main-container .recipes-container .recipe-arrows .next-arrow {
-  float: right;
-  padding-right: 2vw;
-}
-
-.main-container .recipes-container .recipes-body {
+.main-container .topRecipes-container .topRecipes-body {
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
   width: 80%;
   margin: auto;
-  -ms-grid-columns: (300px)[7];
-      grid-template-columns: repeat(7, 300px);
+  -ms-grid-columns: (300px)[3];
+      grid-template-columns: repeat(3, 300px);
   -ms-grid-rows: (200px)[2];
       grid-template-rows: repeat(2, 200px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 30px;
   padding: 10px;
   overflow: hidden;
 }
 
-.main-container .recipes-container .recipes-body .grid-item {
+.main-container .topRecipes-container .topRecipes-body .grid-item {
   position: relative;
   background-size: cover;
   border-radius: 10px;
@@ -315,12 +269,12 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.main-container .recipes-container .recipes-body .grid-item:hover {
+.main-container .topRecipes-container .topRecipes-body .grid-item:hover {
   -webkit-filter: drop-shadow(0px 10px 5px #7d4b12);
           filter: drop-shadow(0px 10px 5px #7d4b12);
 }
 
-.main-container .recipes-container .recipes-body .grid-item .hover-text {
+.main-container .topRecipes-container .topRecipes-body .grid-item .hover-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,97 +300,32 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.main-container .recipes-container .recipes-body .grid-item .hover-text:hover {
+.main-container .topRecipes-container .topRecipes-body .grid-item .hover-text:hover {
   opacity: 1;
 }
 
-.main-container .recipes-container .recipes-body .recipe1 {
+.main-container .topRecipes-container .topRecipes-body .recipe1 {
   background-image: url("/IMG/recipe1.jpg");
 }
 
-.main-container .recipes-container .recipes-body .recipe2 {
+.main-container .topRecipes-container .topRecipes-body .recipe2 {
   background-image: url("/IMG/recipe2.jpeg");
 }
 
-.main-container .recipes-container .recipes-body .recipe3 {
+.main-container .topRecipes-container .topRecipes-body .recipe3 {
   background-image: url("/IMG/recipe3.jpg");
 }
 
-.main-container .recipes-container .recipes-body .recipe4 {
+.main-container .topRecipes-container .topRecipes-body .recipe4 {
   background-image: url("/IMG/recipe4.jpg");
 }
 
-.main-container .recipes-container .recipes-body .recipe5 {
+.main-container .topRecipes-container .topRecipes-body .recipe5 {
   background-image: url("/IMG/recipe5.jpg");
 }
 
-.main-container .recipes-container .recipes-body .recipe6 {
+.main-container .topRecipes-container .topRecipes-body .recipe6 {
   background-image: url("/IMG/recipe6.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe7 {
-  background-image: url("/IMG/recipe3.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe8 {
-  background-image: url("/IMG/recipe4.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe9 {
-  background-image: url("/IMG/recipe5.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe10 {
-  background-image: url("/IMG/recipe6.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe11 {
-  background-image: url("/IMG/recipe5.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe12 {
-  background-image: url("/IMG/recipe6.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe13 {
-  background-image: url("/IMG/recipe5.jpg");
-}
-
-.main-container .recipes-container .recipes-body .recipe14 {
-  background-image: url("/IMG/recipe6.jpg");
-}
-
-.main-container .recipes-container .pagination-wrapper {
-  width: 100%;
-  margin: 15px 0 0;
-}
-
-.main-container .recipes-container .pagination-wrapper .pagination {
-  text-align: center;
-}
-
-.main-container .recipes-container .pagination-wrapper .pagination span {
-  display: inline-block;
-  position: relative;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0 2px;
-}
-
-.main-container .recipes-container .pagination-wrapper .pagination span:before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  right: 3px;
-  bottom: 3px;
-  background: #e74c3c;
-  border-radius: 50%;
-}
-
-.main-container .recipes-container .pagination-wrapper .pagination span.active {
-  border: 2px solid #3498db;
 }
 
 .main-container .form-container {
