@@ -442,7 +442,7 @@ body {
   left: 45%;
   padding: 40px 25px 0px;
   position: relative;
-  width: 50%;
+  width: 60%;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid {
@@ -465,6 +465,11 @@ body {
   padding: 5px 20px;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid fieldset :nth-last-child(2) {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid legend {
@@ -700,15 +705,6 @@ body {
     -ms-grid-rows: (160px)[2] !important;
         grid-template-rows: repeat(2, 160px) !important;
   }
-  .form-container form fieldset.mainFieldset .form-grid {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
   .form-container .form-button {
     width: 9rem !important;
   }
@@ -753,6 +749,15 @@ body {
   section.about-section div.boardContainer div.backboard p {
     font-size: 1.4rem !important;
   }
+  .form-container form fieldset.mainFieldset {
+    left: -10% !important;
+  }
+  .form-container form fieldset.mainFieldset .form-grid fieldset:nth-last-child(2) {
+    background: blue;
+  }
+  .form-container .form-button {
+    width: 9rem !important;
+  }
 }
 
 @media screen and (max-width: 745px) {
@@ -788,21 +793,6 @@ body {
   }
   .recipes-container .pagination-wrapper {
     display: none;
-  }
-  section.form-container form.form fieldset.main-fieldset .form-grid {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-  }
-  section.form-container form.form fieldset.main-fieldset .form-grid fieldset.recipe-list textarea {
-    width: 100% !important;
-  }
-  section.form-container form.form fieldset.main-fieldset .form-grid input.form-button[type="submit"] {
-    width: 155px !important;
   }
 }
 
@@ -866,8 +856,11 @@ body {
     display: none;
   }
   .main-container section.form-container form.form fieldset.main-fieldset {
-    left: 100% !important;
-    width: 100%;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
+    background-position: right !important;
+    width: 100% !important;
   }
   .main-container section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
     font-size: 15px;

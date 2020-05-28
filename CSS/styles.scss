@@ -425,12 +425,14 @@ body {
         left: 45%;
         padding: 40px 25px 0px;
         position: relative;
-        width: 50%;
+        // width: 35rem;
+        width: 60%;
         .form-grid {
           display: grid;
           grid-gap: 20px;
           grid-template-columns: 1fr;
           grid-template-rows: 75px 75px 75px 250px;
+
           fieldset {
             border-radius: 25px;
             border: 3px solid hsl(28, 32%, 20%);
@@ -438,6 +440,9 @@ body {
             filter: saturate(2);
             padding: 5px 20px;
             transition: color 0.3s ease-in-out;
+            :nth-last-child(2) {
+              grid-template-columns: 100%;
+            }
           }
           legend {
             // color: hsl(3,60,25);
@@ -496,8 +501,6 @@ body {
               resize: none;
               top: -30px;
               width: 100%;
-              // border-radius: 20px;
-
               &:focus {
                 outline-style: none;
               }
@@ -671,9 +674,11 @@ body {
       fieldset.mainFieldset {
         // left: 50% !important;
         // transform: translate(-50%, 0);
-        .form-grid {
-          display: flex !important;
-          flex-direction: column !important;
+        .form-grid fieldset:nth-last-child(2) {
+          // background: blue;
+          // grid-template-columns: 100% !important;
+
+          // width: 45vw !important;
         }
         // /fieldset
       }
@@ -729,39 +734,6 @@ body {
       padding-right: 0px !important;
     }
   }
-  // section.form-container {
-  //   form.form {
-  //     fieldset.main-fieldset {
-  //       width: 80%;
-  //       left: 50%;
-  //       transform: translate(-50%);
-  //       .form-grid {
-  //         // grid-template-columns: 1fr !important;
-  //         grid-template-columns: repeat(1, 200px) !important;
-  //         // grid-template-rows: 5fr !important;
-  //         grid-template-rows: repeat(5, 200px) !important;
-  //       }
-  //     }
-  //     // /form
-  //   }
-  //   // /section.form-container
-  // }
-  .form-container {
-    form {
-      // margin: auto;
-      fieldset.mainFieldset {
-        // width: 80% !important;
-        .form-grid {
-        }
-        // /fieldset
-      }
-      // /form
-    }
-    // .form-button {
-    //   width: 100% !important;
-    // }
-  }
-
   // /@media(900px)
 }
 
@@ -778,6 +750,22 @@ body {
           font-size: 1.4rem !important;
         }
       }
+    }
+  }
+  .form-container {
+    form {
+      fieldset.mainFieldset {
+        left: -10% !important;
+        .form-grid fieldset:nth-last-child(2) {
+          background: blue;
+          // grid-template-columns: 100% !important;
+        }
+        // /fieldset
+      }
+      // /form
+    }
+    .form-button {
+      width: 9rem !important;
     }
   }
 }
@@ -824,46 +812,22 @@ body {
       display: none;
     }
   }
-  section.form-container {
-    // padding: 20px;
-    // h1.form-title {
-    //   font-size: 3rem !important;
-    //   padding-top: 30px;
-    //   text-align: center;
-    // }
-    form.form {
-      fieldset.main-fieldset {
-        // width: 90%;
-        // left: 50%;
-        // transform: translate(-50%);
-        .form-grid {
-          display: flex !important;
-          flex-direction: column !important;
-          fieldset {
-            // margin: 10px 0;
-          }
-          fieldset.recipe-list {
-            textarea {
-              width: 100% !important;
-            }
-          }
-          // .add-link {
-          //   input::placeholder {
-          //     // font-size: 22px;
-          //   }
-          // }
-          input.form-button[type="submit"] {
-            width: 155px !important;
-            // top: 150px !important;
-          }
-          // /.form-grid
-        }
-        // /fieldset
-      }
-      // /form
-    }
-    // /form-container
-  }
+  // section.form-container {
+  //   form.form {
+  //     fieldset.main-fieldset {
+  //       .form-grid {
+  //         input.form-button[type="submit"] {
+  //           // width: 155px !important;
+  //           // top: 150px !important;
+  //         }
+  //         // /.form-grid
+  //       }
+  //       // /fieldset
+  //     }
+  //     // /form
+  //   }
+  //   // /form-container
+  // }
   // /Media (720px)
 }
 
@@ -888,17 +852,6 @@ body {
         // line-height: 1.1;
       }
     }
-
-    // .title-container {
-    //   .bg {
-    //     height: 30rem !important;
-    //   }
-    //   .main-title {
-    //     h1 {
-    //       font-size: 4rem !important;
-    //     }
-    //   }
-    // }
 
     section.about-section {
       height: 22rem !important;
@@ -956,9 +909,12 @@ body {
       form.form {
         // width: 100vw !important;
         fieldset.main-fieldset {
-          left: 100% !important;
+          left: 50% !important;
+          transform: translate(-50%, 0) !important;
 
-          width: 100%;
+          background-position: right !important;
+
+          width: 100% !important;
           input::placeholder {
             font-size: 15px;
           }
