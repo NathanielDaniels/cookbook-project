@@ -181,10 +181,6 @@ body {
   border-bottom: 5px solid black;
 }
 
-.main-container .about-section .mobilePara {
-  display: none;
-}
-
 .main-container .about-section .boardContainer {
   -webkit-filter: drop-shadow(0px 15px 15px #0d0d0d);
           filter: drop-shadow(0px 15px 15px #0d0d0d);
