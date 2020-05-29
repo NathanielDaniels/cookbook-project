@@ -269,8 +269,6 @@ body {
 
   .topRecipes-container {
     background: #eec78e;
-    position: relative;
-    z-index: -1;
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
@@ -321,22 +319,27 @@ body {
     //   // }
     // }
     .topRecipes-body {
-      display: grid;
-      grid-gap: 20px;
-      width: 80%;
-      margin: auto;
-      grid-template-columns: repeat(3, 300px);
-      grid-template-rows: repeat(2, 200px);
-      // justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      // margin: auto;
+      // display: grid;
+      // grid-gap: 20px;
+      // grid-template-columns: repeat(3, 300px);
+      // grid-template-rows: repeat(2, 200px);
       margin-top: 30px;
       padding: 10px;
       overflow: hidden;
       .grid-item {
-        position: relative;
+        width: 300px;
+        height: 200px;
+        margin: 10px;
         background-size: cover;
         border-radius: 10px;
-        cursor: pointer;
         transition: all 0.3s ease-in-out;
+        cursor: pointer;
         &:hover {
           filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
         }
@@ -630,7 +633,10 @@ body {
   }
 
   .recipes-container {
-    background: #eec78e;
+    // background: #eec78e;
+    // background: hsl(0, 59%, 30%);
+    // background: hsl(26, 90%, 70%);
+    background: lightsalmon;
     position: relative;
     z-index: -1;
     border-bottom: 5px solid hsl(0, 0, 0.5);
@@ -643,7 +649,8 @@ body {
       text-align: center;
       margin: 0;
       h1 {
-        color: hsl(0, 0, 10);
+        // color: hsl(0, 0, 10);
+        color: hsl(0, 0%, 86%);
         font-family: Rustico;
         font-size: 6rem;
         font-weight: 300;
@@ -658,6 +665,7 @@ body {
       top: 55%;
       .prev,
       .next {
+        color: hsl(0, 0%, 86%);
         font-family: Rustico;
         font-size: 4rem;
         position: relative;
@@ -670,7 +678,8 @@ body {
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
         &:hover {
-          background-color: hsl(36, 74%, 60%);
+          // background-color: hsl(36, 74%, 60%);
+          background-color: hsl(17, 100%, 65%);
         }
       }
       .prev-arrow {
@@ -683,6 +692,8 @@ body {
       }
     }
     .recipes-body {
+      // background: blue;
+      height: 28rem;
       display: grid;
       grid-gap: 20px;
       width: 80%;
@@ -700,7 +711,8 @@ body {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         &:hover {
-          filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
+          // filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
+          filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
         }
         .hover-text {
           @include hover-text();
@@ -754,11 +766,8 @@ body {
     }
     .pagination-wrapper {
       width: 100%;
-      // height: 40px;
-      margin: 15px 0 0;
+      // margin: 15px 0 0;
       .pagination {
-        // position: relative;
-        // top: 20px;
         text-align: center;
         span {
           display: inline-block;
@@ -774,33 +783,35 @@ body {
             left: 3px;
             right: 3px;
             bottom: 3px;
-            background: #e74c3c;
+            // background: #e74c3c;
+            background: hsl(0, 0%, 86%);
             // background: hsl(3, 60, 25);
 
             border-radius: 50%;
           }
           &.active {
-            border: 2px solid #3498db;
-            // border: 2px solid whitesmoke;
+            // border: 2px solid #3498db;
+            // border: 2px solid hsl(36, 79%, 63%);
+            background: hsl(0, 0%, 86%);
           }
         }
       }
     }
   }
 
-  .mainRecipes {
-    border-bottom: 5px solid hsl(0, 0, 0);
-    width: 100%;
-    height: 500px;
-    max-height: auto;
-    background: #f1c98e;
-    .recipes-list {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+  // .mainRecipes {
+  //   border-bottom: 5px solid hsl(0, 0, 0);
+  //   width: 100%;
+  //   height: 500px;
+  //   max-height: auto;
+  //   background: #f1c98e;
+  //   .recipes-list {
+  //     height: 100%;
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //   }
+  // }
   /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
@@ -844,6 +855,7 @@ body {
       }
     }
   }
+
   .recipes-container {
     .recipes-title {
       text-align: center;
