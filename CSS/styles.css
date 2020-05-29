@@ -1003,6 +1003,9 @@ body {
   .main-container section.about-section div.boardContainer div.backboard p {
     font-size: 1.1rem !important;
   }
+  .main-container .topRecipes-container .topRecipes-body .grid-item {
+    width: 350px !important;
+  }
   .main-container .recipes-container .recipes-title h1 {
     font-size: 5rem;
     position: static;

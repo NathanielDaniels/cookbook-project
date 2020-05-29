@@ -1108,6 +1108,21 @@ body {
         }
       }
     }
+
+    .topRecipes-container {
+      .topRecipes-title {
+        h1 {
+          // font-size: 5rem !important;
+        }
+      }
+      .topRecipes-body {
+        // margin-top: 0px !important;
+        .grid-item {
+          width: 350px !important;
+        }
+      }
+    }
+
     .recipes-container {
       // padding: 80px 150px !important;
       .recipes-title h1 {
