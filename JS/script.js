@@ -36,9 +36,11 @@ prevArrow.addEventListener("click", () => {
     for (let i = 0; i < recipes.length; i++) {
       let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 320;
       if (w < "1200") {
+        console.log("working under 1200");
         moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 250;
       }
       if (w < "900") {
+        console.log("working under 900");
         moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 220;
       }
       recipes[i].style.position = "relative";
@@ -91,6 +93,7 @@ nextArrow.addEventListener("click", () => {
     prevArrow.disabled = true;
   }
 });
+
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
 recipeLocation.classList = "recipeLocation";

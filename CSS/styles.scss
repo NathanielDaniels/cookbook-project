@@ -35,7 +35,7 @@
 /* Sets the dimensions of the entire scrollbar */
 html::-webkit-scrollbar {
   width: 20px;
-  height: 30px;
+  height: 100vh;
 }
 
 /* The grabbable scrollbar button  */
