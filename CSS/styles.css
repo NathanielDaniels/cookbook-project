@@ -630,7 +630,6 @@ body {
 }
 
 .main-container .recipes-container .recipes-body {
-  height: 28rem;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -750,6 +749,7 @@ body {
 
 .main-container .recipes-container .pagination-wrapper {
   width: 100%;
+  margin: 15px 0 0;
 }
 
 .main-container .recipes-container .pagination-wrapper .pagination {
