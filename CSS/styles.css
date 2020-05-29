@@ -7,7 +7,7 @@
 /* Sets the dimensions of the entire scrollbar */
 html::-webkit-scrollbar {
   width: 20px;
-  height: 100vh;
+  height: 20px;
 }
 
 /* The grabbable scrollbar button  */
@@ -37,6 +37,7 @@ html::-webkit-scrollbar-track {
 body {
   background: #333333;
   cursor: default;
+  overflow-x: hidden;
 }
 
 /*------------------------------------*\
@@ -932,6 +933,15 @@ body {
   }
   section.about-section div.boardContainer div.backboard p {
     font-size: 1.3rem !important;
+  }
+  .topRecipes-container .topRecipes-title h1 {
+    font-size: 5rem !important;
+  }
+  .topRecipes-container .topRecipes-body {
+    margin-top: 0px !important;
+  }
+  .topRecipes-container .topRecipes-body .grid-item {
+    width: 200px !important;
   }
   .recipes-container .recipes-title h1 {
     font-size: 5rem;

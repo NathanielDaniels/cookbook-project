@@ -35,7 +35,7 @@
 /* Sets the dimensions of the entire scrollbar */
 html::-webkit-scrollbar {
   width: 20px;
-  height: 100vh;
+  height: 20px;
 }
 
 /* The grabbable scrollbar button  */
@@ -75,7 +75,7 @@ html::-webkit-scrollbar-track {
 body {
   background: hsl(0, 0, 20);
   cursor: default;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 /*------------------------------------*\
     #MAIN-CONTAINER
@@ -795,20 +795,6 @@ body {
       }
     }
   }
-
-  // .mainRecipes {
-  //   border-bottom: 5px solid hsl(0, 0, 0);
-  //   width: 100%;
-  //   height: 500px;
-  //   max-height: auto;
-  //   background: #f1c98e;
-  //   .recipes-list {
-  //     height: 100%;
-  //     display: flex;
-  //     justify-content: center;
-  //     align-items: center;
-  //   }
-  // }
   /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
@@ -1012,6 +998,20 @@ body {
         p {
           font-size: 1.3rem !important;
         }
+      }
+    }
+  }
+
+  .topRecipes-container {
+    .topRecipes-title {
+      h1 {
+        font-size: 5rem !important;
+      }
+    }
+    .topRecipes-body {
+      margin-top: 0px !important;
+      .grid-item {
+        width: 200px !important;
       }
     }
   }
