@@ -543,7 +543,7 @@ body {
 
 .main-container .blog {
   background: white;
-  height: 50vh;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

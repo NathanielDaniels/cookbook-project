@@ -94,6 +94,45 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
+//! Click Recipe Popup Module =====================
+
+hoverText = document.querySelectorAll(".hover-text");
+// console.log(hoverText);
+
+// for (item in hoverText) {
+//   // console.log(hoverText[item]);
+//   eachRecipe = hoverText[item];
+//   console.log(eachRecipe, item);
+
+//   eachRecipe.addEventListener("click", () => {
+//     eachRecipe.classList.add("active");
+//   });
+// }
+
+// for (item in recipes) {
+//   console.log(recipes[item]);
+
+//   recipes[item].addEventListener("click", clickedItem);
+// }
+
+function clickedItem() {
+  console.log("working!!!");
+  recipes[i].removeEventListener("click", clickedItem);
+}
+
+// for (let i = 0; i < recipes.length; i++) {
+//   console.log(recipes[i]);
+//   recipes[i].addEventListener("click", clickedItem);
+// }
+
+//? Running All Recipe Items at once?!
+//? Not what I'm looking for (DELETE Once Complete)
+// recipes.forEach(function () {
+//   console.log("working now?");
+//   this.addEventListener("click", () => {
+//     console.log("EventListener Working");
+//   });
+// });
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
 recipeLocation.classList = "recipeLocation";
@@ -119,9 +158,8 @@ form.onsubmit = async (e) => {
 
   const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
     .value;
-  // console.log(ingredientsValue);
 
-  //! creating list for ingredients
+  //! creating list for ingredients =====================
   // function list(ingredientsValue) {
   //   return `<li>${ingredientsValue}</li>`;
   // }
@@ -131,11 +169,9 @@ form.onsubmit = async (e) => {
 
   const instructionsValue = form.querySelector('textarea[name="instruction"]')
     .value;
-  // console.log(instructionsValue);
   formInfo.instructions = instructionsValue;
 
   const favLinkValue = form.querySelector('input[name="favLink"]').value;
-  // console.log(favLinkValue);
   formInfo.website = favLinkValue;
 
   const file = form.querySelector('input[type="file"]');
