@@ -934,7 +934,7 @@ body {
     background-size: 70rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
   .topRecipes-container .topRecipes-title h1 {
     font-size: 5rem !important;
@@ -982,26 +982,13 @@ body {
   .main-container section.about-section {
     height: 22rem !important;
   }
-  .main-container section.about-section p {
-    display: block;
-    text-shadow: 0px 1px 0px #36281c, 0px -1px 0px black;
-    letter-spacing: 1px;
-    position: relative;
-    top: 45%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    font-family: Rustico;
-    font-size: 1.2rem;
-    text-align: center;
-    color: transparent;
-  }
   .main-container section.about-section div.boardContainer div.backboard {
     height: 20rem !important;
     background-size: 200% !important;
   }
   .main-container section.about-section div.boardContainer div.backboard p {
-    font-size: 1.1rem !important;
+    font-size: 1rem !important;
+    letter-spacing: 1.4px !important;
   }
   .main-container .topRecipes-container .topRecipes-body .grid-item {
     width: 70% !important;
