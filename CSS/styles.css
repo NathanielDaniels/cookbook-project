@@ -984,11 +984,11 @@ body {
   }
   .main-container section.about-section div.boardContainer div.backboard {
     height: 20rem !important;
-    background-size: 200% !important;
+    background-size: 210% !important;
   }
   .main-container section.about-section div.boardContainer div.backboard p {
     font-size: 1rem !important;
-    letter-spacing: 1.4px !important;
+    letter-spacing: 1.3px !important;
   }
   .main-container .topRecipes-container .topRecipes-body .grid-item {
     width: 70% !important;
