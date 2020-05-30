@@ -699,7 +699,7 @@ body {
       grid-template-rows: repeat(2, 150px);
       justify-content: center;
       // margin-top: 30px;
-      // padding: 10px;
+      padding: 0 0 10px;
       overflow: hidden;
       .grid-item {
         position: relative;
@@ -1160,13 +1160,14 @@ body {
       // padding: 5% !important;
       form.form {
         // width: 100vw !important;
+        width: 100% !important;
         fieldset.main-fieldset {
           left: 50% !important;
           transform: translate(-50%, 0) !important;
 
           background-position: right !important;
 
-          width: 100% !important;
+          // width: 100% !important;
           input::placeholder {
             font-size: 15px;
           }

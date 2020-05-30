@@ -638,6 +638,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 0 10px;
   overflow: hidden;
 }
 
@@ -1032,12 +1033,14 @@ body {
   .main-container .recipes-container .pagination-wrapper {
     display: none;
   }
+  .main-container section.form-container form.form {
+    width: 100% !important;
+  }
   .main-container section.form-container form.form fieldset.main-fieldset {
     left: 50% !important;
     -webkit-transform: translate(-50%, 0) !important;
             transform: translate(-50%, 0) !important;
     background-position: right !important;
-    width: 100% !important;
   }
   .main-container section.form-container form.form fieldset.main-fieldset input::-webkit-input-placeholder {
     font-size: 15px;
