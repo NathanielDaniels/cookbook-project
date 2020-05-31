@@ -722,16 +722,12 @@ body {
             left: 3px;
             right: 3px;
             bottom: 3px;
-            // background: #e74c3c;
-            background: hsl(0, 0%, 86%);
-            // background: hsl(3, 60, 25);
-
+            background: hsl(0, 0%, 95%);
             border-radius: 50%;
           }
           &.active {
-            // border: 2px solid #3498db;
             // border: 2px solid hsl(36, 79%, 63%);
-            background: hsl(0, 0%, 86%);
+            background: hsl(0, 0%, 95%);
           }
         }
       }

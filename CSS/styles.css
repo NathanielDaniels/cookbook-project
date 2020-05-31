@@ -822,12 +822,12 @@ body {
   left: 3px;
   right: 3px;
   bottom: 3px;
-  background: #dbdbdb;
+  background: #f2f2f2;
   border-radius: 50%;
 }
 
 .main-container .recipes-container .pagination-wrapper .pagination span.active {
-  background: #dbdbdb;
+  background: #f2f2f2;
 }
 
 .main-container footer.footer {
