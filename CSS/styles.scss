@@ -651,9 +651,13 @@ body {
         }
         .hover-text {
           @include hover-text();
-          // p {
-          //   color: hsl(36, 74%, 80%);
-          // }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .active {
+          @include hover-text();
+          opacity: 1;
         }
       }
       .recipe1 {

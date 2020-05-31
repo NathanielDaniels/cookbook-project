@@ -4,7 +4,7 @@
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
-const recipes = document.querySelectorAll(".grid-item");
+const scrollRecipes = document.querySelectorAll(".scroll");
 
 const form = document.forms[0];
 // console.log(form);
@@ -20,8 +20,8 @@ $(function () {
 //! Top Recipe Arrows =====================================
 let pagination = document.querySelector(".pagination");
 let dots = pagination.children;
-let w = window.innerWidth;
-let h = window.innerHeight;
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
 
 window.addEventListener("resize", function () {
   console.log(window.innerWidth);
@@ -33,18 +33,18 @@ prevArrow.addEventListener("click", () => {
   // console.log(counter);
   if (counter <= 3 && counter >= -3) {
     counter++;
-    for (let i = 0; i < recipes.length; i++) {
-      let moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 320;
-      if (w < "1200") {
+    for (let i = 0; i < scrollRecipes.length; i++) {
+      let moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 320;
+      if (screenWidth < "1200") {
         console.log("working under 1200");
-        moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 250;
+        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 250;
       }
-      if (w < "900") {
+      if (screenWidth < "900") {
         console.log("working under 900");
-        moveRight = (parseInt(recipes[i].style.left, 10) || 0) + 220;
+        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 220;
       }
-      recipes[i].style.position = "relative";
-      recipes[i].style.left = moveRight + "px";
+      scrollRecipes[i].style.position = "relative";
+      scrollRecipes[i].style.left = moveRight + "px";
       function dotsLeft() {
         for (let i = 0; i < dots.length; i++) {
           if (dots[i].classList.value === "active") {
@@ -67,16 +67,16 @@ nextArrow.addEventListener("click", () => {
   // console.log(counter);
   if (counter >= -3 && counter <= 3) {
     counter--;
-    for (let i = 0; i < recipes.length; i++) {
-      let moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 320;
-      if (w < "1200") {
-        moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 250;
+    for (let i = 0; i < scrollRecipes.length; i++) {
+      let moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 320;
+      if (screenWidth < "1200") {
+        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 250;
       }
-      if (w < "900") {
-        moveLeft = (parseInt(recipes[i].style.left, 10) || 0) - 220;
+      if (screenWidth < "900") {
+        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 220;
       }
-      recipes[i].style.position = "relative";
-      recipes[i].style.left = moveLeft + "px";
+      scrollRecipes[i].style.position = "relative";
+      scrollRecipes[i].style.left = moveLeft + "px";
       function dotsRight() {
         for (let i = 0; i < dots.length; i++) {
           if (dots[i].classList.value === "active") {
@@ -102,10 +102,12 @@ items = document.querySelectorAll(".grid-item");
 function addEventListenerList(list) {
   console.log("working!!!");
 
-  for (let i = 0; i < recipes.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     list[i].addEventListener("click", () => {
-      console.log("clicked");
-      list[i].classList.toggle("active");
+      if (screenWidth < "1200") {
+        console.log("Clicked on Mobile");
+        list[i].classList.toggle("active");
+      }
     });
   }
 }
@@ -114,7 +116,7 @@ addEventListenerList(hoverText);
 
 //? Running All Recipe Items at once?!
 //? Not what I'm looking for (DELETE Once Complete)
-// recipes.forEach(function () {
+// scrollRecipes.forEach(function () {
 //   console.log("working now?");
 //   this.addEventListener("click", () => {
 //     console.log("EventListener Working");
@@ -180,3 +182,15 @@ form.onsubmit = async (e) => {
 };
 
 // console.log(document.forms);
+
+//==============================
+//! Javascript Practice
+
+//? Reverse a string
+// function reverseString(str) {
+//   let splitString = str.split("");
+//   console.log(splitString);
+//   splitString.reverse();
+//   return splitString;
+// }
+// console.log(reverseString("hello"));
