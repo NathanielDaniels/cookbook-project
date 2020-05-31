@@ -296,6 +296,23 @@ body {
       width: 100%;
       padding: 10px;
       overflow: hidden;
+      .popup {
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        border: 2px solid black;
+        box-shadow: 0 10px 5px black;
+        .burgerMenu {
+          font-size: 2rem;
+          position: relative;
+          top: 10px;
+          right: 10px;
+          float: right;
+        }
+      }
+
       .grid-item {
         width: 300px;
         height: 200px;
@@ -337,30 +354,6 @@ body {
       .recipe6 {
         background-image: url("/IMG/recipe6.jpg");
       }
-      // .recipe7 {
-      //   background-image: url("/IMG/recipe3.jpg");
-      // }
-      // .recipe8 {
-      //   background-image: url("/IMG/recipe4.jpg");
-      // }
-      // .recipe9 {
-      //   background-image: url("/IMG/recipe5.jpg");
-      // }
-      // .recipe10 {
-      //   background-image: url("/IMG/recipe6.jpg");
-      // }
-      // .recipe11 {
-      //   background-image: url("/IMG/recipe5.jpg");
-      // }
-      // .recipe12 {
-      //   background-image: url("/IMG/recipe6.jpg");
-      // }
-      // .recipe13 {
-      //   background-image: url("/IMG/recipe5.jpg");
-      // }
-      // .recipe14 {
-      //   background-image: url("/IMG/recipe6.jpg");
-      // }
     }
   }
 

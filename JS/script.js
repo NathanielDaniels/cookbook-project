@@ -98,6 +98,7 @@ nextArrow.addEventListener("click", () => {
 
 hoverText = document.querySelectorAll(".hover-text");
 items = document.querySelectorAll(".grid-item");
+popup = document.querySelector(".popup");
 
 function addEventListenerList(list) {
   console.log("working!!!");
