@@ -27,9 +27,10 @@
   text-transform: uppercase;
   top: 0px;
   transition: 0.4s ease-in-out;
-  &:hover {
-    opacity: 1;
-  }
+  // &:hover,
+  // .active {
+  //   opacity: 1;
+  // }
 }
 
 /* Sets the dimensions of the entire scrollbar */
@@ -271,7 +272,6 @@ body {
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
-    // padding: 40px 0 60px;
     padding: 10px 0 40px;
     width: 100%;
     overflow: hidden;
@@ -288,48 +288,12 @@ body {
           0px -1px 0px rgba(0, 0, 0, 0.7);
       }
     }
-    // .recipe-arrows {
-    //   position: absolute;
-    //   width: 100%;
-    //   top: 55%;
-    //   .prev,
-    //   .next {
-    //     font-family: Rustico;
-    //     font-size: 4rem;
-    //     position: relative;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     width: 60px;
-    //     height: 60px;
-    //     cursor: pointer;
-    //     border-radius: 50%;
-    //     transition: all 0.3s ease-in-out;
-    //     &:hover {
-    //       background-color: hsl(36, 74%, 60%);
-    //     }
-    //   }
-    //   // .prev-arrow {
-    //   //   float: left;
-    //   //   padding-left: 2vw;
-    //   // }
-    //   // .next-arrow {
-    //   //   float: right;
-    //   //   padding-right: 2vw;
-    //   // }
-    // }
     .topRecipes-body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       width: 100%;
-      // margin: auto;
-      // display: grid;
-      // grid-gap: 20px;
-      // grid-template-columns: repeat(3, 300px);
-      // grid-template-rows: repeat(2, 200px);
-      // margin-top: 30px;
       padding: 10px;
       overflow: hidden;
       .grid-item {
@@ -343,11 +307,16 @@ body {
         &:hover {
           filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
         }
+
         .hover-text {
           @include hover-text();
-          // p {
-          //   color: hsl(36, 74%, 80%);
-          // }
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .active {
+          @include hover-text();
+          opacity: 1;
         }
       }
       .recipe1 {
@@ -393,40 +362,6 @@ body {
       //   background-image: url("/IMG/recipe6.jpg");
       // }
     }
-    // .pagination-wrapper {
-    //   width: 100%;
-    //   // height: 40px;
-    //   margin: 15px 0 0;
-    //   .pagination {
-    //     // position: relative;
-    //     // top: 20px;
-    //     text-align: center;
-    //     span {
-    //       display: inline-block;
-    //       position: relative;
-    //       width: 15px;
-    //       height: 15px;
-    //       border-radius: 50%;
-    //       margin: 0 2px;
-    //       &:before {
-    //         content: "";
-    //         position: absolute;
-    //         top: 3px;
-    //         left: 3px;
-    //         right: 3px;
-    //         bottom: 3px;
-    //         background: #e74c3c;
-    //         // background: hsl(3, 60, 25);
-
-    //         border-radius: 50%;
-    //       }
-    //       &.active {
-    //         border: 2px solid #3498db;
-    //         // border: 2px solid whitesmoke;
-    //       }
-    //     }
-    //   }
-    // }
   }
 
   /*------------------------------------*\
@@ -636,7 +571,7 @@ body {
     // background: #eec78e;
     // background: hsl(0, 59%, 30%);
     // background: hsl(26, 90%, 70%);
-    background: lightsalmon;
+    background: hsl(17, 100%, 80%);
     position: relative;
     z-index: -1;
     border-bottom: 5px solid hsl(0, 0, 0.5);
@@ -651,7 +586,7 @@ body {
       margin: 0;
       h1 {
         // color: hsl(0, 0, 10);
-        color: hsl(0, 0%, 86%);
+        color: hsl(0, 0%, 95%);
         font-family: Rustico;
         font-size: 7rem;
         font-weight: 300;
@@ -666,7 +601,7 @@ body {
       top: 55%;
       .prev,
       .next {
-        color: hsl(0, 0%, 86%);
+        color: hsl(0, 0%, 95%);
         font-family: Rustico;
         font-size: 4rem;
         position: relative;
@@ -680,7 +615,8 @@ body {
         transition: all 0.3s ease-in-out;
         &:hover {
           // background-color: hsl(36, 74%, 60%);
-          background-color: hsl(17, 100%, 65%);
+          // background-color: hsl(17, 100%, 65%);
+          background: hsl(17, 100%, 75%);
         }
       }
       .prev-arrow {
@@ -710,7 +646,8 @@ body {
         cursor: pointer;
         transition: all 0.3s ease-in-out;
         &:hover {
-          filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
+          // filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
+          filter: drop-shadow(0px 10px 5px hsl(15, 72%, 63%));
         }
         .hover-text {
           @include hover-text();

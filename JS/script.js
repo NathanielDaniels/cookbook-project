@@ -97,33 +97,20 @@ nextArrow.addEventListener("click", () => {
 //! Click Recipe Popup Module =====================
 
 hoverText = document.querySelectorAll(".hover-text");
-// console.log(hoverText);
+items = document.querySelectorAll(".grid-item");
 
-// for (item in hoverText) {
-//   // console.log(hoverText[item]);
-//   eachRecipe = hoverText[item];
-//   console.log(eachRecipe, item);
-
-//   eachRecipe.addEventListener("click", () => {
-//     eachRecipe.classList.add("active");
-//   });
-// }
-
-// for (item in recipes) {
-//   console.log(recipes[item]);
-
-//   recipes[item].addEventListener("click", clickedItem);
-// }
-
-function clickedItem() {
+function addEventListenerList(list) {
   console.log("working!!!");
-  recipes[i].removeEventListener("click", clickedItem);
+
+  for (let i = 0; i < recipes.length; i++) {
+    list[i].addEventListener("click", () => {
+      console.log("clicked");
+      list[i].classList.toggle("active");
+    });
+  }
 }
 
-// for (let i = 0; i < recipes.length; i++) {
-//   console.log(recipes[i]);
-//   recipes[i].addEventListener("click", clickedItem);
-// }
+addEventListenerList(hoverText);
 
 //? Running All Recipe Items at once?!
 //? Not what I'm looking for (DELETE Once Complete)
