@@ -99,6 +99,7 @@ nextArrow.addEventListener("click", () => {
 hoverText = document.querySelectorAll(".hover-text");
 items = document.querySelectorAll(".grid-item");
 popup = document.querySelector(".popup");
+burgerMenu = document.querySelector(".burgerMenu");
 
 function addEventListenerList(list) {
   console.log("working!!!");
@@ -109,6 +110,9 @@ function addEventListenerList(list) {
         console.log("Clicked on Mobile");
         list[i].classList.toggle("active");
       }
+    });
+    list[i].addEventListener("dblclick", function () {
+      list[i].classList.toggle("popup");
     });
   }
 }
