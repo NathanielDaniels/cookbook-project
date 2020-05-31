@@ -267,6 +267,14 @@ body {
     #RECIPE-SECTION (Top Recipes)
 \*------------------------------------*/
 
+  .blur {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+  }
+
   .topRecipes-container {
     background: #eec78e;
     border-bottom: 5px solid hsl(0, 0, 0.5);
@@ -275,6 +283,7 @@ body {
     padding: 10px 0 40px;
     width: 100%;
     overflow: hidden;
+
     .topRecipes-title {
       text-align: center;
       margin: 0;
@@ -288,6 +297,13 @@ body {
           0px -1px 0px rgba(0, 0, 0, 0.7);
       }
     }
+    // .blur {
+    //   filter: blur(5px);
+    //   -webkit-filter: blur(5px);
+    //   -moz-filter: blur(5px);
+    //   -o-filter: blur(5px);
+    //   -ms-filter: blur(5px);
+    // }
     .topRecipes-body {
       display: flex;
       flex-wrap: wrap;
@@ -296,28 +312,33 @@ body {
       width: 100%;
       padding: 10px;
       overflow: hidden;
-      // .popup {
-      //   position: absolute;
-      //   z-index: 100;
+      .activeOverlay {
+        position: fixed;
+        z-index: 999;
+        width: 85%;
+        height: 20rem;
+        // top: 0;
+        // left: 0;
+        // bottom: 0;
+        // right: 0;
+        background: white;
+        border: 2px solid black;
+        border-radius: 7px;
+        box-shadow: 0 10px 15px hsl(0, 20%, 10%);
+        .burgerMenu {
+          font-size: 2rem;
+          position: relative;
+          top: 10px;
+          right: 10px;
+          float: right;
+          cursor: pointer;
+        }
+      }
+
+      // .gridItems {
       //   width: 100%;
-      //   height: 100vh;
-      //   background: white;
-      //   border: 2px solid black;
-      //   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
-      //   .burgerMenu {
-      //     font-size: 2rem;
-      //     position: relative;
-      //     top: 10px;
-      //     right: 10px;
-      //     float: right;
-      //     cursor: pointer;
-      //     // &:hover {
-
-      //     // }
-      //   }
-      // }
-
-      .grid-item {
+      //   height: auto;
+      .top-grid-item {
         width: 300px;
         height: 200px;
         margin: 10px;
@@ -325,6 +346,7 @@ body {
         border-radius: 10px;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
+
         &:hover {
           filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
         }
@@ -339,23 +361,23 @@ body {
           @include hover-text();
           opacity: 1;
         }
-        .popup {
-          position: absolute;
-          z-index: 100;
-          width: 100%;
-          height: 20rem;
-          background: white;
-          border: 2px solid black;
-          box-shadow: 0 10px 15px hsl(0, 20%, 10%);
-          .burgerMenu {
-            font-size: 2rem;
-            position: relative;
-            top: 10px;
-            right: 10px;
-            float: right;
-            cursor: pointer;
-          }
-        }
+        // .popup {
+        //   position: absolute;
+        //   z-index: 100;
+        //   width: 100%;
+        //   height: 20rem;
+        //   background: white;
+        //   border: 2px solid black;
+        //   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
+        //   .burgerMenu {
+        //     font-size: 2rem;
+        //     position: relative;
+        //     top: 10px;
+        //     right: 10px;
+        //     float: right;
+        //     cursor: pointer;
+        //   }
+        // }
       }
       .recipe1 {
         background-image: url("/IMG/recipe1.jpg");
@@ -375,6 +397,7 @@ body {
       .recipe6 {
         background-image: url("/IMG/recipe6.jpg");
       }
+      // }
     }
   }
 

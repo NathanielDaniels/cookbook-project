@@ -97,8 +97,10 @@ nextArrow.addEventListener("click", () => {
 //! Click Recipe Popup Module =====================
 
 hoverText = document.querySelectorAll(".hover-text");
-items = document.querySelectorAll(".grid-item");
-popup = document.querySelector(".popup");
+items = document.querySelectorAll(".top-grid-item");
+topRecipesBody = document.querySelector(".topRecipes-body");
+overlayRecipe = document.querySelector(".overlayRecipe");
+popup = document.querySelector(".overlay");
 burgerMenu = document.querySelector(".burgerMenu");
 
 function addEventListenerList(list) {
@@ -111,11 +113,27 @@ function addEventListenerList(list) {
         list[i].classList.toggle("active");
       }
     });
+
     list[i].addEventListener("dblclick", function () {
-      list[i].classList.toggle("popup");
+      overlayRecipe.classList.toggle("activeOverlay");
+
+      items.forEach(() => {
+        //!Not working
+        // console.log("for each working");
+        items[i].classList.toggle("blur");
+      });
     });
   }
 }
+
+//! Close overlay when clicking outside
+document.addEventListener("click", () => {
+  let isClickInside = overlayRecipe.contains(event.target);
+
+  if (!isClickInside) {
+    overlayRecipe.classList.remove("activeOverlay");
+  }
+});
 
 addEventListenerList(hoverText);
 

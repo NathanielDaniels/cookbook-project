@@ -215,6 +215,14 @@ body {
   margin-top: 20px;
 }
 
+.main-container .blur {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+}
+
 .main-container .topRecipes-container {
   background: #eec78e;
   border-bottom: 5px solid #010101;
@@ -257,7 +265,28 @@ body {
   overflow: hidden;
 }
 
-.main-container .topRecipes-container .topRecipes-body .grid-item {
+.main-container .topRecipes-container .topRecipes-body .activeOverlay {
+  position: fixed;
+  z-index: 999;
+  width: 85%;
+  height: 20rem;
+  background: white;
+  border: 2px solid black;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 10px 15px #1f1414;
+          box-shadow: 0 10px 15px #1f1414;
+}
+
+.main-container .topRecipes-container .topRecipes-body .activeOverlay .burgerMenu {
+  font-size: 2rem;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.main-container .topRecipes-container .topRecipes-body .top-grid-item {
   width: 300px;
   height: 200px;
   margin: 10px;
@@ -268,12 +297,12 @@ body {
   cursor: pointer;
 }
 
-.main-container .topRecipes-container .topRecipes-body .grid-item:hover {
+.main-container .topRecipes-container .topRecipes-body .top-grid-item:hover {
   -webkit-filter: drop-shadow(0px 10px 5px #7d4b12);
           filter: drop-shadow(0px 10px 5px #7d4b12);
 }
 
-.main-container .topRecipes-container .topRecipes-body .grid-item .hover-text {
+.main-container .topRecipes-container .topRecipes-body .top-grid-item .hover-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,11 +328,11 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.main-container .topRecipes-container .topRecipes-body .grid-item .hover-text:hover {
+.main-container .topRecipes-container .topRecipes-body .top-grid-item .hover-text:hover {
   opacity: 1;
 }
 
-.main-container .topRecipes-container .topRecipes-body .grid-item .active {
+.main-container .topRecipes-container .topRecipes-body .top-grid-item .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,26 +357,6 @@ body {
   -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   opacity: 1;
-}
-
-.main-container .topRecipes-container .topRecipes-body .grid-item .popup {
-  position: absolute;
-  z-index: 100;
-  width: 100%;
-  height: 20rem;
-  background: white;
-  border: 2px solid black;
-  -webkit-box-shadow: 0 10px 15px #1f1414;
-          box-shadow: 0 10px 15px #1f1414;
-}
-
-.main-container .topRecipes-container .topRecipes-body .grid-item .popup .burgerMenu {
-  font-size: 2rem;
-  position: relative;
-  top: 10px;
-  right: 10px;
-  float: right;
-  cursor: pointer;
 }
 
 .main-container .topRecipes-container .topRecipes-body .recipe1 {
