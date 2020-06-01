@@ -240,7 +240,7 @@ body {
 }
 
 .main-container .topRecipes-container .topRecipes-title h1 {
-  color: #1a1a1a;
+  color: #6e5c42;
   font-family: Rustico;
   font-size: 6rem;
   font-weight: 300;
@@ -629,7 +629,7 @@ body {
 }
 
 .main-container .recipes-container .recipes-title h1 {
-  color: #f2f2f2;
+  color: #8c5640;
   font-family: Rustico;
   font-size: 7rem;
   font-weight: 300;
@@ -645,7 +645,7 @@ body {
 
 .main-container .recipes-container .recipe-arrows .prev,
 .main-container .recipes-container .recipe-arrows .next {
-  color: #f2f2f2;
+  color: #8c5640;
   font-family: Rustico;
   font-size: 4rem;
   position: relative;
@@ -695,7 +695,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 10px;
-  padding: 0 0 10px;
+  padding: 0 0 20px;
   overflow: hidden;
 }
 
@@ -709,8 +709,8 @@ body {
 }
 
 .main-container .recipes-container .recipes-body .grid-item:hover {
-  -webkit-filter: drop-shadow(0px 10px 5px #e57f5d);
-          filter: drop-shadow(0px 10px 5px #e57f5d);
+  -webkit-filter: drop-shadow(0px 10px 5px #8c5640);
+          filter: drop-shadow(0px 10px 5px #8c5640);
 }
 
 .main-container .recipes-container .recipes-body .grid-item .hover-text {
@@ -828,7 +828,6 @@ body {
 
 .main-container .recipes-container .pagination-wrapper {
   width: 100%;
-  margin: 15px 0 0;
 }
 
 .main-container .recipes-container .pagination-wrapper .pagination {
@@ -851,12 +850,12 @@ body {
   left: 3px;
   right: 3px;
   bottom: 3px;
-  background: #f2f2f2;
+  background: #8c5640;
   border-radius: 50%;
 }
 
 .main-container .recipes-container .pagination-wrapper .pagination span.active {
-  background: #f2f2f2;
+  background: #8c5640;
 }
 
 .main-container footer.footer {

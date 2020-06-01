@@ -288,7 +288,8 @@ body {
       text-align: center;
       margin: 0;
       h1 {
-        color: hsl(0, 0, 10);
+        // color: hsl(0, 0, 10);
+        color: #6e5c42;
         font-family: Rustico;
         font-size: 6rem;
         font-weight: 300;
@@ -623,7 +624,8 @@ body {
       margin: 0;
       h1 {
         // color: hsl(0, 0, 10);
-        color: hsl(0, 0%, 95%);
+        // color: hsl(0, 0%, 95%);
+        color: hsl(17, 37%, 40%);
         font-family: Rustico;
         font-size: 7rem;
         font-weight: 300;
@@ -638,7 +640,8 @@ body {
       top: 55%;
       .prev,
       .next {
-        color: hsl(0, 0%, 95%);
+        // color: hsl(0, 0%, 95%);
+        color: hsl(17, 37%, 40%);
         font-family: Rustico;
         font-size: 4rem;
         position: relative;
@@ -674,7 +677,7 @@ body {
       grid-template-rows: repeat(2, 150px);
       justify-content: center;
       margin-top: 10px;
-      padding: 0 0 10px;
+      padding: 0 0 20px;
       overflow: hidden;
       .grid-item {
         position: relative;
@@ -684,7 +687,8 @@ body {
         transition: all 0.3s ease-in-out;
         &:hover {
           // filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
-          filter: drop-shadow(0px 10px 5px hsl(15, 72%, 63%));
+          // filter: drop-shadow(0px 10px 5px hsl(15, 72%, 63%));
+          filter: drop-shadow(0px 10px 5px hsl(17, 37%, 40%));
         }
         .hover-text {
           @include hover-text();
@@ -742,7 +746,7 @@ body {
     }
     .pagination-wrapper {
       width: 100%;
-      margin: 15px 0 0;
+      // margin: 15px 0 0;
       .pagination {
         text-align: center;
         span {
@@ -759,12 +763,14 @@ body {
             left: 3px;
             right: 3px;
             bottom: 3px;
-            background: hsl(0, 0%, 95%);
+            // background: hsl(0, 0%, 95%);
+            background: hsl(17, 37%, 40%);
             border-radius: 50%;
           }
           &.active {
             // border: 2px solid hsl(36, 79%, 63%);
-            background: hsl(0, 0%, 95%);
+            // background: hsl(0, 0%, 95%);
+            background: hsl(17, 37%, 40%);
           }
         }
       }

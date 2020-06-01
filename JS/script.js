@@ -94,6 +94,7 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
+//====================================================
 //! Click Recipe Popup Module =====================
 
 hoverText = document.querySelectorAll(".hover-text");
@@ -126,6 +127,7 @@ function addEventListenerList(list) {
   }
 }
 
+//===================================================
 //! Close overlay when clicking outside
 document.addEventListener("click", () => {
   let isClickInside = overlayRecipe.contains(event.target);
