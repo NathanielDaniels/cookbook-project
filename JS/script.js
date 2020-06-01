@@ -100,6 +100,7 @@ nextArrow.addEventListener("click", () => {
 hoverText = document.querySelectorAll(".hover-text");
 items = document.querySelectorAll(".top-grid-item");
 topRecipesBody = document.querySelector(".topRecipes-body");
+recipeItems = document.querySelector(".recipeItems");
 overlayRecipe = document.querySelector(".overlayRecipe");
 popup = document.querySelector(".overlay");
 burgerMenu = document.querySelector(".burgerMenu");
@@ -117,12 +118,7 @@ function addEventListenerList(list) {
 
     list[i].addEventListener("dblclick", function () {
       overlayRecipe.classList.toggle("activeOverlay");
-
-      items.forEach(() => {
-        //!Not working
-        // console.log("for each working");
-        items[i].classList.toggle("blur");
-      });
+      recipeItems.classList.add("blur");
     });
   }
 }
@@ -134,6 +130,7 @@ document.addEventListener("click", () => {
 
   if (!isClickInside) {
     overlayRecipe.classList.remove("activeOverlay");
+    recipeItems.classList.remove("blur");
   }
 });
 

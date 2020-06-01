@@ -249,17 +249,6 @@ body {
 }
 
 .main-container .topRecipes-container .topRecipes-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   padding: 10px;
   overflow: hidden;
@@ -270,6 +259,9 @@ body {
   z-index: 999;
   width: 85%;
   height: 20rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   background: white;
   border: 2px solid black;
   border-radius: 7px;
@@ -286,7 +278,21 @@ body {
   cursor: pointer;
 }
 
-.main-container .topRecipes-container .topRecipes-body .top-grid-item {
+.main-container .topRecipes-container .topRecipes-body .recipeItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .topRecipes-container .topRecipes-body .recipeItems .top-grid-item {
   width: 300px;
   height: 200px;
   margin: 10px;
@@ -297,12 +303,12 @@ body {
   cursor: pointer;
 }
 
-.main-container .topRecipes-container .topRecipes-body .top-grid-item:hover {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .top-grid-item:hover {
   -webkit-filter: drop-shadow(0px 10px 5px #7d4b12);
           filter: drop-shadow(0px 10px 5px #7d4b12);
 }
 
-.main-container .topRecipes-container .topRecipes-body .top-grid-item .hover-text {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .top-grid-item .hover-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,11 +334,11 @@ body {
   transition: 0.4s ease-in-out;
 }
 
-.main-container .topRecipes-container .topRecipes-body .top-grid-item .hover-text:hover {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .top-grid-item .hover-text:hover {
   opacity: 1;
 }
 
-.main-container .topRecipes-container .topRecipes-body .top-grid-item .active {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .top-grid-item .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,27 +365,27 @@ body {
   opacity: 1;
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe1 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe1 {
   background-image: url("/IMG/recipe1.jpg");
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe2 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe2 {
   background-image: url("/IMG/recipe2.jpeg");
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe3 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe3 {
   background-image: url("/IMG/recipe3.jpg");
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe4 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe4 {
   background-image: url("/IMG/recipe4.jpg");
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe5 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe5 {
   background-image: url("/IMG/recipe5.jpg");
 }
 
-.main-container .topRecipes-container .topRecipes-body .recipe6 {
+.main-container .topRecipes-container .topRecipes-body .recipeItems .recipe6 {
   background-image: url("/IMG/recipe6.jpg");
 }
 
