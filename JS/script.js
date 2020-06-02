@@ -95,46 +95,66 @@ nextArrow.addEventListener("click", () => {
 });
 
 //====================================================
-//! Click Recipe Popup Module =====================
+//! Click Recipe for Overlay Module =====================
 
 hoverText = document.querySelectorAll(".hover-text");
 items = document.querySelectorAll(".top-grid-item");
-topRecipesBody = document.querySelector(".topRecipes-body");
+// topRecipesBody = document.querySelector(".topRecipes-body");
 recipeItems = document.querySelector(".recipeItems");
 overlayRecipe = document.querySelector(".overlayRecipe");
-popup = document.querySelector(".overlay");
-burgerMenu = document.querySelector(".burgerMenu");
+// popup = document.querySelector(".overlay");
+// mobileOverlay = document.querySelector(".mobileOverlay");
+overlayBlur = document.querySelector(".overlayBlur");
+closeBtn = document.querySelector(".closeBtn");
+mainContainer = document.querySelector(".main-container");
 
 function addEventListenerList(list) {
-  console.log("working!!!");
-
   for (let i = 0; i < items.length; i++) {
     list[i].addEventListener("click", () => {
       if (screenWidth < "1200") {
-        console.log("Clicked on Mobile");
+        // console.log("Clicked on Mobile");
+
         list[i].classList.toggle("active");
       }
     });
 
     list[i].addEventListener("dblclick", function () {
-      overlayRecipe.classList.toggle("activeOverlay");
-      recipeItems.classList.add("blur");
+      if (screenWidth > "745") {
+        console.log("screen over 745");
+        overlayRecipe.classList.toggle("activeOverlay");
+        // recipeItems.classList.add("blur");
+      } else {
+        console.log("screen under 745");
+        overlayRecipe.classList.toggle("mobileOverlay");
+      }
+      overlayBlur.style.display = "block";
+      mainContainer.classList.add("blur");
+      mainContainer.style.overflow = "none";
     });
   }
 }
+addEventListenerList(hoverText);
 
-//===================================================
-//! Close overlay when clicking outside
+//===================
+//! Close overlay when clicking outside modal
 document.addEventListener("click", () => {
   let isClickInside = overlayRecipe.contains(event.target);
 
   if (!isClickInside) {
     overlayRecipe.classList.remove("activeOverlay");
+    overlayRecipe.classList.remove("mobileOverlay");
+
     recipeItems.classList.remove("blur");
+    mainContainer.classList.remove("blur");
+    overlayBlur.style.display = "none";
   }
 });
 
-addEventListenerList(hoverText);
+//! Close Overlay when clicking close button
+closeBtn.addEventListener("click", () => {
+  overlayRecipe.classList.remove("activeOverlay");
+  overlayRecipe.classList.remove("mobileOverlay");
+});
 
 //? Running All Recipe Items at once?!
 //? Not what I'm looking for (DELETE Once Complete)

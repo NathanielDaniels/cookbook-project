@@ -10,6 +10,9 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="/CSS/styles.css" />
+    <script async src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script async src="JS/script.js"></script>
   </head>
 
   <body>
@@ -60,7 +63,7 @@
         </div>
 
         <div class="topRecipes-body imgBody1">
-          <div class="overlayRecipe activeOverlay"></div>
+          <!-- <div class="overlayRecipe"></div> -->
           <div class="recipeItems">
             <a class="top-grid-item recipe1">
               <div class="hover-text">
@@ -261,8 +264,10 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-    <script src="JS/script.js"></script>
-  </body>
+    <div class="overlayBlur"></div>
+    <div class="overlayRecipe activeOverlay">
+      <div class="closeBtn">X</div>
+      <div class="overlayContent"></div>
+    </div>
+
 </html>

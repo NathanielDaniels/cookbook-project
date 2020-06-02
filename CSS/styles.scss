@@ -77,6 +77,7 @@ body {
   background: hsl(0, 0, 20);
   cursor: default;
   overflow-x: hidden;
+  position: relative;
 }
 /*------------------------------------*\
     #MAIN-CONTAINER
@@ -267,14 +268,6 @@ body {
     #RECIPE-SECTION (Top Recipes)
 \*------------------------------------*/
 
-  .blur {
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-  }
-
   .topRecipes-container {
     background: #eec78e;
     border-bottom: 5px solid hsl(0, 0, 0.5);
@@ -283,7 +276,7 @@ body {
     padding: 10px 0 40px;
     width: 100%;
     overflow: hidden;
-
+    // position: relative;
     .topRecipes-title {
       text-align: center;
       margin: 0;
@@ -309,30 +302,50 @@ body {
       width: 100%;
       padding: 10px;
       overflow: hidden;
-      .activeOverlay {
-        position: fixed;
-        z-index: 999;
-        width: 85%;
-        height: 20rem;
-        left: 50%;
-        transform: translate(-50%, 0);
-        // top: 0;
-        // left: 0;
-        // bottom: 0;
-        // right: 0;
-        background: white;
-        border: 2px solid black;
-        border-radius: 7px;
-        box-shadow: 0 10px 15px hsl(0, 20%, 10%);
-        .burgerMenu {
-          font-size: 2rem;
-          position: relative;
-          top: 10px;
-          right: 10px;
-          float: right;
-          cursor: pointer;
-        }
-      }
+      // .activeOverlay,
+      // .mobileOverlay {
+      //   position: fixed;
+      //   z-index: 999;
+      //   width: 85%;
+      //   height: 20rem;
+      //   left: 50%;
+      //   transform: translate(-50%, 0);
+      //   background: white;
+      //   border: 2px solid black;
+      //   border-radius: 7px;
+      //   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
+      //   .overlayTitle {
+      //     color: black;
+      //     width: 50%;
+      //   }
+      //   .burgerMenu {
+      //     font-size: 2rem;
+      //     position: relative;
+      //     top: 10px;
+      //     right: 10px;
+      //     float: right;
+      //     cursor: pointer;
+      //   }
+      // }
+      // .mobileOverlay {
+      //   position: absolute;
+      //   z-index: 999;
+      //   width: 100%;
+      //   height: 100%;
+      //   scroll-behavior: none;
+      //   // left: 50%;
+      //   // // transform: translate(-50%, 0);
+      //   // background: white;
+      //   // border: 2px solid black;
+      //   // border-radius: 7px;
+      //   // box-shadow: 0 10px 15px hsl(0, 20%, 10%);
+      //   // top: 65rem;
+      //   // left: 50%;
+      //   top: 0;
+      //   left: 50%;
+      //   // bottom: 0;
+      //   // right: 0;
+      // }
       .recipeItems {
         display: flex;
         flex-wrap: wrap;
@@ -775,7 +788,78 @@ body {
   // /.main-container
 }
 
-//===============================================================================-------------
+.activeOverlay,
+.mobileOverlay {
+  position: fixed;
+  z-index: 999;
+  width: 600px;
+  max-width: 100%;
+  height: 30rem;
+  max-height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px hsl(0, 20%, 10%);
+  .closeBtn {
+    width: 10px;
+    height: auto;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+  }
+  .overlayContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px 50px;
+    border-radius: 17px;
+    overflow: auto;
+  }
+  // .overlayTitle {
+  //   color: black;
+  //   width: 50%;
+  // }
+  // .burgerMenu {
+  //   font-size: 2rem;
+  //   position: relative;
+  //   top: 10px;
+  //   right: 10px;
+  //   float: right;
+  //   cursor: pointer;
+  // }
+}
+.overlayBlur {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+// .mobileOverlay {
+//   position: absolute;
+//   z-index: 999;
+//   width: 100%;
+//   height: 100%;
+//   scroll-behavior: none;
+//   top: 0;
+//   left: 50%;
+// }
+
+.blur {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+}
+
+//========================================================
 // RESPONSIVE MEDIA
 @media screen and (max-width: 1200px) {
   .main-container {
