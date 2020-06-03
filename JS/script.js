@@ -1,6 +1,6 @@
-// const formRecipes = document.getElementById("formRecipes");
-// const recipesList = document.querySelector("#recipesList");
-// const form = document.getElementsByClassName("recipe-name");
+let cl = (log) => {
+  return console.log(log);
+};
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
@@ -17,6 +17,7 @@ $(function () {
   });
 });
 
+//* ============================================
 //! Top Recipe Arrows =====================================
 let pagination = document.querySelector(".pagination");
 let dots = pagination.children;
@@ -24,7 +25,7 @@ let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 
 window.addEventListener("resize", function () {
-  console.log(window.innerWidth);
+  cl(window.innerWidth);
 });
 
 let counter = 0;
@@ -36,11 +37,11 @@ prevArrow.addEventListener("click", () => {
     for (let i = 0; i < scrollRecipes.length; i++) {
       let moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 320;
       if (screenWidth < "1200") {
-        console.log("working under 1200");
+        cl("working under 1200");
         moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 250;
       }
       if (screenWidth < "900") {
-        console.log("working under 900");
+        cl("working under 900");
         moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 220;
       }
       scrollRecipes[i].style.position = "relative";
@@ -94,7 +95,7 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
-//====================================================
+//* ====================================================
 //! Click Recipe for Overlay Module =====================
 
 hoverText = document.querySelectorAll(".hover-text");
@@ -107,13 +108,13 @@ overlayRecipe = document.querySelector(".overlayRecipe");
 overlayBlur = document.querySelector(".overlayBlur");
 closeBtn = document.querySelector(".closeBtn");
 mainContainer = document.querySelector(".main-container");
+overlayContent = document.querySelector(".overlayContent");
 
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
     list[i].addEventListener("click", () => {
       if (screenWidth < "1200") {
         // console.log("Clicked on Mobile");
-
         list[i].classList.toggle("active");
       }
     });
@@ -135,10 +136,29 @@ function addEventListenerList(list) {
 }
 addEventListenerList(hoverText);
 
-//===================
+//! Add Dynamic Content to modul overlay
+const recipesArr = [
+  {
+    title: "Taco Cups",
+    info: "Talk about taco cups",
+    ingredients: "Ingredients go here",
+    instructions:
+      "instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here",
+  },
+];
+
+overlayContent.innerHTML += `<div class="recipeTemplate">
+    <h1>${recipesArr[0].title}</h1>
+    <h3>${recipesArr[0].info}</h3>
+    <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+    <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+  </div>`;
+
 //! Close overlay when clicking outside modal
 document.addEventListener("click", () => {
   let isClickInside = overlayRecipe.contains(event.target);
+
+  mainContainer.style.cursor = "pointer";
 
   if (!isClickInside) {
     overlayRecipe.classList.remove("activeOverlay");
@@ -150,20 +170,14 @@ document.addEventListener("click", () => {
   }
 });
 
+//? Need to add Close btn to overlay
 //! Close Overlay when clicking close button
 closeBtn.addEventListener("click", () => {
   overlayRecipe.classList.remove("activeOverlay");
   overlayRecipe.classList.remove("mobileOverlay");
 });
 
-//? Running All Recipe Items at once?!
-//? Not what I'm looking for (DELETE Once Complete)
-// scrollRecipes.forEach(function () {
-//   console.log("working now?");
-//   this.addEventListener("click", () => {
-//     console.log("EventListener Working");
-//   });
-// });
+//*=================================================
 //! FORM DATA =====================================
 const recipeLocation = document.createElement("div");
 recipeLocation.classList = "recipeLocation";
@@ -206,9 +220,9 @@ form.onsubmit = async (e) => {
   formInfo.website = favLinkValue;
 
   const file = form.querySelector('input[type="file"]');
-  console.log(file);
+  cl(file);
 
-  console.log(formInfo);
+  cl(formInfo);
   firstRecipe.append(formInfo);
 
   // let response = await fetch("", {
