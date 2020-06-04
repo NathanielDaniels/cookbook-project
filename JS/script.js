@@ -120,6 +120,20 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", function () {
+      document.innerHTML += `
+      <div class="overlayBlur"></div>
+      <div class="overlayRecipe">
+        <div class="overlayContent">
+          <div class="closeBtn">X</div>
+          <div class="recipeTemplate">
+            <h1>${recipesArr[0].title}</h1>
+            <h3>${recipesArr[0].info}</h3>
+            <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+            <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+          </div>
+        </div>
+      </div>
+      `;
       if (screenWidth > "745") {
         console.log("screen over 745");
         overlayRecipe.classList.toggle("activeOverlay");
@@ -131,6 +145,23 @@ function addEventListenerList(list) {
       overlayBlur.style.display = "block";
       mainContainer.classList.add("blur");
       mainContainer.style.overflow = "none";
+      // overlayContent.style.display = "block";
+
+      //! Close overlay when clicking outside modal
+      document.addEventListener("click", () => {
+        let isClickInside = overlayRecipe.contains(event.target);
+
+        mainContainer.style.cursor = "pointer";
+
+        if (!isClickInside) {
+          overlayRecipe.classList.remove("activeOverlay");
+          overlayRecipe.classList.remove("mobileOverlay");
+
+          recipeItems.classList.remove("blur");
+          mainContainer.classList.remove("blur");
+          overlayBlur.style.display = "none";
+        }
+      });
     });
   }
 }
@@ -142,40 +173,39 @@ const recipesArr = [
     title: "Taco Cups",
     info: "Talk about taco cups",
     ingredients: "Ingredients go here",
-    instructions:
-      "instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here instructions here",
+    instructions: "instructions here instructions here instructions here",
   },
 ];
 
-overlayContent.innerHTML += `<div class="recipeTemplate">
-    <h1>${recipesArr[0].title}</h1>
-    <h3>${recipesArr[0].info}</h3>
-    <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-    <p class="recipeInstructions">${recipesArr[0].instructions}</p>
-  </div>`;
+// overlayContent.innerHTML += `<div class="closeBtn">X</div><div class="recipeTemplate">
+//     <h1>${recipesArr[0].title}</h1>
+//     <h3>${recipesArr[0].info}</h3>
+//     <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+//     <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+//   </div>`;
 
 //! Close overlay when clicking outside modal
-document.addEventListener("click", () => {
-  let isClickInside = overlayRecipe.contains(event.target);
+// document.addEventListener("click", () => {
+//   let isClickInside = overlayRecipe.contains(event.target);
 
-  mainContainer.style.cursor = "pointer";
+//   mainContainer.style.cursor = "pointer";
 
-  if (!isClickInside) {
-    overlayRecipe.classList.remove("activeOverlay");
-    overlayRecipe.classList.remove("mobileOverlay");
+//   if (!isClickInside) {
+//     overlayRecipe.classList.remove("activeOverlay");
+//     overlayRecipe.classList.remove("mobileOverlay");
 
-    recipeItems.classList.remove("blur");
-    mainContainer.classList.remove("blur");
-    overlayBlur.style.display = "none";
-  }
-});
+//     recipeItems.classList.remove("blur");
+//     mainContainer.classList.remove("blur");
+//     overlayBlur.style.display = "none";
+//   }
+// });
 
 //? Need to add Close btn to overlay
 //! Close Overlay when clicking close button
-closeBtn.addEventListener("click", () => {
-  overlayRecipe.classList.remove("activeOverlay");
-  overlayRecipe.classList.remove("mobileOverlay");
-});
+// closeBtn.addEventListener("click", () => {
+//   overlayRecipe.classList.remove("activeOverlay");
+//   overlayRecipe.classList.remove("mobileOverlay");
+// });
 
 //*=================================================
 //! FORM DATA =====================================

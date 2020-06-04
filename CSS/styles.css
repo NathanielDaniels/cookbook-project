@@ -879,8 +879,9 @@ body {
   cursor: pointer;
 }
 
-.activeOverlay .overlayContent,
-.mobileOverlay .overlayContent {
+.activeOverlay .overlayRecipe .overlayContent,
+.mobileOverlay .overlayRecipe .overlayContent {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -891,8 +892,8 @@ body {
   overflow: auto;
 }
 
-.activeOverlay .overlayContent .recipeTemplate,
-.mobileOverlay .overlayContent .recipeTemplate {
+.activeOverlay .overlayRecipe .overlayContent .recipeTemplate,
+.mobileOverlay .overlayRecipe .overlayContent .recipeTemplate {
   display: -ms-grid;
   display: grid;
   grid: 1fr 1fr 4fr / 1fr 1fr;
@@ -900,8 +901,8 @@ body {
   height: 100%;
 }
 
-.activeOverlay .overlayContent .recipeTemplate h1,
-.mobileOverlay .overlayContent .recipeTemplate h1 {
+.activeOverlay .overlayRecipe .overlayContent .recipeTemplate h1,
+.mobileOverlay .overlayRecipe .overlayContent .recipeTemplate h1 {
   font-size: 3rem;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -911,8 +912,8 @@ body {
   grid-row: 1/2;
 }
 
-.activeOverlay .overlayContent .recipeTemplate h3,
-.mobileOverlay .overlayContent .recipeTemplate h3 {
+.activeOverlay .overlayRecipe .overlayContent .recipeTemplate h3,
+.mobileOverlay .overlayRecipe .overlayContent .recipeTemplate h3 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -921,8 +922,8 @@ body {
   grid-row: 2/3;
 }
 
-.activeOverlay .overlayContent .recipeTemplate .recipeIngredients,
-.mobileOverlay .overlayContent .recipeTemplate .recipeIngredients {
+.activeOverlay .overlayRecipe .overlayContent .recipeTemplate .recipeIngredients,
+.mobileOverlay .overlayRecipe .overlayContent .recipeTemplate .recipeIngredients {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -931,8 +932,8 @@ body {
   grid-row: 3/4;
 }
 
-.activeOverlay .overlayContent .recipeTemplate .recipeInstructions,
-.mobileOverlay .overlayContent .recipeTemplate .recipeInstructions {
+.activeOverlay .overlayRecipe .overlayContent .recipeTemplate .recipeInstructions,
+.mobileOverlay .overlayRecipe .overlayContent .recipeTemplate .recipeInstructions {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
