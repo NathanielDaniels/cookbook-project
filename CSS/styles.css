@@ -870,13 +870,12 @@ body {
           box-shadow: 0 10px 15px #1f1414;
 }
 
-.activeOverlay .closeBtn,
-.mobileOverlay .closeBtn {
+.activeOverlay .closeOverlay,
+.mobileOverlay .closeOverlay {
   width: 10px;
   height: auto;
   float: right;
   margin: 10px;
-  cursor: pointer;
 }
 
 .activeOverlay .overlayRecipe .overlayContent,

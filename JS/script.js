@@ -98,17 +98,14 @@ nextArrow.addEventListener("click", () => {
 //* ====================================================
 //! Click Recipe for Overlay Module =====================
 
-hoverText = document.querySelectorAll(".hover-text");
-items = document.querySelectorAll(".top-grid-item");
+let hoverText = document.querySelectorAll(".hover-text");
+let items = document.querySelectorAll(".top-grid-item");
 // topRecipesBody = document.querySelector(".topRecipes-body");
-recipeItems = document.querySelector(".recipeItems");
-overlayRecipe = document.querySelector(".overlayRecipe");
+let recipeItems = document.querySelector(".recipeItems");
 // popup = document.querySelector(".overlay");
 // mobileOverlay = document.querySelector(".mobileOverlay");
-overlayBlur = document.querySelector(".overlayBlur");
-closeBtn = document.querySelector(".closeBtn");
-mainContainer = document.querySelector(".main-container");
-overlayContent = document.querySelector(".overlayContent");
+let mainContainer = document.querySelector(".main-container");
+let overlayContent = document.querySelector(".overlayContent");
 
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
@@ -120,29 +117,77 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", function () {
-      document.innerHTML += `
-      <div class="overlayBlur"></div>
-      <div class="overlayRecipe">
-        <div class="overlayContent">
-          <div class="closeBtn">X</div>
-          <div class="recipeTemplate">
-            <h1>${recipesArr[0].title}</h1>
-            <h3>${recipesArr[0].info}</h3>
-            <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-            <p class="recipeInstructions">${recipesArr[0].instructions}</p>
-          </div>
-        </div>
-      </div>
-      `;
-      if (screenWidth > "745") {
-        console.log("screen over 745");
-        overlayRecipe.classList.toggle("activeOverlay");
-        // recipeItems.classList.add("blur");
-      } else {
-        console.log("screen under 745");
-        overlayRecipe.classList.toggle("mobileOverlay");
+      function overlay(id) {
+        let el = document.querySelector(id);
+        let body = document.querySelector("body");
+
+        let overlayRecipeDiv = document.createElement("div");
+        overlayRecipeDiv.className = "overlayRecipe";
+        body.appendChild(overlayRecipeDiv);
+
+        let overlayContentDiv = document.createElement("div");
+        overlayContentDiv.className = "overlayContent";
+        overlayRecipeDiv.appendChild(overlayContentDiv);
+
+        let recipeTemplateDiv = document.createElement("div");
+        recipeTemplateDiv.className = "recipeTemplate";
+
+        let recipeTitle = document.createElement("h1");
+        recipeTitle.className = "recipeTitle";
+        // recipeTitle.innerHTML = `${recipesArr[0].title}`;
+        let recipeInfo = document.createElement("h3");
+        recipeInfo.className = "recipeInfo";
+        // recipeInfo.innerHTML = `${recipesArr[0].info}`;
+
+        recipeTemplateDiv.appendChild(recipeTitle);
+        recipeTemplateDiv.appendChild(recipeInfo);
+
+        // <h1>${recipesArr[0].title}</h1>
+        // <h3>${recipesArr[0].info}</h3>
+        // <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+        // <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+
+        overlayContentDiv.appendChild(recipeTemplateDiv);
+
+        //! close button
+        let close = document.createElement("span");
+        close.className = "closeOverlay";
+        close.innerHTML = "X";
+        close.addEventListener("click", () => {
+          let overlay = body.querySelector(".overlayRecipe");
+          let closeBtn = parent.querySelector(".closeOverlay");
+
+          body.removeChild(overlay);
+          // el.classList.remove();
+        });
       }
-      overlayBlur.style.display = "block";
+      overlay();
+      // overlayRecipe.innerHTML += `
+      // // <!--<div class="overlayBlur"></div>-->
+      // // <!-- <div class="overlayRecipe"> -->
+      // //   <div class="overlayContent">
+      // //     <div class="closeBtn">X</div>
+      // //     <div class="recipeTemplate">
+      // //       <h1>${recipesArr[0].title}</h1>
+      // //       <h3>${recipesArr[0].info}</h3>
+      // //       <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+      // //       <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+      // //     </div>
+      // //   </div>
+      // // <!-- </div> -->
+      // // `;
+
+      // ! Overlay screen size
+      // if (screenWidth > "745") {
+      //   console.log("screen over 745");
+      //   overlayRecipe.classList.toggle("activeOverlay");
+      //   // recipeItems.classList.add("blur");
+      // } else {
+      //   console.log("screen under 745");
+      //   overlayRecipe.classList.toggle("mobileOverlay");
+      // }
+
+      // overlayBlur.style.display = "block";
       mainContainer.classList.add("blur");
       mainContainer.style.overflow = "none";
       // overlayContent.style.display = "block";
@@ -157,7 +202,7 @@ function addEventListenerList(list) {
           overlayRecipe.classList.remove("activeOverlay");
           overlayRecipe.classList.remove("mobileOverlay");
 
-          recipeItems.classList.remove("blur");
+          // recipeItems.classList.remove("blur");
           mainContainer.classList.remove("blur");
           overlayBlur.style.display = "none";
         }
@@ -176,6 +221,26 @@ const recipesArr = [
     instructions: "instructions here instructions here instructions here",
   },
 ];
+
+// if (!overlayRecipe) {
+//   console.log("if statement test received");
+//   overlayRecipe.style.display = "none";
+// } else {
+//   overlayRecipe.innerHTML += `
+//       <!--<div class="overlayBlur"></div>-->
+//       <!-- <div class="overlayRecipe"> -->
+//         <div class="overlayContent">
+//           <div class="closeBtn">X</div>
+//           <div class="recipeTemplate">
+//             <h1>${recipesArr[0].title}</h1>
+//             <h3>${recipesArr[0].info}</h3>
+//             <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+//             <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+//           </div>
+//         </div>
+//       <!-- </div> -->
+//       `;
+// }
 
 // overlayContent.innerHTML += `<div class="closeBtn">X</div><div class="recipeTemplate">
 //     <h1>${recipesArr[0].title}</h1>
