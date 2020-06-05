@@ -100,12 +100,14 @@ nextArrow.addEventListener("click", () => {
 
 let hoverText = document.querySelectorAll(".hover-text");
 let items = document.querySelectorAll(".top-grid-item");
-// topRecipesBody = document.querySelector(".topRecipes-body");
+topRecipesBody = document.querySelector(".topRecipes-body");
 let recipeItems = document.querySelector(".recipeItems");
 // popup = document.querySelector(".overlay");
-// mobileOverlay = document.querySelector(".mobileOverlay");
+mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
 let overlayContent = document.querySelector(".overlayContent");
+let overlayRecipe = document.querySelector(".overlayRecipe");
+let overlayBlur = document.querySelector(".overlayBlur");
 
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
@@ -117,75 +119,69 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", function () {
-      function overlay(id) {
-        let el = document.querySelector(id);
-        let body = document.querySelector("body");
+      // function overlay(id) {
+      //   let el = document.querySelector(id);
+      //   let body = document.querySelector("body");
 
-        let overlayRecipeDiv = document.createElement("div");
-        overlayRecipeDiv.className = "overlayRecipe";
-        body.appendChild(overlayRecipeDiv);
+      //   let overlayRecipeDiv = document.createElement("div");
+      //   overlayRecipeDiv.className = "overlayRecipe";
+      //   body.appendChild(overlayRecipeDiv);
 
-        let overlayContentDiv = document.createElement("div");
-        overlayContentDiv.className = "overlayContent";
-        overlayRecipeDiv.appendChild(overlayContentDiv);
+      //   let overlayContentDiv = document.createElement("div");
+      //   overlayContentDiv.className = "overlayContent";
+      //   overlayRecipeDiv.appendChild(overlayContentDiv);
 
-        let recipeTemplateDiv = document.createElement("div");
-        recipeTemplateDiv.className = "recipeTemplate";
+      //   let recipeTemplateDiv = document.createElement("div");
+      //   recipeTemplateDiv.className = "recipeTemplate";
+      //   recipeTemplateDiv.style.display = "none";
 
-        let recipeTitle = document.createElement("h1");
-        recipeTitle.className = "recipeTitle";
-        // recipeTitle.innerHTML = `${recipesArr[0].title}`;
-        let recipeInfo = document.createElement("h3");
-        recipeInfo.className = "recipeInfo";
-        // recipeInfo.innerHTML = `${recipesArr[0].info}`;
+      //   let recipeTitle = document.createElement("h1");
+      //   recipeTitle.className = "recipeTitle";
+      //   recipeTitle.innerHTML = `${recipesArr[0].title}`;
+      //   let recipeInfo = document.createElement("h3");
+      //   recipeInfo.className = "recipeInfo";
+      //   recipeInfo.innerHTML = `${recipesArr[0].info}`;
 
-        recipeTemplateDiv.appendChild(recipeTitle);
-        recipeTemplateDiv.appendChild(recipeInfo);
+      //   recipeTemplateDiv.appendChild(recipeTitle);
+      //   recipeTemplateDiv.appendChild(recipeInfo);
 
-        // <h1>${recipesArr[0].title}</h1>
-        // <h3>${recipesArr[0].info}</h3>
-        // <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-        // <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+      //   overlayContentDiv.appendChild(recipeTemplateDiv);
 
-        overlayContentDiv.appendChild(recipeTemplateDiv);
+      //   //! close button
+      //   let close = document.createElement("span");
+      //   close.className = "closeOverlay";
+      //   close.innerHTML = "X";
+      //   close.addEventListener("click", () => {
+      //     let overlay = body.querySelector(".overlayRecipe");
+      //     let closeBtn = parent.querySelector(".closeOverlay");
 
-        //! close button
-        let close = document.createElement("span");
-        close.className = "closeOverlay";
-        close.innerHTML = "X";
-        close.addEventListener("click", () => {
-          let overlay = body.querySelector(".overlayRecipe");
-          let closeBtn = parent.querySelector(".closeOverlay");
+      //     body.removeChild(overlay);
+      //   });
+      // }
+      // overlay();
 
-          body.removeChild(overlay);
-          // el.classList.remove();
-        });
-      }
-      overlay();
-      // overlayRecipe.innerHTML += `
-      // // <!--<div class="overlayBlur"></div>-->
-      // // <!-- <div class="overlayRecipe"> -->
-      // //   <div class="overlayContent">
-      // //     <div class="closeBtn">X</div>
-      // //     <div class="recipeTemplate">
-      // //       <h1>${recipesArr[0].title}</h1>
-      // //       <h3>${recipesArr[0].info}</h3>
-      // //       <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-      // //       <p class="recipeInstructions">${recipesArr[0].instructions}</p>
-      // //     </div>
-      // //   </div>
-      // // <!-- </div> -->
-      // // `;
+      overlayRecipe.style.display = "block";
+      overlayRecipe.innerHTML = `
+      <div class="overlayContent">
+        <div class="closeBtn">X</div>
+        <div class="recipeTemplate">
+          <h1>${recipesArr[0].title}</h1>
+          <h3>${recipesArr[0].info}</h3>
+          <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
+          <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+       </div>
+      </div>
+      `;
 
       // ! Overlay screen size
-      // if (screenWidth > "745") {
-      //   console.log("screen over 745");
-      //   overlayRecipe.classList.toggle("activeOverlay");
-      //   // recipeItems.classList.add("blur");
-      // } else {
-      //   console.log("screen under 745");
-      //   overlayRecipe.classList.toggle("mobileOverlay");
-      // }
+      if (screenWidth > "745") {
+        console.log("screen over 745");
+        overlayRecipe.classList.toggle("activeOverlay");
+        // recipeItems.classList.add("blur");
+      } else {
+        console.log("screen under 745");
+        overlayRecipe.classList.toggle("mobileOverlay");
+      }
 
       // overlayBlur.style.display = "block";
       mainContainer.classList.add("blur");
@@ -195,16 +191,17 @@ function addEventListenerList(list) {
       //! Close overlay when clicking outside modal
       document.addEventListener("click", () => {
         let isClickInside = overlayRecipe.contains(event.target);
-
-        mainContainer.style.cursor = "pointer";
+        // mainContainer.style.cursor = "pointer";
 
         if (!isClickInside) {
           overlayRecipe.classList.remove("activeOverlay");
           overlayRecipe.classList.remove("mobileOverlay");
-
+          overlayRecipe.style.display = "none";
           // recipeItems.classList.remove("blur");
           mainContainer.classList.remove("blur");
           overlayBlur.style.display = "none";
+        } else {
+          overlayRecipe.style.display = "block";
         }
       });
     });
