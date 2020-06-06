@@ -165,10 +165,10 @@ function addEventListenerList(list) {
       <div class="overlayContent">
         <div class="closeBtn">X</div>
         <div class="recipeTemplate">
-          <h1>${recipesArr[0].title}</h1>
-          <h3>${recipesArr[0].info}</h3>
-          <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-          <p class="recipeInstructions">${recipesArr[0].instructions}</p>
+          <h1>${recipesArr[i].title}</h1>
+          <h3>${recipesArr[i].info}</h3>
+          <p class="recipeIngredients">${recipesArr[i].ingredients}</p>
+          <p class="recipeInstructions">${recipesArr[i].instructions}</p>
        </div>
       </div>
       `;
@@ -212,9 +212,39 @@ addEventListenerList(hoverText);
 //! Add Dynamic Content to modul overlay
 const recipesArr = [
   {
-    title: "Taco Cups",
-    info: "Talk about taco cups",
+    title: "Taco Soup",
+    info: "Talk about taco Soup",
+    ingredients: "Ingredients go here: Taco Soup",
+    instructions: "instructions here instructions here instructions here",
+  },
+  {
+    title: "Carrot Veggie Dish",
+    info: "Talk about Carrot Veggie Dish",
+    ingredients: "Ingredients go here: Carrot Veggie Dish",
+    instructions: "instructions here instructions here instructions here",
+  },
+  {
+    title: "Cast Iron Steak",
+    info: "Talk about cast iron steak",
     ingredients: "Ingredients go here",
+    instructions: "instructions here instructions here instructions here",
+  },
+  {
+    title: "Taco Cups",
+    info: "Talk about Taco Cups",
+    ingredients: "Ingredients go here: Taco Cups",
+    instructions: "instructions here instructions here instructions here",
+  },
+  {
+    title: "Pan fried COD",
+    info: "Talk about Pan Frying COD",
+    ingredients: "Ingredients go here: Pan fried COD",
+    instructions: "instructions here instructions here instructions here",
+  },
+  {
+    title: "Blu+Bri Burgers",
+    info: "Talk about Blu + Bri Burgers",
+    ingredients: "Ingredients go here: Blu + Bri Burgers",
     instructions: "instructions here instructions here instructions here",
   },
 ];
