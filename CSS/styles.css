@@ -269,6 +269,7 @@ body {
   border-radius: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -681,6 +682,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  border: 1px solid black;
 }
 
 .main-container .recipes-container .recipes-body .grid-item:hover {
@@ -872,7 +874,7 @@ body {
   display: -ms-grid;
   display: grid;
   grid: 1fr 1fr 4fr / 1fr 1fr;
-  gap: 10px;
+  row-gap: 10px;
   height: 100%;
 }
 
@@ -893,6 +895,7 @@ body {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  border-bottom: 2px solid black;
 }
 
 .overlayRecipe .overlayContent .recipeTemplate .recipeIngredients {
@@ -911,6 +914,8 @@ body {
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   grid-row: 2/4;
+  border-left: 2px solid black;
+  padding: 10px;
 }
 
 .overlayBlur {
@@ -926,7 +931,7 @@ body {
 .mobileOverlay {
   position: fixed;
   z-index: 999;
-  width: 600px;
+  width: 50rem;
   max-width: 100%;
   height: 30rem;
   max-height: 100%;
@@ -941,12 +946,16 @@ body {
           box-shadow: 0 10px 15px #1f1414;
 }
 
-.activeOverlay .closeOverlay,
-.mobileOverlay .closeOverlay {
-  width: 10px;
+.activeOverlay .closeBtn,
+.mobileOverlay .closeBtn {
+  position: inherit;
+  z-index: 100;
+  right: 10px;
+  top: 10px;
+  font-size: 1.5rem;
+  width: 20px;
   height: auto;
-  float: right;
-  margin: 10px;
+  cursor: pointer;
 }
 
 .blur {

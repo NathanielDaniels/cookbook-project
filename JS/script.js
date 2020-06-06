@@ -118,7 +118,7 @@ function addEventListenerList(list) {
       }
     });
 
-    list[i].addEventListener("dblclick", function () {
+    list[i].addEventListener("dblclick", async function () {
       // function overlay(id) {
       //   let el = document.querySelector(id);
       //   let body = document.querySelector("body");
@@ -162,8 +162,8 @@ function addEventListenerList(list) {
 
       overlayRecipe.style.display = "block";
       overlayRecipe.innerHTML = `
+      <div class="closeBtn">X</div>
       <div class="overlayContent">
-        <div class="closeBtn">X</div>
         <div class="recipeTemplate">
           <h1>${recipesArr[i].title}</h1>
           <h3>${recipesArr[i].info}</h3>
@@ -203,6 +203,20 @@ function addEventListenerList(list) {
         } else {
           overlayRecipe.style.display = "block";
         }
+      });
+      let closeOverlay = await document.querySelector(".closeBtn");
+      console.log(closeOverlay);
+      closeOverlay.addEventListener("click", () => {
+        overlayRecipe.classList.remove("activeOverlay");
+        overlayRecipe.classList.remove("mobileOverlay");
+        overlayRecipe.style.display = "none";
+        // recipeItems.classList.remove("blur");
+        mainContainer.classList.remove("blur");
+        overlayBlur.style.display = "none";
+        // let overlay = body.querySelector(".overlayRecipe");
+        // let closeBtn = parent.querySelector(".closeOverlay");
+
+        // body.removeChild(overlay);
       });
     });
   }
