@@ -163,12 +163,18 @@ function addEventListenerList(list) {
       overlayRecipe.innerHTML = `
         <div class="closeBtn">X</div>
         <div class="overlayContent">
-        <div class="recipeTemplate">
-        <h1>${recipesArr[i].title}</h1>
-        <h3>${recipesArr[i].info}</h3>
-        <p class="recipeIngredients">${recipesArr[i].ingredients}</p>
-        <p class="recipeInstructions">${recipesArr[i].instructions}</p>
-        </div>
+          <div class="recipeTemplate">
+            <h1>${recipesArr[i].title}</h1>
+            <p>${recipesArr[i].info}</p>
+            <div class="recipeIngredients">
+              <h3>Ingredients</h3>
+              <p>${recipesArr[i].ingredients}</p>
+            </div>
+            <div class="recipeInstructions">
+              <h3>Instructions</h3>
+              <p>${recipesArr[i].instructions}</p>
+            </div>
+          </div>
         </div>
         `;
 
@@ -244,37 +250,37 @@ const recipesArr = [
   {
     title: "Taco Soup",
     info: "Talk about taco Soup",
-    ingredients: "Ingredients go here: Taco Soup",
+    ingredients: "&#8226 Taco Soup <br> &#8226 Taco Soup <br>",
     instructions: "instructions here instructions here instructions here",
   },
   {
     title: "Carrot Veggie Dish",
     info: "Talk about Carrot Veggie Dish",
-    ingredients: "Ingredients go here: Carrot Veggie Dish",
+    ingredients: "&#8226 Carrot Veggie Dish",
     instructions: "instructions here instructions here instructions here",
   },
   {
     title: "Cast Iron Steak",
     info: "Talk about cast iron steak",
-    ingredients: "Ingredients go here",
+    ingredients: "&#8226 ",
     instructions: "instructions here instructions here instructions here",
   },
   {
     title: "Taco Cups",
     info: "Talk about Taco Cups",
-    ingredients: "Ingredients go here: Taco Cups",
+    ingredients: "&#8226 ",
     instructions: "instructions here instructions here instructions here",
   },
   {
     title: "Pan fried COD",
     info: "Talk about Pan Frying COD",
-    ingredients: "Ingredients go here: Pan fried COD",
+    ingredients: "&#8226 Pan fried COD",
     instructions: "instructions here instructions here instructions here",
   },
   {
     title: "Blu+Bri Burgers",
     info: "Talk about Blu + Bri Burgers",
-    ingredients: "Ingredients go here: Blu + Bri Burgers",
+    ingredients: "&#8226 Blu + Bri Burgers",
     instructions: "instructions here instructions here instructions here",
   },
 ];
