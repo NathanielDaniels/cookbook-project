@@ -118,47 +118,6 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", async function () {
-      // function overlay(id) {
-      //   let el = document.querySelector(id);
-      //   let body = document.querySelector("body");
-
-      //   let overlayRecipeDiv = document.createElement("div");
-      //   overlayRecipeDiv.className = "overlayRecipe";
-      //   body.appendChild(overlayRecipeDiv);
-
-      //   let overlayContentDiv = document.createElement("div");
-      //   overlayContentDiv.className = "overlayContent";
-      //   overlayRecipeDiv.appendChild(overlayContentDiv);
-
-      //   let recipeTemplateDiv = document.createElement("div");
-      //   recipeTemplateDiv.className = "recipeTemplate";
-      //   recipeTemplateDiv.style.display = "none";
-
-      //   let recipeTitle = document.createElement("h1");
-      //   recipeTitle.className = "recipeTitle";
-      //   recipeTitle.innerHTML = `${recipesArr[0].title}`;
-      //   let recipeInfo = document.createElement("h3");
-      //   recipeInfo.className = "recipeInfo";
-      //   recipeInfo.innerHTML = `${recipesArr[0].info}`;
-
-      //   recipeTemplateDiv.appendChild(recipeTitle);
-      //   recipeTemplateDiv.appendChild(recipeInfo);
-
-      //   overlayContentDiv.appendChild(recipeTemplateDiv);
-
-      //   //! close button
-      //   let close = document.createElement("span");
-      //   close.className = "closeOverlay";
-      //   close.innerHTML = "X";
-      //   close.addEventListener("click", () => {
-      //     let overlay = body.querySelector(".overlayRecipe");
-      //     let closeBtn = parent.querySelector(".closeOverlay");
-
-      //     body.removeChild(overlay);
-      //   });
-      // }
-      // overlay();
-
       overlayRecipe.style.display = "block";
       overlayRecipe.innerHTML = `
         <div class="closeBtn">X</div>
@@ -188,10 +147,7 @@ function addEventListenerList(list) {
         overlayRecipe.classList.toggle("mobileOverlay");
       }
 
-      // overlayBlur.style.display = "block";
       mainContainer.classList.add("blur");
-      mainContainer.style.overflow = "none";
-      // overlayContent.style.display = "block";
 
       //! Disable/Enable Scroll
       function disableScroll() {
@@ -212,14 +168,10 @@ function addEventListenerList(list) {
 
       //! Close overlay when clicking "X" Btn
       let closeOverlay = await document.querySelector(".closeBtn");
-      let recipeTemplate = await document.querySelector(".recipeTemplate");
-      let overlayContent = await document.querySelector(".overlayContent");
       closeOverlay.addEventListener("click", () => {
         overlayRecipe.classList.remove("activeOverlay");
         overlayRecipe.classList.remove("mobileOverlay");
         overlayRecipe.style.display = "none";
-        // recipeTemplate.style.display = "none";
-        // overlayContent.style.display = "none";
         mainContainer.classList.remove("blur");
         overlayBlur.style.display = "none";
         enableScroll();
@@ -228,13 +180,11 @@ function addEventListenerList(list) {
       //! Close overlay when clicking outside modal
       document.addEventListener("click", () => {
         let isClickInside = overlayRecipe.contains(event.target);
-        // mainContainer.style.cursor = "pointer";
 
         if (!isClickInside) {
           overlayRecipe.classList.remove("activeOverlay");
           overlayRecipe.classList.remove("mobileOverlay");
           overlayRecipe.style.display = "none";
-          // recipeItems.classList.remove("blur");
           mainContainer.classList.remove("blur");
           overlayBlur.style.display = "none";
           enableScroll();
@@ -256,7 +206,8 @@ const recipesArr = [
   {
     title: "Carrot Veggie Dish",
     info: "Talk about Carrot Veggie Dish",
-    ingredients: "&#8226 Carrot Veggie Dish",
+    ingredients:
+      "&#8226 Carrot Veggie Dish <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item",
     instructions: "instructions here instructions here instructions here",
   },
   {
@@ -284,56 +235,6 @@ const recipesArr = [
     instructions: "instructions here instructions here instructions here",
   },
 ];
-
-// if (!overlayRecipe) {
-//   console.log("if statement test received");
-//   overlayRecipe.style.display = "none";
-// } else {
-//   overlayRecipe.innerHTML += `
-//       <!--<div class="overlayBlur"></div>-->
-//       <!-- <div class="overlayRecipe"> -->
-//         <div class="overlayContent">
-//           <div class="closeBtn">X</div>
-//           <div class="recipeTemplate">
-//             <h1>${recipesArr[0].title}</h1>
-//             <h3>${recipesArr[0].info}</h3>
-//             <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-//             <p class="recipeInstructions">${recipesArr[0].instructions}</p>
-//           </div>
-//         </div>
-//       <!-- </div> -->
-//       `;
-// }
-
-// overlayContent.innerHTML += `<div class="closeBtn">X</div><div class="recipeTemplate">
-//     <h1>${recipesArr[0].title}</h1>
-//     <h3>${recipesArr[0].info}</h3>
-//     <p class="recipeIngredients">${recipesArr[0].ingredients}</p>
-//     <p class="recipeInstructions">${recipesArr[0].instructions}</p>
-//   </div>`;
-
-//! Close overlay when clicking outside modal
-// document.addEventListener("click", () => {
-//   let isClickInside = overlayRecipe.contains(event.target);
-
-//   mainContainer.style.cursor = "pointer";
-
-//   if (!isClickInside) {
-//     overlayRecipe.classList.remove("activeOverlay");
-//     overlayRecipe.classList.remove("mobileOverlay");
-
-//     recipeItems.classList.remove("blur");
-//     mainContainer.classList.remove("blur");
-//     overlayBlur.style.display = "none";
-//   }
-// });
-
-//? Need to add Close btn to overlay
-//! Close Overlay when clicking close button
-// closeBtn.addEventListener("click", () => {
-//   overlayRecipe.classList.remove("activeOverlay");
-//   overlayRecipe.classList.remove("mobileOverlay");
-// });
 
 //*=================================================
 //! FORM DATA =====================================

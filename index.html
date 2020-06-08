@@ -18,8 +18,7 @@
     </script> -->
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <script
-      type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'NAME'; ftypes[1] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[2] = 'MMERGE2'; ftypes[2] = 'text'; fnames[3] = 'MMERGE3'; ftypes[3] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);
-    </script>
+      type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'NAME'; ftypes[1] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[2] = 'MMERGE2'; ftypes[2] = 'text'; fnames[3] = 'MMERGE3'; ftypes[3] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
   </head>
 
   <body>
@@ -213,10 +212,7 @@
 
       <!--? Form/Contact Section -->
       <section class="form-container">
-        <form class="form" id="form"
-        action="https://app.us10.list-manage.com/subscribe/post?u=dee71673d8e2bac71a87eeea1&amp;id=ba7b099176"
-        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-        novalidate>
+        <form class="form" id="form" method="POST">
           <fieldset class="mainFieldset">
             <div class="form-grid">
               <fieldset class="userName">
@@ -245,12 +241,6 @@
                 <br />
                 <textarea name="emailMessage"></textarea><br />
               </fieldset>
-
-
-          
-          
-
-
             </div>
             <input
               class="form-button"
@@ -271,6 +261,8 @@
 
     <div class="overlayBlur"></div>
     <div class="overlayRecipe"></div>
+
+    <!-- ! Start EMAIL project -->
 
     <!-- Begin Mailchimp Signup Form -->
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
@@ -322,6 +314,53 @@
       </form>
 
     </div>
+
+    <!--! Building form w/ Maichimp (Currently not working) -->
+    <!-- <section class="form-container">
+      <form class="form" id="form"
+        action="https://app.us10.list-manage.com/subscribe/post?u=dee71673d8e2bac71a87eeea1&amp;id=ba7b099176" method="post"
+        id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <fieldset class="mainFieldset">
+          <div class="form-grid">
+            <fieldset class="mc-field-group userName">
+              <legend for="mce-NAME recipeName">Your Name</legend>
+              <input id="mce-NAME" type="text" name="NAME userName" maxlength="100" autocomplete="off" />
+            </fieldset>
+    
+            <fieldset class="mc-field-group userEmail">
+              <legend for="mce-EMAIL userEmail">Your Email</legend>
+              <br />
+              <input type="email" id="mce-EMAIL" name="EMAIL userEmail"></input><br />
+            </fieldset>
+    
+            <fieldset class="mc-field-group emailSubject">
+              <legend for="mce-MMERGE2 emailSubject">Subject</legend>
+              <br />
+              <input name="MMERGE2 emailSubject" id="mce-MMERGE2"></input><br />
+            </fieldset>
+    
+            <fieldset class="mc-field-group emailMessage">
+              <legend for="mce-MMERGE3 emailMessage">Message</legend>
+              <br />
+              <textarea name="MMERGE3 emailMessage" id="mce-MMERGE3"></textarea><br />
+            </fieldset>
+          </div>
+    
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_dee71673d8e2bac71a87eeea1_ba7b099176" tabindex="-1" value="">
+          </div>
+          <div class="clear">
+            <input id="mc-embedded-subscribe" class="button form-button" type="submit" name="subscribe form-submit"
+              value="submit" />
+          </div>
+    
+        </fieldset>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+      </form>
+    </section> -->
 
     
     <!--End mc_embed_signup-->

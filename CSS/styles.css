@@ -574,7 +574,7 @@ body {
 
 .main-container .blog {
   background: white;
-  height: 40rem;
+  height: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,6 +884,8 @@ body {
 }
 
 .overlayRecipe .overlayContent .recipeTemplate h1 {
+  color: #eec78e;
+  text-shadow: 0px 1px black;
   font-size: 3rem;
   -ms-grid-row: 1;
   grid-row: 1;
