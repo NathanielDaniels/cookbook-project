@@ -238,9 +238,9 @@ const recipesArr = [
 
 //*=================================================
 //! FORM DATA =====================================
-const recipeLocation = document.createElement("div");
-recipeLocation.classList = "recipeLocation";
-const firstRecipe = document.querySelector(".firstRecipe");
+// const recipeLocation = document.createElement("div");
+// recipeLocation.classList = "recipeLocation";
+// const firstRecipe = document.querySelector(".firstRecipe");
 
 // console.log(firstRecipe);
 
@@ -249,52 +249,52 @@ const firstRecipe = document.querySelector(".firstRecipe");
 
 // console.log(formData);
 
-let formInfo = {};
+// let formInfo = {};
 
 // firstRecipe.push(formInfo);
 
-form.onsubmit = async (e) => {
-  e.preventDefault();
+// form.onsubmit = async (e) => {
+//   e.preventDefault();
 
-  const nameValue = form.querySelector('input[type="text"]').value;
-  // console.log(nameValue);
-  formInfo.name = nameValue;
+// const nameValue = form.querySelector('input[type="text"]').value;
+// console.log(nameValue);
+// formInfo.name = nameValue;
 
-  const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
-    .value;
+// const ingredientsValue = form.querySelector('textarea[name="ingredientList"]')
+//   .value;
 
-  //! creating list for ingredients =====================
-  // function list(ingredientsValue) {
-  //   return `<li>${ingredientsValue}</li>`;
-  // }
+//! creating list for ingredients =====================
+// function list(ingredientsValue) {
+//   return `<li>${ingredientsValue}</li>`;
+// }
 
-  formInfo.ingredients = ingredientsValue;
-  // formInfo.ingredients = list(ingredientsValue);
+// formInfo.ingredients = ingredientsValue;
+// formInfo.ingredients = list(ingredientsValue);
 
-  const instructionsValue = form.querySelector('textarea[name="instruction"]')
-    .value;
-  formInfo.instructions = instructionsValue;
+// const instructionsValue = form.querySelector('textarea[name="instruction"]')
+//   .value;
+// formInfo.instructions = instructionsValue;
 
-  const favLinkValue = form.querySelector('input[name="favLink"]').value;
-  formInfo.website = favLinkValue;
+// const favLinkValue = form.querySelector('input[name="favLink"]').value;
+// formInfo.website = favLinkValue;
 
-  const file = form.querySelector('input[type="file"]');
-  cl(file);
+// const file = form.querySelector('input[type="file"]');
+// cl(file);
 
-  cl(formInfo);
-  firstRecipe.append(formInfo);
+// cl(formInfo);
+// firstRecipe.append(formInfo);
 
-  // let response = await fetch("", {
-  //   method: "POST",
-  //   body: new FormData(form),
-  // });
+// let response = await fetch("", {
+//   method: "POST",
+//   body: new FormData(form),
+// });
 
-  // console.log(response);
-  // let result = await response.json();
+// console.log(response);
+// let result = await response.json();
 
-  // alert(result.message);
-  recipeLocation.append(formInfo);
-};
+// alert(result.message);
+// recipeLocation.append(formInfo);
+// };
 
 // console.log(document.forms);
 
@@ -309,3 +309,50 @@ form.onsubmit = async (e) => {
 //   return splitString;
 // }
 // console.log(reverseString("hello"));
+
+//? check if integer is divisible by five
+// function divisibleByFive(n) {
+//   if (n % 5 == 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(divisibleByFive(5));
+
+//? Equality Check
+
+// function equality(value, type) {
+//   console.log(typeof value, typeof type);
+//   if (value === type) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(equality(NaN, NaN));
+
+//? Word Without First Character
+
+// function newWord(txt) {
+//   let newString = txt.substring(1, txt.length);
+//   return newString;
+// }
+
+// console.log(newWord("woodhog"));
+
+//? Using the && Operator
+
+// function and(a, b) {
+//   if (a !== true) {
+//     return false;
+//   } else if (b !== true) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }
+// console.log(and(false, false));
+
+//? Using the && Operator
