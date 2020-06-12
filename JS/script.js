@@ -1,6 +1,4 @@
-let cl = (log) => {
-  return console.log(log);
-};
+let cl = (log) => console.log(log);
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
@@ -355,4 +353,211 @@ const recipesArr = [
 // }
 // console.log(and(false, false));
 
-//? Using the && Operator
+//? Are the Numbers Equal?
+
+// function isSameNum(a, b) {
+//   if (a === b) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isSameNum(8, "8"));
+
+//? Profitable Gamble
+
+// function profitableGamble(prob, prize, pay) {
+//   if (prob * prize > pay) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(profitableGamble(0.9, 1, 2));
+
+//? check empty string
+// function isEmpty(empty) {
+//   if (empty === "") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(isEmpty(" "));
+
+//? Multiple of 100
+
+// function divisible(a) {
+//   if (a % 100 === 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(divisible(1000));
+
+//? Evaluate an Equation
+//! Do not use to evaluate numbers as Javascript does this on its own
+// function eq(str) {
+//   return eval(str);
+// }
+
+// console.log(eq("2+2"));
+
+//? Recursion: Length of a String
+
+// function length(str) {
+//   return str.length;
+// }
+
+// console.log(length("hello"));
+
+//? Return the Next Number from the Integer Passed
+
+// function addition(num) {
+//   return (num += 1);
+// }
+
+// console.log(addition(5));
+
+//? Reverse an Array
+
+// function reverse(arr) {
+//   return arr.reverse();
+// }
+
+// console.log(reverse([5, 4, 3, 2, 1]));
+
+//? Name Greeting!
+//* Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function but use an "arrow function".
+
+// consthelloName = (name) => `Hello ${name}`;
+
+// console.log(helloName("Nathan"));
+
+//? Using Ternary Operators
+// condition ? condition_if_true : condition_if_false
+
+// let yeah_nope = (bool) => {
+//   return bool ? "yeah" : "nope";
+// };
+
+// console.log(yeah_nope(false));
+
+//? Flip the Boolean
+
+// const flipBool = (bool) => bool ? 0 : 1;
+
+// console.log(flipBool(false));
+
+//? Divides Evenly
+
+// const dividesEvenly = (a, b) => (a % b === 0 ? true : false);
+
+// console.log(dividesEvenly(85, 4));
+
+//? Return Last Element in Array
+
+// const getLastItem = (arr) => arr[arr.length - 1];
+//! or
+// const getLastItem = (arr) => arr.pop();
+
+// cl(getLastItem([1, 2, 3, 4]));
+
+//? Concatenating Two Integer Arrays
+
+// const concat = (arr1, arr2) => arr1.concat(arr2);
+// or
+// const concat = (arr1, arr2) => [...arr1, ...arr2];
+
+// console.log(concat([1, 2, 3], [4, 5, 6]));
+
+//? Find the Index (Part 1)
+
+// const search = (arr, num) => {
+//   if (!num) {
+//     num === -1;
+//   }
+//   return arr.indexOf(num);
+// };
+
+// console.log(search([1, 2, 3], 2));
+
+//? Check if Array contains a Given Number
+
+// const check = (arr, num) => arr.includes(num);
+
+// console.log(check([1, 2, 3], 1));
+
+//? Compare Strings by Count of Characters
+
+// const comp = (str1, str2) => str1.length === str2.length;
+
+// cl(comp("AB", "CDE"));
+
+//? To The Power of ___
+
+// const calculateExponent = (num, exp) => Math.pow(num, exp);
+
+// cl(calculateExponent(5, 5));
+
+//? Find the Bug: Returning the Container
+
+// const getContainer = (item) => {
+//   switch (item) {
+//     case "bread":
+//       return "bag";
+//       break;
+//     case "beer":
+//       return "bottle";
+//       break;
+//     case "candy":
+//       return "plastic";
+//       break;
+//     case "cheese":
+//       return null;
+//       break;
+//     default:
+//       cl("choose Bread, beer, candy or cheese");
+//   }
+// };
+
+//! or
+
+// function getContainer(product) {
+//   return {
+//     Eggs: "carton",
+//     Milk: "bottle",
+//     Bread: "bag",
+//     Beer: "bottle",
+//     Candy: "plastic",
+//     Cheese: null,
+//   }[product];
+// }
+
+// cl(getContainer("Eggs"));
+
+//? ES6: Destructuring Arrays I
+
+// const arr = [1, 2, 3, 4, 5];
+
+// let [a, b] = arr;
+
+// cl(b);
+
+//? Hiding the Card Number ***********************
+//! Important to learn
+
+// const cardHide = (num) => {
+//   let last4Digits = num.slice(-4);
+//   maskedNumbs = last4Digits.padStart(num.length, "*");
+//   return maskedNumbs;
+// };
+
+// cl(cardHide("123123123123123"));
+
+//?
