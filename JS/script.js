@@ -560,4 +560,31 @@ const recipesArr = [
 
 // cl(cardHide("123123123123123"));
 
-//?
+//? Find the Index (Part 2)
+
+// const search = (arr, item) => arr.indexOf(item);
+
+// console.log(search([1, 2, 3, 4], 5));
+
+//? Squares and Cubes
+
+// const checkSquareAndCube = ([item1, item2]) =>
+//   Math.sqrt(item1) === Math.cbrt(item2);
+
+// cl(checkSquareAndCube([4, 8]));
+
+//? Is the Number Even or Odd?
+
+// const isEvenOrOdd = (num) => (num % 2 == 0 ? "Even" : "Odd");
+
+// cl(isEvenOrOdd(4));
+// cl(isEvenOrOdd(3));
+
+//? Is the Last Character an N?
+
+const isLastCharacterN = (name) => {
+  let arr = name.split("");
+  return arr[arr.length - 1] === "n" ? true : false;
+};
+
+cl(isLastCharacterN("Nathan"));
