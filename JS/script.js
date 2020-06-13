@@ -582,9 +582,67 @@ const recipesArr = [
 
 //? Is the Last Character an N?
 
-const isLastCharacterN = (name) => {
-  let arr = name.split("");
-  return arr[arr.length - 1] === "n" ? true : false;
-};
+// const isLastCharacterN = (name) => {
+//   let arr = name.split("");
+//   return arr[arr.length - 1] === "n" ? true : false;
+// };
 
-cl(isLastCharacterN("Nathan"));
+// cl(isLastCharacterN("Nathan"));
+
+//? Extract City Facts
+
+// const cityFacts = (obj) => {
+//   return `${obj.name} has a population of ${obj.population} and is situated in ${obj.continent}`;
+// };
+
+// cl(
+//   cityFacts({
+//     name: "Paris",
+//     population: "2,140,526",
+//     continent: "Europe",
+//   })
+// );
+
+//? Volume of a Box
+
+// const volumeOfBox = (obj) => {
+//   return obj.width * obj.length * obj.height;
+// };
+
+// cl(volumeOfBox({ width: 2, length: 5, height: 1 })); // 10
+
+//? Default Mood
+
+// const moodToday = (mood) => {
+//   if (mood) {
+//     return `Today, I am feeling ${mood}`;
+//   } else {
+//     return "Today, I am feeling neutral";
+//   }
+// };
+
+//! or
+
+// const moodToday = (mood) => `Today, I am feeling ${mood || "neutral"}`;
+
+// cl(moodToday("happy"));
+
+//? Concatenate First and Last Name into One String
+
+// const concatName = (firstName, lastName) => lastName.concat(`, ${firstName}`);
+
+// cl(concatName("first", "last"));
+
+//? Is the Word Singular or Plural?
+
+// const isPlural = (word) => word[word.length - 1] === "s";
+
+//! or
+
+// const isPlural = (word) => word.endsWith("s");
+
+//! or
+
+// const isPlural = (word) => word.substring(word.length - 1) === "s";
+
+// cl(isPlural("changes"));
