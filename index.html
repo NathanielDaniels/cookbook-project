@@ -218,7 +218,7 @@
       <!--? Form/Contact Section -->
       <section class="form-container">
         <!-- /PHP/form-to-email.php -->
-        <form action="/PHP/form-to-email.php" class="form" id="form" method="POST">
+        <form data-netlify="true" action="" class="form" id="form" method="POST">
           <fieldset class="mainFieldset">
             <div class="form-grid">
               <fieldset class="userName">
@@ -257,6 +257,48 @@
           </fieldset>
         </form>
       </section>
+
+      <!--! Original Form (before netlify changes) -->
+      <!-- 0
+        <form action="/PHP/form-to-email.php" class="form" id="form" method="POST">
+          <fieldset class="mainFieldset">
+            <div class="form-grid">
+              <fieldset class="userName">
+                <legend for="recipeName">Your Name</legend>
+                <input
+                  type="text"
+                  name="userName"
+                  maxlength="100"
+                  autocomplete="off"
+                />
+              </fieldset>
+
+              <fieldset class="userEmail">
+                <legend for="userEmail">Your Email</legend>
+                <br />
+                <input type="email" name="userEmail"></input><br />
+              </fieldset>
+              
+              <fieldset class="emailSubject">
+                <legend for="emailSubject">Subject</legend>
+                <br />
+                <input name="emailSubject"></input><br />
+              </fieldset>
+              <fieldset class="emailMessage">
+                <legend for="emailMessage">Message</legend>
+                <br />
+                <textarea name="emailMessage"></textarea><br />
+              </fieldset>
+            </div>
+            <input
+              class="form-button"
+              type="submit"
+              name="form-submit"
+              value="submit"
+            />
+          </fieldset>
+        </form>
+      </section> -->
 
       <!--? Footer -->
       <footer class="footer">
