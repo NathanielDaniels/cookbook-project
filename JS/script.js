@@ -236,6 +236,11 @@ const recipesArr = [
 
 //*=================================================
 //! FORM DATA =====================================
+
+// form.onsubmit = async (e) => {
+//   e.preventDefault();
+// };
+
 // const recipeLocation = document.createElement("div");
 // recipeLocation.classList = "recipeLocation";
 // const firstRecipe = document.querySelector(".firstRecipe");
@@ -296,7 +301,7 @@ const recipesArr = [
 
 // console.log(document.forms);
 
-//==============================
+//================================================================================================
 //! Javascript Practice
 
 //? Reverse a string
@@ -646,3 +651,31 @@ const recipesArr = [
 // const isPlural = (word) => word.substring(word.length - 1) === "s";
 
 // cl(isPlural("changes"));
+
+//? Find the Index
+
+// const findIndex = (arr, str) => arr.indexOf(str);
+
+//! or
+
+// const findIndex = (arr, str) => arr.findIndex((val) => val === str);
+
+// cl(findIndex(["hi", "edabit", "fgh", "abc"], "fgh")); //2
+
+//? ES6: Destructuring Objects VIII
+
+// const user = {
+//   name: "John",
+//   email: "john@example.com",
+//   city: "Phoenix",
+//   state: "AZ",
+//   country: "USA",
+// };
+
+// const str = `({ name, email, rest = {city: "Phoenix", state: "AZ", country: "USA"}} = user ).toString()`;
+
+//! or (Better)
+
+// const str = `({ name, email, ...rest} = user ).toString()`;
+
+// cl(str);
