@@ -237,9 +237,9 @@ const recipesArr = [
 //*=================================================
 //! FORM DATA =====================================
 
-form.onsubmit = async (e) => {
-  e.preventDefault();
-};
+// form.onsubmit = async (e) => {
+//   e.preventDefault();
+// };
 
 // const recipeLocation = document.createElement("div");
 // recipeLocation.classList = "recipeLocation";
