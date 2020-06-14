@@ -6,7 +6,9 @@ echo "<pre>";
 print_r($_POST);
 echo "</pre>";
 
-$message_sent = false;
+// $message_sent = false;
+
+// if ($($message_sent))
 
 if (isset($_POST['userEmail']) && $_POST['userEmail'] != '') {
 
@@ -27,7 +29,7 @@ if (isset($_POST['userEmail']) && $_POST['userEmail'] != '') {
 
         mail($to, $emailSubject, $body);
 
-        $message_sent = true;
+        // $message_sent = true;
 
     }
 
