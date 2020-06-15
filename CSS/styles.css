@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Finger+Paint");
-colors {
+:root {
   --main-color: hsl(36, 74%, 75%);
+  --hover-color: hsl(36, 74%, 80%);
+  --button-color: hsl(3, 60%, 25%);
+  --button-hover: hsl(3, 60%, 19%);
 }
 
 @font-face {
@@ -133,7 +136,7 @@ body {
 }
 
 .main-container .title-container .main-title h1 {
-  color: #eec990;
+  color: var(--main-color);
   -webkit-filter: drop-shadow(0px 10px 5px #0d0d0d);
           filter: drop-shadow(0px 10px 5px #0d0d0d);
   font-family: Rustico;
@@ -148,7 +151,7 @@ body {
   left: 50%;
   z-index: 1;
   opacity: 0;
-  background: #661d1a;
+  background: var(--button-color);
   border-radius: 7px;
   cursor: pointer;
   font-size: 30px;
@@ -165,7 +168,7 @@ body {
 }
 
 .main-container .title-container button:hover {
-  background: #4e1613;
+  background: var(--button-hover);
   -webkit-filter: drop-shadow(0px 1px 1px #50300b);
           filter: drop-shadow(0px 1px 1px #50300b);
   opacity: 1;
@@ -179,7 +182,7 @@ body {
   z-index: -1;
   position: relative;
   height: 28rem;
-  background: #eec78e;
+  background: var(--main-color);
   background-image: url("/IMG/Wood-Grain.jpg");
   background-position: bottom;
   background-size: 100%;
@@ -221,7 +224,7 @@ body {
 }
 
 .main-container .topRecipes-container {
-  background: #eec78e;
+  background: var(--main-color);
   border-bottom: 5px solid #010101;
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
@@ -548,7 +551,7 @@ body {
 }
 
 .main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"] {
-  background: #661d1a;
+  background: var(--button-color);
   border-radius: 7px;
   color: white;
   cursor: pointer;
@@ -570,7 +573,7 @@ body {
 }
 
 .main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"]:hover {
-  background: #5a1a16;
+  background: var(--button-hover);
   -webkit-filter: drop-shadow(0px 1px 1px #0d0d0d);
           filter: drop-shadow(0px 1px 1px #0d0d0d);
   opacity: 1;
@@ -888,7 +891,7 @@ body {
 }
 
 .overlayRecipe .overlayContent .recipeTemplate h1 {
-  color: #eec78e;
+  color: var(--main-color);
   text-shadow: 0px 1px black;
   font-size: 3rem;
   -ms-grid-row: 1;
