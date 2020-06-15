@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Finger+Paint");
 
+colors {
+  --main-color: hsl(36, 74%, 75%);
+}
+
 @font-face {
   font-family: Rustico;
   src: url(/Fonts/Rustico-Regular.otf);
