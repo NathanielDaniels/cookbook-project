@@ -1,12 +1,12 @@
-let cl = (log) => console.log(log);
-
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
 const scrollRecipes = document.querySelectorAll(".scroll");
-
 const form = document.forms[0];
-// console.log(form);
-//! Hero Animations =====================================
+
+//! Conole.log shortcut
+let cl = (log) => console.log(log);
+
+//! Hero Animations (replace w/GSAP=====================================
 $(function () {
   $(".main-title").hide().delay(100).fadeIn(2000);
   $("#btn").hide().delay(100).fadeIn(1000).animate({
@@ -15,8 +15,106 @@ $(function () {
   });
 });
 
+//* ====================================================
+//! Click Recipe for Overlay Module =====================
+
+let hoverText = document.querySelectorAll(".hover-text");
+let items = document.querySelectorAll(".top-grid-item");
+topRecipesBody = document.querySelector(".topRecipes-body");
+let recipeItems = document.querySelector(".recipeItems");
+mobileOverlay = document.querySelector(".mobileOverlay");
+let mainContainer = document.querySelector(".main-container");
+let overlayRecipe = document.querySelector(".overlayRecipe");
+let overlayBlur = document.querySelector(".overlayBlur");
+
+function addEventListenerList(list) {
+  for (let i = 0; i < items.length; i++) {
+    list[i].addEventListener("click", () => {
+      if (screenWidth < "1200") {
+        list[i].classList.toggle("active");
+      }
+    });
+
+    list[i].addEventListener("dblclick", async function () {
+      overlayRecipe.style.display = "block";
+      overlayRecipe.innerHTML = `
+        <div class="closeBtn">X</div>
+        <div class="overlayContent">
+          <div class="recipeTemplate">
+            <h1>${recipesArr[i].title}</h1>
+            <p>${recipesArr[i].info}</p>
+            <div class="recipeIngredients">
+              <h3>Ingredients</h3>
+              <p>${recipesArr[i].ingredients}</p>
+            </div>
+            <div class="recipeInstructions">
+              <h3>Instructions</h3>
+              <p>${recipesArr[i].instructions}</p>
+            </div>
+          </div>
+        </div>
+        `;
+
+      // ! Overlay screen size
+      if (screenWidth > "745") {
+        // console.log("screen over 745");
+        overlayRecipe.classList.toggle("activeOverlay");
+        // recipeItems.classList.add("blur");
+      } else {
+        // console.log("screen under 745");
+        overlayRecipe.classList.toggle("mobileOverlay");
+      }
+
+      mainContainer.classList.add("blur");
+
+      //! Disable/Enable Scroll
+      function disableScroll() {
+        // Get the current page scroll position
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        (scrollLeft =
+          window.pageXOffset || document.documentElement.scrollLeft),
+          // if any scroll is attempted, set this to the previous value
+          (window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+          });
+      }
+      disableScroll();
+
+      function enableScroll() {
+        window.onscroll = function () {};
+      }
+
+      //! Close overlay when clicking "X" Btn
+      let closeOverlay = await document.querySelector(".closeBtn");
+      closeOverlay.addEventListener("click", () => {
+        overlayRecipe.classList.remove("activeOverlay");
+        overlayRecipe.classList.remove("mobileOverlay");
+        overlayRecipe.style.display = "none";
+        mainContainer.classList.remove("blur");
+        overlayBlur.style.display = "none";
+        enableScroll();
+      });
+
+      //! Close overlay when clicking outside modal
+      document.addEventListener("click", () => {
+        let isClickInside = overlayRecipe.contains(event.target);
+
+        if (!isClickInside) {
+          overlayRecipe.classList.remove("activeOverlay");
+          overlayRecipe.classList.remove("mobileOverlay");
+          overlayRecipe.style.display = "none";
+          mainContainer.classList.remove("blur");
+          overlayBlur.style.display = "none";
+          enableScroll();
+        }
+      });
+    });
+  }
+}
+addEventListenerList(hoverText);
+
 //* ============================================
-//! Top Recipe Arrows =====================================
+//! Main Recipe Arrows =====================================
 let pagination = document.querySelector(".pagination");
 let dots = pagination.children;
 let screenWidth = window.innerWidth;
@@ -92,106 +190,6 @@ nextArrow.addEventListener("click", () => {
     prevArrow.disabled = true;
   }
 });
-
-//* ====================================================
-//! Click Recipe for Overlay Module =====================
-
-let hoverText = document.querySelectorAll(".hover-text");
-let items = document.querySelectorAll(".top-grid-item");
-topRecipesBody = document.querySelector(".topRecipes-body");
-let recipeItems = document.querySelector(".recipeItems");
-// popup = document.querySelector(".overlay");
-mobileOverlay = document.querySelector(".mobileOverlay");
-let mainContainer = document.querySelector(".main-container");
-let overlayRecipe = document.querySelector(".overlayRecipe");
-let overlayBlur = document.querySelector(".overlayBlur");
-
-function addEventListenerList(list) {
-  for (let i = 0; i < items.length; i++) {
-    list[i].addEventListener("click", () => {
-      if (screenWidth < "1200") {
-        // console.log("Clicked on Mobile");
-        list[i].classList.toggle("active");
-      }
-    });
-
-    list[i].addEventListener("dblclick", async function () {
-      overlayRecipe.style.display = "block";
-      overlayRecipe.innerHTML = `
-        <div class="closeBtn">X</div>
-        <div class="overlayContent">
-          <div class="recipeTemplate">
-            <h1>${recipesArr[i].title}</h1>
-            <p>${recipesArr[i].info}</p>
-            <div class="recipeIngredients">
-              <h3>Ingredients</h3>
-              <p>${recipesArr[i].ingredients}</p>
-            </div>
-            <div class="recipeInstructions">
-              <h3>Instructions</h3>
-              <p>${recipesArr[i].instructions}</p>
-            </div>
-          </div>
-        </div>
-        `;
-
-      // ! Overlay screen size
-      if (screenWidth > "745") {
-        console.log("screen over 745");
-        overlayRecipe.classList.toggle("activeOverlay");
-        // recipeItems.classList.add("blur");
-      } else {
-        console.log("screen under 745");
-        overlayRecipe.classList.toggle("mobileOverlay");
-      }
-
-      mainContainer.classList.add("blur");
-
-      //! Disable/Enable Scroll
-      function disableScroll() {
-        // Get the current page scroll position
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        (scrollLeft =
-          window.pageXOffset || document.documentElement.scrollLeft),
-          // if any scroll is attempted, set this to the previous value
-          (window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-          });
-      }
-      disableScroll();
-
-      function enableScroll() {
-        window.onscroll = function () {};
-      }
-
-      //! Close overlay when clicking "X" Btn
-      let closeOverlay = await document.querySelector(".closeBtn");
-      closeOverlay.addEventListener("click", () => {
-        overlayRecipe.classList.remove("activeOverlay");
-        overlayRecipe.classList.remove("mobileOverlay");
-        overlayRecipe.style.display = "none";
-        mainContainer.classList.remove("blur");
-        overlayBlur.style.display = "none";
-        enableScroll();
-      });
-
-      //! Close overlay when clicking outside modal
-      document.addEventListener("click", () => {
-        let isClickInside = overlayRecipe.contains(event.target);
-
-        if (!isClickInside) {
-          overlayRecipe.classList.remove("activeOverlay");
-          overlayRecipe.classList.remove("mobileOverlay");
-          overlayRecipe.style.display = "none";
-          mainContainer.classList.remove("blur");
-          overlayBlur.style.display = "none";
-          enableScroll();
-        }
-      });
-    });
-  }
-}
-addEventListenerList(hoverText);
 
 //! Add Dynamic Content to modul overlay
 const recipesArr = [
@@ -665,8 +663,8 @@ const recipesArr = [
 //? ES6: Destructuring Objects VIII
 
 // const user = {
-//   name: "John",
-//   email: "john@example.com",
+//   name: "Billy",
+//   email: "Billy@example.com",
 //   city: "Phoenix",
 //   state: "AZ",
 //   country: "USA",
@@ -679,3 +677,12 @@ const recipesArr = [
 // const str = `({ name, email, ...rest} = user ).toString()`;
 
 // cl(str);
+
+//? Map out an array(10) of random numbers from (1-200)
+//! Sort Array from lowers to highest.
+
+// let eggsInNest = new Array(10).fill(null);
+// eggsInNest = eggsInNest.map(() => Math.floor(Math.random() * 200) + 1);
+// cl(eggsInNest);
+// eggsInNest.sort((a, b) => a - b);
+// cl(eggsInNest);
