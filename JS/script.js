@@ -7,13 +7,13 @@ const form = document.forms[0];
 let cl = (log) => console.log(log);
 
 //! Hero Animations (replace w/GSAP=====================================
-$(function () {
-  $(".main-title").hide().delay(100).fadeIn(2000);
-  $("#btn").hide().delay(100).fadeIn(1000).animate({
-    bottom: "-55px",
-    opacity: 0.9,
-  });
-});
+// $(function () {
+//   $(".main-title").hide().delay(100).fadeIn(2000);
+//   $("#btn").hide().delay(100).fadeIn(1000).animate({
+//     bottom: "-55px",
+//     opacity: 0.9,
+//   });
+// });
 
 //* ====================================================
 //! Click Recipe for Overlay Module =====================
@@ -38,8 +38,11 @@ function addEventListenerList(list) {
     list[i].addEventListener("dblclick", async function () {
       overlayRecipe.style.display = "block";
       overlayRecipe.innerHTML = `
-        <div class="closeBtn">X</div>
+        <div class="closeBtnBg">
+          <div class="closeBtn">X</div>
+        </div>
         <div class="overlayContent">
+          <div class="print"></div>
           <div class="recipeTemplate">
             <h1>${recipesArr[i].title}</h1>
             <p>${recipesArr[i].info}</p>
@@ -84,8 +87,26 @@ function addEventListenerList(list) {
         window.onscroll = function () {};
       }
 
-      //! Close overlay when clicking "X" Btn
-      let closeOverlay = await document.querySelector(".closeBtn");
+      //! Printer Icon
+      let print = await document.querySelector(".print");
+      print.addEventListener("click", async () => {
+        printElement(await document.querySelector(".recipeTemplate"));
+      });
+      function printElement(elem) {
+        let domClone = elem.cloneNode(true);
+        let printSection = document.getElementById("printSection");
+        if (!printSection) {
+          printSection = document.createElement("div");
+          printSection.id = "printSection";
+          document.body.appendChild(printSection);
+        }
+        printSection.innerHTML = "";
+        printSection.appendChild(domClone);
+        window.print();
+      }
+
+      //! Close overlay (clicking "X" Btn)
+      let closeOverlay = await document.querySelector(".closeBtnBg");
       closeOverlay.addEventListener("click", () => {
         overlayRecipe.classList.remove("activeOverlay");
         overlayRecipe.classList.remove("mobileOverlay");
@@ -95,7 +116,7 @@ function addEventListenerList(list) {
         enableScroll();
       });
 
-      //! Close overlay when clicking outside modal
+      //! Close overlay (clicking outside modal)
       document.addEventListener("click", () => {
         let isClickInside = overlayRecipe.contains(event.target);
 
@@ -111,6 +132,7 @@ function addEventListenerList(list) {
     });
   }
 }
+
 addEventListenerList(hoverText);
 
 //* ============================================
@@ -202,9 +224,20 @@ const recipesArr = [
   {
     title: "Carrot Veggie Dish",
     info: "Talk about Carrot Veggie Dish",
-    ingredients:
-      "&#8226 Carrot Veggie Dish <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item <br> &#8226 Next Item",
-    instructions: "instructions here instructions here instructions here",
+    ingredients: `<ul>
+        <li>&#8226 Carrot Veggie Dish</li>
+        <li>&#8226 Carrot Veggie Dish</li>
+        <li>&#8226 Carrot Veggie Dish</li>
+        <li>&#8226 Carrot Veggie Dish</li>
+        <li>&#8226 Carrot Veggie Dish</li>
+      </ul>`,
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
   },
   {
     title: "Cast Iron Steak",
@@ -686,3 +719,23 @@ const recipesArr = [
 // cl(eggsInNest);
 // eggsInNest.sort((a, b) => a - b);
 // cl(eggsInNest);
+
+//? Map an array that doubles the output of the array
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let mapped = arr.map((x) => {
+//   return x * 2;
+// });
+
+// cl(mapped);
+
+let newArray = new Array(5).fill(null);
+cl(newArray);
+
+newArray.map((item) => {
+  item = Math.floor(Math.random() * 100) + 1;
+  newArray.push(item);
+  newArray.splice(0, newArray.length - 5);
+});
+cl(newArray);

@@ -736,49 +736,48 @@ body {
 
 .overlayRecipe {
   display: none;
-  // padding: 20px;
   border-radius: 17px;
   .overlayContent {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // background: blue;
     height: 90%;
     width: 100%;
-    // padding: 20px;
     overflow: auto;
     .recipeTemplate {
       display: grid;
-      // grid: 1fr 1fr 4fr / 1fr 1fr;
-      grid: 1fr 2fr 4fr 4fr/ 1fr;
+      grid: 1fr 1fr 4fr 4fr/ 1fr;
       row-gap: 10px;
       height: 100%;
-      h1,
-      h3,
-      p {
-        padding: 10px;
-      }
       h1 {
-        color: var(--main-color);
+        color: var(--hover-color);
+        text-align: center;
         text-shadow: 0px 1px black;
         font-size: 3rem;
         grid-row: 1;
+        padding-bottom: 10px;
       }
       p {
+        margin: 0 auto;
+        text-align: justify;
         grid-row: 2;
-        padding: 0 20px;
+        padding: 0;
       }
       .recipeIngredients {
-        border-bottom: 2px solid black;
         grid-row: 3;
-        border-top: 2px solid black;
-        h3 {
-          // grid-row: 2;
-        }
       }
       .recipeInstructions {
         grid-row: 4;
+      }
+      .recipeIngredients,
+      .recipeInstructions {
+        border-top: 2px solid black;
+        padding: 2rem 3rem;
+        line-height: 1.5rem;
+        h3 {
+          padding-bottom: 0.8rem;
+        }
       }
     }
   }
@@ -809,6 +808,7 @@ body {
 
 .activeOverlay,
 .mobileOverlay {
+  overflow: hidden;
   position: fixed;
   z-index: 999;
   width: 50rem;
@@ -822,17 +822,39 @@ body {
   border: 2px solid black;
   border-radius: 20px;
   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
-  .closeBtn {
-    position: inherit;
+  .closeBtnBg {
     z-index: 100;
-    right: 10px;
-    top: 10px;
-    font-size: 1.5rem;
-    width: 20px;
-    // margin: 10px 20px;
-    height: auto;
-    // float: right;
+    width: 55px;
+    height: 55px;
+    background: var(--hover-color);
+    border-radius: 50%;
+    position: inherit;
+    left: -10px;
+    top: -10px;
+    &:hover {
+      background: var(--main-color);
+      cursor: pointer;
+    }
+    .closeBtn {
+      position: inherit;
+      left: 10px;
+      top: 6px;
+      font-size: 1.8rem;
+      width: 20px;
+      height: auto;
+      color: white;
+    }
+  }
+  .print {
+    background-image: url("../IMG/print.svg");
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+    letter-spacing: 0.1rem;
   }
 
   // .mobileOverlay {
@@ -855,6 +877,33 @@ body {
 
 //========================================================
 // RESPONSIVE MEDIA
+
+@media print {
+  body * {
+    visibility: hidden;
+    font: 16pt serif;
+    line-height: 1.5;
+  }
+  @page {
+    margin: 5rem;
+  }
+  h1 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  #printSection,
+  #printSection * {
+    visibility: visible;
+  }
+  #printSection {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .main-container {
     width: auto;
