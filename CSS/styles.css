@@ -887,7 +887,7 @@ body {
 .overlayRecipe .overlayContent .recipeTemplate h1 {
   color: var(--hover-color);
   text-align: center;
-  text-shadow: 0px 1px black;
+  text-shadow: 0px 1px 3px #432c0a;
   font-size: 3rem;
   -ms-grid-row: 1;
   grid-row: 1;
@@ -924,15 +924,6 @@ body {
   padding-bottom: 0.8rem;
 }
 
-.overlayBlur {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .activeOverlay,
 .mobileOverlay {
   overflow: hidden;
@@ -948,25 +939,31 @@ body {
           transform: translate(-50%, -50%);
   background: white;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
   -webkit-box-shadow: 0 10px 15px #1f1414;
           box-shadow: 0 10px 15px #1f1414;
 }
 
 .activeOverlay .closeBtnBg,
 .mobileOverlay .closeBtnBg {
+  -webkit-box-shadow: 0px 1px 3px #432c0a;
+          box-shadow: 0px 1px 3px #432c0a;
   z-index: 100;
   width: 55px;
   height: 55px;
   background: var(--hover-color);
-  border-radius: 50%;
+  border-radius: 15px;
   position: inherit;
   left: -10px;
   top: -10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .activeOverlay .closeBtnBg:hover,
 .mobileOverlay .closeBtnBg:hover {
+  -webkit-box-shadow: 0px 0px 2px #432c0a;
+          box-shadow: 0px 0px 2px #432c0a;
   background: var(--main-color);
   cursor: pointer;
 }
@@ -996,6 +993,12 @@ body {
 }
 
 .blur {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 100vh;
+  z-index: 900;
   filter: blur(10px);
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);

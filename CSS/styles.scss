@@ -753,7 +753,7 @@ body {
       h1 {
         color: var(--hover-color);
         text-align: center;
-        text-shadow: 0px 1px black;
+        text-shadow: 0px 1px 3px hsl(36, 74%, 15%);
         font-size: 3rem;
         grid-row: 1;
         padding-bottom: 10px;
@@ -797,14 +797,15 @@ body {
 //   cursor: pointer;
 // }
 // }
-.overlayBlur {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+// .overlayBlur {
+//   display: none;
+//   position: fixed;
+//   z-index: 990;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
 
 .activeOverlay,
 .mobileOverlay {
@@ -820,18 +821,23 @@ body {
   transform: translate(-50%, -50%);
   background: white;
   border: 2px solid black;
-  border-radius: 20px;
+  border-radius: 15px;
   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
   .closeBtnBg {
+    box-shadow: 0px 1px 3px hsl(36, 74%, 15%);
     z-index: 100;
     width: 55px;
     height: 55px;
     background: var(--hover-color);
-    border-radius: 50%;
+    // border-radius: 50%;
+    border-radius: 15px;
     position: inherit;
     left: -10px;
     top: -10px;
+    transition: all 0.3s ease-in-out;
     &:hover {
+      box-shadow: 0px 0px 2px hsl(36, 74%, 15%);
+
       background: var(--main-color);
       cursor: pointer;
     }
@@ -868,6 +874,12 @@ body {
 }
 
 .blur {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 100vh;
+  z-index: 900;
   filter: blur(10px);
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);

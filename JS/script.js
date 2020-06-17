@@ -3,17 +3,22 @@ const nextArrow = document.querySelector(".next-arrow");
 const scrollRecipes = document.querySelectorAll(".scroll");
 const form = document.forms[0];
 
+//! Window Resize log
+window.addEventListener("resize", function () {
+  cl(window.innerWidth);
+});
+
 //! Conole.log shortcut
 let cl = (log) => console.log(log);
 
-//! Hero Animations (replace w/GSAP=====================================
-// $(function () {
-//   $(".main-title").hide().delay(100).fadeIn(2000);
-//   $("#btn").hide().delay(100).fadeIn(1000).animate({
-//     bottom: "-55px",
-//     opacity: 0.9,
-//   });
-// });
+//! Hero Animations (replace w/GSAP) =====================================
+$(function () {
+  $(".main-title").hide().delay(100).fadeIn(2000);
+  $("#btn").hide().delay(100).fadeIn(1000).animate({
+    bottom: "-55px",
+    opacity: 0.9,
+  });
+});
 
 //* ====================================================
 //! Click Recipe for Overlay Module =====================
@@ -142,10 +147,6 @@ let dots = pagination.children;
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
 
-window.addEventListener("resize", function () {
-  cl(window.innerWidth);
-});
-
 let counter = 0;
 prevArrow.addEventListener("click", () => {
   counter++;
@@ -243,25 +244,49 @@ const recipesArr = [
     title: "Cast Iron Steak",
     info: "Talk about cast iron steak",
     ingredients: "&#8226 ",
-    instructions: "instructions here instructions here instructions here",
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
   },
   {
     title: "Taco Cups",
     info: "Talk about Taco Cups",
     ingredients: "&#8226 ",
-    instructions: "instructions here instructions here instructions here",
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
   },
   {
     title: "Pan fried COD",
     info: "Talk about Pan Frying COD",
     ingredients: "&#8226 Pan fried COD",
-    instructions: "instructions here instructions here instructions here",
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
   },
   {
     title: "Blu+Bri Burgers",
     info: "Talk about Blu + Bri Burgers",
     ingredients: "&#8226 Blu + Bri Burgers",
-    instructions: "instructions here instructions here instructions here",
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
   },
 ];
 
@@ -730,12 +755,21 @@ const recipesArr = [
 
 // cl(mapped);
 
-let newArray = new Array(5).fill(null);
-cl(newArray);
+//? Create an array of null values, replace null with random numbers.
 
-newArray.map((item) => {
-  item = Math.floor(Math.random() * 100) + 1;
-  newArray.push(item);
-  newArray.splice(0, newArray.length - 5);
-});
-cl(newArray);
+// let newArray = new Array(5).fill(null);
+// cl(newArray);
+
+// newArray.map((item) => {
+//   item = Math.floor(Math.random() * 100) + 1;
+//   newArray.push(item);
+//   newArray.splice(0, newArray.length - 5);
+// });
+// cl(newArray);
+
+//?
+
+// let h1 = document.querySelector("h1");
+// let inner = h1.innerHTML;
+// cl(h1.textContent);
+// cl(inner);
