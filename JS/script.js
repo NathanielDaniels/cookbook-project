@@ -30,7 +30,7 @@ let recipeItems = document.querySelector(".recipeItems");
 mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
 let overlayRecipe = document.querySelector(".overlayRecipe");
-let overlayBlur = document.querySelector(".overlayBlur");
+// let overlayBlur = document.querySelector(".overlayBlur");
 
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
@@ -86,7 +86,7 @@ function addEventListenerList(list) {
             window.scrollTo(scrollLeft, scrollTop);
           });
       }
-      disableScroll();
+      // disableScroll();
 
       function enableScroll() {
         window.onscroll = function () {};
@@ -117,8 +117,9 @@ function addEventListenerList(list) {
         overlayRecipe.classList.remove("mobileOverlay");
         overlayRecipe.style.display = "none";
         mainContainer.classList.remove("blur");
-        overlayBlur.style.display = "none";
-        enableScroll();
+        // mainContainer.style.overflowY = "scroll";
+        // overlayBlur.style.display = "none";
+        // enableScroll();
       });
 
       //! Close overlay (clicking outside modal)
@@ -130,7 +131,7 @@ function addEventListenerList(list) {
           overlayRecipe.classList.remove("mobileOverlay");
           overlayRecipe.style.display = "none";
           mainContainer.classList.remove("blur");
-          overlayBlur.style.display = "none";
+          // overlayBlur.style.display = "none";
           enableScroll();
         }
       });

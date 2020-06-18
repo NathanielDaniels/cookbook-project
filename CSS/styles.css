@@ -993,12 +993,6 @@ body {
 }
 
 .blur {
-  position: fixed;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  height: 100vh;
-  z-index: 900;
   filter: blur(10px);
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
