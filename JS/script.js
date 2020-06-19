@@ -7,18 +7,21 @@ const form = document.forms[0];
 window.addEventListener("resize", function () {
   cl(window.innerWidth);
 });
+window.addEventListener("scroll", () => {
+  console.log(window.scrollY);
+});
 
 //! Conole.log shortcut
 let cl = (log) => console.log(log);
 
 //! Hero Animations (replace w/GSAP) =====================================
-$(function () {
-  $(".main-title").hide().delay(100).fadeIn(2000);
-  $("#btn").hide().delay(100).fadeIn(1000).animate({
-    bottom: "-55px",
-    opacity: 0.9,
-  });
-});
+// $(function () {
+//   $(".main-title").hide().delay(100).fadeIn(2000);
+//   $("#btn").hide().delay(100).fadeIn(1000).animate({
+//     bottom: "-55px",
+//     opacity: 0.9,
+//   });
+// });
 
 //* ====================================================
 //! Click Recipe for Overlay Module =====================
@@ -30,7 +33,6 @@ let recipeItems = document.querySelector(".recipeItems");
 mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
 let overlayRecipe = document.querySelector(".overlayRecipe");
-// let overlayBlur = document.querySelector(".overlayBlur");
 
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
@@ -41,6 +43,9 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", async function () {
+      document.body.style.position = "fixed";
+      let scrollY = (document.body.style.top = `727px`);
+      console.log(scrollY);
       overlayRecipe.style.display = "block";
       overlayRecipe.innerHTML = `
         <div class="closeBtnBg">
@@ -117,6 +122,13 @@ function addEventListenerList(list) {
         overlayRecipe.classList.remove("mobileOverlay");
         overlayRecipe.style.display = "none";
         mainContainer.classList.remove("blur");
+
+        //! When the modal is hidden.
+        const scrollY = document.body.style.top;
+        document.body.style.position = "";
+        document.body.style.top = "";
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+
         // mainContainer.style.overflowY = "scroll";
         // overlayBlur.style.display = "none";
         // enableScroll();
@@ -131,8 +143,14 @@ function addEventListenerList(list) {
           overlayRecipe.classList.remove("mobileOverlay");
           overlayRecipe.style.display = "none";
           mainContainer.classList.remove("blur");
+
+          //! When the modal is hidden.
+          const scrollY = document.body.style.top;
+          document.body.style.position = "";
+          document.body.style.top = "";
+          window.scrollTo(0, parseInt(scrollY || "0") * -1);
           // overlayBlur.style.display = "none";
-          enableScroll();
+          // enableScroll();
         }
       });
     });

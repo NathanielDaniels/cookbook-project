@@ -993,6 +993,10 @@ body {
 }
 
 .blur {
+  overflow: hidden;
+  padding-right: 15px;
+  /* Avoid width reflow */
+  height: 100vh;
   filter: blur(10px);
   -webkit-filter: blur(10px);
   -moz-filter: blur(10px);
