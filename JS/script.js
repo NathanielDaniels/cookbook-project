@@ -7,12 +7,19 @@ const form = document.forms[0];
 window.addEventListener("resize", function () {
   cl(window.innerWidth);
 });
-window.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-});
+
+//! Scroll Log
+// window.addEventListener("scroll", () => {
+//   console.log(window.scrollY);
+// });
 
 //! Conole.log shortcut
 let cl = (log) => console.log(log);
+
+// console.log(window.pageYOffset);
+
+// let scrollLocation = (window.scrollY = `${window.scrollY}px`);
+// console.log(scrollLocation);
 
 //! Hero Animations (replace w/GSAP) =====================================
 // $(function () {
@@ -34,6 +41,7 @@ mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
 let overlayRecipe = document.querySelector(".overlayRecipe");
 
+//! Recipe Item Click Func.
 function addEventListenerList(list) {
   for (let i = 0; i < items.length; i++) {
     list[i].addEventListener("click", () => {
@@ -43,9 +51,17 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", async function () {
-      document.body.style.position = "fixed";
-      let scrollY = (document.body.style.top = `727px`);
-      console.log(scrollY);
+      const scrollLocal = Math.floor(parseInt(window.scrollY));
+      console.log("scrollLocal", scrollLocal);
+      // window.onscroll = function () {
+      //   window.scrollTo(scrollLocal);
+      // };
+
+      // document.body.style.position = "fixed";
+      document.body.style.position = "absolute";
+      mainContainer.style.top = `-${window.scrollY}px`;
+      console.log("Local when double CLick", window.scrollY);
+
       overlayRecipe.style.display = "block";
       overlayRecipe.innerHTML = `
         <div class="closeBtnBg">
@@ -81,21 +97,21 @@ function addEventListenerList(list) {
       mainContainer.classList.add("blur");
 
       //! Disable/Enable Scroll
-      function disableScroll() {
-        // Get the current page scroll position
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        (scrollLeft =
-          window.pageXOffset || document.documentElement.scrollLeft),
-          // if any scroll is attempted, set this to the previous value
-          (window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-          });
-      }
+      // function disableScroll() {
+      //   // Get the current page scroll position
+      //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      //   (scrollLeft =
+      //     window.pageXOffset || document.documentElement.scrollLeft),
+      //     // if any scroll is attempted, set this to the previous value
+      //     (window.onscroll = function () {
+      //       window.scrollTo(scrollLeft, scrollTop);
+      //     });
+      // }
       // disableScroll();
 
-      function enableScroll() {
-        window.onscroll = function () {};
-      }
+      // function enableScroll() {
+      //   window.onscroll = function () {};
+      // }
 
       //! Printer Icon
       let print = await document.querySelector(".print");
@@ -122,15 +138,26 @@ function addEventListenerList(list) {
         overlayRecipe.classList.remove("mobileOverlay");
         overlayRecipe.style.display = "none";
         mainContainer.classList.remove("blur");
+        // document.body.style.position = "static";
+        document.body.style.position = "static";
+
+        console.log(
+          "location after X",
+          Math.floor(parseInt(mainContainer.style.top))
+        );
+
+        mainContainer.style.top = `${Math.floor(
+          parseInt(mainContainer.style.top)
+        )}px`;
 
         //! When the modal is hidden.
-        const scrollY = document.body.style.top;
-        document.body.style.position = "";
-        document.body.style.top = "";
-        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        // const scrollY = document.body.style.top;
+        // document.body.style.position = "";
+        // document.body.style.top = "";
+        // window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        // window.scrollTo(0, parseInt(window.pageYOffset) * -1);
 
         // mainContainer.style.overflowY = "scroll";
-        // overlayBlur.style.display = "none";
         // enableScroll();
       });
 
@@ -143,13 +170,16 @@ function addEventListenerList(list) {
           overlayRecipe.classList.remove("mobileOverlay");
           overlayRecipe.style.display = "none";
           mainContainer.classList.remove("blur");
+          document.body.style.position = "static";
 
           //! When the modal is hidden.
-          const scrollY = document.body.style.top;
-          document.body.style.position = "";
-          document.body.style.top = "";
-          window.scrollTo(0, parseInt(scrollY || "0") * -1);
-          // overlayBlur.style.display = "none";
+          // const scrollY = document.body.style.top;
+
+          // document.body.style.position = "";
+          // document.body.style.top = "";
+          // window.scrollTo(0, parseInt(scrollY || "800") * -1);
+          // window.scrollTo(0, parseInt(scrollY) * -1);
+
           // enableScroll();
         }
       });
@@ -158,80 +188,6 @@ function addEventListenerList(list) {
 }
 
 addEventListenerList(hoverText);
-
-//* ============================================
-//! Main Recipe Arrows =====================================
-let pagination = document.querySelector(".pagination");
-let dots = pagination.children;
-let screenWidth = window.innerWidth;
-let screenHeight = window.innerHeight;
-
-let counter = 0;
-prevArrow.addEventListener("click", () => {
-  counter++;
-  // console.log(counter);
-  if (counter <= 3 && counter >= -3) {
-    counter++;
-    for (let i = 0; i < scrollRecipes.length; i++) {
-      let moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 320;
-      if (screenWidth < "1200") {
-        cl("working under 1200");
-        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 250;
-      }
-      if (screenWidth < "900") {
-        cl("working under 900");
-        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 220;
-      }
-      scrollRecipes[i].style.position = "relative";
-      scrollRecipes[i].style.left = moveRight + "px";
-      function dotsLeft() {
-        for (let i = 0; i < dots.length; i++) {
-          if (dots[i].classList.value === "active") {
-            dots[i].classList.remove("active");
-            dots[(i -= 1)].classList.add("active");
-          }
-        }
-      }
-    }
-    dotsLeft();
-  } else if (counter > 3) {
-    counter--;
-  } else {
-    nextArrow.disabled = true;
-  }
-});
-
-nextArrow.addEventListener("click", () => {
-  counter--;
-  // console.log(counter);
-  if (counter >= -3 && counter <= 3) {
-    counter--;
-    for (let i = 0; i < scrollRecipes.length; i++) {
-      let moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 320;
-      if (screenWidth < "1200") {
-        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 250;
-      }
-      if (screenWidth < "900") {
-        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 220;
-      }
-      scrollRecipes[i].style.position = "relative";
-      scrollRecipes[i].style.left = moveLeft + "px";
-      function dotsRight() {
-        for (let i = 0; i < dots.length; i++) {
-          if (dots[i].classList.value === "active") {
-            dots[i].classList.remove("active");
-            dots[(i += 1)].classList.add("active");
-          }
-        }
-      }
-    }
-    dotsRight();
-  } else if (counter < -3) {
-    counter++;
-  } else {
-    prevArrow.disabled = true;
-  }
-});
 
 //! Add Dynamic Content to modul overlay
 const recipesArr = [
@@ -308,6 +264,80 @@ const recipesArr = [
     </ul>`,
   },
 ];
+
+//* ============================================
+//! Main Recipe Arrows =====================================
+let pagination = document.querySelector(".pagination");
+let dots = pagination.children;
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
+
+let counter = 0;
+prevArrow.addEventListener("click", () => {
+  counter++;
+  // console.log(counter);
+  if (counter <= 3 && counter >= -3) {
+    counter++;
+    for (let i = 0; i < scrollRecipes.length; i++) {
+      let moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 320;
+      if (screenWidth < "1200") {
+        cl("working under 1200");
+        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 250;
+      }
+      if (screenWidth < "900") {
+        cl("working under 900");
+        moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 220;
+      }
+      scrollRecipes[i].style.position = "relative";
+      scrollRecipes[i].style.left = moveRight + "px";
+      function dotsLeft() {
+        for (let i = 0; i < dots.length; i++) {
+          if (dots[i].classList.value === "active") {
+            dots[i].classList.remove("active");
+            dots[(i -= 1)].classList.add("active");
+          }
+        }
+      }
+    }
+    dotsLeft();
+  } else if (counter > 3) {
+    counter--;
+  } else {
+    nextArrow.disabled = true;
+  }
+});
+
+nextArrow.addEventListener("click", () => {
+  counter--;
+  // console.log(counter);
+  if (counter >= -3 && counter <= 3) {
+    counter--;
+    for (let i = 0; i < scrollRecipes.length; i++) {
+      let moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 320;
+      if (screenWidth < "1200") {
+        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 250;
+      }
+      if (screenWidth < "900") {
+        moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 220;
+      }
+      scrollRecipes[i].style.position = "relative";
+      scrollRecipes[i].style.left = moveLeft + "px";
+      function dotsRight() {
+        for (let i = 0; i < dots.length; i++) {
+          if (dots[i].classList.value === "active") {
+            dots[i].classList.remove("active");
+            dots[(i += 1)].classList.add("active");
+          }
+        }
+      }
+    }
+    dotsRight();
+  } else if (counter < -3) {
+    counter++;
+  } else {
+    prevArrow.disabled = true;
+  }
+});
 
 //*=================================================
 //! FORM DATA =====================================

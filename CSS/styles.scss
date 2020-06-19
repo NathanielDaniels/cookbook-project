@@ -184,10 +184,10 @@ body {
     }
     button {
       position: absolute;
-      bottom: -80px;
+      bottom: -60px;
       left: 50%;
       z-index: 1;
-      opacity: 0;
+      // opacity: 0;
       background: var(--button-color);
       border-radius: 7px;
       cursor: pointer;
