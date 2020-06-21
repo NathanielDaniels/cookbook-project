@@ -39,7 +39,7 @@ topRecipesBody = document.querySelector(".topRecipes-body");
 let recipeItems = document.querySelector(".recipeItems");
 mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
-let overlayRecipe = document.querySelector(".overlayRecipe");
+let overlayModal = document.querySelector(".overlayModal");
 
 //! Recipe Item Click Func.
 function addEventListenerList(list) {
@@ -51,19 +51,20 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", async function () {
-      const scrollLocal = Math.floor(parseInt(window.scrollY));
-      console.log("scrollLocal", scrollLocal);
+      const scrollLocation = Math.floor(parseInt(window.scrollY));
+      console.log("scrollLocal", scrollLocation);
       // window.onscroll = function () {
       //   window.scrollTo(scrollLocal);
       // };
 
       // document.body.style.position = "fixed";
-      document.body.style.position = "absolute";
-      mainContainer.style.top = `-${window.scrollY}px`;
-      console.log("Local when double CLick", window.scrollY);
+      // document.body.style.position = "absolute";
+      mainContainer.style.position = "relative";
+      mainContainer.style.top = `-${scrollLocation}px`;
+      console.log("Local when double CLick", scrollLocation);
 
-      overlayRecipe.style.display = "block";
-      overlayRecipe.innerHTML = `
+      overlayModal.style.display = "block";
+      overlayModal.innerHTML = `
         <div class="closeBtnBg">
           <div class="closeBtn">X</div>
         </div>
@@ -87,11 +88,11 @@ function addEventListenerList(list) {
       // ! Overlay screen size
       if (screenWidth > "745") {
         // console.log("screen over 745");
-        overlayRecipe.classList.toggle("activeOverlay");
+        overlayModal.classList.toggle("activeOverlay");
         // recipeItems.classList.add("blur");
       } else {
         // console.log("screen under 745");
-        overlayRecipe.classList.toggle("mobileOverlay");
+        overlayModal.classList.toggle("mobileOverlay");
       }
 
       mainContainer.classList.add("blur");
@@ -134,21 +135,17 @@ function addEventListenerList(list) {
       //! Close overlay (clicking "X" Btn)
       let closeOverlay = await document.querySelector(".closeBtnBg");
       closeOverlay.addEventListener("click", () => {
-        overlayRecipe.classList.remove("activeOverlay");
-        overlayRecipe.classList.remove("mobileOverlay");
-        overlayRecipe.style.display = "none";
+        overlayModal.classList.remove("activeOverlay");
+        overlayModal.classList.remove("mobileOverlay");
+        overlayModal.style.display = "none";
         mainContainer.classList.remove("blur");
         // document.body.style.position = "static";
         document.body.style.position = "static";
 
-        console.log(
-          "location after X",
-          Math.floor(parseInt(mainContainer.style.top))
-        );
+        console.log("location after X", scrollLocation);
 
-        mainContainer.style.top = `${Math.floor(
-          parseInt(mainContainer.style.top)
-        )}px`;
+        //? MAIN ISSUE OF MODAL SCROLL LOCATION
+        mainContainer.style.top = `-${scrollLocation}px`;
 
         //! When the modal is hidden.
         // const scrollY = document.body.style.top;
@@ -163,12 +160,12 @@ function addEventListenerList(list) {
 
       //! Close overlay (clicking outside modal)
       document.addEventListener("click", () => {
-        let isClickInside = overlayRecipe.contains(event.target);
+        let isClickInside = overlayModal.contains(event.target);
 
         if (!isClickInside) {
-          overlayRecipe.classList.remove("activeOverlay");
-          overlayRecipe.classList.remove("mobileOverlay");
-          overlayRecipe.style.display = "none";
+          overlayModal.classList.remove("activeOverlay");
+          overlayModal.classList.remove("mobileOverlay");
+          overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
           document.body.style.position = "static";
 
@@ -822,3 +819,94 @@ nextArrow.addEventListener("click", () => {
 // let inner = h1.innerHTML;
 // cl(h1.textContent);
 // cl(inner);
+
+//? ------ Free Code Camp ------
+//? Working with Objects
+
+// function phoneticLookup(val) {
+//   let result = "";
+//   const lookup = {
+//     alpha: "Adams",
+//     bravo: "Boston",
+//     charlie: "Chicago",
+//     delta: "Denver",
+//     echo: "Easy",
+//     foxtrot: "Frank",
+//   };
+
+//   result = lookup[val];
+//   return result;
+// }
+
+// phoneticLookup("charlie");
+// console.log(phoneticLookup("charlie"));
+
+//? Testing Objects for PropertiesPassed
+
+// function checkObj(obj, checkProp) {
+//   if (obj.hasOwnProperty(checkProp)) {
+//     return obj[checkProp];
+//   } else {
+//     return "Not Found";
+//   }
+// }
+
+// var obj1 = {
+//   top: "hat",
+//   bottom: "pants",
+// };
+
+// console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "house"));
+
+//? Record Collection
+
+const collection = {
+  2548: {
+    album: "Slippery When Wet",
+    artist: "Bon Jovi",
+    tracks: ["Let It Rock", "You Give Love a Bad Name"],
+  },
+  2468: {
+    album: "1999",
+    artist: "Prince",
+    tracks: ["1999", "Little Red Corvette"],
+  },
+  1245: {
+    artist: "Robert Palmer",
+    tracks: [],
+  },
+  5439: {
+    album: "ABBA Gold",
+  },
+};
+
+// Only change code below this line
+function updateRecords(id, prop, value) {
+  id = collection[id];
+
+  if (prop !== "tracks" && value !== "") {
+    id[prop] = value;
+  }
+
+  if (prop === "tracks" && value !== "") {
+    id[prop] = value;
+    // id[prop][value].push(value);
+    console.log(id[prop]);
+  }
+
+  if (prop === "artist" && value === "") {
+    id[prop] = "";
+  }
+
+  return collection;
+}
+
+// updateRecords(5439, "tracks", "ABBA");
+// console.log(updateRecords(5439, "artist", "ABBA"));
+
+// console.log(updateRecords(5439, "tracks", "Take a Chance on Me")); //'Take a change on me' (last element)
+// console.log(updateRecords(2548, "artist", "")); // artist should not be set
+// console.log(updateRecords(1245, "tracks", "Addicted to Love")); // tracks should have "addicted to love"
+console.log(updateRecords(2468, "tracks", "Free")); // tracks should have 1999
+// updateRecords(2548, "tracks", "") // tracks should not be set
+// updateRecords(1245, "album", "Riptide") // album should be "riptide"

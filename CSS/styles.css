@@ -859,12 +859,12 @@ body {
   width: 100%;
 }
 
-.overlayRecipe {
+.overlayModal {
   display: none;
   border-radius: 17px;
 }
 
-.overlayRecipe .overlayContent {
+.overlayModal .overlayContent {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -875,7 +875,7 @@ body {
   overflow: auto;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate {
+.overlayModal .overlayContent .recipeTemplate {
   display: -ms-grid;
   display: grid;
   grid: 1fr 1fr 4fr 4fr/ 1fr;
@@ -883,7 +883,7 @@ body {
   height: 100%;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate h1 {
+.overlayModal .overlayContent .recipeTemplate h1 {
   color: var(--hover-color);
   text-align: center;
   text-shadow: 0px 1px 3px #432c0a;
@@ -893,7 +893,7 @@ body {
   padding-bottom: 10px;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate p {
+.overlayModal .overlayContent .recipeTemplate p {
   margin: 0 auto;
   text-align: justify;
   -ms-grid-row: 2;
@@ -901,25 +901,25 @@ body {
   padding: 0;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate .recipeIngredients {
+.overlayModal .overlayContent .recipeTemplate .recipeIngredients {
   -ms-grid-row: 3;
   grid-row: 3;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate .recipeInstructions {
+.overlayModal .overlayContent .recipeTemplate .recipeInstructions {
   -ms-grid-row: 4;
   grid-row: 4;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate .recipeIngredients,
-.overlayRecipe .overlayContent .recipeTemplate .recipeInstructions {
+.overlayModal .overlayContent .recipeTemplate .recipeIngredients,
+.overlayModal .overlayContent .recipeTemplate .recipeInstructions {
   border-top: 2px solid black;
   padding: 2rem 3rem;
   line-height: 1.5rem;
 }
 
-.overlayRecipe .overlayContent .recipeTemplate .recipeIngredients h3,
-.overlayRecipe .overlayContent .recipeTemplate .recipeInstructions h3 {
+.overlayModal .overlayContent .recipeTemplate .recipeIngredients h3,
+.overlayModal .overlayContent .recipeTemplate .recipeInstructions h3 {
   padding-bottom: 0.8rem;
 }
 
