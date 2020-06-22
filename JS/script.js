@@ -859,54 +859,136 @@ nextArrow.addEventListener("click", () => {
 // console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "house"));
 
 //? Record Collection
+//! This was not as easy as I thought. Need to work on Objects more
 
-const collection = {
-  2548: {
-    album: "Slippery When Wet",
-    artist: "Bon Jovi",
-    tracks: ["Let It Rock", "You Give Love a Bad Name"],
-  },
-  2468: {
-    album: "1999",
-    artist: "Prince",
-    tracks: ["1999", "Little Red Corvette"],
-  },
-  1245: {
-    artist: "Robert Palmer",
-    tracks: [],
-  },
-  5439: {
-    album: "ABBA Gold",
-  },
-};
+// const collection = {
+//   2548: {
+//     album: "Slippery When Wet",
+//     artist: "Bon Jovi",
+//     tracks: ["Let It Rock", "You Give Love a Bad Name"],
+//   },
+//   2468: {
+//     album: "1999",
+//     artist: "Prince",
+//     tracks: ["1999", "Little Red Corvette"],
+//   },
+//   1245: {
+//     artist: "Robert Palmer",
+//     tracks: [],
+//   },
+//   5439: {
+//     album: "ABBA Gold",
+//   },
+// };
 
 // Only change code below this line
-function updateRecords(id, prop, value) {
-  id = collection[id];
+// function updateRecords(id, prop, value) {
+//   id = collection[id];
 
-  if (prop !== "tracks" && value !== "") {
-    id[prop] = value;
-  }
+//*  --- My Way ---
+// if (prop !== "tracks" && value !== "") {
+//   id[prop] = value;
+// } else if (prop === "tracks" && value !== "") {
+//   id.hasOwnProperty("tracks") ? id.tracks.push(value) : (id.tracks = [value]);
+// } else if (prop === "tracks" && value === "") {
+//   delete id[prop];
+// } else if (prop === "artist" && value === "") {
+//   delete id[prop];
+// } else if (prop === "album" && value !== "") {
+//   id[prop] = value;
+// }
 
-  if (prop === "tracks" && value !== "") {
-    id[prop] = value;
-    // id[prop][value].push(value);
-    console.log(id[prop]);
-  }
+//*  --- Cleaner way ---
+// if (value === "") {
+//   delete id[prop];
+// } else {
+//   if (prop !== "tracks") {
+//     id[prop] = value;
+//   } else {
+//     id.hasOwnProperty("tracks")
+//       ? id.tracks.push(value)
+//       : (id.tracks = [value]);
+//   }
+// }
 
-  if (prop === "artist" && value === "") {
-    id[prop] = "";
-  }
+//   return collection;
+// }
 
-  return collection;
-}
-
+//*  --- Testing ---
 // updateRecords(5439, "tracks", "ABBA");
 // console.log(updateRecords(5439, "artist", "ABBA"));
-
 // console.log(updateRecords(5439, "tracks", "Take a Chance on Me")); //'Take a change on me' (last element)
 // console.log(updateRecords(2548, "artist", "")); // artist should not be set
 // console.log(updateRecords(1245, "tracks", "Addicted to Love")); // tracks should have "addicted to love"
-console.log(updateRecords(2468, "tracks", "Free")); // tracks should have 1999
-// updateRecords(2548, "tracks", "") // tracks should not be set
-// updateRecords(1245, "album", "Riptide") // album should be "riptide"
+// console.log(updateRecords(2468, "tracks", "Free")); // tracks should have 1999
+// console.log(updateRecords(2548, "tracks", "")); // tracks should not be set
+// console.log(updateRecords(1245, "album", "Riptide")); // album should be "riptide"
+
+//? Iterate though array
+// var myArr = [2, 3, 4, 5, 6];
+
+// let total = 0;
+// for (let i = 0; i < myArr.length; i++) {
+//   console.log((total += myArr[i]));
+// }
+// console.log("total", total);
+
+//? Nested for loops
+
+// function multiplyAll(arr) {
+//   let product = 1;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//       product *= arr[i][j];
+//     }
+//   }
+//   return product;
+// }
+
+// console.log(
+//   multiplyAll([
+//     [1, 2],
+//     [3, 4],
+//     [5, 6, 7],
+//   ])
+// );
+// console.log(multiplyAll([[1], [2], [3]]));
+
+//? Replace Loops using Recursion
+
+// function multiply(arr, n) {
+//   let product = 1;
+//   for (let i = 0; i < n; i++) {
+//     product *= arr[i];
+//   }
+//   return product;
+// }
+
+function multiply(arr, n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return multiply(arr, n - 1) * arr[n - 1];
+  }
+}
+
+arr1 = [1, 2, 3, 4, 5];
+
+// console.log(multiply(arr1, 4));
+
+let add = function (n) {
+  if (n <= 0) {
+    return 1;
+  } else {
+    return n + add(n - 1);
+  }
+};
+
+console.log(add(4));
+
+4 + add(3);
+4 + 3 + add(2);
+4 + 3 + 2 + add(1);
+4 + 3 + 2 + add(0);
+// 4 + 3 + 2 + 0 = 9
