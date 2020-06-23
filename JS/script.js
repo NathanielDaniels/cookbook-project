@@ -957,6 +957,7 @@ nextArrow.addEventListener("click", () => {
 
 //? Replace Loops using Recursion
 
+//* Original loop
 // function multiply(arr, n) {
 //   let product = 1;
 //   for (let i = 0; i < n; i++) {
@@ -965,30 +966,92 @@ nextArrow.addEventListener("click", () => {
 //   return product;
 // }
 
-function multiply(arr, n) {
-  if (n <= 0) {
-    return 1;
-  } else {
-    return multiply(arr, n - 1) * arr[n - 1];
-  }
-}
+//* W/ Recursion
+// function multiply(arr, n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return multiply(arr, n - 1) * arr[n - 1];
+//   }
+// }
 
-arr1 = [1, 2, 3, 4, 5];
+// arr1 = [1, 2, 3, 4, 5];
 
 // console.log(multiply(arr1, 4));
 
-let add = function (n) {
-  if (n <= 0) {
-    return 1;
-  } else {
-    return n + add(n - 1);
-  }
-};
+// let add = function (n) {
+//   if (n <= 0) {
+//     return 1;
+//   } else {
+//     return n + add(n - 1);
+//   }
+// };
 
-console.log(add(4));
+// console.log(add(4));
 
-4 + add(3);
-4 + 3 + add(2);
-4 + 3 + 2 + add(1);
-4 + 3 + 2 + add(0);
+// 4 + add(3);
+// 4 + 3 + add(2);
+// 4 + 3 + 2 + add(1);
+// 4 + 3 + 2 + add(0);
 // 4 + 3 + 2 + 0 = 9
+
+//? Profile Looking (iterate though object)
+
+// Setup
+// var contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
+
+// function lookUpProfile(name, prop) {
+//   for (let i = 0; i < contacts.length; i++) {
+//     if (contacts[i].firstName === name) {
+//       console.log(`found ${name}`);
+//       if (contacts[i].hasOwnProperty(prop)) {
+//         console.log(`found prop: ${prop}`);
+//         return contacts[i][prop];
+//       } else {
+//         return "No such property";
+//       }
+//     }
+//   }
+//   return "No such contact";
+// }
+
+// // console.log(lookUpProfile("Akira", "lastName"));
+// console.log(lookUpProfile("Kristian", "lastName"));
+
+//? random number with a min/max
+
+let arr = [];
+
+function randomRange(myMin, myMax) {
+  for (let i = 0; i < 10; i++) {
+    arr.push(Math.floor(Math.random() * (myMax - myMin + 1) + myMin));
+  }
+}
+randomRange(5, 12);
+
+console.log(arr);
