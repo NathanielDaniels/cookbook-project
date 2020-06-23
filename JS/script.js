@@ -1045,13 +1045,15 @@ nextArrow.addEventListener("click", () => {
 
 //? random number with a min/max
 
-let arr = [];
+// let arr = [];
 
-function randomRange(myMin, myMax) {
-  for (let i = 0; i < 10; i++) {
-    arr.push(Math.floor(Math.random() * (myMax - myMin + 1) + myMin));
-  }
-}
-randomRange(5, 12);
+// function randomRange(myMin, myMax) {
+//   for (let i = 0; i < 10; i++) {
+//     arr.push(Math.floor(Math.random() * (myMax - myMin + 1) + myMin));
+//   }
+// }
+// randomRange(5, 12);
 
-console.log(arr);
+// console.log(arr);
+
+//?
