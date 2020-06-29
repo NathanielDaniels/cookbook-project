@@ -65,6 +65,8 @@ function addEventListenerList(list) {
 
       mainContainer.classList.add("blur");
       overlayModal.style.display = "block";
+
+      //? Dynamic Html Content
       overlayModal.innerHTML = `
         <div class="closeBtnBg">
           <div class="closeBtn">X</div>
@@ -153,12 +155,14 @@ addEventListenerList(hoverText);
 //! Add Dynamic Content to modul overlay
 const recipesArr = [
   {
+    location: "Top Recipes",
     title: "Taco Soup",
     info: "Talk about taco Soup",
     ingredients: "&#8226 Taco Soup <br> &#8226 Taco Soup <br>",
     instructions: "instructions here instructions here instructions here",
   },
   {
+    location: "Top Recipes",
     title: "Carrot Veggie Dish",
     info: "Talk about Carrot Veggie Dish",
     ingredients: `<ul>
@@ -177,6 +181,7 @@ const recipesArr = [
     </ul>`,
   },
   {
+    location: "Top Recipes",
     title: "Cast Iron Steak",
     info: "Talk about cast iron steak",
     ingredients: "&#8226 ",
@@ -189,6 +194,7 @@ const recipesArr = [
     </ul>`,
   },
   {
+    location: "Top Recipes",
     title: "Taco Cups",
     info: "Talk about Taco Cups",
     ingredients: "&#8226 ",
@@ -201,6 +207,7 @@ const recipesArr = [
     </ul>`,
   },
   {
+    location: "Top Recipes",
     title: "Pan fried COD",
     info: "Talk about Pan Frying COD",
     ingredients: "&#8226 Pan fried COD",
@@ -213,9 +220,23 @@ const recipesArr = [
     </ul>`,
   },
   {
+    location: "Top Recipes",
     title: "Blu+Bri Burgers",
     info: "Talk about Blu + Bri Burgers",
     ingredients: "&#8226 Blu + Bri Burgers",
+    instructions: `<ul>
+      <li>instructions here instructions here instructions here</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>`,
+  },
+  {
+    location: "Main Recipes",
+    title: "Main Recipe Section Test",
+    info: "Test Test Test",
+    ingredients: "&#8226 Test Test",
     instructions: `<ul>
       <li>instructions here instructions here instructions here</li>
       <li></li>
