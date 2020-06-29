@@ -51,23 +51,17 @@ function addEventListenerList(list) {
     });
 
     list[i].addEventListener("dblclick", async function () {
-      mainContainer.classList.add("blur");
-      // mainContainer.style.overflow = "hidden";
       const scrollLocation = Math.floor(parseInt(window.scrollY));
       console.log("scrollLocal", scrollLocation);
-
-      // window.onscroll = function () {
-      //   window.scrollTo(scrollLocation, 0);
-      // };
-
-      document.body.style.position = "fixed";
-      // document.body.style.position = "absolute";
-
-      //! HERE IS THE MAIN SCROLL ISSUE
-      // mainContainer.style.position = "relative";
-      // mainContainer.style.top = `-${scrollLocation}px`;
+      console.log(window.pageYOffset);
 
       console.log("Local when double CLick", scrollLocation);
+
+      mainContainer.classList.add("blur");
+
+      //! HERE IS THE MAIN SCROLL ISSUE
+      // mainContainer.style.position = "fixed";
+      // mainContainer.style.top = `-${scrollLocation}px`;
 
       overlayModal.style.display = "block";
       overlayModal.innerHTML = `
@@ -95,10 +89,11 @@ function addEventListenerList(list) {
       if (screenWidth > "745") {
         // console.log("screen over 745");
         overlayModal.classList.toggle("activeOverlay");
-        // recipeItems.classList.add("blur");
+        
       } else {
         // console.log("screen under 745");
         overlayModal.classList.toggle("mobileOverlay");
+        
       }
 
       //! Disable/Enable Scroll
@@ -143,13 +138,13 @@ function addEventListenerList(list) {
         overlayModal.classList.remove("mobileOverlay");
         overlayModal.style.display = "none";
         mainContainer.classList.remove("blur");
-        document.body.style.position = "static";
+        // document.body.style.position = "static";
 
         //? Back to Scroll location before clicking recipe Modal
-        // window.scrollTo(0, scrollLocation);
-        window.scrollY(scrollLocation);
+        window.scrollTo(0, scrollLocation);
+        // window.scrollY(scrollLocation);
 
-        // console.log("location after Modal Close(X) ", scrollLocation);
+        console.log("location after Modal Close(X) ", scrollLocation);
 
         //? MAIN ISSUE OF MODAL SCROLL LOCATION
         // mainContainer.style.scrollTop = `-${scrollLocation}px`;
@@ -174,10 +169,10 @@ function addEventListenerList(list) {
           overlayModal.classList.remove("mobileOverlay");
           overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
-          document.body.style.position = "static";
+          // document.body.style.position = "static";
 
           //? Back to Scroll location before clicking recipe Modal
-          window.scrollTo(0, scrollLocation);
+          // window.scrollTo(0, scrollLocation);
 
           //! When the modal is hidden.
           // const scrollY = document.body.style.top;
