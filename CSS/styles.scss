@@ -20,19 +20,19 @@
 
 @mixin hover-text() {
   @include centered();
-  // top: 120px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   color: #fff;
   font-size: 1.1em;
-  height: 100%;
+  height: 101%;
+  width: 101%;
+  top: 0px;
   left: 0px;
   opacity: 0;
   padding: 10px 20px;
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  top: 0px;
   transition: 0.4s ease-in-out;
   // &:hover,
   // .active {
@@ -48,6 +48,12 @@ html::-webkit-scrollbar {
 
 /* The grabbable scrollbar button  */
 html::-webkit-scrollbar-thumb {
+  background-image: url("/IMG/fork.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+
+  //* Colorful Scrollbar if fork doesn't work
   // background: -webkit-gradient(
   //   linear,
   //   left top,
@@ -56,10 +62,6 @@ html::-webkit-scrollbar-thumb {
   //   to(var(--main-color))
   // );
   // background: linear-gradient(180deg, white, var(--main-color));
-  background-image: url("/IMG/fork.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 20px;
   // box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
   //   inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
@@ -276,7 +278,6 @@ body {
 \*------------------------------------*/
 
   .topRecipes-container {
-    // background: var(--main-color);
     background: var(--main-color);
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
@@ -317,9 +318,10 @@ body {
           border-radius: 10px;
           transition: all 0.3s ease-in-out;
           border: 2px solid black;
-
           cursor: pointer;
           &:hover {
+            border-radius: 10px;
+
             filter: drop-shadow(0px 10px 5px hsl(32, 75%, 28%));
           }
           .hover-text {
@@ -969,11 +971,11 @@ body {
         width: 50% !important;
         // left: 50% !important;
         // transform: translate(-50%, 0);
-        .form-grid fieldset:nth-last-child(2) {
-          // background: blue;
-          // grid-template-columns: 100% !important;
-          // width: 45vw !important;
-        }
+        // .form-grid fieldset:nth-last-child(2) {
+        // background: blue;
+        // grid-template-columns: 100% !important;
+        // width: 45vw !important;
+        // }
         .form-grid {
           grid-template-rows: 75px 75px 75px 250px !important;
           .userName {
@@ -1078,10 +1080,10 @@ body {
         left: 50% !important;
         transform: translate(-50%, 0) !important;
         width: 80% !important;
-        .form-grid fieldset:nth-last-child(2) {
-          // background: blue;
-          // grid-template-columns: 100% !important;
-        }
+        // .form-grid fieldset:nth-last-child(2) {
+        // background: blue;
+        // grid-template-columns: 100% !important;
+        // }
         // /fieldset
       }
       // /form
