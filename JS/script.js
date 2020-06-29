@@ -1,4 +1,4 @@
-import recipesArr from "./recipes";
+import recipesArr from "./recipes.js";
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
