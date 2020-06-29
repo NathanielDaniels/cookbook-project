@@ -34,12 +34,15 @@ let cl = (log) => console.log(log);
 //! Click Recipe for Overlay Module =====================
 
 let hoverText = document.querySelectorAll(".hover-text");
-let topRecipeItems = document.querySelectorAll(".top-grid-item");
+
 let topRecipesBody = document.querySelector(".topRecipes-body");
+let topRecipeItems = document.querySelectorAll(".top-grid-item");
 let mainRecipeItems = document.querySelector(".recipeItems");
 let allRecipeItems = document.querySelectorAll(".allRecipes");
-let mobileOverlay = document.querySelector(".mobileOverlay");
+
 let mainContainer = document.querySelector(".main-container");
+
+let mobileOverlay = document.querySelector(".mobileOverlay");
 let overlayModal = document.querySelector(".overlayModal");
 
 console.log(allRecipeItems);
@@ -92,23 +95,6 @@ function addEventListenerList(list) {
         overlayModal.classList.toggle("mobileOverlay");
       }
 
-      //! Disable/Enable Scroll
-      // function disableScroll() {
-      //   // Get the current page scroll position
-      //   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      //   (scrollLeft =
-      //     window.pageXOffset || document.documentElement.scrollLeft),
-      //     // if any scroll is attempted, set this to the previous value
-      //     (window.onscroll = function () {
-      //       window.scrollTo(scrollLeft, scrollTop);
-      //     });
-      // }
-      // disableScroll();
-
-      // function enableScroll() {
-      //   window.onscroll = function () {};
-      // }
-
       //! Printer Icon
       let print = await document.querySelector(".print");
       print.addEventListener("click", async () => {
@@ -141,16 +127,6 @@ function addEventListenerList(list) {
         // window.scrollY(scrollLocation);
 
         console.log("location after Modal Close(X) ", scrollLocation);
-
-        //! When the modal is hidden.
-        // const scrollY = document.body.style.top;
-        // document.body.style.position = "";
-        // document.body.style.top = "";
-        // window.scrollTo(0, parseInt(scrollY || "0") * -1);
-        // window.scrollTo(0, parseInt(window.pageYOffset) * -1);
-
-        // mainContainer.style.overflowY = "scroll";
-        // enableScroll();
       });
 
       //! Close overlay (clicking outside modal)
@@ -166,16 +142,6 @@ function addEventListenerList(list) {
 
           //? Back to Scroll location before clicking recipe Modal
           // window.scrollTo(0, scrollLocation);
-
-          //! When the modal is hidden.
-          // const scrollY = document.body.style.top;
-
-          // document.body.style.position = "";
-          // document.body.style.top = "";
-          // window.scrollTo(0, parseInt(scrollY || "800") * -1);
-          // window.scrollTo(0, parseInt(scrollY) * -1);
-
-          // enableScroll();
         }
       });
     });
@@ -402,3 +368,30 @@ nextArrow.addEventListener("click", () => {
 // console.log(document.forms);
 
 //================================================================================================
+//? Might not need, saving until completion
+//! Disable/Enable Scroll
+// function disableScroll() {
+//   // Get the current page scroll position
+//   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   (scrollLeft =
+//     window.pageXOffset || document.documentElement.scrollLeft),
+//     // if any scroll is attempted, set this to the previous value
+//     (window.onscroll = function () {
+//       window.scrollTo(scrollLeft, scrollTop);
+//     });
+// }
+// disableScroll();
+
+// function enableScroll() {
+//   window.onscroll = function () {};
+// }
+
+//! When the modal is hidden.
+// const scrollY = document.body.style.top;
+// document.body.style.position = "";
+// document.body.style.top = "";
+// window.scrollTo(0, parseInt(scrollY || "0") * -1);
+// window.scrollTo(0, parseInt(window.pageYOffset) * -1);
+
+// mainContainer.style.overflowY = "scroll";
+// enableScroll();
