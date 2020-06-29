@@ -34,35 +34,33 @@ let cl = (log) => console.log(log);
 //! Click Recipe for Overlay Module =====================
 
 let hoverText = document.querySelectorAll(".hover-text");
-let items = document.querySelectorAll(".top-grid-item");
-topRecipesBody = document.querySelector(".topRecipes-body");
-let recipeItems = document.querySelector(".recipeItems");
-mobileOverlay = document.querySelector(".mobileOverlay");
+let topRecipeItems = document.querySelectorAll(".top-grid-item");
+let topRecipesBody = document.querySelector(".topRecipes-body");
+let mainRecipeItems = document.querySelector(".recipeItems");
+let allRecipeItems = document.querySelectorAll(".allRecipes");
+let mobileOverlay = document.querySelector(".mobileOverlay");
 let mainContainer = document.querySelector(".main-container");
 let overlayModal = document.querySelector(".overlayModal");
 
-//! Recipe Item Click Func.
+console.log(allRecipeItems);
+
+//! Recipe Item Click Func. (ONLY TOP RECIPES FOR NOW)
 function addEventListenerList(list) {
-  for (let i = 0; i < items.length; i++) {
-    list[i].addEventListener("click", () => {
-      if (screenWidth < "1200") {
-        list[i].classList.toggle("active");
-      }
-    });
+  for (let i = 0; i < allRecipeItems.length; i++) {
+    // list[i].addEventListener("click", () => {
+    //   if (screenWidth < "1200") {
+    //     list[i].classList.toggle("active");
+    //   }
+    // });
 
     list[i].addEventListener("dblclick", async function () {
       const scrollLocation = Math.floor(parseInt(window.scrollY));
       console.log("scrollLocal", scrollLocation);
-      console.log(window.pageYOffset);
+      console.log("pageYOffset", window.pageYOffset);
 
       console.log("Local when double CLick", scrollLocation);
 
       mainContainer.classList.add("blur");
-
-      //! HERE IS THE MAIN SCROLL ISSUE
-      // mainContainer.style.position = "fixed";
-      // mainContainer.style.top = `-${scrollLocation}px`;
-
       overlayModal.style.display = "block";
       overlayModal.innerHTML = `
         <div class="closeBtnBg">
@@ -89,11 +87,9 @@ function addEventListenerList(list) {
       if (screenWidth > "745") {
         // console.log("screen over 745");
         overlayModal.classList.toggle("activeOverlay");
-        
       } else {
         // console.log("screen under 745");
         overlayModal.classList.toggle("mobileOverlay");
-        
       }
 
       //! Disable/Enable Scroll
@@ -145,9 +141,6 @@ function addEventListenerList(list) {
         // window.scrollY(scrollLocation);
 
         console.log("location after Modal Close(X) ", scrollLocation);
-
-        //? MAIN ISSUE OF MODAL SCROLL LOCATION
-        // mainContainer.style.scrollTop = `-${scrollLocation}px`;
 
         //! When the modal is hidden.
         // const scrollY = document.body.style.top;
