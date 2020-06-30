@@ -1,3 +1,4 @@
+// function recipes() {
 const topRecipeArr = [
   {
     // location: "Top Recipes",
@@ -264,6 +265,7 @@ const mainRecipeArr = [
   },
 ];
 
-export const recipesArr = topRecipeArr.concat(mainRecipeArr);
+let recipesArr = topRecipeArr.concat(mainRecipeArr);
+// }
 
 // export default recipesArr;

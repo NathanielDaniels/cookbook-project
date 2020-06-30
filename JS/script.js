@@ -1,9 +1,5 @@
 // import * as recipesArr from "./recipes.js";
-import { recipesArr } from "./recipes.js";
-
-// import("./recipes").then((module) => {
-//   console.log(module);
-// });
+// import { recipesArr } from "./recipes.js";
 
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
@@ -160,6 +156,9 @@ function addEventListenerList(list) {
 addEventListenerList(hoverText);
 
 //! Add Dynamic Content to modul overlay
+// let module = require("./recipes");
+
+// let recipesArr = module.recipesArr;
 
 // const topRecipeArr = [
 //   {
