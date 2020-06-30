@@ -48,7 +48,7 @@ let mainContainer = document.querySelector(".main-container");
 let mobileOverlay = document.querySelector(".mobileOverlay");
 let overlayModal = document.querySelector(".overlayModal");
 
-console.log(allRecipeItems);
+// console.log(allRecipeItems);
 
 //! Recipe Item Click (All Recipes (Top + Main))
 function addEventListenerList(list) {
@@ -61,10 +61,10 @@ function addEventListenerList(list) {
 
     list[i].addEventListener("dblclick", async function () {
       const scrollLocation = Math.floor(parseInt(window.scrollY));
-      console.log("scrollLocal", scrollLocation);
-      console.log("pageYOffset", window.pageYOffset);
 
-      console.log("Local when double CLick", scrollLocation);
+      // console.log("scrollLocal", scrollLocation);
+      // console.log("pageYOffset", window.pageYOffset);
+      // console.log("Local when double CLick", scrollLocation);
 
       mainContainer.classList.add("blur");
       overlayModal.style.display = "block";
@@ -131,7 +131,7 @@ function addEventListenerList(list) {
         window.scrollTo(0, scrollLocation);
         // window.scrollY(scrollLocation);
 
-        console.log("location after Modal Close(X) ", scrollLocation);
+        // console.log("location after Modal Close(X) ", scrollLocation);
       });
 
       //! Close overlay (clicking outside modal)
