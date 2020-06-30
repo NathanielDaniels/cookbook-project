@@ -264,6 +264,6 @@ const mainRecipeArr = [
   },
 ];
 
-const recipesArr = topRecipeArr.concat(mainRecipeArr);
+export const recipesArr = topRecipeArr.concat(mainRecipeArr);
 
-export default recipesArr;
+// export default recipesArr;
