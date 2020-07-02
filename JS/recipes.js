@@ -1,4 +1,4 @@
-// function recipes() {
+// module.exports = function recipes() {
 const topRecipeArr = [
   {
     // location: "Top Recipes",
