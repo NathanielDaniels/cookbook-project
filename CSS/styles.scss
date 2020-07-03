@@ -743,6 +743,8 @@ body {
 }
 
 .overlayModal {
+  position: absolute;
+  z-index: 100;
   display: none;
   border-radius: 17px;
   .overlayContent {
@@ -758,6 +760,7 @@ body {
       grid: 1fr 1fr 4fr 4fr/ 1fr;
       row-gap: 10px;
       height: 100%;
+      width: 100%;
       h1 {
         color: var(--hover-color);
         text-align: center;
@@ -863,7 +866,8 @@ body {
     font-size: 2rem;
     position: absolute;
     top: 0;
-    right: 1rem;
+    right: 0.2rem;
+    margin-right: 1rem;
     width: 30px;
     height: 30px;
     cursor: pointer;
