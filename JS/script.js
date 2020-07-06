@@ -50,6 +50,9 @@ let overlayModal = document.querySelector(".overlayModal");
 
 let bg = document.querySelector(".bg");
 
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
+
 // let printSection = document.querySelector("#printSection");
 
 // console.log(allRecipeItems);
@@ -63,7 +66,7 @@ function addEventListenerList(list) {
     //   }
     // });
 
-    list[i].addEventListener("dblclick", async function () {
+    list[i].addEventListener("click", async function () {
       const scrollLocation = Math.floor(parseInt(window.scrollY));
 
       // console.log("scrollLocal", scrollLocation);
@@ -140,6 +143,7 @@ function addEventListenerList(list) {
       });
 
       //! Close overlay (clicking outside modal)
+      //! Problems with overlayModal being the correct click
       overlayModal.addEventListener("click", () => {
         let isClickInside = overlayModal.contains(event.target);
 
@@ -158,15 +162,22 @@ function addEventListenerList(list) {
   }
 }
 
-addEventListenerList(hoverText);
+// ! Overlay screen size
+if (screenWidth > "745") {
+  // console.log("screen over 745");
+  addEventListenerList(hoverText);
+} else {
+  // console.log("screen under 745");
+  addEventListenerList(allRecipeItems);
+}
 
 //*==================================
 //! Main Recipe Arrows =====================================
 
 let pagination = document.querySelector(".pagination");
 let dots = pagination.children;
-let screenWidth = window.innerWidth;
-let screenHeight = window.innerHeight;
+// let screenWidth = window.innerWidth;
+// let screenHeight = window.innerHeight;
 
 let counter = 0;
 prevArrow.addEventListener("click", () => {
