@@ -1167,6 +1167,28 @@ body {
       }
     }
   }
+  .topRecipes-body {
+    .top-grid-item {
+      // width: 45% !important;
+      .hover-text {
+        @include centered();
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.1em;
+        height: 25% !important;
+        width: 100.5% !important;
+        top: 76% !important;
+        left: 0px;
+        opacity: 100% !important ;
+        padding: 10px 20px;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
   .form-container {
     background-position: right !important;
     form {
@@ -1216,26 +1238,26 @@ body {
     }
     .topRecipes-body {
       // margin-top: 0px !important;
-      .top-grid-item {
-        // width: 45% !important;
-        .hover-text {
-          @include centered();
-          background-color: rgba(0, 0, 0, 0.9) !important;
-          border-radius: 10px;
-          color: #fff;
-          font-size: 1.1em;
-          height: 25% !important;
-          width: 100.5% !important;
-          top: 76% !important;
-          left: 0px;
-          opacity: 100% !important ;
-          padding: 10px 20px;
-          position: relative;
-          text-align: center;
-          text-transform: uppercase;
-          transition: 0.4s ease-in-out;
-        }
-      }
+      // .top-grid-item {
+      //   // width: 45% !important;
+      //   .hover-text {
+      //     @include centered();
+      //     background-color: rgba(0, 0, 0, 0.9) !important;
+      //     border-radius: 10px;
+      //     color: #fff;
+      //     font-size: 1.1em;
+      //     height: 25% !important;
+      //     width: 100.5% !important;
+      //     top: 76% !important;
+      //     left: 0px;
+      //     opacity: 100% !important ;
+      //     padding: 10px 20px;
+      //     position: relative;
+      //     text-align: center;
+      //     text-transform: uppercase;
+      //     transition: 0.4s ease-in-out;
+      //   }
+      // }
     }
   }
 
