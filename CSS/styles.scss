@@ -449,6 +449,196 @@ body {
   // }
 
   /*------------------------------------*\
+    Instagram API
+\*------------------------------------*/
+
+  .instagram {
+    background: white;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom: 5px solid hsl(0, 0, 0);
+  }
+
+  /*------------------------------------*\
+    #Main Recipes (Add a Recipe)
+\*------------------------------------*/
+
+  .recipes-container {
+    // background: var(--main-color);
+    // background: hsl(0, 59%, 30%);
+    // background: hsl(26, 90%, 70%);
+    background: hsl(17, 100%, 80%);
+    position: relative;
+    z-index: -1;
+    border-bottom: 5px solid hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+    height: auto;
+    // height: 100vh;
+    padding: 0 0 40px;
+    width: 100%;
+    overflow: hidden;
+    .recipes-title {
+      text-align: center;
+      margin: 0;
+      h1 {
+        // color: hsl(0, 0, 10);
+        // color: hsl(0, 0%, 95%);
+        color: hsl(17, 37%, 40%);
+        font-family: Rustico;
+        font-size: 7rem;
+        font-weight: 300;
+        height: 180px;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+          0px -1px 0px rgba(0, 0, 0, 0.7);
+      }
+    }
+    .recipe-arrows {
+      position: absolute;
+      width: 100%;
+      top: 55%;
+      .prev,
+      .next {
+        // color: hsl(0, 0%, 95%);
+        color: hsl(17, 37%, 40%);
+        font-family: Rustico;
+        font-size: 4rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          // background-color: hsl(36, 74%, 60%);
+          // background-color: hsl(17, 100%, 65%);
+          background: hsl(17, 100%, 75%);
+        }
+      }
+      .prev-arrow {
+        float: left;
+        padding-left: 2vw;
+      }
+      .next-arrow {
+        float: right;
+        padding-right: 2vw;
+      }
+    }
+    .recipes-body {
+      display: grid;
+      grid-gap: 20px;
+      width: 80%;
+      margin: auto;
+      grid-template-columns: repeat(7, 300px);
+      grid-template-rows: repeat(2, 150px);
+      justify-content: center;
+      margin-top: 10px;
+      padding: 0 0 20px;
+      overflow: hidden;
+      .grid-item {
+        position: relative;
+        background-size: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: 1px solid black;
+        &:hover {
+          // filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
+          // filter: drop-shadow(0px 10px 5px hsl(15, 72%, 63%));
+          filter: drop-shadow(0px 10px 5px hsl(17, 37%, 40%));
+        }
+        .hover-text {
+          @include hover-text();
+          &:hover {
+            opacity: 1;
+          }
+        }
+        .active {
+          @include hover-text();
+          opacity: 1;
+        }
+      }
+      .recipe1 {
+        background-image: url("/IMG/recipe1.jpg");
+      }
+      .recipe2 {
+        background-image: url("/IMG/recipe2.jpeg");
+      }
+      .recipe3 {
+        background-image: url("/IMG/recipe3.jpg");
+      }
+      .recipe4 {
+        background-image: url("/IMG/recipe4.jpg");
+      }
+      .recipe5 {
+        background-image: url("/IMG/recipe5.jpg");
+      }
+      .recipe6 {
+        background-image: url("/IMG/recipe6.jpg");
+      }
+      .recipe7 {
+        background-image: url("/IMG/recipe3.jpg");
+      }
+      .recipe8 {
+        background-image: url("/IMG/recipe4.jpg");
+      }
+      .recipe9 {
+        background-image: url("/IMG/recipe5.jpg");
+      }
+      .recipe10 {
+        background-image: url("/IMG/recipe6.jpg");
+      }
+      .recipe11 {
+        background-image: url("/IMG/recipe5.jpg");
+      }
+      .recipe12 {
+        background-image: url("/IMG/recipe6.jpg");
+      }
+      .recipe13 {
+        background-image: url("/IMG/recipe5.jpg");
+      }
+      .recipe14 {
+        background-image: url("/IMG/recipe6.jpg");
+      }
+    }
+    .pagination-wrapper {
+      width: 100%;
+      // margin: 15px 0 0;
+      .pagination {
+        text-align: center;
+        span {
+          display: inline-block;
+          position: relative;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          margin: 0 2px;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            // background: hsl(0, 0%, 95%);
+            background: hsl(17, 37%, 40%);
+            border-radius: 50%;
+          }
+          &.active {
+            // border: 2px solid hsl(36, 79%, 63%);
+            // background: hsl(0, 0%, 95%);
+            background: hsl(17, 37%, 40%);
+          }
+        }
+      }
+    }
+  }
+
+  /*------------------------------------*\
     #FORM-SECTION (Add a Recipe)
 \*------------------------------------*/
 
@@ -627,187 +817,6 @@ body {
     // /.form-container
   }
 
-  .instagram {
-    background: white;
-    height: 30rem;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border-bottom: 5px solid hsl(0, 0, 0);
-  }
-
-  .recipes-container {
-    // background: var(--main-color);
-    // background: hsl(0, 59%, 30%);
-    // background: hsl(26, 90%, 70%);
-    background: hsl(17, 100%, 80%);
-    position: relative;
-    z-index: -1;
-    border-bottom: 5px solid hsl(0, 0, 0.5);
-    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
-    height: auto;
-    // height: 100vh;
-    padding: 0 0 40px;
-    width: 100%;
-    overflow: hidden;
-    .recipes-title {
-      text-align: center;
-      margin: 0;
-      h1 {
-        // color: hsl(0, 0, 10);
-        // color: hsl(0, 0%, 95%);
-        color: hsl(17, 37%, 40%);
-        font-family: Rustico;
-        font-size: 7rem;
-        font-weight: 300;
-        height: 180px;
-        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
-          0px -1px 0px rgba(0, 0, 0, 0.7);
-      }
-    }
-    .recipe-arrows {
-      position: absolute;
-      width: 100%;
-      top: 55%;
-      .prev,
-      .next {
-        // color: hsl(0, 0%, 95%);
-        color: hsl(17, 37%, 40%);
-        font-family: Rustico;
-        font-size: 4rem;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          // background-color: hsl(36, 74%, 60%);
-          // background-color: hsl(17, 100%, 65%);
-          background: hsl(17, 100%, 75%);
-        }
-      }
-      .prev-arrow {
-        float: left;
-        padding-left: 2vw;
-      }
-      .next-arrow {
-        float: right;
-        padding-right: 2vw;
-      }
-    }
-    .recipes-body {
-      display: grid;
-      grid-gap: 20px;
-      width: 80%;
-      margin: auto;
-      grid-template-columns: repeat(7, 300px);
-      grid-template-rows: repeat(2, 150px);
-      justify-content: center;
-      margin-top: 10px;
-      padding: 0 0 20px;
-      overflow: hidden;
-      .grid-item {
-        position: relative;
-        background-size: cover;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        border: 1px solid black;
-        &:hover {
-          // filter: drop-shadow(0px 10px 5px hsl(17, 100%, 60%));
-          // filter: drop-shadow(0px 10px 5px hsl(15, 72%, 63%));
-          filter: drop-shadow(0px 10px 5px hsl(17, 37%, 40%));
-        }
-        .hover-text {
-          @include hover-text();
-          &:hover {
-            opacity: 1;
-          }
-        }
-        .active {
-          @include hover-text();
-          opacity: 1;
-        }
-      }
-      .recipe1 {
-        background-image: url("/IMG/recipe1.jpg");
-      }
-      .recipe2 {
-        background-image: url("/IMG/recipe2.jpeg");
-      }
-      .recipe3 {
-        background-image: url("/IMG/recipe3.jpg");
-      }
-      .recipe4 {
-        background-image: url("/IMG/recipe4.jpg");
-      }
-      .recipe5 {
-        background-image: url("/IMG/recipe5.jpg");
-      }
-      .recipe6 {
-        background-image: url("/IMG/recipe6.jpg");
-      }
-      .recipe7 {
-        background-image: url("/IMG/recipe3.jpg");
-      }
-      .recipe8 {
-        background-image: url("/IMG/recipe4.jpg");
-      }
-      .recipe9 {
-        background-image: url("/IMG/recipe5.jpg");
-      }
-      .recipe10 {
-        background-image: url("/IMG/recipe6.jpg");
-      }
-      .recipe11 {
-        background-image: url("/IMG/recipe5.jpg");
-      }
-      .recipe12 {
-        background-image: url("/IMG/recipe6.jpg");
-      }
-      .recipe13 {
-        background-image: url("/IMG/recipe5.jpg");
-      }
-      .recipe14 {
-        background-image: url("/IMG/recipe6.jpg");
-      }
-    }
-    .pagination-wrapper {
-      width: 100%;
-      // margin: 15px 0 0;
-      .pagination {
-        text-align: center;
-        span {
-          display: inline-block;
-          position: relative;
-          width: 15px;
-          height: 15px;
-          border-radius: 50%;
-          margin: 0 2px;
-          &:before {
-            content: "";
-            position: absolute;
-            top: 3px;
-            left: 3px;
-            right: 3px;
-            bottom: 3px;
-            // background: hsl(0, 0%, 95%);
-            background: hsl(17, 37%, 40%);
-            border-radius: 50%;
-          }
-          &.active {
-            // border: 2px solid hsl(36, 79%, 63%);
-            // background: hsl(0, 0%, 95%);
-            background: hsl(17, 37%, 40%);
-          }
-        }
-      }
-    }
-  }
   /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/

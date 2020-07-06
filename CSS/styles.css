@@ -70,6 +70,12 @@ body {
     #RECIPE-SECTION (Top Recipes)
 \*------------------------------------*/
   /*------------------------------------*\
+    Instagram API
+\*------------------------------------*/
+  /*------------------------------------*\
+    #Main Recipes (Add a Recipe)
+\*------------------------------------*/
+  /*------------------------------------*\
     #FORM-SECTION (Add a Recipe)
 \*------------------------------------*/
   /*------------------------------------*\
@@ -368,219 +374,6 @@ body {
   background-image: url("/IMG/recipe6.jpg");
 }
 
-.main-container .form-container {
-  background-image: url("/IMG/form-bg.jpg");
-  background-position: left;
-  background-size: cover;
-  border-bottom: 4px solid #010101;
-  width: 100%;
-}
-
-.main-container .form-container form {
-  padding: 3rem 0;
-}
-
-.main-container .form-container form fieldset.mainFieldset {
-  background-image: url("/IMG/Wood-Grain.jpg");
-  background-position: center;
-  border-radius: 30px;
-  border: 2px solid #3d120f;
-  -webkit-filter: drop-shadow(0px 6px 5px #0d0d0d);
-          filter: drop-shadow(0px 6px 5px #0d0d0d);
-  left: 35%;
-  padding: 40px 25px 0px;
-  position: relative;
-  width: 60%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 75px 75px 250px;
-      grid-template-rows: 75px 75px 250px;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
-  border-radius: 25px;
-  border: 3px solid #433223;
-  -webkit-box-shadow: inset 0px -8px 20px -10px #3d120f;
-          box-shadow: inset 0px -8px 20px -10px #3d120f;
-  -webkit-filter: saturate(2);
-          filter: saturate(2);
-  padding: 5px 20px;
-  -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid fieldset :nth-last-child(2) {
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid legend {
-  color: #221911;
-  -webkit-filter: saturate(2);
-          filter: saturate(2);
-  font-family: "Gloria Hallelujah", cursive;
-  font-size: 22px;
-  font-weight: 600;
-  padding: 0 10px;
-  position: relative;
-  top: -5px;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input {
-  background-color: transparent;
-  border-color: transparent;
-  color: #221911;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 0;
-  padding-left: 5px;
-  position: relative;
-  width: 100%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input:focus {
-  outline-style: none;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .userName {
-  -ms-grid-row: 1;
-  grid-area: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1 / 2;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .userName input {
-  top: -15px;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail {
-  -ms-grid-row: 1;
-  grid-area: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail input {
-  top: -30px;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject {
-  -ms-grid-row: 2;
-  grid-area: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"] {
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: 2px;
-  color: #221911;
-  font-size: 22px;
-  font-weight: 600;
-  height: 30px;
-  position: relative;
-  resize: none;
-  top: -30px;
-  width: 100%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"]:focus {
-  outline-style: none;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage {
-  -ms-grid-row: 3;
-  grid-area: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage {
-  -ms-grid-row: 3;
-  grid-area: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"] {
-  background-color: transparent;
-  border-color: transparent;
-  border-radius: 2px;
-  color: #221911;
-  font-size: 22px;
-  font-weight: 600;
-  height: 12rem;
-  position: relative;
-  resize: none;
-  top: -25px;
-  width: 100%;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"]:focus {
-  outline-style: none;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input::-webkit-input-placeholder {
-  color: #221911;
-  font-size: 2rem;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input:-ms-input-placeholder {
-  color: #221911;
-  font-size: 2rem;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input::-ms-input-placeholder {
-  color: #221911;
-  font-size: 2rem;
-}
-
-.main-container .form-container form fieldset.mainFieldset .form-grid input::placeholder {
-  color: #221911;
-  font-size: 2rem;
-}
-
-.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"] {
-  background: var(--button-color);
-  border-radius: 7px;
-  color: white;
-  cursor: pointer;
-  -webkit-filter: drop-shadow(0px 4px 2px #0d0d0d);
-          filter: drop-shadow(0px 4px 2px #0d0d0d);
-  font-size: 30px;
-  left: 50%;
-  letter-spacing: 0.1rem;
-  opacity: 0.98;
-  padding: 10px;
-  position: relative;
-  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  top: 60px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"]:hover {
-  background: var(--button-hover);
-  -webkit-filter: drop-shadow(0px 1px 1px #0d0d0d);
-          filter: drop-shadow(0px 1px 1px #0d0d0d);
-  opacity: 1;
-}
-
 .main-container .instagram {
   background: white;
   height: 30rem;
@@ -844,6 +637,219 @@ body {
 
 .main-container .recipes-container .pagination-wrapper .pagination span.active {
   background: #8c5640;
+}
+
+.main-container .form-container {
+  background-image: url("/IMG/form-bg.jpg");
+  background-position: left;
+  background-size: cover;
+  border-bottom: 4px solid #010101;
+  width: 100%;
+}
+
+.main-container .form-container form {
+  padding: 3rem 0;
+}
+
+.main-container .form-container form fieldset.mainFieldset {
+  background-image: url("/IMG/Wood-Grain.jpg");
+  background-position: center;
+  border-radius: 30px;
+  border: 2px solid #3d120f;
+  -webkit-filter: drop-shadow(0px 6px 5px #0d0d0d);
+          filter: drop-shadow(0px 6px 5px #0d0d0d);
+  left: 35%;
+  padding: 40px 25px 0px;
+  position: relative;
+  width: 60%;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 75px 75px 250px;
+      grid-template-rows: 75px 75px 250px;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
+  border-radius: 25px;
+  border: 3px solid #433223;
+  -webkit-box-shadow: inset 0px -8px 20px -10px #3d120f;
+          box-shadow: inset 0px -8px 20px -10px #3d120f;
+  -webkit-filter: saturate(2);
+          filter: saturate(2);
+  padding: 5px 20px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid fieldset :nth-last-child(2) {
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid legend {
+  color: #221911;
+  -webkit-filter: saturate(2);
+          filter: saturate(2);
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 0 10px;
+  position: relative;
+  top: -5px;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input {
+  background-color: transparent;
+  border-color: transparent;
+  color: #221911;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  padding-left: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input:focus {
+  outline-style: none;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .userName {
+  -ms-grid-row: 1;
+  grid-area: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .userName input {
+  top: -15px;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail {
+  -ms-grid-row: 1;
+  grid-area: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .userEmail input {
+  top: -30px;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject {
+  -ms-grid-row: 2;
+  grid-area: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"] {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
+  color: #221911;
+  font-size: 22px;
+  font-weight: 600;
+  height: 30px;
+  position: relative;
+  resize: none;
+  top: -30px;
+  width: 100%;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"]:focus {
+  outline-style: none;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage {
+  -ms-grid-row: 3;
+  grid-area: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage {
+  -ms-grid-row: 3;
+  grid-area: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"] {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 2px;
+  color: #221911;
+  font-size: 22px;
+  font-weight: 600;
+  height: 12rem;
+  position: relative;
+  resize: none;
+  top: -25px;
+  width: 100%;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"]:focus {
+  outline-style: none;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input::-webkit-input-placeholder {
+  color: #221911;
+  font-size: 2rem;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input:-ms-input-placeholder {
+  color: #221911;
+  font-size: 2rem;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input::-ms-input-placeholder {
+  color: #221911;
+  font-size: 2rem;
+}
+
+.main-container .form-container form fieldset.mainFieldset .form-grid input::placeholder {
+  color: #221911;
+  font-size: 2rem;
+}
+
+.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"] {
+  background: var(--button-color);
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0px 4px 2px #0d0d0d);
+          filter: drop-shadow(0px 4px 2px #0d0d0d);
+  font-size: 30px;
+  left: 50%;
+  letter-spacing: 0.1rem;
+  opacity: 0.98;
+  padding: 10px;
+  position: relative;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  top: 60px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"]:hover {
+  background: var(--button-hover);
+  -webkit-filter: drop-shadow(0px 1px 1px #0d0d0d);
+          filter: drop-shadow(0px 1px 1px #0d0d0d);
+  opacity: 1;
 }
 
 .main-container footer.footer {
