@@ -163,7 +163,7 @@ function addEventListenerList(list) {
 }
 
 // ! Overlay screen size
-if (screenWidth > "745") {
+if (screenWidth > "900") {
   // console.log("screen over 745");
   addEventListenerList(hoverText);
 } else {
