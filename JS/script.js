@@ -81,8 +81,8 @@ function addEventListenerList(list) {
         <div class="closeBtnBg">
           <div class="closeBtn">X</div>
         </div>
+        <div class="print"></div>
         <div class="overlayContent">
-          <div class="print"></div>
           <div class="recipeTemplate">
             <h1>${recipesArr[i].title}</h1>
             <p>${recipesArr[i].info}</p>
