@@ -372,13 +372,13 @@ body {
 
     .title {
       text-align: center;
-      margin: 0;
+      padding: 2rem 0;
       h1 {
         color: #fff;
         font-family: Rustico;
         font-size: 4rem;
         font-weight: 300;
-        height: 150px;
+        height: 100px;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
           0px -1px 0px rgba(0, 0, 0, 0.7);
       }
@@ -386,7 +386,7 @@ body {
     .wrapper {
       position: relative;
       // top: 1vh;
-      width: 60%;
+      width: 70%;
       height: 80vh;
       overflow: hidden;
       margin: 5% auto;
@@ -400,6 +400,7 @@ body {
         height: 100px;
         width: 25%;
         opacity: 0.6;
+        cursor: pointer;
       }
     }
   }
