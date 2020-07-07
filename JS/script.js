@@ -98,14 +98,16 @@ function addEventListenerList(list) {
         </div>
         `;
 
+      overlayModal.classList.toggle("activeOverlay");
+
       // ! Overlay screen size
-      if (screenWidth > "745") {
-        // console.log("screen over 745");
-        overlayModal.classList.toggle("activeOverlay");
-      } else {
-        // console.log("screen under 745");
-        overlayModal.classList.toggle("mobileOverlay");
-      }
+      // if (screenWidth > "745") {
+      //   // console.log("screen over 745");
+      //   overlayModal.classList.toggle("activeOverlay");
+      // } else {
+      //   // console.log("screen under 745");
+      //   overlayModal.classList.toggle("mobileOverlay");
+      // }
 
       //! Print Recipe
       let print = await document.querySelector(".print");
@@ -164,10 +166,8 @@ function addEventListenerList(list) {
 
 // ! Overlay screen size
 if (screenWidth > "900") {
-  // console.log("screen over 745");
   addEventListenerList(hoverText);
 } else {
-  // console.log("screen under 745");
   addEventListenerList(allRecipeItems);
 }
 

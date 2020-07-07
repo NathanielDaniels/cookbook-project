@@ -831,9 +831,11 @@ body {
   overflow: hidden;
   position: fixed;
   z-index: 999;
-  width: 50rem;
+  // width: 50rem;
+  width: 100%;
   max-width: 100%;
-  height: 30rem;
+  // height: 30rem;
+  height: 100vh;
   max-height: 100%;
   left: 50%;
   top: 50%;
@@ -848,7 +850,7 @@ body {
     z-index: 100;
     font-size: 2rem;
     position: inherit;
-    top: 0.5rem;
+    top: 1rem;
     right: 1rem;
     width: 30px;
     height: 30px;
