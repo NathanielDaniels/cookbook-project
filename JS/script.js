@@ -122,7 +122,9 @@ function addEventListenerList(list) {
           printSection.id = "printSection";
           document.body.appendChild(printSection);
         }
-        printSection.innerHTML = "";
+        if (printSection) {
+          printSection.innerHTML = "";
+        }
         printSection.appendChild(domClone);
         window.print();
       }
@@ -134,6 +136,10 @@ function addEventListenerList(list) {
         overlayModal.classList.remove("mobileOverlay");
         overlayModal.style.display = "none";
         mainContainer.classList.remove("blur");
+        if (printSection) {
+          printSection.innerHTML = "";
+        }
+
         // print.innerHTML = "";
         // document.body.style.position = "static";
 
@@ -154,6 +160,9 @@ function addEventListenerList(list) {
           overlayModal.classList.remove("mobileOverlay");
           overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
+          if (printSection) {
+            printSection.innerHTML = "";
+          }
           // document.body.style.position = "static";
 
           //? Back to Scroll location before clicking recipe Modal
