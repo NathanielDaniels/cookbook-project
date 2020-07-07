@@ -1,4 +1,7 @@
 // module.exports = function recipes() {
+
+//? Top Recipe Section
+
 const topRecipeArr = [
   {
     // location: "Top Recipes",
@@ -79,6 +82,8 @@ const topRecipeArr = [
     </ul>`,
   },
 ];
+
+//? Main Recipe Section
 
 const mainRecipeArr = [
   {
