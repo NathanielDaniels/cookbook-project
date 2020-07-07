@@ -246,6 +246,21 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
+//*==================================
+//! Instagram Section =====================================
+let bannerImg = document.querySelector("#banner");
+let thumbImg = document.querySelector("#thumb").getElementsByTagName("img");
+
+for (let i = 0; i < thumbImg.length; i++) {
+  thumbImg[i].addEventListener("click", box);
+}
+
+function box() {
+  let imgSrc = this.getAttribute("src");
+
+  bannerImg.innerHTML = `<img src="${imgSrc}">`;
+}
+
 //?=============================================
 //! FORM DATA =====================================
 // form.onsubmit = async (e) => {
