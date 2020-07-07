@@ -960,6 +960,7 @@ body {
 .activeOverlay .print,
 .mobileOverlay .print {
   background-color: white;
+  border-radius: 10px;
   z-index: 100;
   font-size: 2rem;
   position: inherit;
@@ -1238,6 +1239,10 @@ body {
   .recipes-container .pagination-wrapper {
     display: none;
   }
+  .overlayModal .overlayContent .recipeTemplate h1 {
+    margin-top: 1.5rem;
+    font-size: 2.4rem;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -1322,6 +1327,9 @@ body {
   }
   .main-container section.form-container form.form fieldset.main-fieldset input[type="submit"] {
     width: 155px !important;
+  }
+  .main-container .overlayModal .overlayContent .recipeTemplate h1 {
+    font-size: 1rem !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

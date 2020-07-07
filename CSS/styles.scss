@@ -844,6 +844,7 @@ body {
   box-shadow: 0 10px 15px hsl(0, 20%, 10%);
   .print {
     background-color: white;
+    border-radius: 10px;
     z-index: 100;
     font-size: 2rem;
     position: inherit;
@@ -855,7 +856,6 @@ body {
     cursor: pointer;
     letter-spacing: 0.1rem;
   }
-
   .closeBtnBg {
     box-shadow: 0px 1px 3px hsl(36, 74%, 15%);
     z-index: 100;
@@ -882,20 +882,6 @@ body {
       color: white;
     }
   }
-  // .print {
-  //   z-index: 100;
-  //   font-size: 2rem;
-  //   // position: absolute;
-  //   position: inherit;
-  //   top: 0;
-  //   right: 1rem;
-  //   width: 30px;
-  //   height: 30px;
-  //   background-image: url("../IMG/print.svg");
-  //   cursor: pointer;
-  //   letter-spacing: 0.1rem;
-  // }
-
   // .mobileOverlay {
   //   position: absolute;
   //   z-index: 999;
@@ -1195,29 +1181,29 @@ body {
         height: 120px !important;
       }
     }
-    .topRecipes-body {
-      // margin-top: 0px !important;
-      // .top-grid-item {
-      //   // width: 45% !important;
-      //   .hover-text {
-      //     @include centered();
-      //     background-color: rgba(0, 0, 0, 0.9) !important;
-      //     border-radius: 10px;
-      //     color: #fff;
-      //     font-size: 1.1em;
-      //     height: 25% !important;
-      //     width: 100.5% !important;
-      //     top: 76% !important;
-      //     left: 0px;
-      //     opacity: 100% !important ;
-      //     padding: 10px 20px;
-      //     position: relative;
-      //     text-align: center;
-      //     text-transform: uppercase;
-      //     transition: 0.4s ease-in-out;
-      //   }
-      // }
-    }
+    // .topRecipes-body {
+    // margin-top: 0px !important;
+    // .top-grid-item {
+    //   // width: 45% !important;
+    //   .hover-text {
+    //     @include centered();
+    //     background-color: rgba(0, 0, 0, 0.9) !important;
+    //     border-radius: 10px;
+    //     color: #fff;
+    //     font-size: 1.1em;
+    //     height: 25% !important;
+    //     width: 100.5% !important;
+    //     top: 76% !important;
+    //     left: 0px;
+    //     opacity: 100% !important ;
+    //     padding: 10px 20px;
+    //     position: relative;
+    //     text-align: center;
+    //     text-transform: uppercase;
+    //     transition: 0.4s ease-in-out;
+    //   }
+    // }
+    // }
   }
 
   .recipes-container {
@@ -1243,6 +1229,18 @@ body {
       display: none;
     }
   }
+
+  .overlayModal {
+    .overlayContent {
+      .recipeTemplate {
+        h1 {
+          margin-top: 1.5rem;
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+
   // section.form-container {
   //   form.form {
   //     fieldset.main-fieldset {
@@ -1381,6 +1379,16 @@ body {
         // /form
       }
       // /.form-container
+    }
+
+    .overlayModal {
+      .overlayContent {
+        .recipeTemplate {
+          h1 {
+            font-size: 1rem !important;
+          }
+        }
+      }
     }
   }
 
