@@ -186,35 +186,34 @@ body {
 .main-container .about-section {
   z-index: -1;
   position: relative;
-  height: 28rem;
+  height: 30rem;
   background: var(--main-color);
   background-image: url("/IMG/Wood-Grain.jpg");
   background-position: bottom;
-  background-size: 100%;
+  background-size: 110%;
   background-repeat: no-repeat;
   border-bottom: 5px solid black;
 }
 
 .main-container .about-section .boardContainer {
-  -webkit-filter: drop-shadow(0px 15px 15px #0d0d0d);
-          filter: drop-shadow(0px 15px 15px #0d0d0d);
+  -webkit-filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.9));
   text-shadow: 0px 1px 1.8px #140605;
 }
 
 .main-container .about-section .boardContainer .backboard {
-  height: 400px;
-  color: blue;
+  height: 28rem;
   background-image: url("/IMG/woodSign2.png");
   background-position: center;
-  background-size: 122%;
+  background-size: 100rem;
   background-repeat: no-repeat;
 }
 
 .main-container .about-section .boardContainer .backboard p {
-  text-shadow: 0px 1px 0px #36281c, 0px -1px 0px black;
+  width: 35rem;
   letter-spacing: 1px;
   position: relative;
-  top: 45%;
+  top: 55%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -222,10 +221,7 @@ body {
   font-size: 1.7rem;
   text-align: center;
   color: transparent;
-}
-
-.main-container .about-section .boardContainer .backboard p:nth-child(2) {
-  margin-top: 20px;
+  text-shadow: 0px 1px 0px #36281c, 0px -1px 0px black;
 }
 
 .main-container .topRecipes-container {
@@ -392,6 +388,7 @@ body {
   color: #fff;
   font-family: Rustico;
   font-size: 4rem;
+  font-weight: 300;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
@@ -1161,10 +1158,11 @@ body {
 
 @media screen and (max-width: 900px) {
   .about-section .boardContainer .backboard {
-    background-size: 80rem !important;
+    background-size: 85rem !important;
   }
   .about-section .boardContainer .backboard p {
     font-size: 1.4rem !important;
+    width: 30rem !important;
   }
   .topRecipes-body .top-grid-item .hover-text {
     display: -webkit-box;
@@ -1216,7 +1214,7 @@ body {
 
 @media screen and (max-width: 800px) {
   section.about-section {
-    background-size: 50rem !important;
+    background-size: 120% !important;
   }
   section.about-section div.boardContainer div.backboard {
     background-size: 80rem !important;
@@ -1308,9 +1306,25 @@ body {
     font-size: 5rem !important;
   }
   .main-container section.about-section {
-    height: 22rem !important;
+    background-size: 160% !important;
+    height: 25rem !important;
+  }
+  .main-container section.about-section p {
+    display: block;
+    text-shadow: 0px 1px 0px #36281c, 0px -1px 0px black;
+    letter-spacing: 1px;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    font-family: Rustico;
+    font-size: 0.1rem !important;
+    text-align: center;
+    color: transparent;
   }
   .main-container section.about-section div.boardContainer div.backboard {
+    display: none;
     height: 20rem !important;
     background-size: 210% !important;
   }
