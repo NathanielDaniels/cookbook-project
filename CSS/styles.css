@@ -377,6 +377,8 @@ body {
 .main-container .instagram {
   background: #262626;
   height: 100vh;
+  -webkit-box-shadow: 0px 2px 5px #010101;
+          box-shadow: 0px 2px 5px #010101;
 }
 
 .main-container .instagram .title {
@@ -385,20 +387,22 @@ body {
 }
 
 .main-container .instagram .title h1 {
+  letter-spacing: 0.2rem;
+  padding-top: 1rem;
   color: #fff;
   font-family: Rustico;
   font-size: 4rem;
-  font-weight: 300;
-  height: 100px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
 .main-container .instagram .wrapper {
   position: relative;
-  width: 70%;
-  height: 80vh;
+  width: 30em;
+  height: 24rem;
   overflow: hidden;
-  margin: 5% auto;
+  margin: auto;
+  -webkit-box-shadow: 0px 2px 5px #010101;
+          box-shadow: 0px 2px 5px #010101;
 }
 
 .main-container .instagram .wrapper #banner img {
@@ -408,11 +412,17 @@ body {
 
 .main-container .instagram .wrapper #thumb img {
   float: left;
-  border: 2px solid #fff;
-  height: 100px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  height: 5rem;
   width: 25%;
   opacity: 0.6;
   cursor: pointer;
+}
+
+.main-container .instagram .wrapper #thumb img:nth-child(4) {
+  border-right: 2px solid #fff;
 }
 
 .main-container .recipes-container {
@@ -1272,6 +1282,17 @@ body {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .instagram .title h1 {
+    font-size: 3rem !important;
+    letter-spacing: 0.3rem !important;
+  }
+  .instagram .wrapper {
+    width: 25rem !important;
+    height: 24rem;
+  }
+}
+
 @media screen and (max-width: 560px) {
   .main-container {
     width: auto;
@@ -1304,6 +1325,9 @@ body {
   .main-container .topRecipes-container .topRecipes-body .grid-item {
     width: 70% !important;
     height: 150px !important;
+  }
+  .main-container .instagram .title h1 {
+    line-height: 4rem;
   }
   .main-container .recipes-container {
     height: 100% !important;
