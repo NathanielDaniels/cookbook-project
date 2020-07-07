@@ -186,7 +186,7 @@ body {
 .main-container .about-section {
   z-index: -1;
   position: relative;
-  height: 30rem;
+  height: 35rem;
   background: var(--main-color);
   background-image: url("/IMG/Wood-Grain.jpg");
   background-position: bottom;
@@ -202,7 +202,7 @@ body {
 }
 
 .main-container .about-section .boardContainer .backboard {
-  height: 28rem;
+  height: 30rem;
   background-image: url("/IMG/woodSign2.png");
   background-position: center;
   background-size: 100rem;
@@ -210,10 +210,10 @@ body {
 }
 
 .main-container .about-section .boardContainer .backboard p {
-  width: 35rem;
+  width: 45rem;
   letter-spacing: 1px;
   position: relative;
-  top: 55%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -222,6 +222,11 @@ body {
   text-align: center;
   color: transparent;
   text-shadow: 0px 1px 0px #36281c, 0px -1px 0px black;
+}
+
+.main-container .about-section .boardContainer .backboard p:nth-child(2) {
+  position: relative;
+  top: 12rem;
 }
 
 .main-container .topRecipes-container {
@@ -1088,10 +1093,7 @@ body {
     font-size: 8.5rem;
   }
   .about-section .boardContainer .backboard {
-    background-size: 80rem !important;
-  }
-  .about-section .boardContainer .backboard p {
-    font-size: 1.4rem !important;
+    background-size: 100rem !important;
   }
   .recipes-container .recipes-title {
     text-align: center;
@@ -1157,12 +1159,18 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  .about-section {
+    background-size: 65rem !important;
+  }
   .about-section .boardContainer .backboard {
-    background-size: 85rem !important;
+    background-size: 95rem !important;
   }
   .about-section .boardContainer .backboard p {
-    font-size: 1.4rem !important;
-    width: 30rem !important;
+    width: 40rem !important;
+    font-size: 1.5rem !important;
+  }
+  .about-section .boardContainer .backboard p:nth-child(2) {
+    top: 13rem !important;
   }
   .topRecipes-body .top-grid-item .hover-text {
     display: -webkit-box;
@@ -1213,15 +1221,6 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  section.about-section {
-    background-size: 120% !important;
-  }
-  section.about-section div.boardContainer div.backboard {
-    background-size: 80rem !important;
-  }
-  section.about-section div.boardContainer div.backboard p {
-    font-size: 1.4rem !important;
-  }
   .form-container {
     background-position: right !important;
   }
@@ -1241,14 +1240,18 @@ body {
     font-size: 6rem;
   }
   section.about-section {
-    height: auto !important;
+    height: 25rem !important;
   }
   section.about-section div.boardContainer div.backboard {
     height: 22rem !important;
-    background-size: 70rem !important;
+    background-size: 75rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
+    width: 30rem !important;
     font-size: 1.2rem !important;
+  }
+  section.about-section div.boardContainer div.backboard p:nth-child(2) {
+    top: 9rem !important;
   }
   .topRecipes-container .topRecipes-title h1 {
     font-size: 5rem !important;
