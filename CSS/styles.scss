@@ -134,7 +134,9 @@ body {
 \*------------------------------------*/
 
   .title-container {
-    border-bottom: 5px solid hsl(0, 0, 0);
+    // border-bottom: 5px solid hsl(0, 0, 0);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
+
     filter: drop-shadow(0px 5px 5px hsl(0, 0, 10));
     // border-bottom: none;
     .bg {
@@ -234,7 +236,9 @@ body {
     background-position: bottom;
     background-size: 110%;
     background-repeat: no-repeat;
-    border-bottom: 5px solid black;
+    // border-bottom: 5px solid black;
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
+
     .boardContainer {
       filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.7));
 
@@ -272,20 +276,19 @@ body {
 \*------------------------------------*/
   //! original
   .topRecipes-container {
+    z-index: -2;
+    position: relative;
     // background: var(--main-color);
     // background: #d4d8f0; //light blue
     // background: #271c19; // brown
     // background: #fffffe; //white
     background: #fbdd74;
-    border-bottom: 5px solid hsl(0, 0, 0.5);
-    box-shadow: 0px 2px 5px hsl(0, 0, 0.5), 0px 5px 5px rgba(0, 0, 0, 0.9),
-      0px 15px 10px rgba(0, 0, 0, 0.5);
+    // border-bottom: 5px solid hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
     height: auto;
-    // padding-bottom: 2rem;
     padding: 2rem 1rem;
     width: 100%;
     overflow: hidden;
-    // position: relative;
     .topRecipes-title {
       text-align: center;
       margin: 0;
@@ -364,13 +367,14 @@ body {
 \*------------------------------------*/
 
   .instagram {
+    z-index: -3;
+    position: relative;
     background: #262626;
     height: auto;
     padding: 2rem 0 3rem;
-    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
     .title {
       text-align: center;
-      // padding: 2rem 0;
       h1 {
         letter-spacing: 0.2rem;
         padding: 1rem 0 2rem;
@@ -384,16 +388,16 @@ body {
       }
     }
     .wrapper {
-      // position: relative;
-      // margin-top: 2rem;
-      width: 30em;
-      // height: 24rem;
-      // overflow: hidden;
+      width: 25rem;
+      height: 24rem;
       margin: auto;
-      box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+      // box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+      box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
+      // height: auto;
       #banner img {
         height: 300px;
         width: 100%;
+        // border: 1px solid #fff;
       }
       #thumb img {
         float: left;
@@ -434,10 +438,13 @@ body {
     // background: hsl(0, 59%, 30%);
     // background: hsl(26, 90%, 70%);
     background: hsl(17, 100%, 80%);
+    z-index: -4;
     position: relative;
-    z-index: -1;
-    border-bottom: 5px solid hsl(0, 0, 0.5);
-    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+
+    // border-bottom: 5px solid hsl(0, 0, 0.5);
+    // box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.9), 0px 5px 10px hsl(0, 0, 0.5);
+
     height: auto;
     padding: 2rem 0;
     width: 100%;
@@ -605,10 +612,12 @@ body {
 \*------------------------------------*/
 
   .form-container {
+    z-index: -5;
+    position: relative;
+    border-bottom: 4px solid hsl(0, 0, 0.5);
     background-image: url("/IMG/form-bg.jpg");
     background-position: left;
     background-size: cover;
-    border-bottom: 4px solid hsl(0, 0, 0.5);
     // height: auto;
     width: 100%;
     // .form-title {
@@ -1334,13 +1343,7 @@ body {
     .title {
       h1 {
         font-size: 3rem !important;
-        letter-spacing: 0.3rem !important;
-        // line-height: 4rem;
       }
-    }
-    .wrapper {
-      width: 25rem !important;
-      height: 24rem;
     }
   }
 }
