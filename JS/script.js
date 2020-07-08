@@ -69,6 +69,8 @@ function addEventListenerList(list) {
     list[i].addEventListener("click", async function () {
       const scrollLocation = Math.floor(parseInt(window.scrollY));
 
+      // mainContainer.style.scrollY = "hidden";
+
       // console.log("scrollLocal", scrollLocation);
       // console.log("pageYOffset", window.pageYOffset);
       // console.log("Local when double CLick", scrollLocation);
@@ -122,23 +124,24 @@ function addEventListenerList(list) {
           printSection.id = "printSection";
           document.body.appendChild(printSection);
         }
-        if (printSection) {
-          printSection.innerHTML = "";
-        }
         printSection.appendChild(domClone);
         window.print();
       }
 
       //! Close overlay (clicking "X" Btn)
+      // let printSection = document.querySelector("#printSection");
       let closeOverlay = await document.querySelector(".closeBtnBg");
-      closeOverlay.addEventListener("click", () => {
+      closeOverlay.addEventListener("click", async () => {
         overlayModal.classList.remove("activeOverlay");
         overlayModal.classList.remove("mobileOverlay");
         overlayModal.style.display = "none";
         mainContainer.classList.remove("blur");
-        if (printSection) {
-          printSection.innerHTML = "";
-        }
+        // mainContainer.style.scrollY = "scroll";
+        // if (printSection) {
+        // printSection.innerHTML = "";
+        // printSection.classList.display = "none";
+
+        printSection.remove();
 
         // print.innerHTML = "";
         // document.body.style.position = "static";
@@ -161,6 +164,7 @@ function addEventListenerList(list) {
           overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
           if (printSection) {
+            printSection.classList = "";
             printSection.innerHTML = "";
           }
           // document.body.style.position = "static";
