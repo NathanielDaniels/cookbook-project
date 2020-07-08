@@ -236,7 +236,8 @@ body {
     background-repeat: no-repeat;
     border-bottom: 5px solid black;
     .boardContainer {
-      filter: drop-shadow(0px 15px 15px hsla(0, 0, 0, 0.9));
+      filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.7));
+
       text-shadow: 0px 1px 1.8px hsl(3, 60, 5);
       .backboard {
         height: 30rem;
@@ -256,10 +257,10 @@ body {
           text-align: center;
           color: transparent;
           text-shadow: 0px 1px 0px hsl(28, 32%, 16%),
-            0px -1px 0px rgba(0, 0, 0, 1);
+            0px -0.5px 0px rgba(0, 0, 0, 1);
         }
         p:nth-child(2) {
-          position: relative;
+          // position: relative;
           top: 12rem;
         }
       }
@@ -277,20 +278,18 @@ body {
     // background: #fffffe; //white
     background: #fbdd74;
     border-bottom: 5px solid hsl(0, 0, 0.5);
-    box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
+    box-shadow: 0px 2px 5px hsl(0, 0, 0.5), 0px 5px 5px rgba(0, 0, 0, 0.9),
+      0px 15px 10px rgba(0, 0, 0, 0.5);
     height: auto;
-    padding-bottom: 2rem;
+    // padding-bottom: 2rem;
+    padding: 2rem 1rem;
     width: 100%;
     overflow: hidden;
     // position: relative;
     .topRecipes-title {
       text-align: center;
       margin: 0;
-      height: 10rem;
-
-      // padding: 2rem 0;
       h1 {
-        padding-top: 2rem;
         // color: hsl(0, 0, 10);
         // color: #6e5c42;
         // color: hsl(25, 100%, 15%);
@@ -305,9 +304,10 @@ body {
     }
     .topRecipes-body {
       width: 100%;
-      padding: 1rem;
+      // padding: 1rem;
       overflow: hidden;
       .recipeItems {
+        padding: 2rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -365,14 +365,15 @@ body {
 
   .instagram {
     background: #262626;
-    height: 40rem;
+    height: auto;
+    padding: 2rem 1rem 3rem;
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     .title {
       text-align: center;
-      padding: 2rem 0;
+      // padding: 2rem 0;
       h1 {
         letter-spacing: 0.2rem;
-        padding-top: 1rem;
+        padding: 1rem 0 2rem;
         color: #fff;
         font-family: Rustico;
         font-size: 4rem;
@@ -383,15 +384,13 @@ body {
       }
     }
     .wrapper {
-      position: relative;
-      // top: 1vh;
+      // position: relative;
+      // margin-top: 2rem;
       width: 30em;
-      height: 24rem;
-      overflow: hidden;
-      // margin: 5% auto;
+      // height: 24rem;
+      // overflow: hidden;
       margin: auto;
       box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
-
       #banner img {
         height: 300px;
         width: 100%;
@@ -426,14 +425,13 @@ body {
     border-bottom: 5px solid hsl(0, 0, 0.5);
     box-shadow: 0px 2px 5px hsl(0, 0, 0.5);
     height: auto;
-    // height: 100vh;
     padding: 2rem 0;
     width: 100%;
     overflow: hidden;
     .recipes-title {
       text-align: center;
       margin: 0;
-      height: 10rem;
+      // height: 10rem;
       h1 {
         // color: hsl(0, 0, 10);
         // color: hsl(0, 0%, 95%);
@@ -487,7 +485,7 @@ body {
       grid-template-columns: repeat(7, 300px);
       grid-template-rows: repeat(2, 150px);
       justify-content: center;
-      padding: 1rem 0 2rem;
+      padding: 1rem;
       overflow: hidden;
       .grid-item {
         position: relative;
@@ -1314,6 +1312,7 @@ body {
   // }
   // /Media (720px)
 }
+
 @media screen and (max-width: 700px) {
   .instagram {
     .title {
@@ -1420,7 +1419,8 @@ body {
         font-size: 5rem;
         position: static;
         text-align: center;
-        height: 130px !important;
+
+        // height: 130px !important;
       }
       .recipe-arrows {
         display: none;
