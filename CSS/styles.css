@@ -249,6 +249,7 @@ body {
   font-family: Rustico;
   font-size: 6rem;
   font-weight: 300;
+  height: 9rem;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
@@ -420,6 +421,22 @@ body {
 
 .main-container .instagram .wrapper #thumb img:nth-child(4) {
   border-right: 2px solid #fff;
+}
+
+.main-container .instagram .link {
+  letter-spacing: 1.5px;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.main-container .instagram .link a {
+  font-family: Rustico;
+  color: #ffb699;
+}
+
+.main-container .instagram .link a:hover {
+  color: #fbdd74;
 }
 
 .main-container .recipes-container {
