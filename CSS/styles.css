@@ -377,7 +377,7 @@ body {
 .main-container .instagram {
   background: #262626;
   height: auto;
-  padding: 2rem 1rem 3rem;
+  padding: 2rem 0 3rem;
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
 }
