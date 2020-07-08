@@ -1356,10 +1356,10 @@ body {
   .main-container .recipes-container .recipes-body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2] !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-    -ms-grid-rows: (150px)[7] !important;
-        grid-template-rows: repeat(7, 150px) !important;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (250px)[14] !important;
+        grid-template-rows: repeat(14, 250px) !important;
     grid-gap: 10px !important;
     margin: 0 auto;
     width: 95% !important;

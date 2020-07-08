@@ -1444,8 +1444,8 @@ body {
 
       .recipes-body {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-template-rows: repeat(7, 150px) !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-rows: repeat(14, 250px) !important;
         grid-gap: 10px !important;
         margin: 0 auto;
         width: 95% !important;
