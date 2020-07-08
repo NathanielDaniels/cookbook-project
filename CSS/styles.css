@@ -1182,7 +1182,10 @@ body {
   .about-section .boardContainer .backboard p:nth-child(2) {
     top: 13rem !important;
   }
-  .topRecipes-body .top-grid-item .hover-text {
+  .topRecipes-body .top-grid-item .hover-text,
+  .topRecipes-body .grid-item .hover-text,
+  .recipes-body .top-grid-item .hover-text,
+  .recipes-body .grid-item .hover-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

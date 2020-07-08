@@ -1108,8 +1108,10 @@ body {
       }
     }
   }
-  .topRecipes-body {
-    .top-grid-item {
+  .topRecipes-body,
+  .recipes-body {
+    .top-grid-item,
+    .grid-item {
       // width: 45% !important;
       .hover-text {
         @include centered();
