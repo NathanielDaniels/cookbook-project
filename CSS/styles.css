@@ -126,7 +126,7 @@ body {
 }
 
 .main-container .title-container .navbar a:hover {
-  color: #f2d4a6;
+  color: #fbdd74;
 }
 
 .main-container .title-container .main-title {
@@ -142,7 +142,7 @@ body {
 }
 
 .main-container .title-container .main-title h1 {
-  color: var(--main-color);
+  color: #fbdd74;
   -webkit-filter: drop-shadow(0px 10px 5px #0d0d0d);
           filter: drop-shadow(0px 10px 5px #0d0d0d);
   font-family: Rustico;
@@ -235,7 +235,7 @@ body {
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
   height: auto;
-  padding: 10px 0 40px;
+  padding-bottom: 2rem;
   width: 100%;
   overflow: hidden;
 }
@@ -243,20 +243,21 @@ body {
 .main-container .topRecipes-container .topRecipes-title {
   text-align: center;
   margin: 0;
+  height: 10rem;
 }
 
 .main-container .topRecipes-container .topRecipes-title h1 {
+  padding-top: 2rem;
   color: #3b341b;
   font-family: Rustico;
   font-size: 6rem;
   font-weight: 300;
-  height: 150px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
 .main-container .topRecipes-container .topRecipes-body {
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   overflow: hidden;
 }
 
@@ -435,7 +436,7 @@ body {
   -webkit-box-shadow: 0px 2px 5px #010101;
           box-shadow: 0px 2px 5px #010101;
   height: auto;
-  padding: 0 0 40px;
+  padding: 2rem 0;
   width: 100%;
   overflow: hidden;
 }
@@ -443,14 +444,14 @@ body {
 .main-container .recipes-container .recipes-title {
   text-align: center;
   margin: 0;
+  height: 10rem;
 }
 
 .main-container .recipes-container .recipes-title h1 {
   color: #8c5640;
   font-family: Rustico;
-  font-size: 7rem;
+  font-size: 6rem;
   font-weight: 300;
-  height: 180px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
 
@@ -511,8 +512,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 10px;
-  padding: 0 0 20px;
+  padding: 1rem 0 2rem;
   overflow: hidden;
 }
 
