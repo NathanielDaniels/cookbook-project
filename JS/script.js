@@ -126,10 +126,10 @@ function addEventListenerList(list) {
         }
         printSection.appendChild(domClone);
         window.print();
+        printSection.remove();
       }
 
       //! Close overlay (clicking "X" Btn)
-      // let printSection = document.querySelector("#printSection");
       let closeOverlay = await document.querySelector(".closeBtnBg");
       closeOverlay.addEventListener("click", async () => {
         overlayModal.classList.remove("activeOverlay");
@@ -141,7 +141,7 @@ function addEventListenerList(list) {
         // printSection.innerHTML = "";
         // printSection.classList.display = "none";
 
-        printSection.remove();
+        // printSection.remove();
 
         // print.innerHTML = "";
         // document.body.style.position = "static";
@@ -163,10 +163,7 @@ function addEventListenerList(list) {
           overlayModal.classList.remove("mobileOverlay");
           overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
-          if (printSection) {
-            printSection.classList = "";
-            printSection.innerHTML = "";
-          }
+          // printSection.remove();
           // document.body.style.position = "static";
 
           //? Back to Scroll location before clicking recipe Modal
