@@ -648,7 +648,6 @@ body {
             }
           }
           legend {
-            // color: hsl(3,60,25);
             color: hsl(28, 32%, 10%);
             filter: saturate(2);
             font-family: "Gloria Hallelujah", cursive;
@@ -1175,16 +1174,16 @@ body {
     }
   }
   section.about-section {
-    height: 25rem !important;
+    height: 27rem !important;
     div.boardContainer {
       div.backboard {
-        height: 22rem !important;
+        height: 25rem !important;
         background-size: 80rem !important;
         p {
           width: 30rem !important;
           font-size: 1.2rem !important;
           &:nth-child(2) {
-            top: 9rem !important;
+            top: 11rem !important;
           }
         }
       }
@@ -1271,13 +1270,13 @@ body {
     }
 
     section.about-section {
-      height: 27rem !important;
+      // height: 27rem !important;
       div.boardContainer {
-        height: 40rem !important;
+        // height: 40rem !important;
         div.backboard {
           height: 25rem !important;
           p {
-            width: 26rem !important;
+            width: 28rem !important;
             letter-spacing: 1.2px !important;
             text-shadow: 0px 0.5px 0px hsl(28, 32%, 16%),
               0px -0.5px 0px rgba(0, 0, 0, 1);

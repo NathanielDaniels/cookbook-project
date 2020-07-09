@@ -1255,10 +1255,10 @@ body {
     font-size: 6rem;
   }
   section.about-section {
-    height: 25rem !important;
+    height: 27rem !important;
   }
   section.about-section div.boardContainer div.backboard {
-    height: 22rem !important;
+    height: 25rem !important;
     background-size: 80rem !important;
   }
   section.about-section div.boardContainer div.backboard p {
@@ -1266,7 +1266,7 @@ body {
     font-size: 1.2rem !important;
   }
   section.about-section div.boardContainer div.backboard p:nth-child(2) {
-    top: 9rem !important;
+    top: 11rem !important;
   }
   .topRecipes-container .topRecipes-title h1 {
     font-size: 5rem !important;
@@ -1325,17 +1325,11 @@ body {
   .main-container .title-container .main-title h1.title {
     font-size: 5rem !important;
   }
-  .main-container section.about-section {
-    height: 27rem !important;
-  }
-  .main-container section.about-section div.boardContainer {
-    height: 40rem !important;
-  }
   .main-container section.about-section div.boardContainer div.backboard {
     height: 25rem !important;
   }
   .main-container section.about-section div.boardContainer div.backboard p {
-    width: 26rem !important;
+    width: 28rem !important;
     letter-spacing: 1.2px !important;
     text-shadow: 0px 0.5px 0px #36281c, 0px -0.5px 0px black;
   }
