@@ -1269,7 +1269,7 @@ body {
     top: 11rem !important;
   }
   .topRecipes-container .topRecipes-title h1 {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
   }
   .topRecipes-container .topRecipes-body .recipeItems {
     padding: 0 !important;
@@ -1335,9 +1335,6 @@ body {
   }
   .main-container section.about-section div.boardContainer div.backboard p:nth-child(2) {
     top: 9rem !important;
-  }
-  .main-container .topRecipes-container .topRecipes-title h1 {
-    font-size: 5rem !important;
   }
   .main-container .instagram .title h1 {
     line-height: 4rem;
