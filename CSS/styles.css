@@ -1275,15 +1275,12 @@ body {
     top: 9rem !important;
   }
   .topRecipes-container .topRecipes-body .recipeItems {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1] !important;
-        grid-template-columns: repeat(1, 1fr) !important;
-    -ms-grid-rows: (250px)[6] !important;
-        grid-template-rows: repeat(6, 250px) !important;
-    grid-gap: 10px !important;
-    margin: 0 auto;
-    width: 95% !important;
+    padding: 0 !important;
+  }
+  .topRecipes-container .topRecipes-body .recipeItems .top-grid-item {
+    width: 450px !important;
+    height: 250px !important;
+    margin: 10px;
   }
   .recipes-container .recipes-title h1 {
     font-size: 5rem;

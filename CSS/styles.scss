@@ -1251,12 +1251,12 @@ body {
   .topRecipes-container {
     .topRecipes-body {
       .recipeItems {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr) !important;
-        grid-template-rows: repeat(6, 250px) !important;
-        grid-gap: 10px !important;
-        margin: 0 auto;
-        width: 95% !important;
+        padding: 0 !important;
+        .top-grid-item {
+          width: 450px !important;
+          height: 250px !important;
+          margin: 10px;
+        }
       }
     }
   }
