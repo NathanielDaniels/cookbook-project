@@ -1346,6 +1346,7 @@ body {
     height: 100% !important;
   }
   .main-container .recipes-container .recipes-title h1 {
+    font-size: 4.8rem !important;
     position: static;
     text-align: center;
   }
