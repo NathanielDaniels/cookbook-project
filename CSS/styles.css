@@ -449,11 +449,11 @@ body {
   background: #ffb699;
   z-index: -4;
   position: relative;
-  -webkit-box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
-          box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
   height: auto;
   padding: 2rem 0;
   width: 100%;
+  -webkit-box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
+          box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
   overflow: hidden;
 }
 
@@ -1249,7 +1249,7 @@ body {
     left: 50% !important;
     -webkit-transform: translate(-50%, 0) !important;
             transform: translate(-50%, 0) !important;
-    width: 80% !important;
+    width: 95% !important;
   }
   .form-container .form-button {
     width: 9rem !important;
@@ -1274,9 +1274,16 @@ body {
   section.about-section div.boardContainer div.backboard p:nth-child(2) {
     top: 9rem !important;
   }
-  .topRecipes-container .topRecipes-title h1 {
-    font-size: 5rem !important;
-    height: 120px !important;
+  .topRecipes-container .topRecipes-body .recipeItems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1] !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    -ms-grid-rows: (250px)[6] !important;
+        grid-template-rows: repeat(6, 250px) !important;
+    grid-gap: 10px !important;
+    margin: 0 auto;
+    width: 95% !important;
   }
   .recipes-container .recipes-title h1 {
     font-size: 5rem;
@@ -1291,9 +1298,9 @@ body {
     display: grid;
     -ms-grid-columns: (1fr)[2] !important;
         grid-template-columns: repeat(2, 1fr) !important;
-    -ms-grid-rows: (150px)[7] !important;
-        grid-template-rows: repeat(7, 150px) !important;
-    width: 90% !important;
+    -ms-grid-rows: (200px)[7] !important;
+        grid-template-rows: repeat(7, 200px) !important;
+    width: 95% !important;
   }
   .recipes-container .pagination-wrapper {
     display: none;
@@ -1343,10 +1350,6 @@ body {
   }
   .main-container .topRecipes-container .topRecipes-title h1 {
     font-size: 4.8rem !important;
-  }
-  .main-container .topRecipes-container .topRecipes-body .grid-item {
-    width: 70% !important;
-    height: 150px !important;
   }
   .main-container .instagram .title h1 {
     line-height: 4rem;
