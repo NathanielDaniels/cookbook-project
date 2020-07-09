@@ -1329,12 +1329,15 @@ body {
     height: 25rem !important;
   }
   .main-container section.about-section div.boardContainer div.backboard p {
-    width: 28rem !important;
+    width: 26rem !important;
     letter-spacing: 1.2px !important;
     text-shadow: 0px 0.5px 0px #36281c, 0px -0.5px 0px black;
   }
   .main-container section.about-section div.boardContainer div.backboard p:nth-child(2) {
     top: 9rem !important;
+  }
+  .main-container .topRecipes-container .topRecipes-title h1 {
+    font-size: 4.8rem !important;
   }
   .main-container .instagram .title h1 {
     line-height: 4rem;
