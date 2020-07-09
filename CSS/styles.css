@@ -86,8 +86,8 @@ body {
 .main-container .title-container {
   -webkit-box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
           box-shadow: 0px 2px 5px #020202, 0px 5px 10px #010101;
-  -webkit-filter: drop-shadow(0px 5px 5px #1a1a1a);
-          filter: drop-shadow(0px 5px 5px #1a1a1a);
+  -webkit-filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.9));
 }
 
 .main-container .title-container .bg {
@@ -187,7 +187,7 @@ body {
 .main-container .about-section {
   z-index: -1;
   position: relative;
-  height: 35rem;
+  height: 34rem;
   background: var(--main-color);
   background-image: url("/IMG/Wood-Grain.jpg");
   background-position: bottom;
@@ -198,8 +198,8 @@ body {
 }
 
 .main-container .about-section .boardContainer {
-  -webkit-filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.9));
+          filter: drop-shadow(0px 15px 10px rgba(0, 0, 0, 0.9));
   text-shadow: 0px 1px 1.8px #140605;
 }
 
@@ -734,8 +734,8 @@ body {
 .main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
   border-radius: 25px;
   border: 2px solid #32251a;
-  -webkit-box-shadow: inset 0px -2px 10px #140605, inset 0px -10px 20px #433223;
-          box-shadow: inset 0px -2px 10px #140605, inset 0px -10px 20px #433223;
+  -webkit-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
+          box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
   -webkit-filter: saturate(2);
           filter: saturate(2);
   padding: 5px 20px;
