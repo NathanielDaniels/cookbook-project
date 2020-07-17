@@ -490,7 +490,13 @@ body {
       grid-template-rows: repeat(2, 200px);
       justify-content: center;
       padding-bottom: 2rem;
-      overflow: hidden;
+      overflow-x: scroll;
+      // overflow: hidden;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .grid-item {
         overflow: hidden;
         position: relative;
@@ -1013,11 +1019,11 @@ body {
       display: grid;
       grid-template-columns: repeat(7, 230px) !important;
       grid-template-rows: repeat(2, 160px) !important;
-      .grid-item {
-        &:hover {
-          // filter: drop-shadow(0px 5px 5px hsl(17, 100%, 60%)) !important;
-        }
-      }
+      // .grid-item {
+      //   &:hover {
+      //     // filter: drop-shadow(0px 5px 5px hsl(17, 100%, 60%)) !important;
+      //   }
+      // }
     }
   }
 

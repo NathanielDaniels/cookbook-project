@@ -528,7 +528,15 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 2rem;
-  overflow: hidden;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.main-container .recipes-container .recipes-body::-webkit-scrollbar {
+  display: none;
 }
 
 .main-container .recipes-container .recipes-body .grid-item {
