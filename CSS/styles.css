@@ -1178,6 +1178,7 @@ body {
     position: relative;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 0.05rem;
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
   }
@@ -1187,6 +1188,12 @@ body {
     text-align: center;
   }
   .recipes-container .recipe-arrows {
+    display: none;
+  }
+  .recipes-container .recipe-arrows .prev-arrow {
+    display: none;
+  }
+  .recipes-container .recipe-arrows .next-arrow {
     display: none;
   }
   .recipes-container .recipes-body {
@@ -1290,17 +1297,10 @@ body {
   .main-container .instagram .title h1 {
     line-height: 4rem;
   }
-  .main-container .recipes-container {
-    height: 100% !important;
-  }
   .main-container .recipes-container .recipes-title h1 {
     font-size: 4.8rem !important;
-    position: static;
-    text-align: center;
   }
   .main-container .recipes-container .recipes-body {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[1] !important;
         grid-template-columns: repeat(1, 1fr) !important;
     -ms-grid-rows: (250px)[14] !important;
@@ -1308,9 +1308,6 @@ body {
     grid-gap: 20px !important;
     margin: 0 auto;
     width: 90% !important;
-  }
-  .main-container .recipes-container .pagination-wrapper {
-    display: none;
   }
   .main-container section.form-container form.form {
     width: 100% !important;
