@@ -1,5 +1,3 @@
-// module.exports = function recipes() {
-
 //? Top Recipe Section
 
 const topRecipeArr = [
