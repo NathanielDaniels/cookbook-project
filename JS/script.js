@@ -52,8 +52,6 @@ let screenHeight = window.innerHeight;
 
 // let printSection = document.querySelector("#printSection");
 
-// console.log(allRecipeItems);
-
 //! Recipe Item Click (All Recipes (Top + Main))
 function addEventListenerList(list) {
   for (let i = 0; i < allRecipeItems.length; i++) {
