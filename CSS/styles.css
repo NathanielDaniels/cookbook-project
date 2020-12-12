@@ -219,7 +219,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: Rustico;
-  font-size: 1.7rem;
+  font-size: clamp(0.8rem, 18vw, 1.7rem);
   text-align: center;
   color: transparent;
   text-shadow: 0px 1px 0px #36281c, 0px -0.5px 0px black;
@@ -249,7 +249,7 @@ body {
 .main-container .topRecipes-container .topRecipes-title h1 {
   color: #3b341b;
   font-family: Rustico;
-  font-size: 6rem;
+  font-size: clamp(2rem, 18vw, 6rem);
   font-weight: 300;
   height: 9rem;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
@@ -397,7 +397,7 @@ body {
   padding: 1rem 0 2rem;
   color: #fff;
   font-family: Rustico;
-  font-size: 4rem;
+  font-size: clamp(2rem, 8vw, 5rem);
   font-weight: 300;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
@@ -432,7 +432,7 @@ body {
 
 .main-container .instagram .link {
   letter-spacing: 1.5px;
-  font-size: 1.7rem;
+  font-size: clamp(1rem, 6vw, 1.7rem);
   text-align: center;
   margin-top: 3rem;
 }
@@ -466,7 +466,7 @@ body {
 .main-container .recipes-container .recipes-title h1 {
   color: #8c5640;
   font-family: Rustico;
-  font-size: 6rem;
+  font-size: clamp(2rem, 20vw, 6rem);
   font-weight: 300;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
 }
@@ -1147,7 +1147,6 @@ body {
   }
   .about-section .boardContainer .backboard p {
     width: 40rem !important;
-    font-size: 1.5rem !important;
   }
   .about-section .boardContainer .backboard p:nth-child(2) {
     top: 13rem !important;
@@ -1183,7 +1182,6 @@ body {
     transition: 0.4s ease-in-out;
   }
   .recipes-container .recipes-title h1 {
-    font-size: 5rem;
     position: static;
     text-align: center;
   }
@@ -1239,9 +1237,6 @@ body {
   section.about-section div.boardContainer div.backboard p:nth-child(2) {
     top: 11rem !important;
   }
-  .topRecipes-container .topRecipes-title h1 {
-    font-size: 5rem !important;
-  }
   .topRecipes-container .topRecipes-body .recipeItems {
     padding: 0 !important;
   }
@@ -1252,12 +1247,6 @@ body {
   .overlayModal .overlayContent .recipeTemplate h1 {
     margin-top: 1.5rem;
     font-size: 2.4rem;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .instagram .title h1 {
-    font-size: 3rem !important;
   }
 }
 
@@ -1283,14 +1272,8 @@ body {
   .main-container section.about-section div.boardContainer div.backboard p:nth-child(2) {
     top: 9rem !important;
   }
-  .main-container .topRecipes-container .topRecipes-title h1 {
-    font-size: 4.8rem !important;
-  }
   .main-container .instagram .title h1 {
     line-height: 4rem;
-  }
-  .main-container .recipes-container .recipes-title h1 {
-    font-size: 4.8rem !important;
   }
   .main-container .recipes-container .recipes-body {
     -ms-grid-columns: (1fr)[1] !important;

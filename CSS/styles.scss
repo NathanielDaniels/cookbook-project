@@ -240,7 +240,6 @@ body {
         background-size: 100rem;
         background-repeat: no-repeat;
         p {
-          // line-height: 2rem;
           width: 45rem;
           letter-spacing: 1px;
           position: relative;
@@ -248,7 +247,9 @@ body {
           left: 50%;
           transform: translate(-50%, -50%);
           font-family: Rustico;
-          font-size: 1.7rem;
+          // font-size: 1.7rem;
+          font-size: clamp(.8rem, 18vw, 1.7rem);
+
           text-align: center;
           color: transparent;
           text-shadow: 0px 1px 0px hsl(28, 32%, 16%),
@@ -283,7 +284,8 @@ body {
         // color: hsl(25, 100%, 15%);
         color: #3b341b;
         font-family: Rustico;
-        font-size: 6rem;
+        // font-size: 6rem;
+        font-size: clamp(2rem, 18vw, 6rem);
         font-weight: 300;
         height: 9rem;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
@@ -366,9 +368,8 @@ body {
         padding: 1rem 0 2rem;
         color: #fff;
         font-family: Rustico;
-        font-size: 4rem;
+        font-size: clamp(2rem, 8vw, 5rem);
         font-weight: 300;
-        // height: 100px;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
           0px -1px 0px rgba(0, 0, 0, 0.7);
       }
@@ -401,7 +402,9 @@ body {
     }
     .link {
       letter-spacing: 1.5px;
-      font-size: 1.7rem;
+      // font-size: 1.7rem;
+      font-size: clamp(1rem, 6vw, 1.7rem);
+
       text-align: center;
       margin-top: 3rem;
       // font-family: Rustico;
@@ -434,7 +437,9 @@ body {
       h1 {
         color: hsl(17, 37%, 40%);
         font-family: Rustico;
-        font-size: 6rem;
+        // font-size: 6rem;
+        font-size: clamp(2rem, 20vw, 6rem);
+
         font-weight: 300;
         text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
           0px -1px 0px rgba(0, 0, 0, 0.7);
@@ -1013,7 +1018,7 @@ body {
         background-size: 95rem !important;
         p {
           width: 40rem !important;
-          font-size: 1.5rem !important;
+          // font-size: 1.5rem !important;
           &:nth-child(2) {
             top: 13rem !important;
           }
@@ -1050,7 +1055,6 @@ body {
   }
   .recipes-container {
     .recipes-title h1 {
-      font-size: 5rem;
       position: static;
       text-align: center;
     }
@@ -1110,11 +1114,11 @@ body {
   }
 
   .topRecipes-container {
-    .topRecipes-title {
-      h1 {
-        font-size: 5rem !important;
-      }
-    }
+    // .topRecipes-title {
+    //   h1 {
+    //     font-size: 5rem !important;
+    //   }
+    // }
     .topRecipes-body {
       .recipeItems {
         padding: 0 !important;
@@ -1137,15 +1141,15 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
-  .instagram {
-    .title {
-      h1 {
-        font-size: 3rem !important;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 700px) {
+//   .instagram {
+//     .title {
+//       h1 {
+//         font-size: 3rem !important;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 560px) {
   .main-container {
@@ -1184,14 +1188,6 @@ body {
       }
     }
 
-    .topRecipes-container {
-      .topRecipes-title {
-        h1 {
-          font-size: 4.8rem !important;
-        }
-      }
-    }
-
     .instagram {
       .title {
         h1 {
@@ -1202,7 +1198,7 @@ body {
 
     .recipes-container {
       .recipes-title h1 {
-        font-size: 4.8rem !important;
+        // font-size: 4.8rem !important;
       }
 
       .recipes-body {
