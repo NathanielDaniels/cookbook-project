@@ -35,11 +35,10 @@ const btn = document.querySelector('#btn')
 const html = document.querySelector("html")
 
 btn.addEventListener('click', () => {
-  console.log('clicked')
   html.style.scrollBehavior = "smooth"
 })
 
-//? Remove smooth-scroll when clicking recipes.
+// //? Remove smooth-scroll when clicking recipes.
 btn.addEventListener('mouseleave', () => {
   html.style.scrollBehavior = "auto"
 

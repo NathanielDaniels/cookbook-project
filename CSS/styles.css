@@ -1137,9 +1137,6 @@ body {
     -ms-grid-column-span: 2 !important;
     grid-column: 1 / 3 !important;
   }
-  .form-container .form-button {
-    width: 9rem !important;
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -1225,9 +1222,6 @@ body {
     -webkit-transform: translate(-50%, 0) !important;
             transform: translate(-50%, 0) !important;
     width: 95% !important;
-  }
-  .form-container .form-button {
-    width: 9rem !important;
   }
 }
 
@@ -1334,9 +1328,6 @@ body {
   }
   .main-container section.form-container form.form fieldset.main-fieldset input::placeholder {
     font-size: 15px;
-  }
-  .main-container section.form-container form.form fieldset.main-fieldset input[type="submit"] {
-    width: 155px !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
