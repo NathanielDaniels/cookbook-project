@@ -287,24 +287,25 @@
                   name="userName"
                   maxlength="100"
                   autocomplete="off"
+                  require
                 />
               </fieldset>
 
               <fieldset class="userEmail">
                 <legend for="userEmail">Email</legend>
                 <br />
-                <input type="email" name="userEmail"></input><br />
+                <input type="email" name="userEmail" require></input><br />
               </fieldset>
               
               <fieldset class="emailSubject">
                 <legend for="emailSubject">Subject</legend>
                 <br />
-                <input name="emailSubject"></input><br />
+                <input name="emailSubject" require></input><br />
               </fieldset>
               <fieldset class="emailMessage">
                 <legend for="emailMessage">Message</legend>
                 <br />
-                <textarea name="emailMessage"></textarea><br />
+                <textarea name="emailMessage" require></textarea><br />
               </fieldset>
             </div>
             <input
@@ -312,6 +313,7 @@
               type="submit"
               name="form-submit"
               value="submit"
+              require
             />
           </fieldset>
         </form>
