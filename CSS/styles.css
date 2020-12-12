@@ -471,7 +471,7 @@ body {
 }
 
 .main-container .recipes-container .recipe-arrows {
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
   position: absolute;
   top: 60%;
@@ -504,6 +504,7 @@ body {
 }
 
 .main-container .recipes-container .recipes-body {
+  z-index: 100;
   display: -ms-grid;
   display: grid;
   grid-gap: 20px;
@@ -543,6 +544,7 @@ body {
   letter-spacing: 1px;
   -webkit-filter: drop-shadow(0px 10px 5px #8c5640);
           filter: drop-shadow(0px 10px 5px #8c5640);
+  border-radius: 10px;
 }
 
 .main-container .recipes-container .recipes-body .grid-item .hover-text {
