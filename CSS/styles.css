@@ -144,7 +144,7 @@ body {
   -webkit-filter: drop-shadow(0px 10px 5px #0d0d0d);
           filter: drop-shadow(0px 10px 5px #0d0d0d);
   font-family: Rustico;
-  font-size: 10rem;
+  font-size: clamp(2rem, 18vw, 10rem);
   font-weight: 300;
   line-height: 1.1;
 }
@@ -157,7 +157,7 @@ body {
   background: var(--button-color);
   border-radius: 7px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: clamp(0.8rem, 4vw, 1.8rem);
   padding: 15px 30px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -166,8 +166,10 @@ body {
   -webkit-filter: drop-shadow(0px 4px 2px #50300b);
           filter: drop-shadow(0px 4px 2px #50300b);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out, -webkit-filter .3s ease-in-out;
+  transition: background 0.3s ease-in-out, -webkit-filter .3s ease-in-out;
+  transition: background 0.3s ease-in-out, filter .3s ease-in-out;
+  transition: background 0.3s ease-in-out, filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
 }
 
 .main-container .title-container button:hover {
@@ -1074,9 +1076,6 @@ body {
   .main-container {
     width: auto;
   }
-  .title-container .main-title h1.title {
-    font-size: 8.5rem;
-  }
   .about-section .boardContainer .backboard {
     background-size: 100rem !important;
   }
@@ -1226,9 +1225,6 @@ body {
 }
 
 @media screen and (max-width: 755px) {
-  .title-container .main-title h1.title {
-    font-size: 6rem;
-  }
   section.about-section {
     height: 27rem !important;
   }
@@ -1275,9 +1271,6 @@ body {
   }
   .main-container .title-container .bg {
     height: 94vh !important;
-  }
-  .main-container .title-container .main-title h1.title {
-    font-size: 5rem !important;
   }
   .main-container section.about-section div.boardContainer div.backboard {
     height: 25rem !important;
