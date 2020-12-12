@@ -4,9 +4,9 @@ const scrollRecipes = document.querySelectorAll(".scroll");
 const form = document.forms[0];
 
 //! Window Resize log
-// window.addEventListener("resize", function () {
-//   cl(window.innerWidth);
-// });
+window.addEventListener("resize", function () {
+  cl(window.innerWidth);
+});
 
 //! Scroll Log
 // window.addEventListener("scroll", () => {

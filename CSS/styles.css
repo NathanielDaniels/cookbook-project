@@ -1080,6 +1080,9 @@ body {
   .about-section .boardContainer .backboard {
     background-size: 100rem !important;
   }
+  .topRecipes-container .topRecipes-body {
+    width: 100% !important;
+  }
   .recipes-container .recipes-title {
     text-align: center;
   }
