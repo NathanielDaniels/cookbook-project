@@ -78,11 +78,13 @@ html::-webkit-scrollbar-track {
   padding: 0;
   text-decoration: none;
   list-style: none;
-  scroll-behavior: smooth;
+  
+  // scroll-behavior: smooth;
   // font-family: Rustico;
 }
 
 body {
+
   background: hsl(0, 0, 20);
   cursor: default;
   overflow-x: hidden;

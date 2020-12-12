@@ -4,9 +4,9 @@ const scrollRecipes = document.querySelectorAll(".scroll");
 const form = document.forms[0];
 
 //! Window Resize log
-window.addEventListener("resize", function () {
-  cl(window.innerWidth);
-});
+// window.addEventListener("resize", function () {
+//   cl(window.innerWidth);
+// });
 
 //! Scroll Log
 // window.addEventListener("scroll", () => {
@@ -29,6 +29,22 @@ let cl = (log) => console.log(log);
 //     opacity: 0.9,
 //   });
 // });
+
+//! Recipe Button Click Smooth Scroll =====================================
+const btn = document.querySelector('#btn')
+const html = document.querySelector("html")
+
+btn.addEventListener('click', () => {
+  console.log('clicked')
+  html.style.scrollBehavior = "smooth"
+})
+
+//? Remove smooth-scroll when clicking recipes.
+btn.addEventListener('mouseleave', () => {
+  html.style.scrollBehavior = "auto"
+
+})
+
 
 //* ==================================
 //! Click Recipe for Overlay Module ======================================
