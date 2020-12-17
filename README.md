@@ -17,5 +17,5 @@ S&P Recipe Box is a custom-built project I did for a local Instagram "foodtograp
 
 <br><hr><br>
 
-![Image](./IMG/aboutBG.jpg)
+![Image](./IMG/README/recipebox-11-16-2020.png)
 
