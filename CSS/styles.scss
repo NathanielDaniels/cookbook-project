@@ -346,6 +346,30 @@ body {
     Instagram API
 \*------------------------------------*/
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
   .instagram {
     z-index: -3;
     position: relative;
@@ -374,6 +398,13 @@ body {
       #banner img {
         height: 300px;
         width: 100%;
+        -webkit-animation-name: fade;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 6s;
+        animation-name: fade;
+        animation-iteration-count: infinite;
+        animation-duration: 6s;
+
       }
       #thumb img {
         float: left;
@@ -384,6 +415,7 @@ body {
         width: 25%;
         opacity: 0.6;
         cursor: pointer;
+        
         &:nth-child(4) {
           border-right: 2px solid #fff;
         }
@@ -391,12 +423,9 @@ body {
     }
     .link {
       letter-spacing: 1.5px;
-      // font-size: 1.7rem;
       font-size: clamp(1rem, 6vw, 1.7rem);
-
       text-align: center;
       margin-top: 3rem;
-      // font-family: Rustico;
       a {
         font-family: Rustico;
         color: hsl(17, 100%, 80%);

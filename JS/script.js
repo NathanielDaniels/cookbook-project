@@ -79,12 +79,6 @@ function addEventListenerList(list) {
     list[i].addEventListener("click", async function () {
       const scrollLocation = Math.floor(parseInt(window.scrollY));
 
-      // mainContainer.style.scrollY = "hidden";
-
-      // console.log("scrollLocal", scrollLocation);
-      // console.log("pageYOffset", window.pageYOffset);
-      // console.log("Local when double CLick", scrollLocation);
-
       mainContainer.classList.add("blur");
       overlayModal.style.display = "block";
 
@@ -192,6 +186,34 @@ if (screenWidth > "900") {
 }
 
 //*==================================
+//! Instagram Section =====================================
+const bannerImg = document.querySelector("#banner");
+const thumbImg = document.querySelectorAll("#thumb > img")
+const imgSrcList = [];
+let index = 0;
+
+let imgRotation = setInterval(() => {
+    if (index !== imgSrcList.length) {
+      bannerImg.style.transition = 'all .3s ease-in-out';
+      bannerImg.innerHTML = `<img src="${imgSrcList[index++]}">`
+    } else {
+      index = 0;
+    }
+  }, 3000)
+
+thumbImg.forEach(img => {
+  img.addEventListener("click", box);
+  let eachImg = img.getAttribute('src')
+  imgSrcList.push(eachImg);
+});
+
+function box() {
+  clearInterval(imgRotation)
+  let imgSrc = this.getAttribute("src");
+  bannerImg.innerHTML = `<img src="${imgSrc}">`;
+}
+
+//*==================================
 //! Main Recipe Arrows =====================================
 
 let pagination = document.querySelector(".pagination");
@@ -266,20 +288,7 @@ nextArrow.addEventListener("click", () => {
   }
 });
 
-//*==================================
-//! Instagram Section =====================================
-let bannerImg = document.querySelector("#banner");
-let thumbImg = document.querySelector("#thumb").getElementsByTagName("img");
 
-for (let i = 0; i < thumbImg.length; i++) {
-  thumbImg[i].addEventListener("click", box);
-}
-
-function box() {
-  let imgSrc = this.getAttribute("src");
-
-  bannerImg.innerHTML = `<img src="${imgSrc}">`;
-}
 
 //?=============================================
 //! FORM DATA =====================================

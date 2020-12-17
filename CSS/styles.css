@@ -378,6 +378,30 @@ body {
   background-image: url("/IMG/recipe6.jpg");
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .main-container .instagram {
   z-index: -3;
   position: relative;
@@ -413,6 +437,12 @@ body {
 .main-container .instagram .wrapper #banner img {
   height: 300px;
   width: 100%;
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
 }
 
 .main-container .instagram .wrapper #thumb img {
