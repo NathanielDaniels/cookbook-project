@@ -399,10 +399,10 @@ body {
         height: 300px;
         width: 100%;
         -webkit-animation-name: fade;
-        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: initial;
         -webkit-animation-duration: 6s;
         animation-name: fade;
-        animation-iteration-count: infinite;
+        animation-iteration-count: initial;
         animation-duration: 6s;
 
       }
