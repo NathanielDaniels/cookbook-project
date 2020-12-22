@@ -14,7 +14,7 @@ window.addEventListener("resize", function () {
 // });
 
 //! Conole.log shortcut
-let cl = (log) => console.log(log);
+// let cl = (log) => console.log(log);
 
 // console.log(window.pageYOffset);
 
