@@ -21,14 +21,6 @@ window.addEventListener("resize", function () {
 // let scrollLocation = (window.scrollY = `${window.scrollY}px`);
 // console.log(scrollLocation);
 
-//! Hero Animations (replace w/GSAP) =====================================
-// $(function () {
-//   $(".main-title").hide().delay(100).fadeIn(2000);
-//   $("#btn").hide().delay(100).fadeIn(1000).animate({
-//     bottom: "-55px",
-//     opacity: 0.9,
-//   });
-// });
 
 //! Recipe Button Click Smooth Scroll =====================================
 const btn = document.querySelector('#btn')
