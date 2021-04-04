@@ -96,6 +96,7 @@ body {
   -webkit-filter: opacity(0.5);
           filter: opacity(0.5);
   height: 94vh;
+  min-height: 400px;
 }
 
 .main-container .title-container .navbar {
@@ -129,6 +130,7 @@ body {
 }
 
 .main-container .title-container .main-title {
+  z-index: 1;
   letter-spacing: 0.1rem;
   text-align: center;
   position: absolute;
@@ -166,10 +168,10 @@ body {
   -webkit-filter: drop-shadow(0px 4px 2px #50300b);
           filter: drop-shadow(0px 4px 2px #50300b);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
-  -webkit-transition: background 0.3s ease-in-out, -webkit-filter .3s ease-in-out;
-  transition: background 0.3s ease-in-out, -webkit-filter .3s ease-in-out;
-  transition: background 0.3s ease-in-out, filter .3s ease-in-out;
-  transition: background 0.3s ease-in-out, filter .3s ease-in-out, -webkit-filter .3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
 }
 
 .main-container .title-container button:hover {
@@ -684,7 +686,7 @@ body {
 }
 
 .main-container .recipes-container .pagination-wrapper .pagination span:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 3px;
   left: 3px;
@@ -738,8 +740,9 @@ body {
 .main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
   border-radius: 25px;
   border: 2px solid #32251a;
+  box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
+  -moz-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
   -webkit-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
-          box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
   -webkit-filter: saturate(2);
           filter: saturate(2);
   padding: 5px 20px;
@@ -756,7 +759,7 @@ body {
   color: #221911;
   -webkit-filter: saturate(2);
           filter: saturate(2);
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 22px;
   font-weight: 600;
   padding: 0 10px;
@@ -813,7 +816,7 @@ body {
   grid-column: 1 / 3;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"] {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name='emailSubject'] {
   background-color: transparent;
   border-color: transparent;
   border-radius: 2px;
@@ -828,7 +831,7 @@ body {
   width: 100%;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name="emailSubject"]:focus {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject input[name='emailSubject']:focus {
   outline-style: none;
 }
 
@@ -840,7 +843,7 @@ body {
   grid-column: 1 / 3;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"] {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name='emailMessage'] {
   background-color: transparent;
   border-color: transparent;
   border-radius: 2px;
@@ -855,7 +858,7 @@ body {
   width: 100%;
 }
 
-.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name="emailMessage"]:focus {
+.main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name='emailMessage']:focus {
   outline-style: none;
 }
 
@@ -879,7 +882,7 @@ body {
   font-size: 2rem;
 }
 
-.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"] {
+.main-container .form-container form fieldset.mainFieldset button.form-button[type='submit'] {
   background: var(--button-color);
   border-radius: 7px;
   color: white;
@@ -901,7 +904,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.main-container .form-container form fieldset.mainFieldset input.form-button[type="submit"]:hover {
+.main-container .form-container form fieldset.mainFieldset button.form-button[type='submit']:hover {
   background: var(--button-hover);
   -webkit-filter: drop-shadow(0px 1px 1px #0d0d0d);
           filter: drop-shadow(0px 1px 1px #0d0d0d);
@@ -968,7 +971,7 @@ body {
   text-align: justify;
   -ms-grid-row: 2;
   grid-row: 2;
-  padding: 0;
+  padding: 10px 40px;
 }
 
 .overlayModal .overlayContent .recipeTemplate .recipeIngredients {

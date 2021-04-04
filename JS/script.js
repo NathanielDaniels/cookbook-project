@@ -1,3 +1,76 @@
+// import recipeData from "./RecipeData"
+
+
+//* ==================================
+//? Fetch Recipe Data
+//! ======================================
+// const recipe = document.querySelector(".hover-text > p").innerText
+
+// async function getRecipes() {
+//   const fetchRecipes = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=3aa2ade2b96d4987ac0686f8ede20cf6')
+//   .then(response => response.json())
+//   .then(data => data.results)
+  
+//   // fetchRecipes.map(recipe => console.log(recipe))
+
+//   const recipeTitles = fetchRecipes.map(recipe => recipe.title)
+//   const recipeTitleArray = document.querySelectorAll(".hover-text > p")
+
+//   console.log(recipeTitles)
+//   // console.log(recipeTitleArray)
+
+//   for (let i = 0; i < recipeTitleArray.length; i++) {
+//     const recipeTitleArr = document.querySelectorAll(".allRecipes > .hover-text > p")[i]
+//     console.log(recipeTitleArr.innerText = recipeTitles[i])
+
+//     // const updateTitle = recipeTitles.innerText += recipeTitles
+//     // console.log(updateTitle)
+//   }
+
+//   fetchRecipes.map(recipe => {
+//     // const innerTitle = document.querySelectorAll(".hover-text > p")
+
+//     // for (let i = 0; i < innerTitle.length; i++) {
+//     //   // innerTitle[i].innerText = recipe.title
+
+//     //   const recipeTitles = document.querySelectorAll(".allRecipes > .hover-text > p")[i]
+
+//     //   recipeTitles.innerText += recipe.title
+//     //   console.log(recipeTitles)
+//     //   // console.log("recipe test", recipeTitles)
+//     // }
+   
+//     // console.log(recipe.title)
+//     // console.log("tester",[...document.querySelectorAll(".hover-text > p")].map(title => title.innerText += recipe.title));
+//   })
+
+//   //? ============================================================
+//   // const recipeTitleArr = fetchRecipes.map(recipe => recipe.title)
+//   // const recipeImgArr = fetchRecipes.map(recipe => recipe.image)
+
+//   // const recipes = fetchRecipes.map(recipe => {
+//   //   const recipeTitleArr = recipe.title
+//   //   const recipeImgArr = recipe.image
+//   //   const recipeIdArr = recipe.id
+//   //   return [recipeIdArr, recipeTitleArr, recipeImgArr]
+//   // })
+
+//   // console.log(recipes)
+
+//   // const newRecipes = fetchRecipes.map(recipe => {
+//   //   const recipeObj = {
+//   //     id: recipe.id,
+//   //     title: recipe.title,
+//   //     image: recipe.image,
+//   //   }
+//   //   console.log(recipeObj.title)
+//   //   return recipeObj
+//   // })
+// }
+// getRecipes()
+
+//! ======================================
+
 const prevArrow = document.querySelector(".prev-arrow");
 const nextArrow = document.querySelector(".next-arrow");
 const scrollRecipes = document.querySelectorAll(".scroll");
@@ -5,16 +78,13 @@ const form = document.forms[0];
 
 //! Window Resize log
 window.addEventListener("resize", function () {
-  cl(window.innerWidth);
+  console.log(window.innerWidth);
 });
 
 //! Scroll Log
 // window.addEventListener("scroll", () => {
 //   console.log(window.scrollY);
 // });
-
-//! Conole.log shortcut
-// let cl = (log) => console.log(log);
 
 // console.log(window.pageYOffset);
 
@@ -51,11 +121,14 @@ let mainContainer = document.querySelector(".main-container");
 
 let mobileOverlay = document.querySelector(".mobileOverlay");
 let overlayModal = document.querySelector(".overlayModal");
+let overlayContent = document.querySelector(".overlayContent");
 
 let bg = document.querySelector(".bg");
 
 let screenWidth = window.innerWidth;
 let screenHeight = window.innerHeight;
+
+
 
 // let printSection = document.querySelector("#printSection");
 
@@ -132,35 +205,24 @@ function addEventListenerList(list) {
         overlayModal.classList.remove("mobileOverlay");
         overlayModal.style.display = "none";
         mainContainer.classList.remove("blur");
-        // mainContainer.style.scrollY = "scroll";
-        // if (printSection) {
-        // printSection.innerHTML = "";
-        // printSection.classList.display = "none";
-
-        // printSection.remove();
-
-        // print.innerHTML = "";
-        // document.body.style.position = "static";
 
         //? Back to Scroll location before clicking recipe Modal
         window.scrollTo(0, scrollLocation);
-        // window.scrollY(scrollLocation);
-
-        // console.log("location after Modal Close(X) ", scrollLocation);
       });
 
       //! Close overlay (clicking outside modal)
       //! Problems with overlayModal being the correct click
-      overlayModal.addEventListener("click", () => {
-        let isClickInside = overlayModal.contains(event.target);
+      overlayModal.addEventListener("click", (e) => {
+        const active = document.querySelector('.activeOverlay')
+        // console.log(active)
+        let isClickInside = overlayModal.contains(e.target);
+        // console.log(isClickInside)
 
         if (!isClickInside) {
           overlayModal.classList.remove("activeOverlay");
           overlayModal.classList.remove("mobileOverlay");
           overlayModal.style.display = "none";
           mainContainer.classList.remove("blur");
-          // printSection.remove();
-          // document.body.style.position = "static";
 
           //? Back to Scroll location before clicking recipe Modal
           window.scrollTo(0, scrollLocation);
