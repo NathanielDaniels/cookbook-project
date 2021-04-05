@@ -702,7 +702,6 @@ body {
         left: 40%;
         padding: 40px 25px 0px;
         position: relative;
-        // width: 50%;
         width: 750px;
 
         .form-grid {
@@ -712,20 +711,28 @@ body {
           grid-template-rows: 75px 75px 250px;
 
           fieldset {
+            z-index: 1000;
+            // box-sizing: content-box;
             border-radius: 25px;
             border: 2px solid hsl(28, 32%, 15%);
+            min-height: 50px;
+            // box-shadow:
+            //   0px -2px 5px hsl(28, 32%, 15%),
+            //   0px -5px 10px hsl(28, 32%, 25%);
+
+            // filter: drop-shadow(0px 4px 2px hsl(0, 0, 5));
 
             box-shadow:
-              inset 0px -2px 5px hsl(28, 32%, 15%),
-              inset 0px -5px 10px hsl(28, 32%, 25%);
+              0px -2px 5px hsl(28, 32%, 15%),
+              0px -5px 10px hsl(28, 32%, 25%);
             -moz-box-shadow:
-              inset 0px -2px 5px hsl(28, 32%, 15%),
-              inset 0px -5px 10px hsl(28, 32%, 25%);
+              0px -2px 5px hsl(28, 32%, 15%),
+              0px -5px 10px hsl(28, 32%, 25%);
             -webkit-box-shadow:
               inset 0px -2px 5px hsl(28, 32%, 15%),
               inset 0px -5px 10px hsl(28, 32%, 25%);
 
-            filter: saturate(2);
+            filter: satur ate(2);
             padding: 5px 20px;
             transition: color 0.3s ease-in-out;
 

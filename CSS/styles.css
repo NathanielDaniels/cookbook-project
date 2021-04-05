@@ -738,13 +738,15 @@ body {
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid fieldset {
+  z-index: 1000;
   border-radius: 25px;
   border: 2px solid #32251a;
-  box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
-  -moz-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
+  min-height: 50px;
+  box-shadow: 0px -2px 5px #32251a, 0px -5px 10px #543e2b;
+  -moz-box-shadow: 0px -2px 5px #32251a, 0px -5px 10px #543e2b;
   -webkit-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
-  -webkit-filter: saturate(2);
-          filter: saturate(2);
+  -webkit-filter: satur ate(2);
+          filter: satur ate(2);
   padding: 5px 20px;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
