@@ -1,73 +1,10 @@
-// import recipeData from "./RecipeData"
+// import recipeData from "./RecipeData.js"
 
 
 //* ==================================
 //? Fetch Recipe Data
 //! ======================================
-// const recipe = document.querySelector(".hover-text > p").innerText
 
-// async function getRecipes() {
-//   const fetchRecipes = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=3aa2ade2b96d4987ac0686f8ede20cf6')
-//   .then(response => response.json())
-//   .then(data => data.results)
-  
-//   // fetchRecipes.map(recipe => console.log(recipe))
-
-//   const recipeTitles = fetchRecipes.map(recipe => recipe.title)
-//   const recipeTitleArray = document.querySelectorAll(".hover-text > p")
-
-//   console.log(recipeTitles)
-//   // console.log(recipeTitleArray)
-
-//   for (let i = 0; i < recipeTitleArray.length; i++) {
-//     const recipeTitleArr = document.querySelectorAll(".allRecipes > .hover-text > p")[i]
-//     console.log(recipeTitleArr.innerText = recipeTitles[i])
-
-//     // const updateTitle = recipeTitles.innerText += recipeTitles
-//     // console.log(updateTitle)
-//   }
-
-//   fetchRecipes.map(recipe => {
-//     // const innerTitle = document.querySelectorAll(".hover-text > p")
-
-//     // for (let i = 0; i < innerTitle.length; i++) {
-//     //   // innerTitle[i].innerText = recipe.title
-
-//     //   const recipeTitles = document.querySelectorAll(".allRecipes > .hover-text > p")[i]
-
-//     //   recipeTitles.innerText += recipe.title
-//     //   console.log(recipeTitles)
-//     //   // console.log("recipe test", recipeTitles)
-//     // }
-   
-//     // console.log(recipe.title)
-//     // console.log("tester",[...document.querySelectorAll(".hover-text > p")].map(title => title.innerText += recipe.title));
-//   })
-
-//   //? ============================================================
-//   // const recipeTitleArr = fetchRecipes.map(recipe => recipe.title)
-//   // const recipeImgArr = fetchRecipes.map(recipe => recipe.image)
-
-//   // const recipes = fetchRecipes.map(recipe => {
-//   //   const recipeTitleArr = recipe.title
-//   //   const recipeImgArr = recipe.image
-//   //   const recipeIdArr = recipe.id
-//   //   return [recipeIdArr, recipeTitleArr, recipeImgArr]
-//   // })
-
-//   // console.log(recipes)
-
-//   // const newRecipes = fetchRecipes.map(recipe => {
-//   //   const recipeObj = {
-//   //     id: recipe.id,
-//   //     title: recipe.title,
-//   //     image: recipe.image,
-//   //   }
-//   //   console.log(recipeObj.title)
-//   //   return recipeObj
-//   // })
-// }
-// getRecipes()
 
 //! ======================================
 
@@ -133,21 +70,23 @@ let screenHeight = window.innerHeight;
 // let printSection = document.querySelector("#printSection");
 
 //! Recipe Item Click (All Recipes (Top + Main))
-function addEventListenerList(list) {
+function addEventListenerList(recipeList) {
   for (let i = 0; i < allRecipeItems.length; i++) {
-    // list[i].addEventListener("click", () => {
+    // recipeList[i].addEventListener("click", () => {
     //   if (screenWidth < "1200") {
-    //     list[i].classList.toggle("active");
+    //     recipeList[i].classList.toggle("active");
     //   }
     // });
 
-    list[i].addEventListener("click", async function () {
+    recipeList[i].addEventListener("click", async function () {
+      //? Save Scroll Location
       const scrollLocation = Math.floor(parseInt(window.scrollY));
 
+      //? Add Blur and Overloay
       mainContainer.classList.add("blur");
       overlayModal.style.display = "block";
 
-      //? Dynamic Html Content
+      //? Dynamic Html Content (Recipe Modal)
       overlayModal.innerHTML = `
         <div class="closeBtnBg">
           <div class="closeBtn">X</div>
@@ -160,6 +99,7 @@ function addEventListenerList(list) {
             <div class="recipeIngredients">
               <h3>Ingredients</h3>
               <p>${recipesArr[i].ingredients}</p>
+              
             </div>
             <div class="recipeInstructions">
               <h3>Instructions</h3>
@@ -172,6 +112,7 @@ function addEventListenerList(list) {
       overlayModal.classList.toggle("activeOverlay");
 
       // ! Overlay screen size
+      //? testing which modal shows at screen width
       // if (screenWidth > "745") {
       //   // console.log("screen over 745");
       //   overlayModal.classList.toggle("activeOverlay");
@@ -211,7 +152,7 @@ function addEventListenerList(list) {
       });
 
       //! Close overlay (clicking outside modal)
-      //! Problems with overlayModal being the correct click
+      //? Problems with overlayModal being the correct click
       overlayModal.addEventListener("click", (e) => {
         const active = document.querySelector('.activeOverlay')
         // console.log(active)

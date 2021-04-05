@@ -688,7 +688,6 @@ body {
     background-image: url('/IMG/form-bg.jpg');
     background-position: left;
     background-size: cover;
-    // height: auto;
     width: 100%;
 
     form {
@@ -715,12 +714,17 @@ body {
           fieldset {
             border-radius: 25px;
             border: 2px solid hsl(28, 32%, 15%);
-            box-shadow: inset 0px -2px 5px hsl(28, 32%, 15%),
+
+            box-shadow:
+              inset 0px -2px 5px hsl(28, 32%, 15%),
               inset 0px -5px 10px hsl(28, 32%, 25%);
-            -moz-box-shadow: inset 0px -2px 5px hsl(28, 32%, 15%),
+            -moz-box-shadow:
+              inset 0px -2px 5px hsl(28, 32%, 15%),
               inset 0px -5px 10px hsl(28, 32%, 25%);
-            -webkit-box-shadow: inset 0px -2px 5px hsl(28, 32%, 15%),
+            -webkit-box-shadow:
+              inset 0px -2px 5px hsl(28, 32%, 15%),
               inset 0px -5px 10px hsl(28, 32%, 25%);
+
             filter: saturate(2);
             padding: 5px 20px;
             transition: color 0.3s ease-in-out;
@@ -1048,6 +1052,7 @@ body {
 //========================================================
 // RESPONSIVE MEDIA
 
+//? Print for Recipes
 @media print {
   body * {
     visibility: hidden;
@@ -1079,6 +1084,7 @@ body {
   }
 }
 
+//? Responsive Screen Size
 @media screen and (max-width: 1200px) {
   .main-container {
     width: auto;

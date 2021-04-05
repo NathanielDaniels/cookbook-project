@@ -5,7 +5,7 @@ import Key from './stash.js'
 //! ======================================
 const recipe = document.querySelector(".hover-text > p").innerText
 
-async function getRecipes() {
+export default async function getRecipes() {
   
   const fetchRecipes = await fetch(`https://api.spoonacular.com/recipes/complexSearch?${Key()}`)
   .then(response => response.json())

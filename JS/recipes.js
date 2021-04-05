@@ -1,14 +1,14 @@
 //? Top Recipe Section
 const topRecipeArr = [
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Taco Soup",
     info: "Talk about taco Soup",
     ingredients: "&#8226 Taco Soup <br> &#8226 Taco Soup <br>",
     instructions: "instructions here instructions here instructions here",
   },
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Carrot Veggie Dish",
     info: "Talk about Carrot Veggie Dish",
     ingredients: `<ul>
@@ -27,7 +27,7 @@ const topRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Cast Iron Steak",
     info: "Talk about cast iron steak",
     ingredients: "&#8226 ",
@@ -40,7 +40,7 @@ const topRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Taco Cups",
     info: "Taco Cups are one of our favorite lunch items.<br> Simple to create and full of flavor, all wrapped up in a nice little taco package.",
     ingredients: `<ul>
@@ -76,7 +76,7 @@ const topRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Pan fried COD",
     info: "Talk about Pan Frying COD",
     ingredients: "&#8226 Pan fried COD",
@@ -89,7 +89,7 @@ const topRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Top Recipes",
+    //? location: "Top Recipes",
     title: "Blu+Bri Burgers",
     info: "Talk about Blu + Bri Burgers",
     ingredients: "&#8226 Blu + Bri Burgers",
@@ -107,7 +107,7 @@ const topRecipeArr = [
 
 const mainRecipeArr = [
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -120,7 +120,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -133,7 +133,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -146,7 +146,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -159,7 +159,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -172,7 +172,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -185,7 +185,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -198,7 +198,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -211,7 +211,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -224,7 +224,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -237,7 +237,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -250,7 +250,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -263,7 +263,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -276,7 +276,7 @@ const mainRecipeArr = [
     </ul>`,
   },
   {
-    // location: "Main Recipes",
+    //? location: "Main Recipes",
     title: "Main Recipe Section Test",
     info: "Test Test Test",
     ingredients: "&#8226 Test Test",
@@ -293,4 +293,4 @@ const mainRecipeArr = [
 let recipesArr = topRecipeArr.concat(mainRecipeArr);
 // }
 
-// export default recipesArr;
+export default recipesArr;
