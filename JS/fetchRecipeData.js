@@ -71,6 +71,6 @@ export default async function getRecipes() {
   //   return recipeObj
   // })
 }
-getRecipes()
 
-// export default getRecipes
+
+// getRecipes()

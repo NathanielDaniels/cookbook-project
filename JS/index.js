@@ -1,4 +1,5 @@
 // import recipeData from "./RecipeData.js"
+import recipesArr from "./recipes.js"
 
 
 //* ==================================
@@ -78,6 +79,7 @@ function addEventListenerList(recipeList) {
     //   }
     // });
 
+    //? Click Event for each Recipe Link
     recipeList[i].addEventListener("click", async function () {
       //? Save Scroll Location
       const scrollLocation = Math.floor(parseInt(window.scrollY));

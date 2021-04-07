@@ -714,7 +714,7 @@ body {
           fieldset {
             z-index: 1000;
             border-radius: 25px;
-            border: 2px solid hsl(28, 32%, 15%);
+            border: 3px solid hsl(28, 32%, 15%);
             // min-height: 50px;
             // box-shadow:
             //   0px -2px 5px hsl(28, 32%, 15%),
@@ -728,15 +728,7 @@ body {
 
             // box-shadow:
             //   inset 0px -2px 5px hsl(28, 32%, 15%),
-            //   inset 0px -5px 10px hsl(28, 32%, 25%);
-
-            // -moz-box-shadow:
-            //   0px -2px 5px hsl(28, 32%, 15%),
-            //   0px -5px 10px hsl(28, 32%, 25%);
-            // -webkit-box-shadow:
-            //   inset 0px -2px 5px hsl(28, 32%, 15%),
-            //   inset 0px -5px 10px hsl(28, 32%, 25%);
-
+            //   inset 0px -5px 10px hsl(28, 32%, 25%)
             filter: saturate(2);
             padding: 10px 20px;
             transition: color 0.3s ease-in-out;
@@ -1056,10 +1048,10 @@ body {
   /* Avoid width reflow */
   height: 100vh;
   filter: blur(10px);
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
+  // -webkit-filter: blur(10px);
+  // -moz-filter: blur(10px);
+  // -o-filter: blur(10px);
+  // -ms-filter: blur(10px);
 }
 
 //========================================================

@@ -45,8 +45,8 @@ const topRecipeArr = [
     info: "Taco Cups are one of our favorite lunch items.<br> Simple to create and full of flavor, all wrapped up in a nice little taco package.",
     ingredients: `<ul>
       <li>&#8226 Flour Tortillas (One Dozen).</li>
-      <li>&#8226 Diced Tomatoes & Green Chilies (10oz can).</li>
-      <li>&#8226 Refried Beans (16oz can).</li>
+      <li>&#8226 Diced Tomatoes & Green Chilies (10oz).</li>
+      <li>&#8226 Refried Beans (6-8oz).</li>
       <li>&#8226 Ground Beef (3/4 - 1lb).</li>
       <li>&#8226 Taco Seasoning.</li>
     </ul>`,
