@@ -1,12 +1,5 @@
 // import recipeData from "./RecipeData.js"
 import recipesArr from "./recipes.js"
-
-
-//* ==================================
-//? Fetch Recipe Data
-//! ======================================
-
-
 //! ======================================
 
 const prevArrow = document.querySelector(".prev-arrow");
@@ -48,23 +41,23 @@ btn.addEventListener('mouseleave', () => {
 //* ==================================
 //! Click Recipe for Overlay Module ======================================
 
-let hoverText = document.querySelectorAll(".hover-text");
+const hoverText = document.querySelectorAll(".hover-text");
 
-let topRecipesBody = document.querySelector(".topRecipes-body");
-let topRecipeItems = document.querySelectorAll(".top-grid-item");
-let mainRecipeItems = document.querySelector(".recipeItems");
-let allRecipeItems = document.querySelectorAll(".allRecipes");
+const topRecipesBody = document.querySelector(".topRecipes-body");
+const topRecipeItems = document.querySelectorAll(".top-grid-item");
+const mainRecipeItems = document.querySelector(".recipeItems");
+const allRecipeItems = document.querySelectorAll(".allRecipes");
 
-let mainContainer = document.querySelector(".main-container");
+const mainContainer = document.querySelector(".main-container");
 
-let mobileOverlay = document.querySelector(".mobileOverlay");
-let overlayModal = document.querySelector(".overlayModal");
-let overlayContent = document.querySelector(".overlayContent");
+const mobileOverlay = document.querySelector(".mobileOverlay");
+const overlayModal = document.querySelector(".overlayModal");
+const overlayContent = document.querySelector(".overlayContent");
 
-let bg = document.querySelector(".bg");
+const bg = document.querySelector(".bg");
 
-let screenWidth = window.innerWidth;
-let screenHeight = window.innerHeight;
+const screenWidth = window.innerWidth;
+const screenHeight = window.innerHeight;
 
 
 
