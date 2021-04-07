@@ -718,9 +718,9 @@ body {
   background-image: url("/IMG/Wood-Grain.jpg");
   background-position: center;
   border-radius: 30px;
-  border: 2px solid #3d120f;
-  -webkit-filter: drop-shadow(0px 6px 5px #0d0d0d);
-          filter: drop-shadow(0px 6px 5px #0d0d0d);
+  border: none;
+  -webkit-box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.7), 2px 6px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.7), 2px 6px 5px rgba(0, 0, 0, 0.6);
   left: 40%;
   padding: 40px 25px 0px;
   position: relative;
@@ -741,13 +741,11 @@ body {
   z-index: 1000;
   border-radius: 25px;
   border: 2px solid #32251a;
-  min-height: 50px;
-  box-shadow: 0px -2px 5px #32251a, 0px -5px 10px #543e2b;
-  -moz-box-shadow: 0px -2px 5px #32251a, 0px -5px 10px #543e2b;
-  -webkit-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
-  -webkit-filter: satur ate(2);
-          filter: satur ate(2);
-  padding: 5px 20px;
+  -webkit-box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
+          box-shadow: inset 0px -2px 5px #32251a, inset 0px -5px 10px #543e2b;
+  -webkit-filter: saturate(2);
+          filter: saturate(2);
+  padding: 10px 20px;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
@@ -774,8 +772,8 @@ body {
   border-color: transparent;
   color: #221911;
   font-size: 24px;
+  height: 50px;
   margin: 0;
-  padding-left: 5px;
   position: relative;
   width: 100%;
   font-family: Rustico;
@@ -795,7 +793,7 @@ body {
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid .userName input {
-  top: -20px;
+  top: -25px;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid .userEmail {
@@ -807,7 +805,7 @@ body {
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid .userEmail input {
-  top: -40px;
+  top: -25px;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid .emailSubject {
@@ -826,10 +824,9 @@ body {
   font-size: 24px;
   font-family: Rustico;
   font-weight: 300;
-  height: 30px;
   position: relative;
   resize: none;
-  top: -30px;
+  top: -25px;
   width: 100%;
 }
 
@@ -856,8 +853,9 @@ body {
   height: 12rem;
   position: relative;
   resize: none;
-  top: -25px;
+  top: -15px;
   width: 100%;
+  line-height: 1.4;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid .emailMessage textarea[name='emailMessage']:focus {
@@ -886,6 +884,7 @@ body {
 
 .main-container .form-container form fieldset.mainFieldset button.form-button[type='submit'] {
   background: var(--button-color);
+  border: 1px solid var(--button-hover);
   border-radius: 7px;
   color: white;
   cursor: pointer;
