@@ -90,15 +90,15 @@ function addEventListenerList(recipeList) {
         <div class="overlayContent">
           <div class="recipeTemplate">
             <h1>${recipesArr[i].title}</h1>
-            <p>${recipesArr[i].info}</p>
+            <p class="aboutRecipe">${recipesArr[i].about}</p>
+            <p class="recipeInfo">${recipesArr[i].info}</p>
             <div class="recipeIngredients">
               <h3>Ingredients</h3>
               <p>${recipesArr[i].ingredients}</p>
-              
             </div>
             <div class="recipeInstructions">
               <h3>Instructions</h3>
-              <p>${recipesArr[i].instructions}</p>
+              <div>${recipesArr[i].instructions}</div>
             </div>
           </div>
         </div>

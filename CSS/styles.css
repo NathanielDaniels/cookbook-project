@@ -45,6 +45,9 @@ body {
   cursor: default;
   overflow-x: hidden;
   position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
 }
 
 /*------------------------------------*\
@@ -949,10 +952,13 @@ body {
 }
 
 .overlayModal .overlayContent .recipeTemplate {
-  display: -ms-grid;
-  display: grid;
-  grid: 1fr 1fr 4fr 4fr/ 1fr;
-  row-gap: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   width: 100%;
 }
@@ -961,10 +967,19 @@ body {
   color: var(--hover-color);
   text-align: center;
   text-shadow: 0px 1px 3px #432c0a;
-  font-size: 2rem;
+  font-size: 3rem;
   -ms-grid-row: 1;
   grid-row: 1;
-  line-height: .8;
+}
+
+.overlayModal .overlayContent .recipeTemplate .aboutRecipe {
+  width: 80ch;
+}
+
+.overlayModal .overlayContent .recipeTemplate .recipeInfo {
+  border: 1px solid gray;
+  border-radius: 8px;
+  margin: 10px auto;
 }
 
 .overlayModal .overlayContent .recipeTemplate span {
