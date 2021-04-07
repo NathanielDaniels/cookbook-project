@@ -21,3 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 JS/stash.js
+../JS/stash.js
