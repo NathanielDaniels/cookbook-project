@@ -973,7 +973,7 @@ body {
 }
 
 .overlayModal .overlayContent .recipeTemplate .aboutRecipe {
-  width: 80ch;
+  max-width: 80ch;
 }
 
 .overlayModal .overlayContent .recipeTemplate .recipeInfo {
