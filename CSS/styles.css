@@ -1088,7 +1088,6 @@ body {
   body * {
     visibility: hidden;
     line-height: 1.4;
-    border: 1px solid black;
   }
   @page {
     size: auto;
@@ -1106,6 +1105,11 @@ body {
   .recipeInfo {
     margin-bottom: 1em;
     text-align: center;
+  }
+  .recipeIngredients {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 10px;
   }
   #printSection,
   #printSection * {
