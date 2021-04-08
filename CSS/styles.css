@@ -727,7 +727,7 @@ body {
   left: 40%;
   padding: 40px 25px 0px;
   position: relative;
-  width: 750px;
+  max-width: 700px;
 }
 
 .main-container .form-container form fieldset.mainFieldset .form-grid {
@@ -901,7 +901,7 @@ body {
   position: relative;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
-  top: 60px;
+  top: 50px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out;
@@ -959,6 +959,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 20px;
   height: 100%;
   width: 100%;
 }
@@ -968,8 +969,6 @@ body {
   text-align: center;
   text-shadow: 0px 1px 3px #432c0a;
   font-size: 3rem;
-  -ms-grid-row: 1;
-  grid-row: 1;
 }
 
 .overlayModal .overlayContent .recipeTemplate .aboutRecipe {
@@ -990,19 +989,7 @@ body {
 .overlayModal .overlayContent .recipeTemplate p {
   margin: 0 auto;
   text-align: justify;
-  -ms-grid-row: 2;
-  grid-row: 2;
   padding: 10px 40px;
-}
-
-.overlayModal .overlayContent .recipeTemplate .recipeIngredients {
-  -ms-grid-row: 3;
-  grid-row: 3;
-}
-
-.overlayModal .overlayContent .recipeTemplate .recipeInstructions {
-  -ms-grid-row: 4;
-  grid-row: 4;
 }
 
 .overlayModal .overlayContent .recipeTemplate .recipeIngredients,
@@ -1044,8 +1031,8 @@ body {
   z-index: 100;
   font-size: 2rem;
   position: inherit;
-  top: 1rem;
-  right: 1rem;
+  top: .5rem;
+  right: 1.5rem;
   width: 30px;
   height: 30px;
   background-image: url("../IMG/print.svg");
@@ -1100,26 +1087,30 @@ body {
 @media print {
   body * {
     visibility: hidden;
-    font: 16pt serif;
-    line-height: 1.5;
+    line-height: 1.4;
+    border: 1px solid black;
   }
   @page {
-    margin: 5rem;
+    size: auto;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 3rem;
+    text-align: center;
   }
   h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+  .aboutRecipe {
+    display: none;
+  }
+  .recipeInfo {
+    margin-bottom: 1em;
+    text-align: center;
   }
   #printSection,
   #printSection * {
     visibility: visible;
-  }
-  #printSection {
-    position: fixed;
-    left: 0;
-    top: 0;
+    height: auto;
   }
 }
 
@@ -1146,8 +1137,7 @@ body {
         grid-template-rows: repeat(2, 160px) !important;
   }
   .form-container form fieldset.mainFieldset {
-    left: 45% !important;
-    width: 50% !important;
+    width: 55% !important;
   }
   .form-container form fieldset.mainFieldset .form-grid {
     -ms-grid-rows: 75px 75px 75px 250px !important;
@@ -1198,6 +1188,7 @@ body {
   }
   .about-section .boardContainer .backboard p {
     width: 40rem !important;
+    font-size: 1.5rem !important;
   }
   .about-section .boardContainer .backboard p:nth-child(2) {
     top: 13rem !important;
@@ -1266,9 +1257,8 @@ body {
     background-position: right !important;
   }
   .form-container form fieldset.mainFieldset {
-    left: 50% !important;
-    -webkit-transform: translate(-50%, 0) !important;
-            transform: translate(-50%, 0) !important;
+    left: 0 !important;
+    margin: 0 auto;
     width: 95% !important;
   }
 }

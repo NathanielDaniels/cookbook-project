@@ -47,7 +47,7 @@ const topRecipeArr = [
   {
     //? location: "Top Recipes #2",
     title: "Creamy Mushroom Cavatappi",
-    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
+    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese. Get ready for this umami bomb to make waves at your dinner table!",
     info: "Prep: 10min | Total: 45min | Calories: 750",
     ingredients: `<ul>
         <li>&#8226 Scallions (2-3)</li>
