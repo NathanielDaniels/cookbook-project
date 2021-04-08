@@ -129,7 +129,8 @@ const topRecipeArr = [
   {
     //? location: "Top Recipes #4",
     title: "Taco Cups",
-    info: "Simple to create and full of flavor, all wrapped up in a nice little taco package.",
+    about: "Simple to create and full of flavor, all wrapped up in a nice little taco package.",
+    info: "Prep: 10min | Total: 30min | Calories: 850",
     ingredients: `<ul>
       <li>&#8226 Flour Tortillas (One Dozen).</li>
       <li>&#8226 Diced Tomatoes & Green Chilies (10oz).</li>
