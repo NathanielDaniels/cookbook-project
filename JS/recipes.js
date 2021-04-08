@@ -46,45 +46,46 @@ const topRecipeArr = [
   },
   {
     //? location: "Top Recipes #2",
-    title: "Creamy Mushroom Cavatappi",
-    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese. Get ready for this umami bomb to make waves at your dinner table!",
-    info: "Prep: 10min | Total: 45min | Calories: 750",
+    title: 'Ancho BBQ Sloppy Joes',
+    about: 'Sloppy joes are the ultimate throwback. The name alone transports us back to the cafeteria line, though, this version is worlds tastier than the ones the lunch lady slung: Think sliced pickles, a smoky BBQ sauce, and a side of hearty potato wedges.',
+    info: 'Prep: 15min | Total: 45min | Calories: 820',
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Cavatappi Pasta (8 oz)</li>
-        <li>&#8226 Button Mushrooms (8 oz)</li>
-        <li>&#8226 Flour (1 TBSP)</li>
-        <li>&#8226 Milk (6.75 oz)</li>
-        <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
-        <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
-        <li>&#8226 Parmesan Cheese (1/4 cup)</li>
-        <li>&#8226 Olive Oil (2 TSP)</li>
+        <li>&#8226 Yukon Gold Potatoes (12 ounce)</li>
+        <li>&#8226 Potato or Brioche Buns</li>
+        <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
+        <li>&#8226 Dill Pickle (1)</li>
+        <li>&#8226 Ancho Chili Powder (1 TSP)</li>
+        <li>&#8226 Ketchup (2 TBSP)</li>
+        <li>&#8226 Ground Beef (10 ounce)</li>
+        <li>&#8226 BBQ Sauce (4 TBSP)</li>
+        <li>&#8226 Cornstarch (1 TBSP)</li>
+        <li>&#8226 Olive Oil (1 TBSP)</li>
         <li>&#8226 Butter (2 TBSP)</li>
         <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
-        Bring Medium Pot of <strong>salted water</strong> to a boil. <strong>Wash/dry all produce</strong>. Trim and Slice <strong>mushrooms</strong> into 1/4-inch-thick pieces. Trim and thinly slice <strong>scallions</strong>, seperating whites from greens.
+        Adjust rack to top position and preheat oven to 450 degrees. <strong>Wash and dry produce</strong>.<br/> • Cut <strong>potatoes</strong> into ¼-inch-thick rounds. Toss on a baking sheet with a <strong>large drizzle of oil</strong>, <strong>salt</strong>, and <strong>pepper</strong>. Roast on top rack until lightly browned and tender, 18-20 minutes.
       </li>
       <br />
       <li> &#8226
-        Heat a large drizzle of <strong>olive oil</strong> in a large pan over medium-high heat. Add <strong>mushrooms</strong>; season with <strong>salt</strong> and <strong>pepper</strong>. Cook, stiring occasionally, until browned and slightly crispy, 5-7 minutes. Turn off heat; transfer to a paper-towel-lined plate. Wash out pan.
+        While potatoes roast, halve, peel, and dice <strong>onion</strong>. Thinly slice <strong>pickle</strong> into rounds. Halve <strong>buns</strong>. <br/>• In a small bowl, combine <strong>BBQ sauce</strong>, <strong>ketchup</strong>, <strong>chili powder</strong>, <strong>stock concentrate</strong>, half the <strong>cornstarch</strong>, and <strong>1 TBSP water</strong>. <em>(For 4 servings, use all the cornstarch and 2 TBSP water.)</em> Set aside.
       </li>
       <br />
       <li>&#8226
-        Once water is boiling, add <strong>cavatappi</strong> to pot. Cook, stirring occasionally, until aldente, 9-11 minutes. Reserve <strong>1 cup pasta cooking water</strong>, then drain.
+        Heat a <strong>drizzle of oil</strong> in a large pan over medium-high heat. Add <strong>onion</strong>; cook, stirring, until softened, 4-5 minutes. <br/>• Add <strong>beef</strong>; season with <strong>salt</strong> and <strong>pepper</strong>. Cook, breaking up meat into pieces, until browned, 3-5 minutes <em>(it’ll finish cooking in the next step)</em>.
       </li>
       <br />
       <li>&#8226
-        While pasta cooks, melt <strong>2 TBSP plain butter</strong> (4 TBSP for 4 servings) in pan used for mushrooms over medium-high heat. Add <strong>scallion whites</strong> and cook until just softened, 1 minute. Add <strong>flour</strong> and cook, stirring, until lightly browned, 1-2 minutes. Whisk in <strong>milk</strong> and ⅓ <strong>cup pasta cooking water</strong> (½ cup for 4), breaking up any flour clumps. Simmer until slightly thickened, 3-4 minutes.
+         Add <strong>BBQ sauce mixture</strong> to pan. Cook, stirring, until sauce has thickened and <strong>beef</strong> is cooked through, 2-3 minutes. Taste and season with <strong>salt</strong> and <strong>pepper</strong>. Turn off heat.
       </li>
       <br />
       <li>&#8226
-        Stir <strong>cream cheese</strong> into pan with sauce until melted. Stir in <strong>mushrooms</strong>, <strong>cavatappi</strong>, and <strong>garlic herb butter</strong>. Season with <strong>salt</strong> and <strong>pepper</strong>. <span class="recipeTip">TIP:</span> If needed, stir in more reserved cooking water a splash at a time until pasta is coated in a creamy sauce.
+        While filling cooks, toast <strong>buns</strong> until golden brown.
       </li>
       <br />
       <li>&#8226
-        Divide <strong>pasta</strong> between bowls and sprinkle with <strong>Parmesan</strong> and <strong>scallion greens</strong>. Serve.
+        Divide <strong>buns</strong> between plates; stuff with as much <strong>beef filling</strong> and <strong>sliced pickle</strong> as you like. Serve with <strong>potato rounds</strong> and any remaining sliced pickle on the side.
       </li>
     </ul>`,
   },
