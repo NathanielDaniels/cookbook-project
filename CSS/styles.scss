@@ -943,6 +943,7 @@ body {
 
       .aboutRecipe {
         max-width: 80ch;
+        line-height: 1.4;
       }
 
       .recipeInfo {
@@ -1072,25 +1073,6 @@ body {
   // -ms-filter: blur(10px);
 }
 
-// #printSection {
-//   width: 100%;
-//   height: 100%;
-
-//   h1 {
-//     font-size: 3rem;
-//     text-align: center;
-//   }
-
-//   .aboutRecipe {
-//     display: none;
-//   }
-
-//   .recipeInfo {
-//     margin-bottom: 1em;
-//     text-align: center;
-//   }
-// }
-
 //!========================================================
 //! RESPONSIVE MEDIA
 
@@ -1098,8 +1080,16 @@ body {
 @media print {
   body * {
     visibility: hidden;
-    line-height: 1.4;
+    line-height: 1.3;
+    page-break-after: avoid;
+    // page-break-inside: avoid;
   }
+
+  // html,
+  // body {
+  //   page-break-after: avoid !important;
+  //   page-break-before: avoid !important;
+  // }
 
   @page {
     size: auto;
@@ -1135,11 +1125,11 @@ body {
     height: auto;
   }
 
-  // #printSection {
-  //   position: fixed;
-  //   left: 0;
-  //   top: 0;
-  // }
+  #printSection {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 //? Responsive Screen Size

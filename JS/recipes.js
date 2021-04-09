@@ -36,7 +36,7 @@ const topRecipeArr = [
       </li>
       <br />
       <li>&#8226
-        Stir <strong>cream cheese</strong> into pan with sauce until melted. Stir in <strong>mushrooms</strong>, <strong>cavatappi</strong>, and <strong>garlic herb butter</strong>. Season with <strong>salt</strong> and <strong>pepper</strong>. <span class="recipeTip">TIP:</span> If needed, stir in more reserved cooking water a splash at a time until pasta is coated in a creamy sauce.
+        Stir <strong>cream cheese</strong> into pan with sauce until melted. Stir in <strong>mushrooms</strong>, <strong>cavatappi</strong>, and <strong>garlic herb butter</strong>. Season with <strong>salt</strong> and <strong>pepper</strong>. <span class="recipeTip"><em>TIP: If needed, stir in more reserved cooking water a splash at a time until pasta is coated in a creamy sauce.</em></span>
       </li>
       <br />
       <li>&#8226
@@ -69,7 +69,7 @@ const topRecipeArr = [
       </li>
       <br />
       <li> &#8226
-        While potatoes roast, halve, peel, and dice <strong>onion</strong>. Thinly slice <strong>pickle</strong> into rounds. Halve <strong>buns</strong>. <br/>• In a small bowl, combine <strong>BBQ sauce</strong>, <strong>ketchup</strong>, <strong>chili powder</strong>, <strong>stock concentrate</strong>, half the <strong>cornstarch</strong>, and <strong>1 TBSP water</strong>. <em>(For 4 servings, use all the cornstarch and 2 TBSP water.)</em> Set aside.
+        While potatoes roast, halve, peel, and dice <strong>onion</strong>. Thinly slice <strong>pickle</strong> into rounds. Halve <strong>buns</strong>. <br/>• In a small bowl, combine <strong>BBQ sauce</strong>, <strong>ketchup</strong>, <strong>chili powder</strong>, <strong>stock concentrate</strong>, half the <strong>cornstarch</strong>, and <strong>1 TBSP water</strong>. <em>(For 4 servings, use all the cornstarch and 2 TBSP water).</em> Set aside.
       </li>
       <br />
       <li>&#8226
@@ -114,7 +114,7 @@ const topRecipeArr = [
       </li>
       <br />
       <li> &#8226
-        Heat a <strong>drizzle of oil</strong> in a large pan over medium-high heat. Add <strong>beef</strong> and cook, breaking up meat into pieces, until browned and cooked through, 4-6 minutes. <span class="recipeTip">TIP: If there’s excess grease in your pan, carefully pour it out.</span> <br/>• Stir in <strong>scallion whites</strong> and <strong>coleslaw</strong>; cook until tender, 2-3 minutes.
+        Heat a <strong>drizzle of oil</strong> in a large pan over medium-high heat. Add <strong>beef</strong> and cook, breaking up meat into pieces, until browned and cooked through, 4-6 minutes. <span class="recipeTip"><em>TIP: If there’s excess grease in your pan, carefully pour it out.</em></span> <br/>• Stir in <strong>scallion whites</strong> and <strong>coleslaw</strong>; cook until tender, 2-3 minutes.
       </li>
       <br />
       <li>&#8226
@@ -122,7 +122,7 @@ const topRecipeArr = [
       </li>
       <br />
       <li>&#8226
-         Add <strong>noodles</strong> to pot of boiling water; cook until tender, 1-2 minutes. Drain and thoroughly rinse under cold water, at least 30 seconds. TIP: This stops the cooking and helps prevent sticky noodles. <br/>• Add to pan with <strong>beef mixture</strong> along with <strong>1 TBSP butter</strong> (2 TBSP for 4 servings); toss until noodles are warmed through and everything is combined, 1-2 minutes. <span class="recipeTip">TIP: If needed, add water a splash at a time until noodles are coated in sauce.</span> <br/>• Divide between bowls and top with <strong>scallion greens</strong> and a <strong>pinch of sesame seeds</strong>. Serve.
+         Add <strong>noodles</strong> to pot of boiling water; cook until tender, 1-2 minutes. Drain and thoroughly rinse under cold water, at least 30 seconds. TIP: This stops the cooking and helps prevent sticky noodles. <br/>• Add to pan with <strong>beef mixture</strong> along with <strong>1 TBSP butter</strong> (2 TBSP for 4 servings); toss until noodles are warmed through and everything is combined, 1-2 minutes. <span class="recipeTip"><em>TIP: If needed, add water a splash at a time until noodles are coated in sauce.</em></span> <br/>• Divide between bowls and top with <strong>scallion greens</strong> and a <strong>pinch of sesame seeds</strong>. Serve.
       </li>
     </ul>`,
   },
