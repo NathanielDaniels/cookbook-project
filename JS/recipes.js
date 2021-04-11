@@ -6,17 +6,19 @@ const topRecipeArr = [
     about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
     info: "Prep: 10min | Total: 45min | Calories: 750",
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Cavatappi Pasta (8 oz)</li>
-        <li>&#8226 Button Mushrooms (8 oz)</li>
-        <li>&#8226 Flour (1 TBSP)</li>
-        <li>&#8226 Milk (6.75 oz)</li>
-        <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
-        <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
-        <li>&#8226 Parmesan Cheese (1/4 cup)</li>
-        <li>&#8226 Olive Oil (2 TSP)</li>
-        <li>&#8226 Butter (2 TBSP)</li>
-        <li>&#8226 Salt & Pepper</li>
+          <li>&#8226 Scallions (2-3)</li>
+          <li>&#8226 Cavatappi Pasta (8 oz)</li>
+          <li>&#8226 Button Mushrooms (8 oz)</li>
+          <li>&#8226 Flour (1 TBSP)</li>
+          <li>&#8226 Milk (6.75 oz)</li>
+          <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
+        </ul>
+        <ul>
+          <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
+          <li>&#8226 Parmesan Cheese (1/4 cup)</li>
+          <li>&#8226 Olive Oil (2 TSP)</li>
+          <li>&#8226 Butter (2 TBSP)</li>
+          <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
@@ -50,18 +52,20 @@ const topRecipeArr = [
     about: 'Sloppy joes are the ultimate throwback. The name alone transports us back to the cafeteria line, though, this version is worlds tastier than the ones the lunch lady slung: Think sliced pickles, a smoky BBQ sauce, and a side of hearty potato wedges.',
     info: 'Prep: 15min | Total: 45min | Calories: 820',
     ingredients: `<ul>
-        <li>&#8226 Yukon Gold Potatoes (12 ounce)</li>
-        <li>&#8226 Potato or Brioche Buns</li>
-        <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
-        <li>&#8226 Dill Pickle (1)</li>
-        <li>&#8226 Ancho Chili Powder (1 TSP)</li>
-        <li>&#8226 Ketchup (2 TBSP)</li>
-        <li>&#8226 Ground Beef (10 ounce)</li>
-        <li>&#8226 BBQ Sauce (4 TBSP)</li>
-        <li>&#8226 Cornstarch (1 TBSP)</li>
-        <li>&#8226 Olive Oil (1 TBSP)</li>
-        <li>&#8226 Butter (2 TBSP)</li>
-        <li>&#8226 Salt & Pepper</li>
+          <li>&#8226 Yukon Gold Potatoes (12 ounce)</li>
+          <li>&#8226 Potato or Brioche Buns</li>
+          <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
+          <li>&#8226 Dill Pickle (1)</li>
+          <li>&#8226 Ancho Chili Powder (1 TSP)</li>
+          <li>&#8226 Ketchup (2 TBSP)</li>
+        </ul>
+        <ul>
+          <li>&#8226 Ground Beef (10 ounce)</li>
+          <li>&#8226 BBQ Sauce (4 TBSP)</li>
+          <li>&#8226 Cornstarch (1 TBSP)</li>
+          <li>&#8226 Olive Oil (1 TBSP)</li>
+          <li>&#8226 Butter (2 TBSP)</li>
+          <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
@@ -95,18 +99,20 @@ const topRecipeArr = [
     about: "Zingy, spicy, and aromatic Szechuan paste with tangy-sweet soy glaze, beef stock concentrate, and a sprinkle of sugar. Totally mouthwatering and packed with umami flavor, it pairs perfectly with ground beef, sautéed cabbage and carrots, and a tangle of chewy ramen noodles. Each bowl is topped with a sprinkle of scallion greens for brightness, plus sesame seeds for nutty crunch. And the best part? It’s all ready in just 15 minutes—now that’s a dinner win!",
     info: "Prep: 10min | Total: 30min | Calories: 850",
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Ground Beef (10 ounce)</li>
-        <li>&#8226 Coleslaw (4 oz)</li>
-        <li>&#8226 Szechuan Paste (2 TBSP)</li>
-        <li>&#8226 Sweet Soy Glaze (4 TBSP)</li>
-        <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
-        <li>&#8226 Ramen Noodles (6 oz)</li>
-        <li>&#8226 Sesame Seeds (1 TBSP)</li>
-        <li>&#8226 Vegetable Oil (1 TSP)</li>
-        <li>&#8226 Butter (1 TBSP)</li>
-        <li>&#8226 Salt</li>
-        <li>&#8226 Sugar (1 TSP)</li>
+          <li>&#8226 Scallions (2-3)</li>
+          <li>&#8226 Ground Beef (10 ounce)</li>
+          <li>&#8226 Coleslaw (4 oz)</li>
+          <li>&#8226 Szechuan Paste (2 TBSP)</li>
+          <li>&#8226 Sweet Soy Glaze (4 TBSP)</li>
+          <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
+        </ul>
+        <ul>
+          <li>&#8226 Ramen Noodles (6 oz)</li>
+          <li>&#8226 Sesame Seeds (1 TBSP)</li>
+          <li>&#8226 Vegetable Oil (1 TSP)</li>
+          <li>&#8226 Butter (1 TBSP)</li>
+          <li>&#8226 Salt</li>
+          <li>&#8226 Sugar (1 TSP)</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
@@ -165,45 +171,51 @@ const topRecipeArr = [
   },
   {
     //? location: "Top Recipes #5",
-    title: "Creamy Mushroom Cavatappi",
-    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
-    info: "Prep: 10min | Total: 45min | Calories: 750",
+    title: "Beef Ragù Spaghetti",
+    about: "Spaghetti with tomato sauce is always a recipe for success. Is there anyone who’d turn down a plate of noodles piled high and dusted with cheese? Surely not, although adding some extra meat and veg certainly makes it all the more crave-able. Which is exactly what we’re doing: taking a tried-and-true Italian American classic and adding hearty ground beef and bites of tender zucchini.",
+    info: "Prep: 10min | Total: 45min | Calories: 880",
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Cavatappi Pasta (8 oz)</li>
-        <li>&#8226 Button Mushrooms (8 oz)</li>
-        <li>&#8226 Flour (1 TBSP)</li>
-        <li>&#8226 Milk (6.75 oz)</li>
-        <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
-        <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
-        <li>&#8226 Parmesan Cheese (1/4 cup)</li>
-        <li>&#8226 Olive Oil (2 TSP)</li>
-        <li>&#8226 Butter (2 TBSP)</li>
-        <li>&#8226 Salt & Pepper</li>
+          <li>&#8226 Zucchini (1)</li>
+          <li>&#8226 Spaghetti Pasta (6 oz)</li>
+          <li>&#8226 Button Mushrooms (8 oz)</li>
+          <li>&#8226 Yellow Onion (1)</li>
+          <li>&#8226 Ground Beef (10 oz)</li>
+          <li>&#8226 Crushed Tomatoes (14 oz)</li>
+          <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
+        </ul>
+        <ul>
+          <li>&#8226 Parmesan Cheese (1/4 cup)</li>
+          <li>&#8226 Garlic (2-3 cloves)</li>
+          <li>&#8226 Beef Stock Concentrate (1 TBSP)</li>
+          <li>&#8226 Chili Flakes (1 TSP)</li>
+          <li>&#8226 Olive Oil (1 TSP)</li>
+          <li>&#8226 Vegetable Oil (1 TSP)</li>
+          <li>&#8226 Butter (1 TBSP)</li>
+          <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
-        Bring Medium Pot of <strong>salted water</strong> to a boil. <strong>Wash/dry all produce</strong>. Trim and Slice <strong>mushrooms</strong> into 1/4-inch-thick pieces. Trim and thinly slice <strong>scallions</strong>, seperating whites from greens.
+        Bring a large pot of salted water to a boil. <strong>Wash and dry all produce</strong>. Trim and quarter <strong>zucchini</strong> lengthwise; cut crosswise into ½-inch-thick pieces. Halve, peel, and dice <strong>onion</strong>. Mince <strong>garlic</strong>.
       </li>
       <br />
       <li> &#8226
-        Heat a large drizzle of <strong>olive oil</strong> in a large pan over medium-high heat. Add <strong>mushrooms</strong>; season with <strong>salt</strong> and <strong>pepper</strong>. Cook, stiring occasionally, until browned and slightly crispy, 5-7 minutes. Turn off heat; transfer to a paper-towel-lined plate. Wash out pan.
+        Heat a drizzle of <strong>olive oil</strong> in a large pan over medium-high heat. Add <strong>beef</strong> and season with half the <strong>Italian Seasoning</strong> (you’ll use the rest later), <strong>salt</strong>, and <strong>pepper</strong>. Cook, breaking up meat into pieces, until browned and cooked through, 4-6 minutes. Turn off heat. <span class="recipeTip">(TIP: If there’s excess grease in your pan, carefully pour it out)</span>. Transfer beef to a plate.
       </li>
       <br />
       <li>&#8226
-        Once water is boiling, add <strong>cavatappi</strong> to pot. Cook, stirring occasionally, until aldente, 9-11 minutes. Reserve <strong>1 cup pasta cooking water</strong>, then drain.
+        Once water is boiling, add <strong>spaghetti</strong> to pot. Cook, stirring occasionally, until al dente, 9-11 minutes. Carefully reserve ½ cup <strong>pasta cooking water</strong> (¾ cup for 4 servings), then drain.
       </li>
       <br />
       <li>&#8226
-        While pasta cooks, melt <strong>2 TBSP plain butter</strong> (4 TBSP for 4 servings) in pan used for mushrooms over medium-high heat. Add <strong>scallion whites</strong> and cook until just softened, 1 minute. Add <strong>flour</strong> and cook, stirring, until lightly browned, 1-2 minutes. Whisk in <strong>milk</strong> and ⅓ <strong>cup pasta cooking water</strong> (½ cup for 4), breaking up any flour clumps. Simmer until slightly thickened, 3-4 minutes.
+        While spaghetti cooks, heat a <strong>drizzle of oil</strong> in pan used for beef over medium-high heat. Add <strong>zucchini</strong> and <strong>onion</strong>. Cook, stirring, until softened, 5-7 minutes. Stir in <strong>garlic</strong> and remaining <strong>Italian Seasoning</strong>; cook until garlic is fragrant, 30 seconds.
       </li>
       <br />
       <li>&#8226
-        Stir <strong>cream cheese</strong> into pan with sauce until melted. Stir in <strong>mushrooms</strong>, <strong>cavatappi</strong>, and <strong>garlic herb butter</strong>. Season with <strong>salt</strong> and <strong>pepper</strong>. <span class="recipeTip">TIP:</span> If needed, stir in more reserved cooking water a splash at a time until pasta is coated in a creamy sauce.
+        Add <strong>beef</strong>, <strong>tomatoes</strong>, <strong>stock concentrate</strong>, and <strong>reserved pasta cooking water</strong> to pan with veggies. Bring to a boil, then reduce heat and simmer until thick and saucy, 5-10 minutes. <span class="recipeTip">(TIP: If mixture begins to stick to the bottom of the pan, stir in a splash of water)</span>. Taste and season with <strong>salt and pepper</strong>. Stir in <strong>1 TBSP plain butter</strong> (2 TBSP for 4 servings) until melted.
       </li>
       <br />
       <li>&#8226
-        Divide <strong>pasta</strong> between bowls and sprinkle with <strong>Parmesan</strong> and <strong>scallion greens</strong>. Serve.
+        Add <strong>spaghetti</strong> and <strong>garlic herb butter</strong> to pan with ragù; toss to combine. Divide pasta between plates. Sprinkle with Parmesan and as many <strong>chili flakes</strong> as you like. Serve.
       </li>
     </ul>`,
   },
@@ -212,13 +224,15 @@ const topRecipeArr = [
     title: "Creamy Mushroom Cavatappi",
     about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
     info: "Prep: 10min | Total: 45min | Calories: 750",
-    ingredients: `<ul>
+    ingredients: `<ul class="list1">
         <li>&#8226 Scallions (2-3)</li>
         <li>&#8226 Cavatappi Pasta (8 oz)</li>
         <li>&#8226 Button Mushrooms (8 oz)</li>
         <li>&#8226 Flour (1 TBSP)</li>
         <li>&#8226 Milk (6.75 oz)</li>
         <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
+      </ul>
+      <ul class="list2">
         <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
         <li>&#8226 Parmesan Cheese (1/4 cup)</li>
         <li>&#8226 Olive Oil (2 TSP)</li>

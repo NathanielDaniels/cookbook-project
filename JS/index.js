@@ -94,7 +94,7 @@ function addEventListenerList(recipeList) {
             <p class="recipeInfo">${recipesArr[i].info}</p>
             <div class="recipeIngredients">
               <h3>Ingredients</h3>
-              <p>${recipesArr[i].ingredients}</p>
+              <div class="ingredients">${recipesArr[i].ingredients}</div>
             </div>
             <div class="recipeInstructions">
               <h3>Instructions</h3>
@@ -148,22 +148,30 @@ function addEventListenerList(recipeList) {
 
       //! Close overlay (clicking outside modal)
       //? Problems with overlayModal being the correct click
-      overlayModal.addEventListener("click", (e) => {
-        const active = document.querySelector('.activeOverlay')
-        // console.log(active)
-        let isClickInside = overlayModal.contains(e.target);
-        // console.log(isClickInside)
+      // overlayModal.addEventListener("click", (e) => {
 
-        if (!isClickInside) {
-          overlayModal.classList.remove("activeOverlay");
-          overlayModal.classList.remove("mobileOverlay");
-          overlayModal.style.display = "none";
-          mainContainer.classList.remove("blur");
+      //   const mainTitle = document.querySelector('.main-title >h1')
+      //   console.log("main title",mainTitle)
 
-          //? Back to Scroll location before clicking recipe Modal
-          window.scrollTo(0, scrollLocation);
-        }
-      });
+      //   const active = document.querySelector('.activeOverlay')
+      //   console.log("active",active)
+
+      //   let isClickInside = overlayModal.contains(e.target);
+      //   console.log("Click Inside",isClickInside)
+
+      //   let isClickOutside = mainTitle.contains(e.target);
+      //   console.log("Click Outside",isClickOutside)
+
+      //   if (!isClickInside) {
+      //     overlayModal.classList.remove("activeOverlay");
+      //     overlayModal.classList.remove("mobileOverlay");
+      //     overlayModal.style.display = "none";
+      //     mainContainer.classList.remove("blur");
+
+      //     //? Back to Scroll location before clicking recipe Modal
+      //     window.scrollTo(0, scrollLocation);
+      //   }
+      // });
     });
   }
 }
