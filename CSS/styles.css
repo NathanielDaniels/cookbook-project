@@ -1332,14 +1332,14 @@ body {
 
 @media screen and (max-width: 560px) {
   .main-container {
-    width: auto;
+    width: 100%;
   }
   .main-container .navbar-links ul li {
     font-size: 1rem !important;
     padding: 0 8px !important;
   }
   .main-container .title-container .bg {
-    height: 94vh !important;
+    height: 90vh !important;
   }
   .main-container section.about-section div.boardContainer div.backboard {
     height: 25rem !important;
