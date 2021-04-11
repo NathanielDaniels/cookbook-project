@@ -998,14 +998,17 @@ body {
 }
 
 .overlayModal .overlayContent .recipeTemplate .recipeIngredients div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-column-gap: 2em;
           column-gap: 2em;
+  margin: 0 auto;
 }
 
 .overlayModal .overlayContent .recipeTemplate .recipeIngredients,

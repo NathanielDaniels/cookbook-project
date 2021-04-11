@@ -954,22 +954,14 @@ body {
       }
 
       .recipeIngredients {
-        // border: 2px solid red;
 
         div {
+          // border: 2px solid red;
+          width: fit-content;
           display: flex;
-          justify-content: center;
+          flex-wrap: wrap;
           column-gap: 2em;
-
-          // .list1 {
-          //   border: 2px solid blue;
-          //   // grid-column: 1/2;
-          // }
-
-          // .list2 {
-          //   border: 2px solid yellow;
-          //   // grid-column: 2/3;
-          // }
+          margin: 0 auto;
         }
       }
 
