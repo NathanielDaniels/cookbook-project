@@ -221,47 +221,44 @@ const topRecipeArr = [
   },
   {
     //? location: "Top Recipes #6",
-    title: "Creamy Mushroom Cavatappi",
-    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
-    info: "Prep: 10min | Total: 45min | Calories: 750",
+    title: "Firehouse Cheeseburgers",
+    about: "If you love hot sauce with every meal, these burgers are for you. We blend ground beef patties with both tangy hot sauce AND Frank’s Red Hot seasoning for layers of spicy, zesty flavor, then top with Monterey Jack for melt-factor. They’re sandwiched between toasted potato buns and topped with crispy fried onions and a generous swipe of creamy ranch for cooling contrast. After all, how does that old saying go—“hot sauce and spice makes everything nice”? That sounds right to us.",
+    info: "Prep: 10min | Total: 45min | Calories: 1020",
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Cavatappi Pasta (8 oz)</li>
-        <li>&#8226 Button Mushrooms (8 oz)</li>
-        <li>&#8226 Flour (1 TBSP)</li>
-        <li>&#8226 Milk (6.75 oz)</li>
-        <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
-      </ul>
-      <ul>
-        <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
-        <li>&#8226 Parmesan Cheese (1/4 cup)</li>
-        <li>&#8226 Olive Oil (2 TSP)</li>
-        <li>&#8226 Butter (2 TBSP)</li>
+        <li>&#8226 Shallots (2-3)</li>
+        <li>&#8226 Yukon Gold Potatos (12 oz)</li>
+        <li>&#8226 Ground Beef (10 oz)</li>
+        <li>&#8226 Monterey Jack Cheese</li>
+        <li>&#8226 Frank's RedHot Original Seasoning (7 grams)</li>
+        <li>&#8226 Potato or Brioche Buns (1.5oz)</li>
+        </ul>
+        <ul>
+        <li>&#8226 Ranch Dressing (1.5oz)</li>
+        <li>&#8226 Garlic Powder (1 TSP)</li>
+        <li>&#8226 Sour Cream (2 TBSP)</li>
+        <li>&#8226 Hot Sauce (1 TSP)</li>
+        <li>&#8226 Olive Oil (4 TSP)</li>
         <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>
       <li> &#8226
-        Bring Medium Pot of <strong>salted water</strong> to a boil. <strong>Wash/dry all produce</strong>. Trim and Slice <strong>mushrooms</strong> into 1/4-inch-thick pieces. Trim and thinly slice <strong>scallions</strong>, seperating whites from greens.
+        Adjust rack to middle position and preheat oven to 450 degrees. <strong>Wash and dry produce</strong>. <br/>• Cut <strong>potatoes</strong> into ½-inch-thick wedges. Toss on a baking sheet with a large drizzle of <strong>olive oil</strong>, half the <strong>garlic powder</strong> (you’ll use the rest in the next step), and a big pinch of <strong>salt and pepper</strong>. <br/>• Roast on middle rack until browned and tender, 20-25 minutes.
       </li>
       <br />
       <li> &#8226
-        Heat a large drizzle of <strong>olive oil</strong> in a large pan over medium-high heat. Add <strong>mushrooms</strong>; season with <strong>salt</strong> and <strong>pepper</strong>. Cook, stiring occasionally, until browned and slightly crispy, 5-7 minutes. Turn off heat; transfer to a paper-towel-lined plate. Wash out pan.
+        While potatoes roast, heat a small drizzle of <strong>olive oil</strong> in a large pan over medium heat. <br/>• Add <strong>1 TBSP Butter</strong> and <strong>Shallots</strong>. cook until browned.
+      </li>
+      <br />
+      <li> &#8226
+        In a small bowl, combine <strong>sour cream</strong>, <strong>ranch dressing</strong>, and remaining <strong>garlic powder</strong>; season with <strong>salt and pepper</strong>. <span class="recipeTip">TIP: If you like things spicy, add a dash of the hot sauce—just be sure to save some for forming your patties!</span>
       </li>
       <br />
       <li>&#8226
-        Once water is boiling, add <strong>cavatappi</strong> to pot. Cook, stirring occasionally, until aldente, 9-11 minutes. Reserve <strong>1 cup pasta cooking water</strong>, then drain.
+         In a large bowl, combine <strong>beef</strong>, <strong>Frank’s RedHot® Original Seasoning</strong>, a dash of <strong>hot sauce</strong>, and <strong>salt</strong>. Form into two patties (four patties for 4 servings), each slightly wider than a burger bun. <br/>• Heat a large drizzle of <strong>olive oil</strong> in a large pan over medium heat. Add patties and cook until browned and cooked to desired doneness, 3-5 minutes per side. <br/>• In the last 1-2 minutes of cooking, top each patty with <strong>Monterey Jack</strong>; cover pan to melt cheese.
       </li>
       <br />
       <li>&#8226
-        While pasta cooks, melt <strong>2 TBSP plain butter</strong> (4 TBSP for 4 servings) in pan used for mushrooms over medium-high heat. Add <strong>scallion whites</strong> and cook until just softened, 1 minute. Add <strong>flour</strong> and cook, stirring, until lightly browned, 1-2 minutes. Whisk in <strong>milk</strong> and ⅓ <strong>cup pasta cooking water</strong> (½ cup for 4), breaking up any flour clumps. Simmer until slightly thickened, 3-4 minutes.
-      </li>
-      <br />
-      <li>&#8226
-        Stir <strong>cream cheese</strong> into pan with sauce until melted. Stir in <strong>mushrooms</strong>, <strong>cavatappi</strong>, and <strong>garlic herb butter</strong>. Season with <strong>salt</strong> and <strong>pepper</strong>. <span class="recipeTip">TIP:</span> If needed, stir in more reserved cooking water a splash at a time until pasta is coated in a creamy sauce.
-      </li>
-      <br />
-      <li>&#8226
-        Divide <strong>pasta</strong> between bowls and sprinkle with <strong>Parmesan</strong> and <strong>scallion greens</strong>. Serve.
+        While patties cook, halve and toast <strong>buns</strong>. Spread cut sides of buns with creamy <strong>ranch sauce</strong>, then fill with patties and top with <strong>fried shallots</strong>. <br/>• Divide burgers between plates and serve with <strong>potato wedges</strong> on the side.
       </li>
     </ul>`,
   },
@@ -882,22 +879,23 @@ const mainRecipeArr = [
   {
     //? location: "Main Recipes",
    //? location: "Top Recipes #6",
-    title: "Creamy Mushroom Cavatappi",
-    about: "If you’re mad for mushrooms, this pasta will treat you right. They’re the flavor backbone of this recipe, bringing all those deep, earthy flavors that you know and love. We’ve added springy cavatappi spirals, a creamy garlic herb sauce, and a sprinkling of Parmesan cheese (mushrooms, pasta, and dairy are pretty much best friends, after all). Get ready for this umami bomb to make waves at your dinner table!",
-    info: "Prep: 10min | Total: 45min | Calories: 750",
+    title: "Firehouse Cheeseburgers",
+    about: "If you love hot sauce with every meal, these burgers are for you. We blend ground beef patties with both tangy hot sauce AND Frank’s Red Hot seasoning for layers of spicy, zesty flavor, then top with Monterey Jack for melt-factor. They’re sandwiched between toasted potato buns and topped with crispy fried onions and a generous swipe of creamy ranch for cooling contrast. After all, how does that old saying go—“hot sauce and spice makes everything nice”? That sounds right to us.",
+    info: "Prep: 10min | Total: 45min | Calories: 1020",
     ingredients: `<ul>
-        <li>&#8226 Scallions (2-3)</li>
-        <li>&#8226 Cavatappi Pasta (8 oz)</li>
-        <li>&#8226 Button Mushrooms (8 oz)</li>
-        <li>&#8226 Flour (1 TBSP)</li>
-        <li>&#8226 Milk (6.75 oz)</li>
-        <li>&#8226 Cream Cheese or Mascarpone (2 TBSP)</li>
-      </ul>
-      <ul>
-        <li>&#8226 Garlic Herb Butter (2 TBSP)</li>
-        <li>&#8226 Parmesan Cheese (1/4 cup)</li>
-        <li>&#8226 Olive Oil (2 TSP)</li>
-        <li>&#8226 Butter (2 TBSP)</li>
+        <li>&#8226 Shallots (2-3)</li>
+        <li>&#8226 Yukon Gold Potatos (12 oz)</li>
+        <li>&#8226 Ground Beef (10 oz)</li>
+        <li>&#8226 Monterey Jack Cheese</li>
+        <li>&#8226 Frank's RedHot Original Seasoning (7 grams)</li>
+        <li>&#8226 Potato or Brioche Buns (1.5oz)</li>
+        </ul>
+        <ul>
+        <li>&#8226 Ranch Dressing (1.5oz)</li>
+        <li>&#8226 Garlic Powder (1 TSP)</li>
+        <li>&#8226 Sour Cream (2 TBSP)</li>
+        <li>&#8226 Hot Sauce (1 TSP)</li>
+        <li>&#8226 Olive Oil (4 TSP)</li>
         <li>&#8226 Salt & Pepper</li>
       </ul>`,
     instructions: `<ul>

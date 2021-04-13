@@ -42,21 +42,17 @@ btn.addEventListener('mouseleave', () => {
 //! Click Recipe for Overlay Module ======================================
 
 const hoverText = document.querySelectorAll(".hover-text");
+const allRecipeItems = document.querySelectorAll(".allRecipes");
+const mainContainer = document.querySelector(".main-container");
+const overlayModal = document.querySelector(".overlayModal");
+const screenWidth = window.innerWidth;
 
 const topRecipesBody = document.querySelector(".topRecipes-body");
 const topRecipeItems = document.querySelectorAll(".top-grid-item");
 const mainRecipeItems = document.querySelector(".recipeItems");
-const allRecipeItems = document.querySelectorAll(".allRecipes");
-
-const mainContainer = document.querySelector(".main-container");
-
 const mobileOverlay = document.querySelector(".mobileOverlay");
-const overlayModal = document.querySelector(".overlayModal");
 const overlayContent = document.querySelector(".overlayContent");
-
 const bg = document.querySelector(".bg");
-
-const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 
 

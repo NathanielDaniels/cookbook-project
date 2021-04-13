@@ -160,21 +160,22 @@ body {
   left: 50%;
   z-index: 1;
   background: var(--button-color);
+  border: none;
   border-radius: 7px;
-  cursor: pointer;
   font-size: clamp(1.2rem, 4vw, 1.8rem);
   padding: 15px 30px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  -webkit-filter: drop-shadow(0px 4px 2px #50300b);
-          filter: drop-shadow(0px 4px 2px #50300b);
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3), 0px -1px 0px rgba(0, 0, 0, 0.7);
   -webkit-transition: background 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
   transition: background 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
   transition: background 0.3s ease-in-out, filter 0.3s ease-in-out;
   transition: background 0.3s ease-in-out, filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+  -webkit-filter: drop-shadow(0px 4px 2px #50300b);
+          filter: drop-shadow(0px 4px 2px #50300b);
+  cursor: pointer;
 }
 
 .main-container .title-container button:hover {
@@ -216,7 +217,7 @@ body {
 }
 
 .main-container .about-section .boardContainer .backboard p {
-  width: 45rem;
+  max-width: 45rem;
   letter-spacing: 1px;
   position: relative;
   top: 50%;
@@ -224,7 +225,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: Rustico;
-  font-size: clamp(0.8rem, 18vw, 1.7rem);
+  font-size: clamp(0.8rem, 5vw, 1.7rem);
   text-align: center;
   color: transparent;
   text-shadow: 0px 1px 0px #36281c, 0px -0.5px 0px black;
@@ -380,7 +381,7 @@ body {
 }
 
 .main-container .topRecipes-container .topRecipes-body .recipeItems .recipe6 {
-  background-image: url("/IMG/recipe6.jpg");
+  background-image: url("/IMG/firehouseCheeseburgers.png");
 }
 
 @-webkit-keyframes fade {
