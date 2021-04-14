@@ -139,33 +139,31 @@ const topRecipeArr = [
     info: "Prep: 10min | Total: 30min | Calories: 850",
     ingredients: `<ul>
       <li>&#8226 Flour Tortillas (One Dozen).</li>
-      <li>&#8226 Diced Tomatoes & Green Chilies (10oz).</li>
-      <li>&#8226 Refried Beans (6-8oz).</li>
+      <li>&#8226 Diced Tomatoes & Green Chilies (10oz can).</li>
+      <li>&#8226 Refried Beans (6-8oz or 1/2 can).</li>
       <li>&#8226 Ground Beef (3/4 - 1lb).</li>
-      <li>&#8226 Taco Seasoning.</li>
-    </ul>`,
-    needed: `<ul>
+      <li>&#8226 Taco Seasoning (1 packet).</li>
+    </ul>
+    <ul>
+      <li>&#8226 Mexican Style 4 Cheese Blend (20-32 oz).</li>
       <li>&#8226 12 cup muffin baking sheet.</li>
       <li>&#8226 large bowl.</li>
-      <li>&#8226 Olive Oil.</li>
-      <li>&#8226 Ground Beef (3/4 - 1lb).</li>
-      <li>&#8226 Taco Seasoning.</li>
     </ul>`,
     instructions: `<ul>
       <li>
-        &#8226 Preheat the oven to 400 degrees. Heat the olive oil in a large pan over medium high heat.
+      &#8226 Preheat the oven to 400 degrees. Heat the <strong>olive oil</strong> in a large pan over medium high heat. <br/>• Add the <strong>beef</strong> to the pan. Use a spatula to break up the meat while Cooking for 4-5 minutes or until cooked through.
       </li>
+      <br />
       <li>
-        &#8226 Add the beef to the pan. Use a spatula to break up the meat while Cooking for 4-5 minutes or until cooked through.
+       &#8226 While <strong>beef</strong> cooks, cut the <strong>tortillas</strong> into 4-inch squares (save lefover ends for later)
       </li>
+      <br />
       <li>
-       &#8226 While beef cooks, cut the tortillas into 4-inch squares (save lefover ends for later)
+        &#8226 Once <strong>beef</strong> is finished cooking, drain grease and place in large bowl. Add <strong>Taco Seasoning</strong> and mix thoroughly. Then add <strong>Diced Tomatoes & Green Chilies</strong>, mix to combine.
       </li>
+      <br />
       <li>
-        &#8226 Once beef is finished cooking, 
-      </li>
-      <li
-        &#8226 
+      &#8226 Press <strong>Square Tortillas</strong> into each <strong>muffin baking sheet</strong> cup to create cups. <br/>• Add a spoon full of <strong>Seasoned Beef Mixture</strong> to each cup. <br/>• Next, smear a spoon full of <strong>Refried Beans</strong> into the beef mixture. Make sure to coat the sides of the cup! <br/>• Add a layer of <strong>Mexican Style 4 Cheese Blend</strong>. 
       </li>
     </ul>`,
   },
